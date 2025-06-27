@@ -1,0 +1,37 @@
+{
+  "version": "6",
+  "minor_version": 1,
+  "key": "hacs.hacs",
+  "data": {
+    "archived_repositories": [
+      "toringer/home-assistant-sbanken",
+      "robmarkcole/HASS-Deepstack-object",
+      "JuanMTech/green_dark_mode",
+      "JuanMTech/amoled_blue",
+      "JuanMTech/orange_dark",
+      "JuanMTech/green_light_mode",
+      "gjohansson-ST/stl",
+      "jessevl/homeassistant-greenchoice",
+      "robmarkcole/HASS-Deepstack-face",
+      "perara/systemair-save-connect",
+      "bieniu/ha-zadnego-ale",
+      "cgarwood/homeassistant-fullykiosk",
+      "custom-components/sensor.untappd",
+      "JuanMTech/orange_light",
+      "gerardag/person-entity-card",
+      "thebino/rki_covid",
+      "peternijssen/home-assistant-jumbo"
+    ],
+    "renamed_repositories": {
+      "wills106/homsassistant-solax-modbus": "wills106/homeassistant-solax-modbus",
+      "wernerhp/ha_integration_load_shedding": "wernerhp/ha.integration.load_shedding",
+      "mtarjoianu/ha_lektrico": "Lektrico/ha_lektrico",
+      "JoshuaMulliken/ha-wyzeapi": "SecKatie/ha-wyzeapi",
+      "jvitkauskas/homeassistant_salus": "epoplavskis/homeassistant_salus",
+      "Wibias/hass-variables": "enkama/hass-variables",
+      "fondberg/easee_hass": "nordicopen/easee_hass",
+      "johanfrick/custom-sonos-card": "punxaphil/custom-sonos-card"
+    },
+    "ignored_repositories": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "camera",
+  "data": {
+    "camera.garage_wyze_camera": {
+      "preload_stream": true
+    },
+    "camera.front_porch_wyze_camera": {
+      "preload_stream": true
+    },
+    "camera.garage_camera_fluent": {
+      "preload_stream": true
+    },
+    "camera.front_porch_doorbell_fluent": {
+      "preload_stream": true
+    }
+  }
+}

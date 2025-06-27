@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_number",
+  "data": {
+    "items": [
+      {
+        "id": "fan_speed_index",
+        "min": 0.0,
+        "max": 6.0,
+        "name": "Fan Speed Index",
+        "mode": "box",
+        "step": 1.0
+      },
+      {
+        "id": "previous_hvac_temp_downstairs",
+        "min": 50.0,
+        "max": 90.0,
+        "name": "Previous HVAC Temp Downstairs",
+        "step": 1.0,
+        "mode": "slider",
+        "icon": "mdi:home-thermometer-outline"
+      },
+      {
+        "id": "previous_hvac_temp_upstairs",
+        "min": 50.0,
+        "max": 90.0,
+        "name": "Previous HVAC Temp Upstairs",
+        "icon": "mdi:home-thermometer-outline",
+        "step": 1.0,
+        "mode": "slider"
+      },
+      {
+        "id": "fan_speed_controller",
+        "min": 0.0,
+        "max": 100.0,
+        "name": "Fan Speed Controller",
+        "mode": "slider",
+        "step": 1.0
+      }
+    ]
+  }
+}

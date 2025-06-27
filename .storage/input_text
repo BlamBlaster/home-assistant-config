@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_text",
+  "data": {
+    "items": [
+      {
+        "id": "previous_hvac_mode",
+        "name": "Previous HVAC Mode Upstairs",
+        "icon": "mdi:home-thermometer",
+        "min": 0,
+        "max": 100,
+        "mode": "text"
+      },
+      {
+        "id": "previous_hvac_mode_downstairs",
+        "name": "Previous HVAC Mode Downstairs",
+        "min": 0,
+        "max": 100,
+        "mode": "text",
+        "icon": "mdi:home-thermometer"
+      },
+      {
+        "id": "previous_upstairs_mode_select",
+        "name": "previous upstairs mode select",
+        "min": 0,
+        "mode": "text",
+        "max": 100
+      },
+      {
+        "id": "previous_downstairs_mode_select",
+        "name": "previous downstairs mode select",
+        "min": 0,
+        "mode": "text",
+        "max": 100
+      }
+    ]
+  }
+}

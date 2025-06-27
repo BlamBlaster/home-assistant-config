@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "zone",
+  "data": {
+    "items": [
+      {
+        "latitude": 40.44027615292204,
+        "longitude": -80.00023126602174,
+        "name": "Work",
+        "icon": "mdi:briefcase",
+        "passive": false,
+        "radius": 53.886280373959174,
+        "id": "work"
+      }
+    ]
+  }
+}

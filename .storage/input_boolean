@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_boolean",
+  "data": {
+    "items": [
+      {
+        "id": "fan_decending",
+        "name": " Fan Descending"
+      },
+      {
+        "id": "both_in_bed",
+        "name": "Both in Bed"
+      },
+      {
+        "id": "fan_auto_enabled",
+        "name": "Fan Auto Enabled",
+        "icon": "mdi:fan-alert"
+      },
+      {
+        "id": "hvac_pause_active",
+        "name": "HVAC Pause Active"
+      }
+    ]
+  }
+}

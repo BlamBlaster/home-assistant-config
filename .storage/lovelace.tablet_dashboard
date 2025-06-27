@@ -1,0 +1,2236 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.tablet_dashboard",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "theme": "minimalist-mobile",
+          "title": "Quick Access",
+          "icon": "mdi:home-assistant",
+          "columns": 2,
+          "type": "custom:masonry-layout",
+          "cards": [
+            {
+              "type": "custom:clock-weather-card",
+              "entity": "weather.forecast_home"
+            },
+            {
+              "type": "custom:mushroom-chips-card",
+              "chips": [
+                {
+                  "type": "entity",
+                  "entity": "person.benjamin",
+                  "use_entity_picture": true
+                },
+                {
+                  "type": "entity",
+                  "entity": "person.amanda",
+                  "use_entity_picture": true
+                }
+              ],
+              "alignment": "center"
+            },
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-climate-card",
+                  "fill_container": false,
+                  "layout": "vertical",
+                  "show_temperature_control": false,
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "collapsible_controls": false,
+                  "entity": "climate.downstairs_2"
+                },
+                {
+                  "type": "custom:mushroom-climate-card",
+                  "entity": "climate.upstairs_thermostat",
+                  "layout": "vertical",
+                  "show_temperature_control": false,
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "fill_container": true
+                }
+              ]
+            },
+            {
+              "camera_view": "auto",
+              "alert_classes": [
+                "motion",
+                "moisture",
+                "opening"
+              ],
+              "sensor_classes": [
+                "temperature",
+                "humidity"
+              ],
+              "type": "area",
+              "area": "living_room",
+              "show_camera": true,
+              "navigation_path": "/Mobile-dashboard/living-room"
+            },
+            {
+              "camera_view": "auto",
+              "alert_classes": [
+                "motion",
+                "moisture",
+                "window"
+              ],
+              "sensor_classes": [
+                "temperature",
+                "humidity",
+                "energy"
+              ],
+              "type": "area",
+              "area": "master_bedroom",
+              "navigation_path": "/Mobile-dashboard/master-bedroom",
+              "show_camera": true
+            },
+            {
+              "camera_view": "live",
+              "alert_classes": [
+                "motion",
+                "moisture",
+                "window"
+              ],
+              "sensor_classes": [
+                "temperature",
+                "humidity",
+                "illuminance"
+              ],
+              "type": "area",
+              "area": "office",
+              "show_camera": true,
+              "navigation_path": "/Mobile-dashboard/office"
+            },
+            {
+              "camera_view": "auto",
+              "alert_classes": [
+                "motion",
+                "moisture",
+                "window"
+              ],
+              "sensor_classes": [
+                "temperature",
+                "energy"
+              ],
+              "type": "area",
+              "area": "nursery",
+              "navigation_path": "/Mobile-dashboard/nursery",
+              "show_camera": true
+            },
+            {
+              "camera_view": "live",
+              "alert_classes": [
+                "motion",
+                "moisture"
+              ],
+              "sensor_classes": [
+                "temperature",
+                "humidity"
+              ],
+              "type": "area",
+              "area": "den",
+              "navigation_path": "/Mobile-dashboard/den-family-room",
+              "show_camera": true
+            },
+            {
+              "camera_view": "auto",
+              "alert_classes": [
+                "motion",
+                "moisture"
+              ],
+              "sensor_classes": [
+                "energy"
+              ],
+              "type": "area",
+              "area": "front_porch",
+              "show_camera": true,
+              "navigation_path": "/Mobile-dashboard/front-porch",
+              "theme": "Catppuccin Macchiato"
+            },
+            {
+              "camera_view": "auto",
+              "alert_classes": [
+                "motion",
+                "moisture",
+                "garage_door"
+              ],
+              "sensor_classes": [
+                "temperature",
+                "humidity"
+              ],
+              "type": "area",
+              "area": "garage",
+              "show_camera": true,
+              "navigation_path": "/Mobile-dashboard/garage"
+            },
+            {
+              "camera_view": "live",
+              "alert_classes": [
+                "motion",
+                "moisture",
+                "opening",
+                "problem"
+              ],
+              "sensor_classes": [
+                "temperature",
+                "humidity",
+                "energy",
+                "gas",
+                "water"
+              ],
+              "type": "area",
+              "area": "basement",
+              "navigation_path": "/Mobile-dashboard/basement",
+              "show_camera": true
+            },
+            {
+              "alert_classes": [
+                "motion",
+                "moisture",
+                "occupancy",
+                "opening"
+              ],
+              "sensor_classes": [
+                "temperature",
+                "humidity"
+              ],
+              "type": "area",
+              "area": "dining_room",
+              "show_camera": false,
+              "navigation_path": "/config/areas/area/dining_room"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.bathroom_speaker"
+            }
+          ],
+          "layout": {
+            "max_cols": 3
+          }
+        },
+        {
+          "type": "custom:masonry-layout",
+          "path": "cameras",
+          "title": "Cameras",
+          "icon": "mdi:cctv",
+          "cards": [
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "live",
+              "type": "picture-entity",
+              "aspect_ratio": "2:1.4",
+              "entity": "camera.camera_back_door_fluent"
+            },
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "auto",
+              "type": "picture-entity",
+              "entity": "camera.garage_camera_fluent",
+              "aspect_ratio": "2:1.4"
+            },
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "live",
+              "type": "picture-entity",
+              "entity": "camera.basement_camera_fluent",
+              "aspect_ratio": "2:1.4"
+            },
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "live",
+              "type": "picture-entity",
+              "entity": "camera.front_porch_doorbell_fluent",
+              "aspect_ratio": "2:1.4"
+            },
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "live",
+              "type": "picture-entity",
+              "entity": "camera.camera_office_camera_rtp_stream_0",
+              "aspect_ratio": "2:1.4"
+            }
+          ],
+          "layout": {
+            "max_cols": 2
+          }
+        },
+        {
+          "icon": "mdi:security",
+          "cards": [
+            {
+              "type": "entity-filter",
+              "card": {
+                "type": "entities",
+                "title": "Water Sensors",
+                "show_header_toggle": true,
+                "state_color": true
+              },
+              "entities": [
+                {
+                  "entity": "binary_sensor.water_sensor_dishwasher_water",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.water_sensor_kitchen_sink_water",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.water_sensor_hot_water_tank_water",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.water_sensor_hvac_drop_pan_water",
+                  "secondary_info": "last-changed"
+                }
+              ],
+              "state_filter": [
+                {
+                  "operator": "=="
+                },
+                "on"
+              ],
+              "show_empty": false
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entity-filter",
+                  "card": {
+                    "type": "entities",
+                    "title": "Open Door",
+                    "state_color": true
+                  },
+                  "entities": [
+                    {
+                      "entity": "binary_sensor.garage_door_contact",
+                      "name": "Garage Door",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:garage-open-variant"
+                    },
+                    {
+                      "entity": "binary_sensor.front_door_contact_2",
+                      "name": "Front Door",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:door-open"
+                    },
+                    {
+                      "entity": "binary_sensor.back_door_contact_2",
+                      "name": "Back Door",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:door-open"
+                    },
+                    {
+                      "entity": "binary_sensor.basement_door_contact_2",
+                      "name": "Basement Door",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:door-open"
+                    }
+                  ],
+                  "state_filter": [
+                    {
+                      "operator": "=="
+                    },
+                    "on"
+                  ],
+                  "show_empty": false
+                },
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Doors",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mushroom-cover-card",
+                  "show_position_control": false,
+                  "layout": "horizontal",
+                  "show_tilt_position_control": false,
+                  "show_buttons_control": true,
+                  "entity": "cover.garage_door"
+                },
+                {
+                  "type": "glance",
+                  "entities": [
+                    {
+                      "entity": "lock.front_door_lock"
+                    },
+                    {
+                      "entity": "lock.back_door"
+                    },
+                    {
+                      "entity": "lock.basement_door_lock"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entity-filter",
+              "card": {
+                "type": "entities",
+                "title": "Battery Notifications",
+                "show_header_toggle": true,
+                "state_color": true
+              },
+              "entities": [
+                {
+                  "entity": "sensor.water_sensor_kitchen_sink_battery",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.water_sensor_dishwasher_water",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "sensor.water_sensor_hvac_drop_pan_battery",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "sensor.water_sensor_hot_water_tank_battery",
+                  "secondary_info": "last-changed"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "numeric_state",
+                  "above": -1,
+                  "below": 11
+                }
+              ],
+              "show_empty": false
+            },
+            {
+              "type": "entity-filter",
+              "card": {
+                "type": "entities",
+                "title": "Open First Floor Windows",
+                "show_header_toggle": true,
+                "state_color": true
+              },
+              "entities": [
+                {
+                  "entity": "binary_sensor.living_room_left_contact",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:window-closed-variant"
+                },
+                {
+                  "entity": "binary_sensor.living_room_right_contact",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:window-closed-variant"
+                },
+                {
+                  "entity": "binary_sensor.kitchen_contact",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:window-closed"
+                },
+                {
+                  "entity": "binary_sensor.den_left_contact",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:window-closed"
+                },
+                {
+                  "entity": "binary_sensor.den_right_contact",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:window-closed"
+                },
+                {
+                  "entity": "binary_sensor.powder_room_contact",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:window-closed"
+                },
+                {
+                  "entity": "binary_sensor.dining_room_left_contact",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:window-closed"
+                },
+                {
+                  "entity": "binary_sensor.dining_room_right_contact",
+                  "secondary_info": "last-changed",
+                  "icon": "mdi:window-closed"
+                }
+              ],
+              "state_filter": [
+                {
+                  "operator": "=="
+                },
+                "on"
+              ],
+              "show_empty": false
+            },
+            {
+              "type": "entity-filter",
+              "card": {
+                "type": "entities",
+                "title": "Open Second Floor Windows",
+                "show_header_toggle": true,
+                "state_color": true
+              },
+              "entities": [
+                {
+                  "entity": "binary_sensor.nursery_side_contact",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.nursery_rear_contact",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.bethroom_contact",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.bedroom_3_rear_contact",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.bedroom_3_side_contact",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.office_side_contact",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.office_front_contact",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.master_bathroom_contact",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.master_bedroom_left_contact",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.master_bedroom_right_contact",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.master_bedroom_side_contact",
+                  "secondary_info": "last-changed"
+                }
+              ],
+              "state_filter": [
+                {
+                  "operator": "=="
+                },
+                "on"
+              ],
+              "show_empty": false
+            },
+            {
+              "type": "custom:power-flow-card-plus",
+              "entities": {
+                "battery": {
+                  "entity": "",
+                  "state_of_charge": "sensor.old_iphone_6_battery_level"
+                },
+                "grid": {
+                  "secondary_info": {
+                    "entity": "sensor.child_drive_123_1d",
+                    "unit_white_space": false,
+                    "display_zero": true,
+                    "color_value": true
+                  },
+                  "color_value": false,
+                  "use_metadata": false,
+                  "invert_state": false,
+                  "display_state": "one_way_no_zero",
+                  "entity": "sensor.child_drive_123_1mon",
+                  "icon": "mdi:transmission-tower"
+                },
+                "fossil_fuel_percentage": {
+                  "secondary_info": {}
+                },
+                "individual": [
+                  {
+                    "entity": "sensor.dryer_15_1mon",
+                    "secondary_info": {},
+                    "name": "Dryer",
+                    "icon": "mdi:tumble-dryer",
+                    "color_value": true,
+                    "color_icon": true
+                  },
+                  {
+                    "entity": "sensor.electric_stove_2_1mon",
+                    "secondary_info": {},
+                    "name": "Stove",
+                    "icon": "mdi:stove",
+                    "color_value": true,
+                    "color_icon": true,
+                    "display_zero": false,
+                    "inverted_animation": false,
+                    "show_direction": false,
+                    "unit_white_space": false,
+                    "use_metadata": false
+                  },
+                  {
+                    "entity": "sensor.washing_machine_5_1mon",
+                    "secondary_info": {},
+                    "name": "Washer",
+                    "icon": "mdi:washing-machine",
+                    "color_value": true,
+                    "color_icon": true
+                  },
+                  {
+                    "entity": "sensor.back_of_basement_den_bedroom_3_1_1mon",
+                    "secondary_info": {},
+                    "name": "Sever +",
+                    "icon": "mdi:server",
+                    "color_value": true,
+                    "color_icon": true
+                  }
+                ],
+                "home": {
+                  "secondary_info": {},
+                  "subtract_individual": false,
+                  "override_state": true,
+                  "circle_animation": true,
+                  "use_metadata": true,
+                  "color_icon": true,
+                  "color_value": true
+                },
+                "solar": {
+                  "secondary_info": {}
+                }
+              },
+              "clickable_entities": true,
+              "display_zero_lines": {
+                "mode": "show",
+                "transparency": 50,
+                "grey_color": [
+                  189,
+                  189,
+                  189
+                ]
+              },
+              "use_new_flow_rate_model": true,
+              "w_decimals": 0,
+              "min_flow_rate": 0.75,
+              "max_flow_rate": 6,
+              "max_expected_power": 2000,
+              "min_expected_power": 0.01,
+              "watt_threshold": 1000,
+              "transparency_zero_lines": 0,
+              "disable_dots": false,
+              "kw_decimals": 0,
+              "title": "Monthly Electric"
+            },
+            {
+              "show_name": true,
+              "show_icon": true,
+              "show_state": true,
+              "type": "glance",
+              "entities": [
+                {
+                  "entity": "sensor.96_gallon_toter"
+                },
+                {
+                  "entity": "sensor.curb_service_recycle_materials"
+                }
+              ],
+              "state_color": true
+            },
+            {
+              "type": "custom:mini-graph-card",
+              "entities": [
+                {
+                  "entity": "sensor.daily_water"
+                }
+              ],
+              "name": "Water Usage by Day",
+              "hours_to_show": 360,
+              "aggregate_func": "max",
+              "group_by": "date",
+              "show": {
+                "graph": "line",
+                "name": true,
+                "legend": true,
+                "icon": false,
+                "labels": true,
+                "show_points": "true.",
+                "points_per_hour": 1,
+                "smoothing": false
+              },
+              "color_thresholds": [
+                {
+                  "value": 10,
+                  "color": "#99b8c7"
+                },
+                {
+                  "value": 25,
+                  "color": "#8fd9fb"
+                },
+                {
+                  "value": 50,
+                  "color": "#4ab5b5"
+                },
+                {
+                  "value": 100,
+                  "color": "#6d8bc0"
+                },
+                {
+                  "value": 200,
+                  "color": "#525aff"
+                }
+              ]
+            },
+            {
+              "type": "custom:mini-graph-card",
+              "entities": [
+                {
+                  "entity": "sensor.daily_gas"
+                }
+              ],
+              "name": "Gas Usage by Day",
+              "hours_to_show": 360,
+              "aggregate_func": "max",
+              "group_by": "date",
+              "show": {
+                "graph": "line",
+                "name": true,
+                "legend": true,
+                "icon": false,
+                "labels": true,
+                "show_points": "true.",
+                "points_per_hour": 1,
+                "smoothing": false
+              },
+              "color_thresholds": [
+                {
+                  "value": 1,
+                  "color": "#ffd54a"
+                },
+                {
+                  "value": 3,
+                  "color": "#ffa500"
+                },
+                {
+                  "value": 5,
+                  "color": "#ff6d00"
+                }
+              ]
+            }
+          ],
+          "theme": "minimalist-mobile",
+          "type": "custom:masonry-layout",
+          "layout": {
+            "max_cols": 2
+          }
+        },
+        {
+          "title": "Vacuums",
+          "path": "vacuums",
+          "icon": "mdi:robot-vacuum-variant",
+          "type": "custom:vertical-layout",
+          "badges": [
+            {
+              "entity": "vacuum.alfred"
+            },
+            {
+              "entity": "vacuum.barnaby"
+            },
+            {
+              "entity": "vacuum.clarence"
+            }
+          ],
+          "cards": [
+            {
+              "type": "custom:mushroom-vacuum-card",
+              "entity": "vacuum.alfred",
+              "commands": [
+                "on_off",
+                "start_pause",
+                "stop",
+                "locate",
+                "clean_spot",
+                "return_home"
+              ],
+              "icon_animation": true,
+              "icon": "mdi:robot-vacuum-variant",
+              "fill_container": true,
+              "secondary_info": "last-updated",
+              "name": "First Floor - Alfred"
+            },
+            {
+              "type": "custom:mushroom-vacuum-card",
+              "icon": "mdi:robot-vacuum",
+              "commands": [
+                "on_off",
+                "start_pause",
+                "stop",
+                "locate",
+                "clean_spot",
+                "return_home"
+              ],
+              "icon_animation": true,
+              "entity": "vacuum.barnaby",
+              "name": "Second Floor - Barnaby",
+              "secondary_info": "last-updated"
+            },
+            {
+              "type": "custom:mushroom-vacuum-card",
+              "entity": "vacuum.clarence",
+              "icon": "mdi:robot-vacuum-variant",
+              "icon_animation": true,
+              "commands": [
+                "return_home",
+                "clean_spot",
+                "locate",
+                "stop",
+                "start_pause",
+                "on_off"
+              ],
+              "icon_type": "icon",
+              "secondary_info": "last-updated",
+              "name": "First Floor Mop - Clarence"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.dishwasher",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.dryer",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.front_load_washer",
+                  "secondary_info": "last-updated"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "master-bedroom",
+          "icon": "mdi:bed-king-outline",
+          "subview": true,
+          "theme": "Mushroom Square Shadow",
+          "badges": [],
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Lighting & Fan",
+                  "alignment": "center"
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.bedroom_light",
+                      "show_brightness_control": true,
+                      "fill_container": true,
+                      "collapsible_controls": false,
+                      "name": "Fan Light",
+                      "use_light_color": true,
+                      "show_color_temp_control": false,
+                      "show_color_control": false
+                    },
+                    {
+                      "type": "custom:mushroom-fan-card",
+                      "entity": "fan.bedroom_fan",
+                      "icon_animation": true,
+                      "icon": "mdi:fan",
+                      "fill_container": true,
+                      "show_percentage_control": true,
+                      "show_oscillate_control": false,
+                      "collapsible_controls": false,
+                      "name": "Ceiling Fan"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bedside_lamps",
+                  "fill_container": true,
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_temp_control": true,
+                  "show_color_control": false,
+                  "collapsible_controls": false
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.bedside_rgb_ben",
+                      "show_brightness_control": true,
+                      "use_light_color": true,
+                      "show_color_temp_control": false,
+                      "show_color_control": false,
+                      "collapsible_controls": false,
+                      "name": "Ben’s "
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.bedside_rgb_amanda",
+                      "use_light_color": true,
+                      "show_brightness_control": true,
+                      "show_color_temp_control": false,
+                      "show_color_control": false,
+                      "collapsible_controls": false,
+                      "name": "Amanda’s "
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Media",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mini-media-player",
+                  "entity": "media_player.master_bedroom_display",
+                  "toggle_power": false,
+                  "volume_stateless": false,
+                  "group": false,
+                  "replace_mute": "play_stop",
+                  "info": "scroll",
+                  "artwork": "full-cover",
+                  "source": "full",
+                  "sound_mode": "full"
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Climate",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mushroom-climate-card",
+                  "entity": "climate.upstairs_thermostat",
+                  "name": "Upstairs",
+                  "show_temperature_control": true,
+                  "icon": "mdi:thermostat-box",
+                  "fill_container": true,
+                  "layout": "vertical",
+                  "hvac_modes": [
+                    "heat_cool",
+                    "cool",
+                    "heat",
+                    "fan_only",
+                    "auto",
+                    "dry",
+                    "off"
+                  ],
+                  "primary_info": "state",
+                  "secondary_info": "last-changed",
+                  "icon_type": "icon",
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "hold_action": {
+                    "action": "more-info"
+                  },
+                  "double_tap_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.master_temperature"
+                      ],
+                      "name": "Temperature",
+                      "show": {
+                        "labels": false
+                      },
+                      "color_thresholds": [
+                        {
+                          "value": 65,
+                          "color": "#f39c12"
+                        },
+                        {
+                          "value": 70,
+                          "color": "#d35400"
+                        },
+                        {
+                          "value": 75,
+                          "color": "#c0392b"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.upstairs_thermostat_current_humidity"
+                      ],
+                      "name": "Humidity",
+                      "color": "blue",
+                      "show": {
+                        "labels": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "SleepNumber Settings",
+                  "alignment": "center",
+                  "title_tap_action": {
+                    "action": "none"
+                  },
+                  "subtitle_tap_action": {
+                    "action": "none"
+                  }
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-number-card",
+                      "entity": "number.sleepnumber_sleep_number_benjamin_firmness",
+                      "display_mode": "buttons",
+                      "layout": "vertical",
+                      "name": "Ben’s Side",
+                      "icon_color": "red",
+                      "fill_container": false
+                    },
+                    {
+                      "type": "custom:mushroom-number-card",
+                      "entity": "number.sleepnumber_sleep_number_amanda_firmness",
+                      "display_mode": "buttons",
+                      "name": "Amanda’s Side",
+                      "layout": "vertical",
+                      "icon_color": "cyan"
+                    }
+                  ]
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.sleepnumber_sleep_number_benjamin_pressure"
+                      ],
+                      "name": "Ben",
+                      "show": {
+                        "labels": false
+                      }
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.sleepnumber_sleep_number_amanda_pressure"
+                      ],
+                      "name": "Amanda",
+                      "show": {
+                        "labels": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Packages",
+          "path": "Mail and Packages",
+          "icon": "mdi:truck-delivery",
+          "theme": "Mushroom Square Shadow",
+          "badges": [],
+          "cards": [
+            {
+              "square": false,
+              "type": "grid",
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "US Postal Service",
+                  "alignment": "center"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.mail_usps_mail",
+                      "icon": "mdi:mailbox-outline",
+                      "secondary_info": "last-changed"
+                    },
+                    {
+                      "entity": "sensor.mail_usps_packages",
+                      "icon": "mdi:package-variant",
+                      "secondary_info": "last-changed"
+                    },
+                    {
+                      "entity": "sensor.mail_usps_delivered",
+                      "icon": "mdi:truck-delivery",
+                      "secondary_info": "last-changed"
+                    }
+                  ],
+                  "state_color": true,
+                  "theme": "Mushroom Square"
+                }
+              ]
+            },
+            {
+              "square": false,
+              "type": "grid",
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Amazon Orders",
+                  "alignment": "center"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.mail_amazon_packages",
+                      "icon": "mdi:package-variant",
+                      "secondary_info": "last-changed"
+                    },
+                    {
+                      "entity": "sensor.mail_amazon_hub_packages",
+                      "icon": "mdi:package-variant-closed",
+                      "secondary_info": "last-changed"
+                    },
+                    {
+                      "entity": "sensor.mail_amazon_packages_delivered",
+                      "icon": "mdi:truck-delivery",
+                      "secondary_info": "last-changed"
+                    }
+                  ],
+                  "theme": "Mushroom Square",
+                  "show_header_toggle": true,
+                  "state_color": true
+                }
+              ]
+            },
+            {
+              "square": false,
+              "type": "grid",
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "FedEx ",
+                  "alignment": "center"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.mail_fedex_packages",
+                      "secondary_info": "last-changed"
+                    },
+                    {
+                      "entity": "sensor.mail_fedex_delivering",
+                      "secondary_info": "last-changed"
+                    }
+                  ],
+                  "state_color": true,
+                  "theme": "Mushroom Square"
+                }
+              ]
+            },
+            {
+              "square": false,
+              "type": "grid",
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "UPS ",
+                  "alignment": "center"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.mail_ups_packages",
+                      "secondary_info": "last-changed"
+                    },
+                    {
+                      "entity": "sensor.mail_ups_delivering",
+                      "secondary_info": "last-changed"
+                    },
+                    {
+                      "entity": "sensor.mail_ups_exception",
+                      "secondary_info": "last-changed"
+                    }
+                  ],
+                  "state_color": true,
+                  "theme": "Mushroom Square"
+                }
+              ]
+            },
+            {
+              "square": false,
+              "type": "grid",
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "DHL",
+                  "alignment": "center"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.mail_dhl_packages",
+                      "secondary_info": "last-changed"
+                    },
+                    {
+                      "entity": "sensor.mail_dhl_delivering",
+                      "secondary_info": "last-changed"
+                    }
+                  ],
+                  "state_color": true,
+                  "theme": "ios-dark-mode-blue-red-alternative"
+                }
+              ]
+            }
+          ],
+          "type": "custom:masonry-layout",
+          "layout": {
+            "max_cols": 2
+          }
+        },
+        {
+          "theme": "Mushroom Square Shadow",
+          "title": "Nursery ",
+          "path": "nursery",
+          "icon": "mdi:cradle-outline",
+          "subview": true,
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:mushroom-light-card",
+              "entity": "light.nursery_lamp",
+              "use_light_color": true,
+              "show_brightness_control": true,
+              "show_color_temp_control": true,
+              "show_color_control": true,
+              "fill_container": true,
+              "icon": "mdi:lamp",
+              "hold_action": {
+                "action": "more-info"
+              }
+            },
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.nursery_light",
+                  "show_brightness_control": true,
+                  "fill_container": true,
+                  "icon_color": "light-blue",
+                  "hold_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-fan-card",
+                  "entity": "fan.nursery_fan",
+                  "icon_animation": true,
+                  "icon": "mdi:fan",
+                  "show_percentage_control": true,
+                  "show_oscillate_control": true,
+                  "icon_type": "icon",
+                  "hold_action": {
+                    "action": "more-info"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "custom:mini-media-player",
+              "entity": "media_player.nursery_display",
+              "toggle_power": false,
+              "volume_stateless": false,
+              "group": false,
+              "replace_mute": "play_stop",
+              "info": "scroll",
+              "artwork": "full-cover",
+              "source": "full",
+              "sound_mode": "full"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Climate",
+                  "alignment": "center"
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.sensor_nursery_temperature"
+                      ],
+                      "name": "Temperature",
+                      "points_per_hour": 6,
+                      "smoothing": true,
+                      "hours_to_show": 8,
+                      "animate": true,
+                      "show": {
+                        "labels": false
+                      },
+                      "color_thresholds": [
+                        {
+                          "value": 68,
+                          "color": "#00cfd3"
+                        },
+                        {
+                          "value": 73,
+                          "color": "#07d300"
+                        },
+                        {
+                          "value": 78,
+                          "color": "#d31500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "binary_sensor.nursery_rear_motion",
+                "binary_sensor.nursery_rear_occupancy",
+                "binary_sensor.nursery_side_motion",
+                "binary_sensor.nursery_side_occupancy"
+              ]
+            }
+          ]
+        },
+        {
+          "theme": "Mushroom Square Shadow",
+          "icon": "mdi:desktop-tower-monitor",
+          "title": "Office",
+          "path": "office",
+          "subview": true,
+          "badges": [],
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Lighting & Fan",
+                  "alignment": "center"
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.office_light",
+                      "fill_container": true,
+                      "use_light_color": false,
+                      "show_brightness_control": true,
+                      "show_color_temp_control": false,
+                      "collapsible_controls": false
+                    },
+                    {
+                      "type": "custom:mushroom-fan-card",
+                      "entity": "fan.office_fan",
+                      "icon": "mdi:fan",
+                      "icon_animation": true,
+                      "show_percentage_control": true,
+                      "show_oscillate_control": true,
+                      "collapsible_controls": false
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.office_lamp",
+                  "fill_container": true,
+                  "show_brightness_control": true,
+                  "use_light_color": true,
+                  "show_color_temp_control": true,
+                  "show_color_control": true,
+                  "collapsible_controls": false
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Media",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mini-media-player",
+                  "entity": "media_player.kitchen_speaker",
+                  "toggle_power": false,
+                  "volume_stateless": false,
+                  "group": false,
+                  "replace_mute": "play_stop",
+                  "info": "scroll",
+                  "artwork": "full-cover",
+                  "source": "full",
+                  "sound_mode": "full"
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Sensors",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mini-graph-card",
+                  "entities": [
+                    "sensor.office_multi_sensor_temperature"
+                  ],
+                  "show": {
+                    "labels": true
+                  },
+                  "name": "Temperature",
+                  "line_width": 4,
+                  "color_thresholds": [
+                    {
+                      "value": 60,
+                      "color": "#C9F2DC"
+                    },
+                    {
+                      "value": 70,
+                      "color": "#f2dcc9"
+                    },
+                    {
+                      "value": 80,
+                      "color": "#f2c9df"
+                    }
+                  ]
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.office_multi_sensor_humidity"
+                      ],
+                      "name": "Humidity",
+                      "line_color": "#c9f2f1",
+                      "line_width": 10,
+                      "font_size": 100
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.office_multi_sensor_illuminance"
+                      ],
+                      "name": "Lux",
+                      "line_color": "#c9dff2",
+                      "line_width": 10,
+                      "font_size": 100
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Front Porch",
+          "path": "front-porch",
+          "icon": "mdi:coach-lamp",
+          "subview": true,
+          "badges": [],
+          "cards": [
+            {
+              "show_state": true,
+              "show_name": true,
+              "camera_view": "auto",
+              "type": "picture-entity",
+              "entity": "camera.front_porch_doorbell_fluent"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "switch.front_porch_switch"
+              ]
+            },
+            {
+              "type": "custom:mushroom-light-card",
+              "entity": "light.lamp_post",
+              "use_light_color": true,
+              "show_brightness_control": true,
+              "show_color_temp_control": true,
+              "show_color_control": true,
+              "collapsible_controls": true
+            },
+            {
+              "type": "custom:mushroom-light-card",
+              "entity": "light.entry_light",
+              "show_brightness_control": true,
+              "use_light_color": true,
+              "show_color_temp_control": true,
+              "show_color_control": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.front_porch_doorbell_motion"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "theme": "Mushroom Square Shadow",
+          "icon": "mdi:sofa-outline",
+          "title": "Living Room",
+          "path": "living-room",
+          "subview": true,
+          "badges": [],
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Lighting",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.living_room_sconces",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_temp_control": true,
+                  "show_color_control": true,
+                  "fill_container": true,
+                  "collapsible_controls": false
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.living_room_lamp",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_temp_control": true,
+                  "show_color_control": true,
+                  "collapsible_controls": false
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Media",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mini-media-player",
+                  "entity": "media_player.75_tcl_roku_tv",
+                  "toggle_power": false,
+                  "volume_stateless": false,
+                  "group": false,
+                  "replace_mute": "play_stop",
+                  "info": "scroll",
+                  "artwork": "full-cover",
+                  "source": "full",
+                  "sound_mode": "full"
+                },
+                {
+                  "type": "custom:mini-media-player",
+                  "entity": "media_player.living_room_speaker",
+                  "toggle_power": false,
+                  "volume_stateless": false,
+                  "group": false,
+                  "replace_mute": "play_stop",
+                  "info": "scroll",
+                  "artwork": "full-cover",
+                  "source": "full",
+                  "sound_mode": "full"
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Climate",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mushroom-climate-card",
+                  "entity": "climate.downstairs_2",
+                  "fill_container": true,
+                  "show_temperature_control": true,
+                  "hvac_modes": [
+                    "auto",
+                    "heat",
+                    "off",
+                    "dry"
+                  ],
+                  "layout": "vertical",
+                  "collapsible_controls": false,
+                  "double_tap_action": {
+                    "action": "more-info"
+                  },
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "hold_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.downstairs_current_temperature_2"
+                      ],
+                      "name": "Temperature",
+                      "show": {
+                        "labels": false
+                      },
+                      "color_thresholds": [
+                        {
+                          "value": 65,
+                          "color": "#f39c12"
+                        },
+                        {
+                          "value": 70,
+                          "color": "#d35400"
+                        },
+                        {
+                          "value": 75,
+                          "color": "#c0392b"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.downstairs_current_humidity_2"
+                      ],
+                      "name": "Humidity",
+                      "color": "blue",
+                      "show": {
+                        "labels": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Garage",
+          "path": "garage",
+          "icon": "mdi:garage-variant",
+          "theme": "Mushroom Square Shadow",
+          "visible": [],
+          "subview": true,
+          "badges": [],
+          "cards": [
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "cover.garage_door",
+                  "icon": "mdi:garage-variant",
+                  "secondary_info": "none",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "name": "Garage"
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "primary_info": "state",
+                  "secondary_info": "last-changed",
+                  "icon": "none",
+                  "icon_type": "none",
+                  "fill_container": true,
+                  "entity": "binary_sensor.garage_door_contact"
+                }
+              ]
+            },
+            {
+              "show_state": true,
+              "show_name": true,
+              "camera_view": "auto",
+              "type": "picture-entity",
+              "entity": "camera.garage_camera_fluent"
+            },
+            {
+              "type": "custom:mushroom-light-card",
+              "show_color_control": true,
+              "show_brightness_control": true,
+              "use_light_color": true,
+              "show_color_temp_control": true,
+              "fill_container": false,
+              "hold_action": {
+                "action": "more-info"
+              },
+              "double_tap_action": {
+                "action": "none"
+              },
+              "entity": "light.garage_rear_light"
+            },
+            {
+              "show_name": true,
+              "show_icon": true,
+              "show_state": true,
+              "type": "glance",
+              "entities": [
+                {
+                  "entity": "sensor.96_gallon_toter"
+                },
+                {
+                  "entity": "sensor.curb_service_recycle_materials"
+                }
+              ],
+              "theme": "Mushroom Shadow"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.garage_motion_sensor_motion",
+                  "secondary_info": "last-changed",
+                  "name": "Motion Sensor"
+                },
+                {
+                  "entity": "sensor.garage_motion_sensor_battery",
+                  "secondary_info": "last-updated",
+                  "name": "Battery Level"
+                }
+              ],
+              "state_color": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.garage_camera_motion",
+                  "secondary_info": "last-changed",
+                  "name": "Motion Detection "
+                },
+                {
+                  "entity": "binary_sensor.garage_camera_animal",
+                  "secondary_info": "last-changed",
+                  "name": "Animal Detection "
+                },
+                {
+                  "entity": "binary_sensor.garage_camera_vehicle",
+                  "secondary_info": "last-changed",
+                  "name": "Vehicle Detection"
+                }
+              ],
+              "show_header_toggle": true,
+              "state_color": true
+            }
+          ]
+        },
+        {
+          "title": "Basement ",
+          "path": "basement",
+          "icon": "mdi:washing-machine",
+          "theme": "Mushroom Square Shadow",
+          "subview": true,
+          "type": "custom:vertical-layout",
+          "badges": [],
+          "cards": [
+            {
+              "show_state": true,
+              "show_name": true,
+              "camera_view": "auto",
+              "type": "picture-entity",
+              "entity": "camera.basement_camera_fluent"
+            },
+            {
+              "type": "custom:mushroom-lock-card",
+              "entity": "lock.basement_door_lock"
+            },
+            {
+              "type": "custom:mushroom-light-card",
+              "entity": "light.basement_rear_light",
+              "fill_container": false,
+              "use_light_color": true,
+              "show_color_temp_control": true,
+              "show_brightness_control": true,
+              "show_color_control": true
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entity",
+                  "entity": "sensor.front_load_washer",
+                  "state_color": true,
+                  "attribute": "run_state"
+                },
+                {
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "switch.front_load_washer_power",
+                      "state": "on"
+                    }
+                  ],
+                  "card": {
+                    "type": "horizontal-stack",
+                    "cards": [
+                      {
+                        "type": "entity",
+                        "entity": "sensor.front_load_washer_remaining_time"
+                      },
+                      {
+                        "type": "entity",
+                        "entity": "sensor.front_load_washer_water_temp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entity",
+                  "state_color": true,
+                  "entity": "sensor.dryer",
+                  "attribute": "run_state"
+                },
+                {
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "switch.dryer_power",
+                      "state": "on"
+                    }
+                  ],
+                  "card": {
+                    "type": "horizontal-stack",
+                    "cards": [
+                      {
+                        "type": "entity",
+                        "entity": "sensor.dryer_current_course"
+                      },
+                      {
+                        "type": "entity",
+                        "entity": "sensor.dryer_temp_control",
+                        "name": "Temperature ",
+                        "state_color": false
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.basement_door_contact_2"
+                },
+                {
+                  "entity": "binary_sensor.basement_door_motion_2"
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "update.basement_ac_pro"
+                },
+                {
+                  "entity": "button.basement_ac_pro_restart"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Den/Family Room",
+          "path": "den-family-room",
+          "icon": "mdi:fireplace",
+          "subview": true,
+          "theme": "Mushroom Square Shadow",
+          "badges": [],
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Lighting & Fan",
+                  "alignment": "center"
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "show_brightness_control": true,
+                      "fill_container": true,
+                      "collapsible_controls": false,
+                      "name": "Fan Light",
+                      "use_light_color": true,
+                      "show_color_temp_control": false,
+                      "show_color_control": false,
+                      "entity": "light.den_light"
+                    },
+                    {
+                      "type": "custom:mushroom-fan-card",
+                      "icon_animation": true,
+                      "icon": "mdi:fan",
+                      "fill_container": true,
+                      "show_percentage_control": true,
+                      "show_oscillate_control": false,
+                      "collapsible_controls": false,
+                      "name": "Ceiling Fan",
+                      "entity": "fan.den_fan"
+                    }
+                  ]
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "show_brightness_control": true,
+                      "use_light_color": true,
+                      "show_color_temp_control": false,
+                      "show_color_control": false,
+                      "collapsible_controls": false,
+                      "name": "Den Lamp",
+                      "entity": "light.den_lamp"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "auto",
+              "type": "picture-entity",
+              "entity": "camera.back_door_camera_rtp_stream_0",
+              "aspect_ratio": "1.5:1"
+            },
+            {
+              "type": "custom:mushroom-chips-card",
+              "chips": [
+                {
+                  "type": "entity",
+                  "entity": "binary_sensor.back_door_motion",
+                  "icon_color": "primary"
+                },
+                {
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "binary_sensor.back_door_contact",
+                      "state_not": "on"
+                    }
+                  ],
+                  "chip": {
+                    "type": "entity",
+                    "entity": "binary_sensor.back_door_contact"
+                  }
+                }
+              ],
+              "alignment": "center"
+            },
+            {
+              "type": "custom:mushroom-lock-card",
+              "entity": "lock.back_door",
+              "fill_container": false
+            },
+            {
+              "type": "custom:apexcharts-card",
+              "header": {
+                "show": true,
+                "title": "Den/Family Room",
+                "show_states": true,
+                "colorize_states": true
+              },
+              "series": [
+                {
+                  "entity": "sensor.motion_sensor_den_family_room_temperature_2",
+                  "data_generator": ""
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.motion_sensor_den_family_room_motion_2"
+                },
+                {
+                  "entity": "sensor.motion_sensor_den_family_room_battery_2"
+                },
+                {
+                  "entity": "sensor.motion_sensor_den_family_room_illuminance_2"
+                }
+              ],
+              "title": "Motion Sensor"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.den_left_contact"
+                },
+                {
+                  "entity": "binary_sensor.den_right_contact"
+                }
+              ],
+              "title": "Window Sensors"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "update.den_ac_pro",
+                "button.den_ac_pro_restart"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Master Bedroom Display",
+          "path": "master-bedroom-display",
+          "icon": "mdi:castle",
+          "subview": true,
+          "type": "custom:horizontal-layout",
+          "theme": "minimalist-desktop",
+          "badges": [],
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Lighting & Fan",
+                  "alignment": "center"
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.bedroom_light",
+                      "show_brightness_control": true,
+                      "fill_container": true,
+                      "collapsible_controls": false,
+                      "name": "Fan Light",
+                      "use_light_color": true,
+                      "show_color_temp_control": false,
+                      "show_color_control": false,
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "hold_action": {
+                        "action": "more-info"
+                      }
+                    },
+                    {
+                      "type": "custom:mushroom-fan-card",
+                      "entity": "fan.bedroom_fan",
+                      "icon_animation": true,
+                      "icon": "mdi:fan",
+                      "fill_container": true,
+                      "show_percentage_control": true,
+                      "show_oscillate_control": false,
+                      "collapsible_controls": false,
+                      "name": "Ceiling Fan",
+                      "tap_action": {
+                        "action": "more-info"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bedside_lamps",
+                  "fill_container": true,
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_temp_control": true,
+                  "show_color_control": true,
+                  "collapsible_controls": false,
+                  "tap_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.bedside_rgb_ben",
+                      "show_brightness_control": true,
+                      "use_light_color": true,
+                      "show_color_temp_control": false,
+                      "show_color_control": false,
+                      "collapsible_controls": true,
+                      "name": "Ben’s "
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.bedside_rgb_amanda",
+                      "use_light_color": true,
+                      "show_brightness_control": true,
+                      "show_color_temp_control": false,
+                      "show_color_control": false,
+                      "collapsible_controls": true,
+                      "name": "Amanda’s "
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Climate",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mushroom-climate-card",
+                  "entity": "climate.upstairs_thermostat",
+                  "name": "Upstairs",
+                  "show_temperature_control": true,
+                  "icon": "mdi:thermostat-box",
+                  "fill_container": true,
+                  "layout": "vertical",
+                  "hvac_modes": [
+                    "heat_cool",
+                    "cool",
+                    "heat",
+                    "fan_only",
+                    "auto",
+                    "dry",
+                    "off"
+                  ],
+                  "primary_info": "state",
+                  "secondary_info": "last-changed",
+                  "icon_type": "icon",
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "hold_action": {
+                    "action": "more-info"
+                  },
+                  "double_tap_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.master_temperature"
+                      ],
+                      "name": "Temperature",
+                      "show": {
+                        "labels": false
+                      },
+                      "color_thresholds": [
+                        {
+                          "value": 65,
+                          "color": "#f39c12"
+                        },
+                        {
+                          "value": 70,
+                          "color": "#d35400"
+                        },
+                        {
+                          "value": 75,
+                          "color": "#c0392b"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.upstairs_thermostat_current_humidity"
+                      ],
+                      "name": "Humidity",
+                      "color": "blue",
+                      "show": {
+                        "labels": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "4760 Child Drive"
+    }
+  }
+}

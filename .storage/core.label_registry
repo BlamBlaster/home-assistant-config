@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "core.label_registry",
+  "data": {
+    "labels": [
+      {
+        "color": "pink",
+        "description": null,
+        "icon": "mdi:leak",
+        "label_id": "sensor",
+        "name": "Sensor",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "color": "accent",
+        "description": null,
+        "icon": "mdi:thermostat",
+        "label_id": "thermostat",
+        "name": "Thermostat",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "color": "purple",
+        "description": null,
+        "icon": "mdi:door",
+        "label_id": "door_contact",
+        "name": "Door Contact",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "color": "teal",
+        "description": null,
+        "icon": "mdi:cctv",
+        "label_id": "camera",
+        "name": "Camera",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "color": "orange",
+        "description": null,
+        "icon": "mdi:home-lock",
+        "label_id": "lock",
+        "name": "Lock",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "color": "lime",
+        "description": null,
+        "icon": "mdi:remote-tv",
+        "label_id": "controller",
+        "name": "Controller",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "color": "dark-grey",
+        "description": null,
+        "icon": "mdi:home-lightning-bolt",
+        "label_id": "energy",
+        "name": "Energy",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "color": "red",
+        "description": null,
+        "icon": "mdi:alarm-light",
+        "label_id": "alert",
+        "name": "Alert",
+        "created_at": "2024-11-30T20:46:21.739418+00:00",
+        "modified_at": "2024-11-30T20:46:21.739427+00:00"
+      },
+      {
+        "color": "yellow",
+        "description": "Used for notification send to a phone",
+        "icon": "mdi:cellphone-text",
+        "label_id": "notification",
+        "name": "Notification",
+        "created_at": "2025-03-10T11:33:08.586686+00:00",
+        "modified_at": "2025-03-10T11:33:08.586694+00:00"
+      },
+      {
+        "color": "blue",
+        "description": null,
+        "icon": "mdi:thermometer",
+        "label_id": "temperature",
+        "name": "Temperature",
+        "created_at": "2025-03-21T22:30:07.623233+00:00",
+        "modified_at": "2025-03-21T22:30:07.623239+00:00"
+      },
+      {
+        "color": "accent",
+        "description": null,
+        "icon": "mdi:window-closed",
+        "label_id": "door_window",
+        "name": "Window Contact",
+        "created_at": "2025-06-05T15:42:28.273143+00:00",
+        "modified_at": "2025-06-05T15:44:09.654702+00:00"
+      }
+    ]
+  }
+}

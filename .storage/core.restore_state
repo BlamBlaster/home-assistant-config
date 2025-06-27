@@ -1,0 +1,1980 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"2024-11-29T23:45:11.217053+00:00","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-06-19T23:28:24.789252+00:00","last_reported":"2025-06-19T23:28:24.789252+00:00","last_updated":"2025-06-19T23:28:24.789252+00:00","context":{"id":"01JY58BA6N3FGD7EAEYE7RSR6D","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.backup_automatic_backup","state":"2025-06-27T09:08:39.651+00:00","attributes":{"event_types":["completed","failed","in_progress"],"event_type":"completed","backup_stage":null,"failed_reason":null,"friendly_name":"Backup Automatic backup"},"last_changed":"2025-06-27T09:08:39.651506+00:00","last_reported":"2025-06-27T09:08:39.651506+00:00","last_updated":"2025-06-27T09:08:39.651506+00:00","context":{"id":"01JYRAAT338WMRSJPYQP55CDZQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "completed",
+        "last_event_attributes": {
+          "backup_stage": null,
+          "failed_reason": null
+        }
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"stt.home_assistant_cloud","state":"unknown","attributes":{"friendly_name":"Home Assistant Cloud"},"last_changed":"2025-06-19T23:28:26.070185+00:00","last_reported":"2025-06-19T23:28:26.070185+00:00","last_updated":"2025-06-19T23:28:26.070185+00:00","context":{"id":"01JY58BBEPFMBT0G7HGJNKMPYN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.home_assistant_cloud","state":"2024-05-28T22:11:08.783325+00:00","attributes":{"friendly_name":"Home Assistant Cloud"},"last_changed":"2025-06-19T23:28:26.070843+00:00","last_reported":"2025-06-19T23:28:26.070843+00:00","last_updated":"2025-06-19T23:28:26.070843+00:00","context":{"id":"01JY58BBEPQJ8VX3GVBWPPPZ1B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"scene.halloweeen","state":"2024-11-30T21:25:39.515648+00:00","attributes":{"entity_id":["light.lamp_post","light.entry_light","light.den_lamp","light.living_room_sconces","light.living_room_lamp","light.entryway_2"],"id":"1730248496191","icon":"mdi:halloween","friendly_name":"Halloweeen"},"last_changed":"2025-06-19T23:28:26.074878+00:00","last_reported":"2025-06-19T23:28:26.074878+00:00","last_updated":"2025-06-19T23:28:26.074878+00:00","context":{"id":"01JY58BBET3FP7PEZHBA4CYC88","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.fan_speed_index","state":"5.0","attributes":{"initial":null,"editable":true,"min":0.0,"max":6.0,"step":1.0,"mode":"box","friendly_name":"Fan Speed Index"},"last_changed":"2025-06-22T09:15:04.379329+00:00","last_reported":"2025-06-22T09:15:04.379329+00:00","last_updated":"2025-06-22T09:15:04.379329+00:00","context":{"id":"01JYBEPYMBED43WFYG5CQMRC61","parent_id":null,"user_id":"c722e9c4c017439782dcc839ac464d33"}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.previous_hvac_temp_downstairs","state":"72.0","attributes":{"initial":null,"editable":true,"min":50.0,"max":90.0,"step":1.0,"mode":"slider","icon":"mdi:home-thermometer-outline","friendly_name":"Previous HVAC Temp Downstairs"},"last_changed":"2025-06-19T23:28:26.147075+00:00","last_reported":"2025-06-19T23:28:26.147075+00:00","last_updated":"2025-06-19T23:28:26.147075+00:00","context":{"id":"01JY58BBH370EK5TXMKX5EAJR4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.previous_hvac_temp_upstairs","state":"72.0","attributes":{"initial":null,"editable":true,"min":50.0,"max":90.0,"step":1.0,"mode":"slider","icon":"mdi:home-thermometer-outline","friendly_name":"Previous HVAC Temp Upstairs"},"last_changed":"2025-06-19T23:28:26.147238+00:00","last_reported":"2025-06-19T23:28:26.147238+00:00","last_updated":"2025-06-19T23:28:26.147238+00:00","context":{"id":"01JY58BBH3R2C43JPJTK51MMMR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.fan_speed_controller","state":"0.0","attributes":{"initial":null,"editable":true,"min":0.0,"max":100.0,"step":1.0,"mode":"slider","friendly_name":"Fan Speed Controller"},"last_changed":"2025-06-19T23:28:26.147378+00:00","last_reported":"2025-06-19T23:28:26.147378+00:00","last_updated":"2025-06-19T23:28:26.147378+00:00","context":{"id":"01JY58BBH3W1JM9XP12TF7VJ1W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.fan_descending","state":"off","attributes":{"editable":true,"friendly_name":" Fan Descending"},"last_changed":"2025-06-22T09:14:19.249328+00:00","last_reported":"2025-06-22T09:14:25.801408+00:00","last_updated":"2025-06-22T09:14:19.249328+00:00","context":{"id":"01JYBENJJWWZHDFA1EP2V045J5","parent_id":null,"user_id":"c722e9c4c017439782dcc839ac464d33"}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.both_in_bed","state":"off","attributes":{"editable":true,"friendly_name":"Both in Bed"},"last_changed":"2025-06-19T23:28:26.147898+00:00","last_reported":"2025-06-19T23:28:26.147898+00:00","last_updated":"2025-06-19T23:28:26.147898+00:00","context":{"id":"01JY58BBH3BWVCSXNYZCGDDFJ8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.fan_auto_enabled","state":"on","attributes":{"editable":true,"icon":"mdi:fan-alert","friendly_name":"Fan Auto Enabled"},"last_changed":"2025-06-19T23:28:26.148038+00:00","last_reported":"2025-06-19T23:28:26.148038+00:00","last_updated":"2025-06-19T23:28:26.148038+00:00","context":{"id":"01JY58BBH4KE3QTHJ5NJRPWZ8M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.hvac_pause_active","state":"off","attributes":{"editable":true,"friendly_name":"HVAC Pause Active"},"last_changed":"2025-06-19T23:28:26.148249+00:00","last_reported":"2025-06-19T23:28:26.148249+00:00","last_updated":"2025-06-19T23:28:26.148249+00:00","context":{"id":"01JY58BBH4VNRGJVRTG5BD3WR0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"person.benjamin","state":"home","attributes":{"editable":true,"id":"benjamin","device_trackers":["device_tracker.benjamins_ipad_2","device_tracker.benjamins_iphone_16"],"latitude":40.34957523782939,"longitude":-80.00322755604725,"gps_accuracy":9,"source":"device_tracker.benjamins_iphone_16","user_id":"c722e9c4c017439782dcc839ac464d33","entity_picture":"/api/image/serve/3e4c1acc8a9084f2bc54992b7aede86e/512x512","friendly_name":"Benjamin"},"last_changed":"2025-06-27T11:37:25.070140+00:00","last_reported":"2025-06-27T11:41:03.483661+00:00","last_updated":"2025-06-27T11:41:03.483661+00:00","context":{"id":"01JYRK1VKVS3Q14D4ZQSXYTRSC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"person.amanda","state":"home","attributes":{"editable":true,"id":"amanda","device_trackers":["device_tracker.iphone"],"latitude":40.3495774339926,"longitude":-80.00320019782437,"gps_accuracy":9,"source":"device_tracker.iphone","user_id":"78befb7d8ea5495ca41054080780b710","entity_picture":"/api/image/serve/99a6046611ef5bbdd6b2e4ae6a0f530b/512x512","friendly_name":"Amanda"},"last_changed":"2025-06-22T02:52:30.099033+00:00","last_reported":"2025-06-22T02:52:30.099033+00:00","last_updated":"2025-06-22T02:52:30.099033+00:00","context":{"id":"01JYARTEGKVTX9FHPQ2SBCC6MM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_text.previous_hvac_mode_upstairs","state":"off","attributes":{"editable":true,"min":0,"max":100,"pattern":null,"mode":"text","icon":"mdi:home-thermometer","friendly_name":"Previous HVAC Mode Upstairs"},"last_changed":"2025-06-19T23:28:26.168699+00:00","last_reported":"2025-06-19T23:28:26.168699+00:00","last_updated":"2025-06-19T23:28:26.168699+00:00","context":{"id":"01JY58BBHRQH9H3WSCC4WH74MC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_text.previous_hvac_mode_downstairs","state":"off","attributes":{"editable":true,"min":0,"max":100,"pattern":null,"mode":"text","icon":"mdi:home-thermometer","friendly_name":"Previous HVAC Mode Downstairs"},"last_changed":"2025-06-19T23:28:26.168912+00:00","last_reported":"2025-06-19T23:28:26.168912+00:00","last_updated":"2025-06-19T23:28:26.168912+00:00","context":{"id":"01JY58BBHRFTFBJJ5KV5ECXRJ7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_text.previous_upstairs_mode_select","state":"sleep","attributes":{"editable":true,"min":0,"max":100,"pattern":null,"mode":"text","friendly_name":"previous upstairs mode select"},"last_changed":"2025-06-19T23:28:26.169041+00:00","last_reported":"2025-06-19T23:28:26.169041+00:00","last_updated":"2025-06-19T23:28:26.169041+00:00","context":{"id":"01JY58BBHSKAEGTFE7NNG12V7C","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"input_text.previous_downstairs_mode_select","state":"unknown","attributes":{"editable":true,"min":0,"max":100,"pattern":null,"mode":"text","friendly_name":"previous downstairs mode select"},"last_changed":"2025-06-19T23:28:26.169188+00:00","last_reported":"2025-06-19T23:28:26.169188+00:00","last_updated":"2025-06-19T23:28:26.169188+00:00","context":{"id":"01JY58BBHS82JJBAK3ZD0D019B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.left_us_8_60w_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Left - US-8-60W Restart"},"last_changed":"2025-06-19T23:28:45.742195+00:00","last_reported":"2025-06-19T23:29:01.680995+00:00","last_updated":"2025-06-19T23:28:45.742195+00:00","context":{"id":"01JY58BYNE2WTD890S77YHBMPN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.right_us_8_60w_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Right - US-8-60W Restart"},"last_changed":"2025-06-19T23:28:45.743340+00:00","last_reported":"2025-06-19T23:29:01.682032+00:00","last_updated":"2025-06-19T23:28:45.743340+00:00","context":{"id":"01JY58BYNFR0HSTC5FY4E4E10F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.office_ac_pro_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Office-AC-Pro Restart"},"last_changed":"2025-06-19T23:28:45.743811+00:00","last_reported":"2025-06-19T23:29:01.679415+00:00","last_updated":"2025-06-19T23:28:45.743811+00:00","context":{"id":"01JY58BYNFPGTJG000Q3JEDTH2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.basement_ac_pro_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Basement-AC-Pro Restart"},"last_changed":"2025-06-19T23:28:45.744204+00:00","last_reported":"2025-06-19T23:29:01.679888+00:00","last_updated":"2025-06-19T23:28:45.744204+00:00","context":{"id":"01JY58BYNGNPBYJCSDRX9FC628","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.dream_machine_pro_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Dream Machine Pro Restart"},"last_changed":"2025-06-19T23:28:45.745182+00:00","last_reported":"2025-06-19T23:29:01.687796+00:00","last_updated":"2025-06-19T23:28:45.745182+00:00","context":{"id":"01JY58BYNHZ3BCT9GRARC8NAPV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.den_ac_pro_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Den-AC-Pro Restart"},"last_changed":"2025-06-19T23:28:45.745772+00:00","last_reported":"2025-06-19T23:29:01.678188+00:00","last_updated":"2025-06-19T23:28:45.745772+00:00","context":{"id":"01JY58BYNH8TK9CVCPX789VXSJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.master_bedroom_ac_pro_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Master Bedroom-AC-Pro Restart"},"last_changed":"2025-06-19T23:28:45.746237+00:00","last_reported":"2025-06-19T23:29:01.678931+00:00","last_updated":"2025-06-19T23:28:45.746237+00:00","context":{"id":"01JY58BYNJRTSJT7TH4K12HC7R","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.living_room_ac_pro_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Living Room-AC-Pro Restart"},"last_changed":"2025-06-19T23:28:45.746621+00:00","last_reported":"2025-06-19T23:29:01.682884+00:00","last_updated":"2025-06-19T23:28:45.746621+00:00","context":{"id":"01JY58BYNJ074E9W3G1QWYZS61","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.office_flex_mini_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Switch Flex Mini Restart"},"last_changed":"2025-06-19T23:28:45.746996+00:00","last_reported":"2025-06-19T23:29:01.680262+00:00","last_updated":"2025-06-19T23:28:45.746996+00:00","context":{"id":"01JY58BYNJ72GM1NTXAQWFCKBF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.left_us_8_60w_port_5_power_cycle","state":"unavailable","attributes":{"device_class":"restart","friendly_name":"Left - US-8-60W Port 5 Power Cycle"},"last_changed":"2025-06-19T23:28:45.747321+00:00","last_reported":"2025-06-19T23:29:01.681571+00:00","last_updated":"2025-06-19T23:28:45.747321+00:00","context":{"id":"01JY58BYNK3CMP6C0F1QY51XWB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.left_us_8_60w_port_6_power_cycle","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Left - US-8-60W Port 6 Power Cycle"},"last_changed":"2025-06-25T12:15:31.998788+00:00","last_reported":"2025-06-25T12:15:41.653849+00:00","last_updated":"2025-06-25T12:15:31.998788+00:00","context":{"id":"01JYKG7HMYPVSXS6H826CKR6EA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.left_us_8_60w_port_7_power_cycle","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Left - US-8-60W Port 7 Power Cycle"},"last_changed":"2025-06-25T12:15:31.999002+00:00","last_reported":"2025-06-25T12:15:41.653955+00:00","last_updated":"2025-06-25T12:15:31.999002+00:00","context":{"id":"01JYKG7HMZX2NT7P9N8H8ZQPDH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.left_us_8_60w_port_8_power_cycle","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Left - US-8-60W Port 8 Power Cycle"},"last_changed":"2025-06-25T12:15:31.999166+00:00","last_reported":"2025-06-25T12:15:41.654057+00:00","last_updated":"2025-06-25T12:15:31.999166+00:00","context":{"id":"01JYKG7HMZCE7EHCPAGBGAW02D","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.right_us_8_60w_port_5_power_cycle","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Right - US-8-60W Port 5 Power Cycle"},"last_changed":"2025-06-25T12:15:22.581626+00:00","last_reported":"2025-06-25T12:15:41.648992+00:00","last_updated":"2025-06-25T12:15:22.581626+00:00","context":{"id":"01JYKG78EN9NMX56G1XRWJQE4M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.right_us_8_60w_port_6_power_cycle","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Right - US-8-60W Port 6 Power Cycle"},"last_changed":"2025-06-26T00:43:17.492783+00:00","last_reported":"2025-06-26T00:44:03.290741+00:00","last_updated":"2025-06-26T00:43:17.492783+00:00","context":{"id":"01JYMV0QKMBN2JKJJPXB0H3QQF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.right_us_8_60w_port_7_power_cycle","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Right - US-8-60W Port 7 Power Cycle"},"last_changed":"2025-06-25T12:15:22.582049+00:00","last_reported":"2025-06-25T12:15:41.649387+00:00","last_updated":"2025-06-25T12:15:22.582049+00:00","context":{"id":"01JYKG78EP2BBEEQX173XDE8M5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.right_us_8_60w_port_8_power_cycle","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Right - US-8-60W Port 8 Power Cycle"},"last_changed":"2025-06-25T12:15:22.582232+00:00","last_reported":"2025-06-25T12:15:41.649534+00:00","last_updated":"2025-06-25T12:15:22.582232+00:00","context":{"id":"01JYKG78EP68J9B9ZN7PG0B0BM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.left_us_8_60w","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"7.1.26.15869","in_progress":false,"latest_version":"7.1.26.15869","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/unifi/icon.png","friendly_name":"Left - US-8-60W","supported_features":5},"last_changed":"2025-06-19T23:28:45.873659+00:00","last_reported":"2025-06-19T23:29:01.681498+00:00","last_updated":"2025-06-19T23:28:45.873659+00:00","context":{"id":"01JY58BYSHH9TXDMWNW4C4WAAP","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.right_us_8_60w","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"7.1.26.15869","in_progress":false,"latest_version":"7.1.26.15869","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/unifi/icon.png","friendly_name":"Right - US-8-60W","supported_features":5},"last_changed":"2025-06-19T23:28:45.874034+00:00","last_reported":"2025-06-19T23:29:01.682317+00:00","last_updated":"2025-06-19T23:28:45.874034+00:00","context":{"id":"01JY58BYSJX8FKGC7QWHRC3FA7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.office_ac_pro","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"6.6.77.15402","in_progress":false,"latest_version":"6.6.77.15402","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/unifi/icon.png","friendly_name":"Office-AC-Pro","supported_features":5},"last_changed":"2025-06-19T23:28:45.874349+00:00","last_reported":"2025-06-19T23:29:01.679744+00:00","last_updated":"2025-06-19T23:28:45.874349+00:00","context":{"id":"01JY58BYSJM2R7ENB7RTXZ0J8S","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.basement_ac_pro","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"6.6.77.15402","in_progress":false,"latest_version":"6.6.77.15402","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/unifi/icon.png","friendly_name":"Basement-AC-Pro","supported_features":5},"last_changed":"2025-06-19T23:28:45.874663+00:00","last_reported":"2025-06-19T23:29:01.680169+00:00","last_updated":"2025-06-19T23:28:45.874663+00:00","context":{"id":"01JY58BYSJTJZDNNN9XMCXY4CY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.dream_machine_pro","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"4.2.12.23607","in_progress":false,"latest_version":"4.2.12.23607","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/unifi/icon.png","friendly_name":"Dream Machine Pro","supported_features":5},"last_changed":"2025-06-19T23:28:45.875102+00:00","last_reported":"2025-06-19T23:29:01.688653+00:00","last_updated":"2025-06-19T23:28:45.875102+00:00","context":{"id":"01JY58BYSKZX9GHYJRWF2Y5ZH4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.den_ac_pro","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"6.6.77.15402","in_progress":false,"latest_version":"6.6.77.15402","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/unifi/icon.png","friendly_name":"Den-AC-Pro","supported_features":5},"last_changed":"2025-06-19T23:28:45.875455+00:00","last_reported":"2025-06-19T23:29:01.678738+00:00","last_updated":"2025-06-19T23:28:45.875455+00:00","context":{"id":"01JY58BYSK25VBBH761DNY5Q60","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.master_bedroom_ac_pro","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"6.6.77.15402","in_progress":false,"latest_version":"6.6.77.15402","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/unifi/icon.png","friendly_name":"Master Bedroom-AC-Pro","supported_features":5},"last_changed":"2025-06-19T23:28:45.875815+00:00","last_reported":"2025-06-19T23:29:01.679253+00:00","last_updated":"2025-06-19T23:28:45.875815+00:00","context":{"id":"01JY58BYSKQ52ZMMHKT6SNSRBG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.living_room_ac_pro","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"6.6.77.15402","in_progress":false,"latest_version":"6.6.77.15402","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/unifi/icon.png","friendly_name":"Living Room-AC-Pro","supported_features":5},"last_changed":"2025-06-19T23:28:45.876112+00:00","last_reported":"2025-06-19T23:29:01.683174+00:00","last_updated":"2025-06-19T23:28:45.876112+00:00","context":{"id":"01JY58BYSMHFTZ17WRZD7FQ0NX","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.office_flex_mini","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2.1.3.755","in_progress":false,"latest_version":"2.1.3.755","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/unifi/icon.png","friendly_name":"Switch Flex Mini","supported_features":5},"last_changed":"2025-06-19T23:28:45.876487+00:00","last_reported":"2025-06-19T23:29:01.680876+00:00","last_updated":"2025-06-19T23:28:45.876487+00:00","context":{"id":"01JY58BYSM40J4GZ8196SK62Q4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.amandas_macbook_pro_camera_in_use","state":"off","attributes":{"icon":"mdi:camera-off","friendly_name":"Amanda’s MacBook Pro Camera In Use"},"last_changed":"2025-06-19T23:28:46.762233+00:00","last_reported":"2025-06-19T23:28:46.762233+00:00","last_updated":"2025-06-19T23:28:46.762233+00:00","context":{"id":"01JY58BZNAZWQ2931PK3JRVVDF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.amandas_macbook_pro_audio_input_in_use","state":"off","attributes":{"icon":"mdi:microphone-off","friendly_name":"Amanda’s MacBook Pro Audio Input In Use"},"last_changed":"2025-06-19T23:28:46.762582+00:00","last_reported":"2025-06-19T23:28:46.762582+00:00","last_updated":"2025-06-19T23:28:46.762582+00:00","context":{"id":"01JY58BZNA7X0DG344FP28H74S","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.amandas_macbook_pro_audio_output_in_use","state":"off","attributes":{"icon":"mdi:volume-low","friendly_name":"Amanda’s MacBook Pro Audio Output In Use"},"last_changed":"2025-06-19T23:28:46.762971+00:00","last_reported":"2025-06-19T23:28:46.762971+00:00","last_updated":"2025-06-19T23:28:46.762971+00:00","context":{"id":"01JY58BZNA1NGWFFC4MCVFWV90","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.amandas_macbook_pro_active","state":"off","attributes":{"Fast User Switched":false,"Idle":false,"Locked":false,"Screen Off":false,"Screensaver":false,"Sleeping":false,"Terminating":true,"icon":"mdi:monitor-off","friendly_name":"Amanda’s MacBook Pro Active"},"last_changed":"2025-06-19T23:28:46.763195+00:00","last_reported":"2025-06-19T23:28:46.763195+00:00","last_updated":"2025-06-19T23:28:46.763195+00:00","context":{"id":"01JY58BZNB5M6YV7Y45YQXW6PK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.amandas_macbook_pro_focus","state":"on","attributes":{"icon":"mdi:moon-waning-crescent","friendly_name":"Amanda’s MacBook Pro Focus"},"last_changed":"2025-06-19T23:28:46.763387+00:00","last_reported":"2025-06-19T23:28:46.763387+00:00","last_updated":"2025-06-19T23:28:46.763387+00:00","context":{"id":"01JY58BZNBXZHM0R28ZHZBENEZ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.amandas_macbook_pro","state":"home","attributes":{"source_type":"gps","battery_level":4,"latitude":40.34985214158991,"longitude":-80.00272239206228,"gps_accuracy":73,"altitude":0,"friendly_name":"Amanda’s MacBook Pro"},"last_changed":"2025-06-19T23:28:46.764245+00:00","last_reported":"2025-06-19T23:28:46.764245+00:00","last_updated":"2025-06-19T23:28:46.764245+00:00","context":{"id":"01JY58BZNCA3857VC0X7W7K3SG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_internal_battery_level","state":"11","attributes":{"Battery Provides Time Remaining":true,"BatteryHealth":"Good","BatteryHealthCondition":"","Current":3733,"Current Capacity":11,"DesignCycleCount":1000,"Hardware Serial Number":"D869441A3CZK7LN5Q","Is Charging":true,"Is Finishing Charge":false,"Is Present":true,"LPM Active":false,"Max Capacity":100,"Name":"InternalBattery-0","Optimized Battery Charging Engaged":false,"Power Source ID":7929955,"Power Source State":"AC Power","Time to Empty":0,"Time to Full Charge":170,"Transport Type":"Internal","Type":"InternalBattery","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-outline","friendly_name":"Amanda’s MacBook Pro Internal Battery Level"},"last_changed":"2025-06-19T23:28:46.765734+00:00","last_reported":"2025-06-19T23:28:46.765734+00:00","last_updated":"2025-06-19T23:28:46.765734+00:00","context":{"id":"01JY58BZNDCA4ZF30SCYW0FFPZ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 11,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_internal_battery_state","state":"Charging","attributes":{"Battery Provides Time Remaining":true,"BatteryHealth":"Good","BatteryHealthCondition":"","Current":3733,"Current Capacity":11,"DesignCycleCount":1000,"Hardware Serial Number":"D869441A3CZK7LN5Q","Is Charging":true,"Is Finishing Charge":false,"Is Present":true,"Low Power Mode":false,"LPM Active":false,"Max Capacity":100,"Name":"InternalBattery-0","Optimized Battery Charging Engaged":false,"Power Source ID":7929955,"Power Source State":"AC Power","Time to Empty":0,"Time to Full Charge":170,"Transport Type":"Internal","Type":"InternalBattery","icon":"mdi:battery-outline","friendly_name":"Amanda’s MacBook Pro Internal Battery State"},"last_changed":"2025-06-19T23:28:46.766154+00:00","last_reported":"2025-06-19T23:28:46.766154+00:00","last_updated":"2025-06-19T23:28:46.766154+00:00","context":{"id":"01JY58BZNE5V7FS7V6RY9KEXAN","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_connection_type","state":"Wi-Fi","attributes":{"Hardware Address":"f8:ff:c2:2d:27:1c","Name":"Wi-Fi","icon":"mdi:wifi","friendly_name":"Amanda’s MacBook Pro Connection Type"},"last_changed":"2025-06-19T23:28:46.766433+00:00","last_reported":"2025-06-19T23:28:46.766433+00:00","last_updated":"2025-06-19T23:28:46.766433+00:00","context":{"id":"01JY58BZNE8MESBBZ3KYT6YSXT","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Wi-Fi",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_storage","state":"91.56","attributes":{"Available":"878.10 GB","Available (Important)":"928.54 GB","Available (Opportunistic)":"915.81 GB","Total":"1,000.24 GB","unit_of_measurement":"% available","icon":"mdi:database","friendly_name":"Amanda’s MacBook Pro Storage"},"last_changed":"2025-06-19T23:28:46.766769+00:00","last_reported":"2025-06-19T23:28:46.766769+00:00","last_updated":"2025-06-19T23:28:46.766769+00:00","context":{"id":"01JY58BZNEBZ78BKTSJKXC12PQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "91.56",
+        "native_unit_of_measurement": "% available"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_ssid","state":"Child-Wifi","attributes":{"icon":"mdi:wifi","friendly_name":"Amanda’s MacBook Pro SSID"},"last_changed":"2025-06-19T23:28:46.767208+00:00","last_reported":"2025-06-19T23:28:46.767208+00:00","last_updated":"2025-06-19T23:28:46.767208+00:00","context":{"id":"01JY58BZNF2PAKEQZJ19AY7D56","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Child-Wifi",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_bssid","state":"1c:f2:9a:82:af:af","attributes":{"icon":"mdi:wifi-star","friendly_name":"Amanda’s MacBook Pro BSSID"},"last_changed":"2025-06-19T23:28:46.768119+00:00","last_reported":"2025-06-19T23:28:46.768119+00:00","last_updated":"2025-06-19T23:28:46.768119+00:00","context":{"id":"01JY58BZNGS14P3646P3DCWBCT","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "1c:f2:9a:82:af:af",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_geocoded_location","state":"156 Divine Dr\nWhitehall PA 15236\nUnited States","attributes":{"Administrative Area":"PA","Areas Of Interest":"N/A","Country":"United States","Inland Water":"N/A","ISO Country Code":"US","Locality":"Whitehall","Location":[40.34998260249082,-80.00293968077185],"Name":"156 Divine Dr","Ocean":"N/A","Postal Code":"15236","Sub Administrative Area":"Allegheny County","Sub Locality":"N/A","Sub Thoroughfare":"156","Thoroughfare":"Divine Dr","Time Zone":"America/New_York","Zones":["Home"],"icon":"mdi:map","friendly_name":"Amanda’s MacBook Pro Geocoded Location"},"last_changed":"2025-06-19T23:28:46.768840+00:00","last_reported":"2025-06-19T23:28:46.768840+00:00","last_updated":"2025-06-19T23:28:46.768840+00:00","context":{"id":"01JY58BZNGRTXGQSSGECQR3KNP","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "156 Divine Dr\nWhitehall PA 15236\nUnited States",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_active_camera","state":"Inactive","attributes":{"Active Camera":[],"All Camera":["FaceTime HD Camera (Built-in)","Benjamin’s iPhone 14 Camera","Benjamin’s iPhone 14 Desk View Camera"],"icon":"mdi:camera-off","friendly_name":"Amanda’s MacBook Pro Active Camera"},"last_changed":"2025-06-19T23:28:46.769283+00:00","last_reported":"2025-06-19T23:28:46.769283+00:00","last_updated":"2025-06-19T23:28:46.769283+00:00","context":{"id":"01JY58BZNHFXQS22Y3V8A0JNXD","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Inactive",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_active_audio_input","state":"Inactive","attributes":{"Active Audio Input":[],"All Audio Input":["Benjamin’s iPhone 14 Microphone","MacBook Pro Microphone"],"icon":"mdi:microphone-off","friendly_name":"Amanda’s MacBook Pro Active Audio Input"},"last_changed":"2025-06-19T23:28:46.769621+00:00","last_reported":"2025-06-19T23:28:46.769621+00:00","last_updated":"2025-06-19T23:28:46.769621+00:00","context":{"id":"01JY58BZNHVSS336Z9EJ8440K3","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Inactive",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_active_audio_output","state":"Inactive","attributes":{"Active Audio Output":[],"All Audio Output":["MacBook Pro Speakers"],"icon":"mdi:volume-low","friendly_name":"Amanda’s MacBook Pro Active Audio Output"},"last_changed":"2025-06-19T23:28:46.769970+00:00","last_reported":"2025-06-19T23:28:46.769970+00:00","last_updated":"2025-06-19T23:28:46.769970+00:00","context":{"id":"01JY58BZNHEP2WYA9YZTPJPM25","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Inactive",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_displays","state":"1","attributes":{"Display IDs":["6A695234-3342-838E-8749-15310810C7B9"],"Display Names":["Built-in Retina Display"],"icon":"mdi:monitor-multiple","friendly_name":"Amanda’s MacBook Pro Displays"},"last_changed":"2025-06-19T23:28:46.770305+00:00","last_reported":"2025-06-19T23:28:46.770305+00:00","last_updated":"2025-06-19T23:28:46.770305+00:00","context":{"id":"01JY58BZNJJD09C7PFQ88K79S0","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 1,
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_primary_display_name","state":"Built-in Retina Display","attributes":{"icon":"mdi:monitor-star","friendly_name":"Amanda’s MacBook Pro Primary Display Name"},"last_changed":"2025-06-19T23:28:46.770657+00:00","last_reported":"2025-06-19T23:28:46.770657+00:00","last_updated":"2025-06-19T23:28:46.770657+00:00","context":{"id":"01JY58BZNJPEKBJAWRZZJZNJ1T","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Built-in Retina Display",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_primary_display_id","state":"6A695234-3342-838E-8749-15310810C7B9","attributes":{"icon":"mdi:monitor-star","friendly_name":"Amanda’s MacBook Pro Primary Display ID"},"last_changed":"2025-06-19T23:28:46.771025+00:00","last_reported":"2025-06-19T23:28:46.771025+00:00","last_updated":"2025-06-19T23:28:46.771025+00:00","context":{"id":"01JY58BZNKGHEB21S7RNBH464S","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "6A695234-3342-838E-8749-15310810C7B9",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_frontmost_app","state":"Messages","attributes":{"Bundle Identifier":"com.apple.MobileSMS","Is Hidden":false,"Launch Date":"2023-09-12T21:22:39Z","Owns Menu Bar":true,"icon":"mdi:traffic-light","friendly_name":"Amanda’s MacBook Pro Frontmost App"},"last_changed":"2025-06-19T23:28:46.771345+00:00","last_reported":"2025-06-19T23:28:46.771345+00:00","last_updated":"2025-06-19T23:28:46.771345+00:00","context":{"id":"01JY58BZNKX3QXY7GWG3C8Y31M","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Messages",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.amandas_macbook_pro_last_update_trigger","state":"Signaled","attributes":{"icon":"mdi:laptop","friendly_name":"Amanda’s MacBook Pro Last Update Trigger"},"last_changed":"2025-06-19T23:28:46.771714+00:00","last_reported":"2025-06-19T23:28:46.771714+00:00","last_updated":"2025-06-19T23:28:46.771714+00:00","context":{"id":"01JY58BZNKN9C8PMR7NMFF5PN9","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Signaled",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.iphone_14_focus_2","state":"off","attributes":{"icon":"mdi:moon-waning-crescent","friendly_name":"iPhone 14 Focus"},"last_changed":"2025-06-19T23:28:46.773122+00:00","last_reported":"2025-06-19T23:28:46.773122+00:00","last_updated":"2025-06-19T23:28:46.773122+00:00","context":{"id":"01JY58BZNNMZRZKH9KSXBT9VZD","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.iphone","state":"home","attributes":{"source_type":"gps","battery_level":50,"latitude":40.3495774339926,"longitude":-80.00320019782437,"gps_accuracy":9,"altitude":372.61202185916216,"vertical_accuracy":30,"friendly_name":"iPhone 14"},"last_changed":"2025-06-22T02:52:30.097226+00:00","last_reported":"2025-06-22T02:52:30.097226+00:00","last_updated":"2025-06-22T02:52:30.097226+00:00","context":{"id":"01JYARTEGHX01F2V8RYDCNVZKH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_activity_2","state":"Stationary","attributes":{"Confidence":"High","Types":["Stationary"],"icon":"mdi:human-male","friendly_name":"iPhone 14 Activity"},"last_changed":"2025-06-27T04:35:22.089793+00:00","last_reported":"2025-06-27T04:35:22.089793+00:00","last_updated":"2025-06-27T04:35:22.089793+00:00","context":{"id":"01JYQTPCV9ZFGVMMK953XD4RPH","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Stationary",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_distance_2","state":"0","attributes":{"unit_of_measurement":"m","icon":"mdi:hiking","friendly_name":"iPhone 14 Distance"},"last_changed":"2025-06-27T04:05:53.804923+00:00","last_reported":"2025-06-27T04:05:53.804923+00:00","last_updated":"2025-06-27T04:05:53.804923+00:00","context":{"id":"01JYQS0E0CTCY9Z5SCZ44SYVXS","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "m"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_floors_descended_2","state":"0","attributes":{"unit_of_measurement":"floors","icon":"mdi:stairs-down","friendly_name":"iPhone 14 Floors Descended"},"last_changed":"2025-06-27T04:05:53.805290+00:00","last_reported":"2025-06-27T04:05:53.805290+00:00","last_updated":"2025-06-27T04:05:53.805290+00:00","context":{"id":"01JYQS0E0D9KEJBK23KEK4RC87","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_battery_state_2","state":"Charging","attributes":{"Low Power Mode":false,"icon":"mdi:battery-charging-80","friendly_name":"iPhone 14 Battery State"},"last_changed":"2025-06-27T05:44:11.689397+00:00","last_reported":"2025-06-27T05:51:59.848000+00:00","last_updated":"2025-06-27T05:51:59.848000+00:00","context":{"id":"01JYQZ2PV71G1DV609NJQTG6NA","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_floors_ascended_2","state":"0","attributes":{"unit_of_measurement":"floors","icon":"mdi:stairs-up","friendly_name":"iPhone 14 Floors Ascended"},"last_changed":"2025-06-27T04:05:53.805127+00:00","last_reported":"2025-06-27T04:05:53.805127+00:00","last_updated":"2025-06-27T04:05:53.805127+00:00","context":{"id":"01JYQS0E0DCR9M4ME8VZ268SQW","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_battery_level_2","state":"80","attributes":{"unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-charging-80","friendly_name":"iPhone 14 Battery Level"},"last_changed":"2025-06-27T05:51:59.847767+00:00","last_reported":"2025-06-27T05:51:59.847767+00:00","last_updated":"2025-06-27T05:51:59.847767+00:00","context":{"id":"01JYQZ2PV7Y8ZZVQM8A1HHYW43","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 80,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_storage_2","state":"16.04","attributes":{"Available":"4.80 GB","Available (Important)":"56.54 GB","Available (Opportunistic)":"20.51 GB","Total":"127.87 GB","unit_of_measurement":"% available","icon":"mdi:database","friendly_name":"iPhone 14 Storage"},"last_changed":"2025-06-27T06:35:58.986534+00:00","last_reported":"2025-06-27T06:35:58.986534+00:00","last_updated":"2025-06-27T06:35:58.986534+00:00","context":{"id":"01JYR1K84AJ5M06CT40CH2C56S","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "16.04",
+        "native_unit_of_measurement": "% available"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_ssid_2","state":"Not Connected","attributes":{"icon":"mdi:wifi-off","friendly_name":"iPhone 14 SSID"},"last_changed":"2025-06-27T03:49:26.618742+00:00","last_reported":"2025-06-27T03:57:33.493222+00:00","last_updated":"2025-06-27T03:49:26.618742+00:00","context":{"id":"01JYQR29YTWFJGKATDPP31B446","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Not Connected",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_connection_type_2","state":"Wi-Fi","attributes":{"icon":"mdi:wifi","friendly_name":"iPhone 14 Connection Type"},"last_changed":"2025-06-27T03:49:26.619189+00:00","last_reported":"2025-06-27T03:57:33.493468+00:00","last_updated":"2025-06-27T03:49:26.619189+00:00","context":{"id":"01JYQR29YVRAD92YNBHV893M1Z","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Wi-Fi",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_bssid_2","state":"Not Connected","attributes":{"icon":"mdi:wifi-off","friendly_name":"iPhone 14 BSSID"},"last_changed":"2025-06-27T03:49:26.619022+00:00","last_reported":"2025-06-27T03:57:33.493339+00:00","last_updated":"2025-06-27T03:49:26.619022+00:00","context":{"id":"01JYQR29YV5X02EH2ZVME3V1RV","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Not Connected",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_sim_2_2","state":"--","attributes":{"Allows VoIP":true,"Carrier ID":"0000000100000002","Carrier Name":"--","ISO Country Code":"--","Mobile Country Code":"65535","Mobile Network Code":"65535","icon":"mdi:sim","friendly_name":"iPhone 14 SIM 2"},"last_changed":"2025-06-19T23:28:46.787313+00:00","last_reported":"2025-06-19T23:28:46.787313+00:00","last_updated":"2025-06-19T23:28:46.787313+00:00","context":{"id":"01JY58BZP3F45GR2S478TC9026","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "--",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_sim_1_2","state":"--","attributes":{"Allows VoIP":true,"Carrier ID":"0000000100000001","Carrier Name":"--","Current Radio Technology":"5G Non-Standalone","ISO Country Code":"--","Mobile Country Code":"65535","Mobile Network Code":"65535","icon":"mdi:sim","friendly_name":"iPhone 14 SIM 1"},"last_changed":"2025-06-19T23:28:46.789095+00:00","last_reported":"2025-06-24T19:50:05.886612+00:00","last_updated":"2025-06-24T19:50:05.886612+00:00","context":{"id":"01JYHQV59YYQSZHWSRYFFSQP7G","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "--",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_geocoded_location_2","state":"4760 Child Dr\nWhitehall PA 15236\nUnited States","attributes":{"Administrative Area":"PA","Areas Of Interest":"N/A","Country":"United States","Inland Water":"N/A","ISO Country Code":"US","Locality":"Whitehall","Location":[40.3495774339926,-80.00320019782437],"Name":"4760 Child Dr","Ocean":"N/A","Postal Code":"15236","Sub Administrative Area":"Allegheny County","Sub Locality":"N/A","Sub Thoroughfare":"4760","Thoroughfare":"Child Dr","Time Zone":"America/New_York","Zones":["Home"],"icon":"mdi:map","friendly_name":"iPhone 14 Geocoded Location"},"last_changed":"2025-06-22T02:52:30.193078+00:00","last_reported":"2025-06-22T02:52:30.193078+00:00","last_updated":"2025-06-22T02:52:30.193078+00:00","context":{"id":"01JYARTEKHMVN3P79YAGCJAX6N","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "4760 Child Dr\nWhitehall PA 15236\nUnited States",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_last_update_trigger_2","state":"Background Fetch","attributes":{"icon":"mdi:cellphone-wireless","friendly_name":"iPhone 14 Last Update Trigger"},"last_changed":"2025-06-27T06:35:58.987463+00:00","last_reported":"2025-06-27T06:35:58.987463+00:00","last_updated":"2025-06-27T06:35:58.987463+00:00","context":{"id":"01JYR1K84B34WCESR9Q2WP5GPV","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Background Fetch",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_average_active_pace_2","state":"1","attributes":{"unit_of_measurement":"m/s","icon":"mdi:speedometer","friendly_name":"iPhone 14 Average Active Pace"},"last_changed":"2025-06-26T23:07:01.303431+00:00","last_reported":"2025-06-26T23:07:01.856800+00:00","last_updated":"2025-06-26T23:07:01.303431+00:00","context":{"id":"01JYQ7X5SQBJG5HTPKJA5Y7JRS","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 1,
+        "native_unit_of_measurement": "m/s"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_steps_2","state":"0","attributes":{"unit_of_measurement":"steps","icon":"mdi:walk","friendly_name":"iPhone 14 Steps"},"last_changed":"2025-06-27T04:05:53.805454+00:00","last_reported":"2025-06-27T04:05:53.805454+00:00","last_updated":"2025-06-27T04:05:53.805454+00:00","context":{"id":"01JYQS0E0D10H0DHPDCMS8JYAS","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "steps"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_app_version","state":"2025.5","attributes":{"icon":"mdi:cellphone","friendly_name":"iPhone 14 App Version"},"last_changed":"2025-06-19T23:28:46.792040+00:00","last_reported":"2025-06-19T23:28:46.792040+00:00","last_updated":"2025-06-19T23:28:46.792040+00:00","context":{"id":"01JY58BZP8C66JARTDEKF2FTAG","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "2025.5",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_location_permission","state":"Authorized when in use","attributes":{"icon":"mdi:map","friendly_name":"iPhone 14 Location permission"},"last_changed":"2025-06-19T23:28:46.792508+00:00","last_reported":"2025-06-19T23:28:46.792508+00:00","last_updated":"2025-06-19T23:28:46.792508+00:00","context":{"id":"01JY58BZP8EPJQ530AKMXHTPM7","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Authorized when in use",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_watch_battery_state","state":"Not Charging","attributes":{"icon":"mdi:battery-60","friendly_name":"iPhone 14 Watch Battery State"},"last_changed":"2025-06-19T23:28:46.793004+00:00","last_reported":"2025-06-19T23:28:46.793004+00:00","last_updated":"2025-06-19T23:28:46.793004+00:00","context":{"id":"01JY58BZP9GYMEK8V7HS7H46B5","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Not Charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_watch_battery_level","state":"65","attributes":{"unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-60","friendly_name":"iPhone 14 Watch Battery Level"},"last_changed":"2025-06-19T23:28:46.793528+00:00","last_reported":"2025-06-19T23:28:46.793528+00:00","last_updated":"2025-06-19T23:28:46.793528+00:00","context":{"id":"01JY58BZP9MAFQCZ04CH5A9XNW","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 65,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.iphone_14_audio_output","state":"Built-in Speaker","attributes":{"icon":"mdi:volume-high","friendly_name":"iPhone 14 Audio Output"},"last_changed":"2025-06-27T05:44:11.691346+00:00","last_reported":"2025-06-27T05:51:59.849616+00:00","last_updated":"2025-06-27T05:44:11.691346+00:00","context":{"id":"01JYQYMDNBCW4H4D66E00V4YRA","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Built-in Speaker",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.benjamins_ipad_focus","state":"off","attributes":{"icon":"mdi:moon-waning-crescent","friendly_name":"Benjamin’s iPad Focus"},"last_changed":"2025-06-26T21:10:55.975095+00:00","last_reported":"2025-06-26T21:10:55.975095+00:00","last_updated":"2025-06-26T21:10:55.975095+00:00","context":{"id":"01JYQ18KQ77XZQNYSDGGPEQSAK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.benjamins_ipad_2","state":"home","attributes":{"source_type":"gps","battery_level":20,"latitude":40.34955420611241,"longitude":-80.00324427179558,"gps_accuracy":28,"altitude":371.8730251260921,"vertical_accuracy":30,"friendly_name":"Benjamin’s iPad"},"last_changed":"2025-06-26T23:35:57.469513+00:00","last_reported":"2025-06-26T23:35:57.469513+00:00","last_updated":"2025-06-26T23:35:57.469513+00:00","context":{"id":"01JYQ9J58XQVCARKE7NXX58G9J","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_activity","state":"Stationary","attributes":{"Confidence":"High","Types":["Stationary"],"icon":"mdi:human-male","friendly_name":"Benjamin’s iPad Activity"},"last_changed":"2025-06-27T00:52:10.332397+00:00","last_reported":"2025-06-27T00:57:10.825765+00:00","last_updated":"2025-06-27T00:52:10.332397+00:00","context":{"id":"01JYQDXPYW5V3CMFQ3M5WY1818","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Stationary",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_battery_level","state":"35","attributes":{"unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-30","friendly_name":"Benjamin’s iPad Battery Level"},"last_changed":"2025-06-27T00:59:42.414922+00:00","last_reported":"2025-06-27T00:59:42.414922+00:00","last_updated":"2025-06-27T00:59:42.414922+00:00","context":{"id":"01JYQEBGEE9HJAYBM0KSN7K64Q","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 35,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_connection_type","state":"Wi-Fi","attributes":{"icon":"mdi:wifi","friendly_name":"Benjamin’s iPad Connection Type"},"last_changed":"2025-06-19T23:28:46.800285+00:00","last_reported":"2025-06-19T23:28:46.800285+00:00","last_updated":"2025-06-19T23:28:46.800285+00:00","context":{"id":"01JY58BZPG3A2TYR2VS1CMRN0B","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Wi-Fi",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_battery_state","state":"Not Charging","attributes":{"Low Power Mode":false,"icon":"mdi:battery-30","friendly_name":"Benjamin’s iPad Battery State"},"last_changed":"2025-06-27T00:59:42.415163+00:00","last_reported":"2025-06-27T00:59:42.415163+00:00","last_updated":"2025-06-27T00:59:42.415163+00:00","context":{"id":"01JYQEBGEFHPQCWRCCERRBFXX8","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Not Charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_storage","state":"24.44","attributes":{"Available":"17.59 GB","Available (Important)":"58.35 GB","Available (Opportunistic)":"31.01 GB","Total":"126.87 GB","unit_of_measurement":"% available","icon":"mdi:database","friendly_name":"Benjamin’s iPad Storage"},"last_changed":"2025-06-27T00:59:42.415343+00:00","last_reported":"2025-06-27T00:59:42.415343+00:00","last_updated":"2025-06-27T00:59:42.415343+00:00","context":{"id":"01JYQEBGEFWG3VXBQ3TH33SW1M","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "24.44",
+        "native_unit_of_measurement": "% available"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_geocoded_location","state":"4760 Child Dr\nWhitehall PA 15236\nUnited States","attributes":{"Administrative Area":"PA","Areas Of Interest":"N/A","Country":"United States","Inland Water":"N/A","ISO Country Code":"US","Locality":"Whitehall","Location":[40.34955420611241,-80.00324427179558],"Name":"4760 Child Dr","Ocean":"N/A","Postal Code":"15236","Sub Administrative Area":"Allegheny County","Sub Locality":"N/A","Sub Thoroughfare":"4760","Thoroughfare":"Child Dr","Time Zone":"America/New_York","Zones":["Home"],"icon":"mdi:map","friendly_name":"Benjamin’s iPad Geocoded Location"},"last_changed":"2025-06-19T23:55:17.003575+00:00","last_reported":"2025-06-26T23:35:57.550201+00:00","last_updated":"2025-06-26T23:35:57.550201+00:00","context":{"id":"01JYQ9J5BEZ310CJKM3DFM8ZSX","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "4760 Child Dr\nWhitehall PA 15236\nUnited States",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_ssid","state":"Child-WLAN1","attributes":{"icon":"mdi:wifi","friendly_name":"Benjamin’s iPad SSID"},"last_changed":"2025-06-25T12:28:57.189260+00:00","last_reported":"2025-06-25T12:28:57.189260+00:00","last_updated":"2025-06-25T12:28:57.189260+00:00","context":{"id":"01JYKH03Z5RKRQBWJAZX626RJB","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Child-WLAN1",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_last_update_trigger","state":"Signaled","attributes":{"icon":"mdi:cellphone-wireless","friendly_name":"Benjamin’s iPad Last Update Trigger"},"last_changed":"2025-06-27T00:59:42.416179+00:00","last_reported":"2025-06-27T00:59:42.416179+00:00","last_updated":"2025-06-27T00:59:42.416179+00:00","context":{"id":"01JYQEBGEG182D01VTQ9XD5NWY","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Signaled",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_app_version","state":"2025.5","attributes":{"icon":"mdi:cellphone","friendly_name":"Benjamin’s iPad App Version"},"last_changed":"2025-06-19T23:28:46.803638+00:00","last_reported":"2025-06-19T23:28:46.803638+00:00","last_updated":"2025-06-19T23:28:46.803638+00:00","context":{"id":"01JY58BZPKKA89J2G9PZWB3FKR","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "2025.5",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_audio_output","state":"Bluetooth A2DP","attributes":{"icon":"mdi:volume-high","friendly_name":"Benjamin’s iPad Audio Output"},"last_changed":"2025-06-26T23:01:28.555264+00:00","last_reported":"2025-06-26T23:12:01.751476+00:00","last_updated":"2025-06-26T23:01:28.555264+00:00","context":{"id":"01JYQ7K0VBWRHBTWQ4YRW605MR","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Bluetooth A2DP",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_location_permission","state":"Authorized Always","attributes":{"icon":"mdi:map","friendly_name":"Benjamin’s iPad Location permission"},"last_changed":"2025-06-19T23:28:46.804952+00:00","last_reported":"2025-06-19T23:28:46.804952+00:00","last_updated":"2025-06-19T23:28:46.804952+00:00","context":{"id":"01JY58BZPMPBK4W7FM3BNYA8JV","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Authorized Always",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_bssid","state":"b4:fb:e4:d8:57:dc","attributes":{"icon":"mdi:wifi-star","friendly_name":"Benjamin’s iPad BSSID"},"last_changed":"2025-06-25T12:28:57.189427+00:00","last_reported":"2025-06-25T12:28:57.189427+00:00","last_updated":"2025-06-25T12:28:57.189427+00:00","context":{"id":"01JYKH03Z5KJYQZ5HP4RT6F9CT","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "b4:fb:e4:d8:57:dc",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_distance","state":"0","attributes":{"unit_of_measurement":"m","icon":"mdi:hiking","friendly_name":"Benjamin’s iPad Distance"},"last_changed":"2025-06-19T23:28:46.806164+00:00","last_reported":"2025-06-19T23:28:46.806164+00:00","last_updated":"2025-06-19T23:28:46.806164+00:00","context":{"id":"01JY58BZPPP42A2T8MRXMWF0E4","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "m"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_ipad_steps","state":"0","attributes":{"unit_of_measurement":"steps","icon":"mdi:walk","friendly_name":"Benjamin’s iPad Steps"},"last_changed":"2025-06-19T23:28:46.806629+00:00","last_reported":"2025-06-19T23:28:46.806629+00:00","last_updated":"2025-06-19T23:28:46.806629+00:00","context":{"id":"01JY58BZPP5Q5QKDA9JGJEFAZG","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "steps"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.benjamins_iphone_16_focus","state":"off","attributes":{"icon":"mdi:moon-waning-crescent","friendly_name":"Benjamin’s iPhone 16 Focus"},"last_changed":"2025-06-27T11:24:30.823112+00:00","last_reported":"2025-06-27T11:24:31.033749+00:00","last_updated":"2025-06-27T11:24:30.823112+00:00","context":{"id":"01JYRJ3J77767R9ZN6RVJRWSX9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.benjamins_iphone_16","state":"home","attributes":{"source_type":"gps","battery_level":95,"latitude":40.34957523782939,"longitude":-80.00322755604725,"gps_accuracy":9,"altitude":376.05148499070555,"vertical_accuracy":3,"friendly_name":"Benjamin’s iPhone 16"},"last_changed":"2025-06-27T11:41:03.483374+00:00","last_reported":"2025-06-27T11:41:03.483374+00:00","last_updated":"2025-06-27T11:41:03.483374+00:00","context":{"id":"01JYRK1VKVVCNGTJCSCFATG9G5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_floors_ascended","state":"1","attributes":{"unit_of_measurement":"floors","icon":"mdi:stairs-up","friendly_name":"Benjamin’s iPhone 16 Floors Ascended"},"last_changed":"2025-06-27T11:41:03.490904+00:00","last_reported":"2025-06-27T11:41:03.508629+00:00","last_updated":"2025-06-27T11:41:03.490904+00:00","context":{"id":"01JYRK1VM2J1BPPX8AEQK9GADK","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 1,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_activity","state":"Walking","attributes":{"Confidence":"High","Types":["Walking"],"icon":"mdi:walk","friendly_name":"Benjamin’s iPhone 16 Activity"},"last_changed":"2025-06-27T11:41:03.490473+00:00","last_reported":"2025-06-27T11:41:03.508373+00:00","last_updated":"2025-06-27T11:41:03.490473+00:00","context":{"id":"01JYRK1VM2MDCSCHVSJ2QAYDTS","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Walking",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_distance","state":"264","attributes":{"unit_of_measurement":"m","icon":"mdi:hiking","friendly_name":"Benjamin’s iPhone 16 Distance"},"last_changed":"2025-06-27T11:41:03.490742+00:00","last_reported":"2025-06-27T11:41:03.508517+00:00","last_updated":"2025-06-27T11:41:03.490742+00:00","context":{"id":"01JYRK1VM2BVVXBKHAJ5VG1B08","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 264,
+        "native_unit_of_measurement": "m"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_steps","state":"372","attributes":{"unit_of_measurement":"steps","icon":"mdi:walk","friendly_name":"Benjamin’s iPhone 16 Steps"},"last_changed":"2025-06-27T11:41:03.491156+00:00","last_reported":"2025-06-27T11:41:03.508886+00:00","last_updated":"2025-06-27T11:41:03.491156+00:00","context":{"id":"01JYRK1VM3BAWE0G0TYB15YZNK","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 372,
+        "native_unit_of_measurement": "steps"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_battery_level","state":"95","attributes":{"unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-90","friendly_name":"Benjamin’s iPhone 16 Battery Level"},"last_changed":"2025-06-27T10:57:01.178833+00:00","last_reported":"2025-06-27T11:41:03.509096+00:00","last_updated":"2025-06-27T11:41:03.491400+00:00","context":{"id":"01JYRK1VM3XX08BQXHEPJKCMMA","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 95,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_floors_descended","state":"1","attributes":{"unit_of_measurement":"floors","icon":"mdi:stairs-down","friendly_name":"Benjamin’s iPhone 16 Floors Descended"},"last_changed":"2025-06-27T11:17:53.950937+00:00","last_reported":"2025-06-27T11:24:31.031674+00:00","last_updated":"2025-06-27T11:17:53.950937+00:00","context":{"id":"01JYRHQEMYGEF1DZM32R9PA4X3","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 1,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_storage","state":"16.20","attributes":{"Available":"13.04 GB","Available (Important)":"34.79 GB","Available (Opportunistic)":"20.60 GB","Total":"127.19 GB","unit_of_measurement":"% available","icon":"mdi:database","friendly_name":"Benjamin’s iPhone 16 Storage"},"last_changed":"2025-06-27T11:35:48.517214+00:00","last_reported":"2025-06-27T11:41:03.509311+00:00","last_updated":"2025-06-27T11:41:03.491716+00:00","context":{"id":"01JYRK1VM3NT8514PWJMZ5M4KB","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "16.20",
+        "native_unit_of_measurement": "% available"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_battery_state","state":"Not Charging","attributes":{"Low Power Mode":false,"icon":"mdi:battery-90","friendly_name":"Benjamin’s iPhone 16 Battery State"},"last_changed":"2025-06-27T11:41:03.491543+00:00","last_reported":"2025-06-27T11:41:03.509202+00:00","last_updated":"2025-06-27T11:41:03.491543+00:00","context":{"id":"01JYRK1VM3PYWMAJNN5550Z428","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Not Charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_bssid","state":"4:9:d:9:c8:cb","attributes":{"icon":"mdi:wifi-star","friendly_name":"Benjamin’s iPhone 16 BSSID"},"last_changed":"2025-06-27T11:17:53.959800+00:00","last_reported":"2025-06-27T11:24:31.032609+00:00","last_updated":"2025-06-27T11:17:53.959800+00:00","context":{"id":"01JYRHQEN7RR28V5MP48JNPH3S","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "4:9:d:9:c8:cb",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_average_active_pace","state":"1","attributes":{"unit_of_measurement":"m/s","icon":"mdi:speedometer","friendly_name":"Benjamin’s iPhone 16 Average Active Pace"},"last_changed":"2025-06-27T11:17:53.958630+00:00","last_reported":"2025-06-27T11:24:31.031960+00:00","last_updated":"2025-06-27T11:17:53.958630+00:00","context":{"id":"01JYRHQEN6S8T9AMPS26A6XS3W","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 1,
+        "native_unit_of_measurement": "m/s"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_ssid","state":"CarLinkAP275","attributes":{"icon":"mdi:wifi","friendly_name":"Benjamin’s iPhone 16 SSID"},"last_changed":"2025-06-27T11:17:53.959553+00:00","last_reported":"2025-06-27T11:24:31.032478+00:00","last_updated":"2025-06-27T11:17:53.959553+00:00","context":{"id":"01JYRHQEN72AAP0VQW9ZPV3RBN","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "CarLinkAP275",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_watch_battery_state","state":"Not Charging","attributes":{"icon":"mdi:battery-80","friendly_name":"Benjamin’s iPhone 16 Watch Battery State"},"last_changed":"2025-06-27T11:17:53.961087+00:00","last_reported":"2025-06-27T11:24:31.034276+00:00","last_updated":"2025-06-27T11:17:53.961087+00:00","context":{"id":"01JYRHQEN9JXDGZ5PZ04X0G4YF","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Not Charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_watch_battery_level","state":"80","attributes":{"unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-80","friendly_name":"Benjamin’s iPhone 16 Watch Battery Level"},"last_changed":"2025-06-27T11:17:53.960912+00:00","last_reported":"2025-06-27T11:24:31.034127+00:00","last_updated":"2025-06-27T11:17:53.960912+00:00","context":{"id":"01JYRHQEN8WDK2PHGY77BBFN0Z","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 80,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_sim_2","state":"--","attributes":{"Allows VoIP":true,"Carrier ID":"0000000100000002","Carrier Name":"--","ISO Country Code":"--","Mobile Country Code":"65535","Mobile Network Code":"65535","icon":"mdi:sim","friendly_name":"Benjamin’s iPhone 16 SIM 2"},"last_changed":"2025-06-19T23:28:46.817772+00:00","last_reported":"2025-06-19T23:28:46.817772+00:00","last_updated":"2025-06-19T23:28:46.817772+00:00","context":{"id":"01JY58BZQ1ZZDGNG2THB6334EJ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "--",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_connection_type","state":"Cellular","attributes":{"Cellular Technology":"5G","icon":"mdi:signal","friendly_name":"Benjamin’s iPhone 16 Connection Type"},"last_changed":"2025-06-27T11:17:53.959998+00:00","last_reported":"2025-06-27T11:24:31.032893+00:00","last_updated":"2025-06-27T11:17:53.959998+00:00","context":{"id":"01JYRHQEN7NBX4B8NMP8PV185A","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Cellular",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_last_update_trigger","state":"Significant Location Change","attributes":{"icon":"mdi:cellphone-wireless","friendly_name":"Benjamin’s iPhone 16 Last Update Trigger"},"last_changed":"2025-06-27T11:41:03.510345+00:00","last_reported":"2025-06-27T11:41:03.510345+00:00","last_updated":"2025-06-27T11:41:03.510345+00:00","context":{"id":"01JYRK1VMPNAHZ8MTG9345VTD0","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Significant Location Change",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_sim_1","state":"--","attributes":{"Allows VoIP":true,"Carrier ID":"0000000100000001","Carrier Name":"--","Current Radio Technology":"5G Non-Standalone","ISO Country Code":"--","Mobile Country Code":"65535","Mobile Network Code":"65535","icon":"mdi:sim","friendly_name":"Benjamin’s iPhone 16 SIM 1"},"last_changed":"2025-06-19T23:28:46.819195+00:00","last_reported":"2025-06-25T12:25:12.368041+00:00","last_updated":"2025-06-25T12:25:12.368041+00:00","context":{"id":"01JYKGS8DGZ7WMQ7R6J9Z2HNZF","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "--",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_app_version","state":"2025.5","attributes":{"icon":"mdi:cellphone","friendly_name":"Benjamin’s iPhone 16 App Version"},"last_changed":"2025-06-19T23:28:46.820044+00:00","last_reported":"2025-06-19T23:28:46.820044+00:00","last_updated":"2025-06-19T23:28:46.820044+00:00","context":{"id":"01JY58BZQ49RWV94J9BD38B425","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "2025.5",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_location_permission","state":"Authorized Always","attributes":{"icon":"mdi:map","friendly_name":"Benjamin’s iPhone 16 Location permission"},"last_changed":"2025-06-19T23:28:46.820857+00:00","last_reported":"2025-06-19T23:28:46.820857+00:00","last_updated":"2025-06-19T23:28:46.820857+00:00","context":{"id":"01JY58BZQ4QEC0TKFA06B9R5W8","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Authorized Always",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_audio_output","state":"Built-in Speaker","attributes":{"icon":"mdi:volume-high","friendly_name":"Benjamin’s iPhone 16 Audio Output"},"last_changed":"2025-06-27T11:41:03.499344+00:00","last_reported":"2025-06-27T11:41:03.510982+00:00","last_updated":"2025-06-27T11:41:03.499344+00:00","context":{"id":"01JYRK1VMB89T58XD7G4QKE91J","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Built-in Speaker",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.benjamins_iphone_16_geocoded_location","state":"4760 Child Dr\nWhitehall PA 15236\nUnited States","attributes":{"Administrative Area":"PA","Areas Of Interest":"N/A","Country":"United States","Inland Water":"N/A","ISO Country Code":"US","Locality":"Whitehall","Location":[40.34957523782939,-80.00322755604725],"Name":"4760 Child Dr","Ocean":"N/A","Postal Code":"15236","Sub Administrative Area":"Allegheny County","Sub Locality":"N/A","Sub Thoroughfare":"4760","Thoroughfare":"Child Dr","Time Zone":"America/New_York","Zones":["Home"],"icon":"mdi:map","friendly_name":"Benjamin’s iPhone 16 Geocoded Location"},"last_changed":"2025-06-27T11:41:03.510023+00:00","last_reported":"2025-06-27T11:41:03.510023+00:00","last_updated":"2025-06-27T11:41:03.510023+00:00","context":{"id":"01JYRK1VMPJG20D324ZK7B92JR","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "4760 Child Dr\nWhitehall PA 15236\nUnited States",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.hourly_gas","state":"0","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"0","last_valid_state":"792.37","last_reset":"2025-06-27T12:00:00.001331+00:00","next_reset":"2025-06-27T09:00:00-04:00","unit_of_measurement":"ft³","device_class":"gas","friendly_name":"hourly_gas"},"last_changed":"2025-06-19T23:28:50.214303+00:00","last_reported":"2025-06-27T12:00:00.001904+00:00","last_updated":"2025-06-27T12:00:00.001904+00:00","context":{"id":"01JYRM4HG1FMSBT9S3E48M975W","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "ft³",
+        "last_period": "0",
+        "last_reset": "2025-06-27T12:00:00.001331+00:00",
+        "last_valid_state": "792.37",
+        "status": "collecting",
+        "input_device_class": "gas"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.weekly_gas","state":"0","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"0","last_valid_state":"792.37","last_reset":"2025-06-27T12:00:00.002052+00:00","next_reset":"2025-06-27T09:00:00-04:00","unit_of_measurement":"ft³","device_class":"gas","friendly_name":"weekly_gas"},"last_changed":"2025-06-19T23:28:50.215756+00:00","last_reported":"2025-06-27T12:00:00.002302+00:00","last_updated":"2025-06-27T12:00:00.002302+00:00","context":{"id":"01JYRM4HG22B5BDXEEDKY9NCTH","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "ft³",
+        "last_period": "0",
+        "last_reset": "2025-06-27T12:00:00.002052+00:00",
+        "last_valid_state": "792.37",
+        "status": "collecting",
+        "input_device_class": "gas"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.daily_gas","state":"0","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"0","last_valid_state":"792.37","last_reset":"2025-06-27T04:00:00.003003+00:00","next_reset":"2025-06-28T00:00:00-04:00","unit_of_measurement":"ft³","device_class":"gas","friendly_name":"daily_gas"},"last_changed":"2025-06-19T23:28:50.216552+00:00","last_reported":"2025-06-27T04:00:00.003333+00:00","last_updated":"2025-06-27T04:00:00.003333+00:00","context":{"id":"01JYQRNMG3A1EKN3WRH2R73HCF","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "ft³",
+        "last_period": "0",
+        "last_reset": "2025-06-27T04:00:00.003003+00:00",
+        "last_valid_state": "792.37",
+        "status": "collecting",
+        "input_device_class": "gas"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.monthly_gas","state":"3.95","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"23.69","last_valid_state":"792.37","last_reset":"2025-06-01T04:00:00.002817+00:00","next_reset":"2025-07-01T00:00:00-04:00","unit_of_measurement":"ft³","device_class":"gas","friendly_name":"monthly_gas"},"last_changed":"2025-06-19T23:28:50.217374+00:00","last_reported":"2025-06-19T23:28:50.217374+00:00","last_updated":"2025-06-19T23:28:50.217374+00:00","context":{"id":"01JY58C319KK9MES4G6CQ4N07G","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "3.95"
+        },
+        "native_unit_of_measurement": "ft³",
+        "last_period": "23.69",
+        "last_reset": "2025-06-01T04:00:00.002817+00:00",
+        "last_valid_state": "792.37",
+        "status": "collecting",
+        "input_device_class": "gas"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.hourly_water","state":"0","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"0","last_valid_state":"216009.9","last_reset":"2025-06-27T12:00:00.002395+00:00","next_reset":"2025-06-27T09:00:00-04:00","unit_of_measurement":"gal","device_class":"water","friendly_name":"hourly_water"},"last_changed":"2025-06-19T23:28:50.218165+00:00","last_reported":"2025-06-27T12:00:00.002664+00:00","last_updated":"2025-06-27T12:00:00.002664+00:00","context":{"id":"01JYRM4HG2A2FZ4FFAPTD9BXHX","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "gal",
+        "last_period": "0",
+        "last_reset": "2025-06-27T12:00:00.002395+00:00",
+        "last_valid_state": "216009.9",
+        "status": "collecting",
+        "input_device_class": "water"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.weekly_water","state":"0","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"0","last_valid_state":"216009.9","last_reset":"2025-06-23T04:00:00.003042+00:00","next_reset":"2025-06-30T00:00:00-04:00","unit_of_measurement":"gal","device_class":"water","friendly_name":"weekly_water"},"last_changed":"2025-06-19T23:28:50.219834+00:00","last_reported":"2025-06-23T04:00:00.003388+00:00","last_updated":"2025-06-23T04:00:00.003388+00:00","context":{"id":"01JYDF2RG3JJRY9TCJHDDY0QJQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "gal",
+        "last_period": "0",
+        "last_reset": "2025-06-23T04:00:00.003042+00:00",
+        "last_valid_state": "216009.9",
+        "status": "collecting",
+        "input_device_class": "water"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.daily_water","state":"0","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"0","last_valid_state":"216009.9","last_reset":"2025-06-27T04:00:00.001613+00:00","next_reset":"2025-06-28T00:00:00-04:00","unit_of_measurement":"gal","device_class":"water","friendly_name":"daily_water"},"last_changed":"2025-06-19T23:28:50.220941+00:00","last_reported":"2025-06-27T04:00:00.001981+00:00","last_updated":"2025-06-27T04:00:00.001981+00:00","context":{"id":"01JYQRNMG1E85TFAMX6Z7X8KGB","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "gal",
+        "last_period": "0",
+        "last_reset": "2025-06-27T04:00:00.001613+00:00",
+        "last_valid_state": "216009.9",
+        "status": "collecting",
+        "input_device_class": "water"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.monthly_water","state":"440.5","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"3525.4","last_valid_state":"216009.9","last_reset":"2025-06-01T04:00:00.002308+00:00","next_reset":"2025-07-01T00:00:00-04:00","unit_of_measurement":"gal","device_class":"water","friendly_name":"monthly_water"},"last_changed":"2025-06-19T23:28:50.221997+00:00","last_reported":"2025-06-19T23:28:50.221997+00:00","last_updated":"2025-06-19T23:28:50.221997+00:00","context":{"id":"01JY58C31DHQJ780GFJE3NZ8YG","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "440.5"
+        },
+        "native_unit_of_measurement": "gal",
+        "last_period": "3525.4",
+        "last_reset": "2025-06-01T04:00:00.002308+00:00",
+        "last_valid_state": "216009.9",
+        "status": "collecting",
+        "input_device_class": "water"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.basement_camera_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v3.0.0.2417_23070501","in_progress":false,"latest_version":"v3.0.0.4348_2411261177","release_summary":null,"release_url":"https://reolink.com/download-center/","skipped_version":"v3.0.0.4348_2411261177","title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/reolink/icon.png","friendly_name":"Basement Camera Firmware","supported_features":21},"last_changed":"2025-06-19T23:28:50.440864+00:00","last_reported":"2025-06-19T23:28:50.440864+00:00","last_updated":"2025-06-19T23:28:50.440864+00:00","context":{"id":"01JY58C3886NTYW5NMVDSCH7V5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.camera_back_door_ptz_stop","state":"unknown","attributes":{"friendly_name":"Camera - Back Door PTZ stop"},"last_changed":"2025-06-27T11:33:21.306772+00:00","last_reported":"2025-06-27T11:43:20.824631+00:00","last_updated":"2025-06-27T11:33:21.306772+00:00","context":{"id":"01JYRJKR8TSM96T06AJ9RJ1KFW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.camera_back_door_ptz_left","state":"unknown","attributes":{"friendly_name":"Camera - Back Door PTZ left"},"last_changed":"2025-06-27T11:33:21.307035+00:00","last_reported":"2025-06-27T11:43:20.824664+00:00","last_updated":"2025-06-27T11:33:21.307035+00:00","context":{"id":"01JYRJKR8VSZJM8PDJG4QVNSDJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.camera_back_door_ptz_right","state":"unknown","attributes":{"friendly_name":"Camera - Back Door PTZ right"},"last_changed":"2025-06-27T11:33:21.307112+00:00","last_reported":"2025-06-27T11:43:20.824749+00:00","last_updated":"2025-06-27T11:33:21.307112+00:00","context":{"id":"01JYRJKR8V5HW74EB100BX2W0P","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.camera_back_door_ptz_up","state":"unknown","attributes":{"friendly_name":"Camera - Back Door PTZ up"},"last_changed":"2025-06-27T11:33:21.307169+00:00","last_reported":"2025-06-27T11:43:20.824776+00:00","last_updated":"2025-06-27T11:33:21.307169+00:00","context":{"id":"01JYRJKR8V828N6CESZZ7J3S75","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.camera_back_door_ptz_down","state":"unknown","attributes":{"friendly_name":"Camera - Back Door PTZ down"},"last_changed":"2025-06-27T11:33:21.307224+00:00","last_reported":"2025-06-27T11:43:20.824801+00:00","last_updated":"2025-06-27T11:33:21.307224+00:00","context":{"id":"01JYRJKR8VKSX81XD0D52SCT41","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.camera_back_door_ptz_calibrate","state":"unknown","attributes":{"friendly_name":"Camera - Back Door PTZ calibrate"},"last_changed":"2025-06-27T11:33:21.307278+00:00","last_reported":"2025-06-27T11:43:20.824827+00:00","last_updated":"2025-06-27T11:33:21.307278+00:00","context":{"id":"01JYRJKR8V45HK7P59P33CNHNS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.camera_back_door_guard_go_to","state":"unknown","attributes":{"friendly_name":"Camera - Back Door Guard go to"},"last_changed":"2025-06-27T11:33:21.307331+00:00","last_reported":"2025-06-27T11:43:20.824851+00:00","last_updated":"2025-06-27T11:33:21.307331+00:00","context":{"id":"01JYRJKR8V9HV3HPYN61J7DHCK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.camera_back_door_guard_set_current_position","state":"unknown","attributes":{"friendly_name":"Camera - Back Door Guard set current position"},"last_changed":"2025-06-27T11:33:21.307384+00:00","last_reported":"2025-06-27T11:43:20.824877+00:00","last_updated":"2025-06-27T11:33:21.307384+00:00","context":{"id":"01JYRJKR8V32KW811PM211F9D8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.camera_back_door_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v3.1.0.3382_2404178024","in_progress":false,"latest_version":"v3.1.0.4417_2412122178","release_summary":null,"release_url":"https://reolink.com/download-center/","skipped_version":"v3.1.0.4417_2412122178","title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/reolink/icon.png","friendly_name":"Camera - Back Door Firmware","supported_features":21},"last_changed":"2025-06-19T23:28:50.476652+00:00","last_reported":"2025-06-19T23:28:50.476652+00:00","last_updated":"2025-06-19T23:28:50.476652+00:00","context":{"id":"01JY58C39C4037KCFGDBC84V4N","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.front_porch_doorbell_firmware","state":"unavailable","attributes":{"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/reolink/icon.png","friendly_name":"Front Porch Doorbell Firmware","supported_features":1},"last_changed":"2025-06-27T11:31:22.739529+00:00","last_reported":"2025-06-27T11:31:22.739529+00:00","last_updated":"2025-06-27T11:31:22.739529+00:00","context":{"id":"01JYRJG4FKRTH8MR5Y16HB5YS7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.metrology_metro_fluent_windows_themes_by_mmak_es_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v.1.9.1","in_progress":false,"latest_version":"v.1.9.1","release_summary":null,"release_url":"https://github.com/Madelena/Metrology-for-Hass/releases/v.1.9.1","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Metrology - Metro + Fluent + Windows Themes - by mmak.es update","supported_features":23},"last_changed":"2025-06-19T23:28:50.582823+00:00","last_reported":"2025-06-19T23:28:50.582823+00:00","last_updated":"2025-06-19T23:28:50.582823+00:00","context":{"id":"01JY58C3CPWBZ36WQYAR6WNXM2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.emporia_vue_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.11.1","in_progress":false,"latest_version":"v0.11.1","release_summary":null,"release_url":"https://github.com/magico13/ha-emporia-vue/releases/v0.11.1","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/emporia_vue/icon.png","friendly_name":"Emporia Vue update","supported_features":23},"last_changed":"2025-06-19T23:28:50.583141+00:00","last_reported":"2025-06-19T23:28:50.583141+00:00","last_updated":"2025-06-19T23:28:50.583141+00:00","context":{"id":"01JY58C3CQDG8T764HCG4NETS8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.google_dark_theme_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.13","in_progress":false,"latest_version":"v1.13","release_summary":null,"release_url":"https://github.com/JuanMTech/google_dark_theme/releases/v1.13","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Google Dark Theme update","supported_features":23},"last_changed":"2025-06-19T23:28:50.583390+00:00","last_reported":"2025-06-19T23:28:50.583390+00:00","last_updated":"2025-06-19T23:28:50.583390+00:00","context":{"id":"01JY58C3CQV1ZGV75Y960Q4KG7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.power_flow_card_plus_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.2.5","in_progress":false,"latest_version":"v0.2.5","release_summary":null,"release_url":"https://github.com/flixlix/power-flow-card-plus/releases/v0.2.5","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Power Flow Card Plus update","supported_features":23},"last_changed":"2025-06-19T23:28:50.583611+00:00","last_reported":"2025-06-19T23:28:50.583611+00:00","last_updated":"2025-06-19T23:28:50.583611+00:00","context":{"id":"01JY58C3CQ5ZZB9PR381J195F6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.vacuum_card_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2.11.0","in_progress":false,"latest_version":"v2.11.0","release_summary":null,"release_url":"https://github.com/denysdovhan/vacuum-card/releases/v2.11.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Vacuum Card update","supported_features":23},"last_changed":"2025-06-19T23:28:50.583882+00:00","last_reported":"2025-06-19T23:28:50.583882+00:00","last_updated":"2025-06-19T23:28:50.583882+00:00","context":{"id":"01JY58C3CQYNYJJE7DTVJ5GVBV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.clock_weather_card_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2.8.12","in_progress":false,"latest_version":"v2.8.12","release_summary":null,"release_url":"https://github.com/pkissling/clock-weather-card/releases/v2.8.12","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Clock Weather Card update","supported_features":23},"last_changed":"2025-06-27T12:28:53.199734+00:00","last_reported":"2025-06-27T12:28:53.201033+00:00","last_updated":"2025-06-27T12:28:53.200809+00:00","context":{"id":"01JYRNSBWM1GWE0MS99Y08A09X","parent_id":null,"user_id":"c722e9c4c017439782dcc839ac464d33"}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.hacs_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2.0.5","in_progress":false,"latest_version":"2.0.5","release_summary":null,"release_url":"https://github.com/hacs/integration/releases/2.0.5","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/hacs/icon.png","friendly_name":"HACS update","supported_features":23},"last_changed":"2025-06-19T23:28:50.584339+00:00","last_reported":"2025-06-19T23:28:50.584339+00:00","last_updated":"2025-06-19T23:28:50.584339+00:00","context":{"id":"01JY58C3CRBN2T2DZ4NCSDK1DK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.hubitat_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.9.43","in_progress":false,"latest_version":"v0.9.43","release_summary":null,"release_url":"https://github.com/jason0x43/hacs-hubitat/releases/v0.9.43","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/hubitat/icon.png","friendly_name":"Hubitat update","supported_features":23},"last_changed":"2025-06-19T23:28:50.584551+00:00","last_reported":"2025-06-19T23:28:50.584551+00:00","last_updated":"2025-06-19T23:28:50.584551+00:00","context":{"id":"01JY58C3CRN70YX75NB9WK36V7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mini_graph_card_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.13.0","in_progress":false,"latest_version":"v0.13.0","release_summary":null,"release_url":"https://github.com/kalkih/mini-graph-card/releases/v0.13.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"mini-graph-card update","supported_features":23},"last_changed":"2025-06-19T23:28:50.584848+00:00","last_reported":"2025-06-19T23:28:50.584848+00:00","last_updated":"2025-06-19T23:28:50.584848+00:00","context":{"id":"01JY58C3CRMW0MWFEXQ2VKD4A5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.bubble_card_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2.4.0","in_progress":false,"latest_version":"v2.4.0","release_summary":null,"release_url":"https://github.com/Clooos/Bubble-Card/releases/v2.4.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Bubble Card update","supported_features":23},"last_changed":"2025-06-19T23:28:50.585214+00:00","last_reported":"2025-06-19T23:28:50.585214+00:00","last_updated":"2025-06-19T23:28:50.585214+00:00","context":{"id":"01JY58C3CSPSFSK274MDR2HV69","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mushroom_themes_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.0.10","in_progress":false,"latest_version":"v0.0.10","release_summary":null,"release_url":"https://github.com/piitaya/lovelace-mushroom-themes/releases/v0.0.10","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Mushroom Themes update","supported_features":23},"last_changed":"2025-06-19T23:28:50.585484+00:00","last_reported":"2025-06-19T23:28:50.585484+00:00","last_updated":"2025-06-19T23:28:50.585484+00:00","context":{"id":"01JY58C3CSDWN4FV5AXRG3MYHK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.smartthinq_lge_sensors_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.41.1","in_progress":false,"latest_version":"v0.41.1","release_summary":null,"release_url":"https://github.com/ollo69/ha-smartthinq-sensors/releases/v0.41.1","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/smartthinq_sensors/icon.png","friendly_name":"SmartThinQ LGE Sensors update","supported_features":23},"last_changed":"2025-06-19T23:28:50.585751+00:00","last_reported":"2025-06-19T23:28:50.585751+00:00","last_updated":"2025-06-19T23:28:50.585751+00:00","context":{"id":"01JY58C3CSRHY07SM0X2C20V0J","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.accu_weather_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"07d3275","in_progress":false,"latest_version":"07d3275","release_summary":null,"release_url":"https://github.com/simonhq/accu_allergies","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"accu_weather update","supported_features":23},"last_changed":"2025-06-19T23:28:50.585973+00:00","last_reported":"2025-06-19T23:28:50.585973+00:00","last_updated":"2025-06-19T23:28:50.585973+00:00","context":{"id":"01JY58C3CSX3SXJYKAS4RKXXSG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.waste_management_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"0.1.6","in_progress":false,"latest_version":"0.1.6","release_summary":null,"release_url":"https://github.com/dcmeglio/homeassistant-waste_management/releases/0.1.6","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/waste_management/icon.png","friendly_name":"Waste Management update","supported_features":23},"last_changed":"2025-06-19T23:28:50.586175+00:00","last_reported":"2025-06-19T23:28:50.586175+00:00","last_updated":"2025-06-19T23:28:50.586175+00:00","context":{"id":"01JY58C3CTZ83XXDPQN0FSHBSC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.power_flow_card_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2.6.2","in_progress":false,"latest_version":"v2.6.2","release_summary":null,"release_url":"https://github.com/ulic75/power-flow-card/releases/v2.6.2","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Power Flow Card update","supported_features":23},"last_changed":"2025-06-19T23:28:50.586418+00:00","last_reported":"2025-06-19T23:28:50.586418+00:00","last_updated":"2025-06-19T23:28:50.586418+00:00","context":{"id":"01JY58C3CT6AZBQZZF9SZV7RCF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.dryer_remote_start","state":"unavailable","attributes":{"device_class":"update","icon":"mdi:play-circle-outline","friendly_name":"Dryer Remote Start"},"last_changed":"2025-06-19T23:28:50.628603+00:00","last_reported":"2025-06-19T23:28:50.628603+00:00","last_updated":"2025-06-19T23:28:50.628603+00:00","context":{"id":"01JY58C3E430ZTM7X315643FW7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.dryer_pause","state":"unavailable","attributes":{"device_class":"update","icon":"mdi:pause-circle-outline","friendly_name":"Dryer Pause"},"last_changed":"2025-06-26T15:31:55.407261+00:00","last_reported":"2025-06-26T15:43:55.402536+00:00","last_updated":"2025-06-26T15:31:55.407261+00:00","context":{"id":"01JYPDVVWFFN34ESPT7YMS8X8F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.front_load_washer_remote_start","state":"unavailable","attributes":{"device_class":"update","icon":"mdi:play-circle-outline","friendly_name":"Front Load Washer Remote Start"},"last_changed":"2025-06-19T23:28:50.629071+00:00","last_reported":"2025-06-19T23:28:50.629071+00:00","last_updated":"2025-06-19T23:28:50.629071+00:00","context":{"id":"01JY58C3E5PD8CH9D7PR9GH0VK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.front_load_washer_pause","state":"unavailable","attributes":{"device_class":"update","icon":"mdi:pause-circle-outline","friendly_name":"Front Load Washer Pause"},"last_changed":"2025-06-26T00:11:16.472938+00:00","last_reported":"2025-06-26T00:13:46.475893+00:00","last_updated":"2025-06-26T00:11:16.472938+00:00","context":{"id":"01JYMS63KRFW0EA3M4TS2EJ1S5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.master_bedroom_switch_button_1","state":"2025-06-26T22:22:20.157+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Master Bedroom Switch Button 1"},"last_changed":"2025-06-26T22:22:20.158049+00:00","last_reported":"2025-06-26T22:22:20.158049+00:00","last_updated":"2025-06-26T22:22:20.158049+00:00","context":{"id":"01JYQ5BBFY36W5J1170RCK6MAE","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.master_bedroom_switch_button_2","state":"2025-06-25T22:30:54.602+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Master Bedroom Switch Button 2"},"last_changed":"2025-06-25T22:30:54.602897+00:00","last_reported":"2025-06-25T22:30:54.602897+00:00","last_updated":"2025-06-25T22:30:54.602897+00:00","context":{"id":"01JYMKEAWAFN59RTAG2JJ4MSZM","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.master_bedroom_switch_button_3","state":"2025-06-27T10:52:50.192+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Master Bedroom Switch Button 3"},"last_changed":"2025-06-27T10:52:50.192486+00:00","last_reported":"2025-06-27T10:52:50.192486+00:00","last_updated":"2025-06-27T10:52:50.192486+00:00","context":{"id":"01JYRG9J4GR4KMR64G75X2VP9M","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.master_bedroom_switch_button_4","state":"2025-06-26T22:29:03.228+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Master Bedroom Switch Button 4"},"last_changed":"2025-06-26T22:29:03.229062+00:00","last_reported":"2025-06-26T22:29:03.229062+00:00","last_updated":"2025-06-26T22:29:03.229062+00:00","context":{"id":"01JYQ5QN3XSSDNFNE45RPYRNRA","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.nursery_switch_button_1","state":"2025-06-26T22:25:45.577+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Nursery Switch Button 1"},"last_changed":"2025-06-26T22:25:45.577771+00:00","last_reported":"2025-06-26T22:25:45.577771+00:00","last_updated":"2025-06-26T22:25:45.577771+00:00","context":{"id":"01JYQ5HM39A1MJT5PXBWNRRPB6","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.nursery_switch_button_2","state":"2025-06-26T22:56:35.069+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Nursery Switch Button 2"},"last_changed":"2025-06-26T22:56:35.069502+00:00","last_reported":"2025-06-26T22:56:35.069502+00:00","last_updated":"2025-06-26T22:56:35.069502+00:00","context":{"id":"01JYQ7A27XTSGHC24PC4MXK8Q1","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.nursery_switch_button_3","state":"2025-06-27T09:00:58.863+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Nursery Switch Button 3"},"last_changed":"2025-06-27T09:00:58.863924+00:00","last_reported":"2025-06-27T09:00:58.863924+00:00","last_updated":"2025-06-27T09:00:58.863924+00:00","context":{"id":"01JYR9WR3FDXM4KDW6MCRQH7CW","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.nursery_switch_button_4","state":"2025-06-27T09:00:59.662+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Nursery Switch Button 4"},"last_changed":"2025-06-27T09:00:59.662873+00:00","last_reported":"2025-06-27T09:00:59.662873+00:00","last_updated":"2025-06-27T09:00:59.662873+00:00","context":{"id":"01JYR9WRWEZHCX053QKB2PG705","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_1","state":"2025-06-25T03:38:26.411+00:00","attributes":{"event_types":["released","held","pushed"],"event_type":"pushed","device_class":"button","friendly_name":"Front Porch Switch Button 1"},"last_changed":"2025-06-25T03:38:26.411194+00:00","last_reported":"2025-06-25T03:38:26.411194+00:00","last_updated":"2025-06-25T03:38:26.411194+00:00","context":{"id":"01JYJJMQ7BD4RHH1B9G87P1HDN","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_2","state":"2024-10-14T01:26:27.597+00:00","attributes":{"event_types":["released","held","pushed"],"event_type":"pushed","device_class":"button","friendly_name":"Front Porch Switch Button 2"},"last_changed":"2025-06-19T23:28:50.700039+00:00","last_reported":"2025-06-19T23:28:50.700039+00:00","last_updated":"2025-06-19T23:28:50.700039+00:00","context":{"id":"01JY58C3GCK2DRTKKZJCYH8GE7","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_3","state":"unknown","attributes":{"event_types":["released","held","pushed"],"event_type":null,"device_class":"button","friendly_name":"Front Porch Switch Button 3"},"last_changed":"2025-06-19T23:28:50.700330+00:00","last_reported":"2025-06-19T23:28:50.700330+00:00","last_updated":"2025-06-19T23:28:50.700330+00:00","context":{"id":"01JY58C3GCZ7ETE59Q980D338D","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": null,
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_4","state":"unknown","attributes":{"event_types":["released","held","pushed"],"event_type":null,"device_class":"button","friendly_name":"Front Porch Switch Button 4"},"last_changed":"2025-06-19T23:28:50.700598+00:00","last_reported":"2025-06-19T23:28:50.700598+00:00","last_updated":"2025-06-19T23:28:50.700598+00:00","context":{"id":"01JY58C3GCYYNVEGTA3F67VEAJ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": null,
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_5","state":"unknown","attributes":{"event_types":["released","held","pushed"],"event_type":null,"device_class":"button","friendly_name":"Front Porch Switch Button 5"},"last_changed":"2025-06-19T23:28:50.700849+00:00","last_reported":"2025-06-19T23:28:50.700849+00:00","last_updated":"2025-06-19T23:28:50.700849+00:00","context":{"id":"01JY58C3GCZ0FT33RCAYVPCPXW","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": null,
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_6","state":"2025-06-09T21:00:04.460+00:00","attributes":{"event_types":["released","held","pushed"],"event_type":"pushed","device_class":"button","friendly_name":"Front Porch Switch Button 6"},"last_changed":"2025-06-19T23:28:50.701204+00:00","last_reported":"2025-06-19T23:28:50.701204+00:00","last_updated":"2025-06-19T23:28:50.701204+00:00","context":{"id":"01JY58C3GDZP2TMGVFR7BE1JQ3","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_7","state":"2025-06-09T21:00:04.495+00:00","attributes":{"event_types":["released","held","pushed"],"event_type":"pushed","device_class":"button","friendly_name":"Front Porch Switch Button 7"},"last_changed":"2025-06-19T23:28:50.701598+00:00","last_reported":"2025-06-19T23:28:50.701598+00:00","last_updated":"2025-06-19T23:28:50.701598+00:00","context":{"id":"01JY58C3GD5CNS7R93DQZY922C","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_8","state":"2025-06-10T01:12:33.182+00:00","attributes":{"event_types":["released","held","pushed"],"event_type":"pushed","device_class":"button","friendly_name":"Front Porch Switch Button 8"},"last_changed":"2025-06-19T23:28:50.701928+00:00","last_reported":"2025-06-19T23:28:50.701928+00:00","last_updated":"2025-06-19T23:28:50.701928+00:00","context":{"id":"01JY58C3GDNSXS7V99G9KACPX4","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_9","state":"unknown","attributes":{"event_types":["released","held","pushed"],"event_type":null,"device_class":"button","friendly_name":"Front Porch Switch Button 9"},"last_changed":"2025-06-19T23:28:50.702135+00:00","last_reported":"2025-06-19T23:28:50.702135+00:00","last_updated":"2025-06-19T23:28:50.702135+00:00","context":{"id":"01JY58C3GEM1BRPHYRY8DPCAD0","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": null,
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_10","state":"unknown","attributes":{"event_types":["released","held","pushed"],"event_type":null,"device_class":"button","friendly_name":"Front Porch Switch Button 10"},"last_changed":"2025-06-19T23:28:50.702313+00:00","last_reported":"2025-06-19T23:28:50.702313+00:00","last_updated":"2025-06-19T23:28:50.702313+00:00","context":{"id":"01JY58C3GENA98K148VKNR72F3","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": null,
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_11","state":"unknown","attributes":{"event_types":["released","held","pushed"],"event_type":null,"device_class":"button","friendly_name":"Front Porch Switch Button 11"},"last_changed":"2025-06-19T23:28:50.702584+00:00","last_reported":"2025-06-19T23:28:50.702584+00:00","last_updated":"2025-06-19T23:28:50.702584+00:00","context":{"id":"01JY58C3GE7AW4ERJ0EMQXE1QK","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": null,
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_12","state":"2024-08-26T19:35:51.864+00:00","attributes":{"event_types":["released","held","pushed"],"event_type":"pushed","device_class":"button","friendly_name":"Front Porch Switch Button 12"},"last_changed":"2025-06-19T23:28:50.704041+00:00","last_reported":"2025-06-19T23:28:50.704041+00:00","last_updated":"2025-06-19T23:28:50.704041+00:00","context":{"id":"01JY58C3GGWWF7VF3ANTE1HTH8","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_13","state":"2024-08-26T19:35:45.062+00:00","attributes":{"event_types":["released","held","pushed"],"event_type":"pushed","device_class":"button","friendly_name":"Front Porch Switch Button 13"},"last_changed":"2025-06-19T23:28:50.704225+00:00","last_reported":"2025-06-19T23:28:50.704225+00:00","last_updated":"2025-06-19T23:28:50.704225+00:00","context":{"id":"01JY58C3GGZ18HMH28P469MPQQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_porch_switch_button_14","state":"2024-08-26T19:35:45.316+00:00","attributes":{"event_types":["released","held","pushed"],"event_type":"pushed","device_class":"button","friendly_name":"Front Porch Switch Button 14"},"last_changed":"2025-06-19T23:28:50.704436+00:00","last_reported":"2025-06-19T23:28:50.704436+00:00","last_updated":"2025-06-19T23:28:50.704436+00:00","context":{"id":"01JY58C3GGZQX5QE45FRSPJMYV","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.den_2_switch_button_1","state":"2025-06-26T01:27:01.701+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Den 2 Switch Button 1"},"last_changed":"2025-06-26T01:27:01.701668+00:00","last_reported":"2025-06-26T01:27:01.701668+00:00","last_updated":"2025-06-26T01:27:01.701668+00:00","context":{"id":"01JYMXGTA5W9K2TQJA3ZEV35Y9","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.den_2_switch_button_2","state":"2025-06-26T01:27:01.254+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Den 2 Switch Button 2"},"last_changed":"2025-06-26T01:27:01.254616+00:00","last_reported":"2025-06-26T01:27:01.254616+00:00","last_updated":"2025-06-26T01:27:01.254616+00:00","context":{"id":"01JYMXGSW6CER0WRCA75ED5D3Z","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.den_2_switch_button_3","state":"2025-06-26T01:27:00.115+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Den 2 Switch Button 3"},"last_changed":"2025-06-26T01:27:00.115342+00:00","last_reported":"2025-06-26T01:27:00.115342+00:00","last_updated":"2025-06-26T01:27:00.115342+00:00","context":{"id":"01JYMXGRRKQYH39NHRCFM81DRN","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.den_2_switch_button_4","state":"2025-06-27T12:56:29.888+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Den 2 Switch Button 4"},"last_changed":"2025-06-27T12:56:29.888140+00:00","last_reported":"2025-06-27T12:56:29.888140+00:00","last_updated":"2025-06-27T12:56:29.888140+00:00","context":{"id":"01JYRQBZY0776WNYK7P0Q81R2M","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.den_1_switch_button_1","state":"2025-06-24T21:31:45.146+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Den 1 Switch Button 1"},"last_changed":"2025-06-24T21:31:45.146350+00:00","last_reported":"2025-06-24T21:31:45.146350+00:00","last_updated":"2025-06-24T21:31:45.146350+00:00","context":{"id":"01JYHXN9KTX9DS0RS6ZPKRZHCF","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.den_1_switch_button_2","state":"2025-06-17T01:10:46.877+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Den 1 Switch Button 2"},"last_changed":"2025-06-19T23:28:50.706252+00:00","last_reported":"2025-06-19T23:28:50.706252+00:00","last_updated":"2025-06-19T23:28:50.706252+00:00","context":{"id":"01JY58C3GJ80EGVQ2GW8JMX8YH","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.den_1_switch_button_3","state":"2025-06-17T01:10:47.589+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Den 1 Switch Button 3"},"last_changed":"2025-06-19T23:28:50.706511+00:00","last_reported":"2025-06-19T23:28:50.706511+00:00","last_updated":"2025-06-19T23:28:50.706511+00:00","context":{"id":"01JY58C3GJYPV6KPJ25TP2APBM","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.den_1_switch_button_4","state":"2025-06-24T21:31:46.484+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Den 1 Switch Button 4"},"last_changed":"2025-06-24T21:31:46.484368+00:00","last_reported":"2025-06-24T21:31:46.484368+00:00","last_updated":"2025-06-24T21:31:46.484368+00:00","context":{"id":"01JYHXNAXMSBPWP902ZPRGAZHX","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.office_switch_button_1","state":"2025-06-26T15:31:23.029+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Office Switch Button 1"},"last_changed":"2025-06-26T15:31:23.029377+00:00","last_reported":"2025-06-26T15:31:23.029377+00:00","last_updated":"2025-06-26T15:31:23.029377+00:00","context":{"id":"01JYPDTW8N6923H7F7HRHEZSRQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.office_switch_button_2","state":"2025-05-29T00:40:09.777+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Office Switch Button 2"},"last_changed":"2025-06-19T23:28:50.707199+00:00","last_reported":"2025-06-19T23:28:50.707199+00:00","last_updated":"2025-06-19T23:28:50.707199+00:00","context":{"id":"01JY58C3GK4RHMDGX45A12ZA5P","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.office_switch_button_3","state":"2025-06-21T01:25:33.545+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Office Switch Button 3"},"last_changed":"2025-06-21T01:25:33.545466+00:00","last_reported":"2025-06-21T01:25:33.545466+00:00","last_updated":"2025-06-21T01:25:33.545466+00:00","context":{"id":"01JY81EH79RVH3TH0EQ6188GKC","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.office_switch_button_4","state":"2025-06-26T16:29:46.966+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Office Switch Button 4"},"last_changed":"2025-06-26T16:29:46.967070+00:00","last_reported":"2025-06-26T16:29:46.967070+00:00","last_updated":"2025-06-26T16:29:46.967070+00:00","context":{"id":"01JYPH5T2QHM3AR05GN266KPBR","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.button_red_button_1","state":"2025-06-26T00:03:01.014+00:00","attributes":{"event_types":["held","pushed","released","double_tapped"],"event_type":"pushed","device_class":"button","friendly_name":"Button (Red) Button 1"},"last_changed":"2025-06-26T00:03:01.015018+00:00","last_reported":"2025-06-26T00:03:01.015018+00:00","last_updated":"2025-06-26T00:03:01.015018+00:00","context":{"id":"01JYMRPZRQR42224EH2D1MFARC","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.button_yellow_button_1","state":"2025-03-22T12:57:20.614+00:00","attributes":{"event_types":["held","pushed","released","double_tapped"],"event_type":"double_tapped","device_class":"button","friendly_name":"Button (Yellow) Button 1"},"last_changed":"2025-06-19T23:28:50.708153+00:00","last_reported":"2025-06-19T23:28:50.708153+00:00","last_updated":"2025-06-19T23:28:50.708153+00:00","context":{"id":"01JY58C3GMRWJKSGSRJVA63YRX","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "double_tapped",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.button_blue_button_1","state":"2025-02-17T15:34:16.279+00:00","attributes":{"event_types":["held","pushed","released","double_tapped"],"event_type":"released","device_class":"button","friendly_name":"Button (Blue) Button 1"},"last_changed":"2025-06-19T23:28:50.708443+00:00","last_reported":"2025-06-19T23:28:50.708443+00:00","last_updated":"2025-06-19T23:28:50.708443+00:00","context":{"id":"01JY58C3GMRBQ4WRH5MYJB601C","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "released",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.living_room_switch_button_1","state":"2025-06-26T21:46:04.682+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Living Room Switch Button 1"},"last_changed":"2025-06-26T21:46:04.682982+00:00","last_reported":"2025-06-26T21:46:04.682982+00:00","last_updated":"2025-06-26T21:46:04.682982+00:00","context":{"id":"01JYQ38Z0A81WDRM8GEX5BWV47","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.living_room_switch_button_2","state":"2025-06-25T23:46:55.917+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Living Room Switch Button 2"},"last_changed":"2025-06-25T23:46:55.917204+00:00","last_reported":"2025-06-25T23:46:55.917204+00:00","last_updated":"2025-06-25T23:46:55.917204+00:00","context":{"id":"01JYMQSH9D2SNNA593MNZG5GRT","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.living_room_switch_button_3","state":"2025-06-26T21:46:11.007+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Living Room Switch Button 3"},"last_changed":"2025-06-26T21:46:11.007996+00:00","last_reported":"2025-06-26T21:46:11.007996+00:00","last_updated":"2025-06-26T21:46:11.007996+00:00","context":{"id":"01JYQ3955ZVQ6N4GAGXJNBXF3G","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"event.living_room_switch_button_4","state":"2025-06-27T02:08:11.052+00:00","attributes":{"event_types":["pushed","released","held"],"event_type":"pushed","device_class":"button","friendly_name":"Living Room Switch Button 4"},"last_changed":"2025-06-27T02:08:11.052191+00:00","last_reported":"2025-06-27T02:08:11.052191+00:00","last_updated":"2025-06-27T02:08:11.052191+00:00","context":{"id":"01JYQJ8WSC5F7X8784EBRHMVMM","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "pushed",
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"script.garage_door_toggle","state":"off","attributes":{"last_triggered":"2025-06-27T11:37:40.409317+00:00","mode":"single","current":0,"icon":"mdi:garage-variant","friendly_name":"Garage Door - Toggle"},"last_changed":"2025-06-27T11:37:40.555462+00:00","last_reported":"2025-06-27T11:37:40.555462+00:00","last_updated":"2025-06-27T11:37:40.555462+00:00","context":{"id":"01JYRJVN9S9P51EKZWX0SZSC7W","parent_id":null,"user_id":"c722e9c4c017439782dcc839ac464d33"}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"script.all_doors_lock","state":"off","attributes":{"last_triggered":"2025-06-27T11:37:44.761273+00:00","mode":"single","current":0,"icon":"mdi:door-closed-lock","friendly_name":"All Doors - Lock"},"last_changed":"2025-06-27T11:37:45.083281+00:00","last_reported":"2025-06-27T11:37:45.083281+00:00","last_updated":"2025-06-27T11:37:45.083281+00:00","context":{"id":"01JYRJVSHR5JZNYFX5WGCW5VNP","parent_id":null,"user_id":"c722e9c4c017439782dcc839ac464d33"}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"script.toggle_bedside_lamps","state":"off","attributes":{"last_triggered":"2025-06-08T03:15:10.299542+00:00","mode":"single","current":0,"icon":"mdi:lamps-outline","friendly_name":"Toggle Bedside Lamps"},"last_changed":"2025-06-19T23:28:50.814859+00:00","last_reported":"2025-06-19T23:28:50.814859+00:00","last_updated":"2025-06-19T23:28:50.814859+00:00","context":{"id":"01JY58C3KY84GEJPNQ3SGE6BPJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"script.cycle_bedroom_fan_speed","state":"off","attributes":{"last_triggered":"2025-06-22T09:15:04.204055+00:00","mode":"single","current":0,"icon":"mdi:ceiling-fan","friendly_name":"Cycle Bedroom Fan Speed"},"last_changed":"2025-06-22T09:15:04.380119+00:00","last_reported":"2025-06-22T09:15:04.380119+00:00","last_updated":"2025-06-22T09:15:04.380119+00:00","context":{"id":"01JYBEPYMBED43WFYG5CQMRC61","parent_id":null,"user_id":"c722e9c4c017439782dcc839ac464d33"}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.sleepnumber_sleep_number_calibrate","state":"2023-01-27T20:32:17.686609+00:00","attributes":{"icon":"mdi:target","friendly_name":"SleepNumber Bed Calibrate"},"last_changed":"2025-06-19T23:28:50.830978+00:00","last_reported":"2025-06-19T23:28:50.830978+00:00","last_updated":"2025-06-19T23:28:50.830978+00:00","context":{"id":"01JY58C3ME41V5GETQKRMX498J","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.sleepnumber_sleep_number_stop_pump","state":"2023-01-27T20:32:26.827809+00:00","attributes":{"icon":"mdi:stop","friendly_name":"SleepNumber Bed Stop Pump"},"last_changed":"2025-06-19T23:28:50.831167+00:00","last_reported":"2025-06-19T23:28:50.831167+00:00","last_updated":"2025-06-19T23:28:50.831167+00:00","context":{"id":"01JY58C3MFDJDGWRFFRAJTTB7B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.camera_office_identify_2","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Camera - Office Identify"},"last_changed":"2025-06-25T12:15:06.706562+00:00","last_reported":"2025-06-25T12:15:06.706562+00:00","last_updated":"2025-06-25T12:15:06.706562+00:00","context":{"id":"01JYKG6RYJWK9B3N6KN0NDYG6A","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.upstairs_thermostat_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Upstairs Thermostat Identify"},"last_changed":"2025-06-25T12:15:18.859352+00:00","last_reported":"2025-06-25T12:15:18.859352+00:00","last_updated":"2025-06-25T12:15:18.859352+00:00","context":{"id":"01JYKG74TBVKNAATTK4E6BZA6J","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.upstairs_thermostat_clear_hold","state":"2025-05-08T01:46:42.054519+00:00","attributes":{"friendly_name":"Upstairs Thermostat Clear Hold"},"last_changed":"2025-06-25T12:15:18.860254+00:00","last_reported":"2025-06-25T12:15:19.413800+00:00","last_updated":"2025-06-25T12:15:18.860254+00:00","context":{"id":"01JYKG74TCGB41C9N1RHPBQJZY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bedroom3_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Sensor Bedroom 3 Identify"},"last_changed":"2025-06-25T12:15:18.867245+00:00","last_reported":"2025-06-25T12:15:18.867245+00:00","last_updated":"2025-06-25T12:15:18.867245+00:00","context":{"id":"01JYKG74TKZSGDZ59D1ZSK2ACX","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.sensor_nursery_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Sensor - Nursery Identify"},"last_changed":"2025-06-25T12:15:18.859522+00:00","last_reported":"2025-06-25T12:15:18.859522+00:00","last_updated":"2025-06-25T12:15:18.859522+00:00","context":{"id":"01JYKG74TBEB07F51Q4VWJD3BA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.sensor_master_bedroom_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Sensor - Master Bedroom Identify"},"last_changed":"2025-06-25T12:15:18.858959+00:00","last_reported":"2025-06-25T12:15:18.858959+00:00","last_updated":"2025-06-25T12:15:18.858959+00:00","context":{"id":"01JYKG74TAC0WA6ZZ8ESPGPNNY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.office_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Office Identify"},"last_changed":"2025-06-25T12:15:18.859293+00:00","last_reported":"2025-06-25T12:15:18.859293+00:00","last_updated":"2025-06-25T12:15:18.859293+00:00","context":{"id":"01JYKG74TBPZ97BX0NEN6DKSM6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.master_bedroom_side_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Master Bedroom - Side Identify"},"last_changed":"2025-06-25T12:15:18.860328+00:00","last_reported":"2025-06-25T12:15:18.860328+00:00","last_updated":"2025-06-25T12:15:18.860328+00:00","context":{"id":"01JYKG74TC1982E28GXSC8DBYC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.master_bedroom_right_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Master Bedroom - Right Identify"},"last_changed":"2025-06-25T12:15:18.859737+00:00","last_reported":"2025-06-25T12:15:18.859737+00:00","last_updated":"2025-06-25T12:15:18.859737+00:00","context":{"id":"01JYKG74TBDC89NM4JYHQ657VZ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.master_bedroom_left_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Master Bedroom - Left Identify"},"last_changed":"2025-06-25T12:15:18.860012+00:00","last_reported":"2025-06-25T12:15:18.860012+00:00","last_updated":"2025-06-25T12:15:18.860012+00:00","context":{"id":"01JYKG74TC9MCEQHDAVRWZTZMR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.master_bathroom_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Master Bathroom Identify"},"last_changed":"2025-06-25T12:15:18.857968+00:00","last_reported":"2025-06-25T12:15:18.857968+00:00","last_updated":"2025-06-25T12:15:18.857968+00:00","context":{"id":"01JYKG74T9BP1QRT15VZFHMK5C","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.nursery_side_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Nursery - Side Identify"},"last_changed":"2025-06-25T12:15:18.857315+00:00","last_reported":"2025-06-25T12:15:18.857315+00:00","last_updated":"2025-06-25T12:15:18.857315+00:00","context":{"id":"01JYKG74T9JNX815GC03K3362W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.nursery_rear_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Nursery - Rear Identify"},"last_changed":"2025-06-25T12:15:18.857785+00:00","last_reported":"2025-06-25T12:15:18.857785+00:00","last_updated":"2025-06-25T12:15:18.857785+00:00","context":{"id":"01JYKG74T98QVTNGSM402NNZ2E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bedroom_3_rear_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Bedroom 3 - Rear Identify"},"last_changed":"2025-06-25T12:15:18.858566+00:00","last_reported":"2025-06-25T12:15:18.858566+00:00","last_updated":"2025-06-25T12:15:18.858566+00:00","context":{"id":"01JYKG74TA757AXFN080J79YTA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bedroom_3_side_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Bedroom 3 - Side Identify"},"last_changed":"2025-06-25T12:15:18.858847+00:00","last_reported":"2025-06-25T12:15:18.858847+00:00","last_updated":"2025-06-25T12:15:18.858847+00:00","context":{"id":"01JYKG74TACWAZVAWWT1AYKPHK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.office_side_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Office - Side Identify"},"last_changed":"2025-06-25T12:15:18.858411+00:00","last_reported":"2025-06-25T12:15:18.858411+00:00","last_updated":"2025-06-25T12:15:18.858411+00:00","context":{"id":"01JYKG74TAKQ6SJ3R5KGWVM82M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.office_front_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Office - Front Identify"},"last_changed":"2025-06-25T12:15:18.856336+00:00","last_reported":"2025-06-25T12:15:18.856336+00:00","last_updated":"2025-06-25T12:15:18.856336+00:00","context":{"id":"01JYKG74T8D8DF03NNQJDQWYJC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.m2qt_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Bathroom Window Identify"},"last_changed":"2025-06-25T12:15:18.856493+00:00","last_reported":"2025-06-25T12:15:18.856493+00:00","last_updated":"2025-06-25T12:15:18.856493+00:00","context":{"id":"01JYKG74T8VZNR4EX83GVH3X1K","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.downstairs_identify_2","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Downstairs Identify"},"last_changed":"2025-06-25T12:15:22.475579+00:00","last_reported":"2025-06-25T12:15:22.475579+00:00","last_updated":"2025-06-25T12:15:22.475579+00:00","context":{"id":"01JYKG78BBTQ16GCSN5ZH0FX58","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.downstairs_clear_hold_2","state":"2025-05-08T01:58:45.200725+00:00","attributes":{"friendly_name":"Downstairs Clear Hold"},"last_changed":"2025-06-25T12:15:22.467609+00:00","last_reported":"2025-06-25T12:15:22.467609+00:00","last_updated":"2025-06-25T12:15:22.467609+00:00","context":{"id":"01JYKG78B3HV2DQXECK4RMAA6B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.kitchen_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Kitchen Identify"},"last_changed":"2025-06-25T12:15:22.472608+00:00","last_reported":"2025-06-25T12:15:22.472608+00:00","last_updated":"2025-06-25T12:15:22.472608+00:00","context":{"id":"01JYKG78B8DG2YA0HA6CEGWPKP","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.den_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Dining Room Identify"},"last_changed":"2025-06-25T12:15:22.472909+00:00","last_reported":"2025-06-25T12:15:22.472909+00:00","last_updated":"2025-06-25T12:15:22.472909+00:00","context":{"id":"01JYKG78B8G2XGYCKVPZNTAX96","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.office_identify_2","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Family Room Identify"},"last_changed":"2025-06-25T12:15:22.472110+00:00","last_reported":"2025-06-25T12:15:22.472110+00:00","last_updated":"2025-06-25T12:15:22.472110+00:00","context":{"id":"01JYKG78B8QCRYBRYQ39AGQKHM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.back_door_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Back Door Identify"},"last_changed":"2025-06-25T12:15:22.473576+00:00","last_reported":"2025-06-25T12:15:22.473576+00:00","last_updated":"2025-06-25T12:15:22.473576+00:00","context":{"id":"01JYKG78B9TNSV6QEH6SQPVJHE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.front_door_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Front Door Identify"},"last_changed":"2025-06-25T12:15:22.473790+00:00","last_reported":"2025-06-25T12:15:22.473790+00:00","last_updated":"2025-06-25T12:15:22.473790+00:00","context":{"id":"01JYKG78B9PWTR1GWSW676SKN6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.living_room_right_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Living Room - Right Identify"},"last_changed":"2025-06-25T12:15:22.473399+00:00","last_reported":"2025-06-25T12:15:22.473399+00:00","last_updated":"2025-06-25T12:15:22.473399+00:00","context":{"id":"01JYKG78B9YTCTN00FBAH36C0Q","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.living_room_left_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Living Room - Left Identify"},"last_changed":"2025-06-25T12:15:22.468461+00:00","last_reported":"2025-06-25T12:15:22.468461+00:00","last_updated":"2025-06-25T12:15:22.468461+00:00","context":{"id":"01JYKG78B40CTS0B3NW7ACR1S1","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.basement_door_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Basement Door Identify"},"last_changed":"2025-06-25T12:15:22.468988+00:00","last_reported":"2025-06-25T12:15:22.468988+00:00","last_updated":"2025-06-25T12:15:22.468988+00:00","context":{"id":"01JYKG78B427EJNPE8EQVS2WJH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.powder_room_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Powder Room Identify"},"last_changed":"2025-06-25T12:15:22.468178+00:00","last_reported":"2025-06-25T12:15:22.468178+00:00","last_updated":"2025-06-25T12:15:22.468178+00:00","context":{"id":"01JYKG78B4961D68BDX0QDT9RG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.dining_room_right_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Dining Room Right Identify"},"last_changed":"2025-06-25T12:15:22.469881+00:00","last_reported":"2025-06-25T12:15:22.469881+00:00","last_updated":"2025-06-25T12:15:22.469881+00:00","context":{"id":"01JYKG78B5EFRPAS8XS5WFZ8KK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.dining_room_left_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Dining Room Left Identify"},"last_changed":"2025-06-25T12:15:22.470354+00:00","last_reported":"2025-06-25T12:15:22.470354+00:00","last_updated":"2025-06-25T12:15:22.470354+00:00","context":{"id":"01JYKG78B6J4BWBCXG0M947KW7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.kitchen_identify_2","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Kitchen Identify"},"last_changed":"2025-06-25T12:15:22.469089+00:00","last_reported":"2025-06-25T12:15:22.469089+00:00","last_updated":"2025-06-25T12:15:22.469089+00:00","context":{"id":"01JYKG78B56VJN1Q411WY8N0DB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.den_right_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Den Right Identify"},"last_changed":"2025-06-25T12:15:22.469470+00:00","last_reported":"2025-06-25T12:15:22.469470+00:00","last_updated":"2025-06-25T12:15:22.469470+00:00","context":{"id":"01JYKG78B553F0BFJCCMDK5757","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"button.den_left_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Den Left Identify"},"last_changed":"2025-06-25T12:15:22.466235+00:00","last_reported":"2025-06-25T12:15:22.466235+00:00","last_updated":"2025-06-25T12:15:22.466235+00:00","context":{"id":"01JYKG78B24WE7N1RS0DB6HFJJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.front_porch_lights_sunrise_sunset","state":"off","attributes":{"id":"1673808122420","last_triggered":"2024-04-10T08:30:00.494837+00:00","mode":"single","current":0,"friendly_name":"Front Porch Lights - Sunrise/Sunset"},"last_changed":"2025-06-19T23:28:51.349338+00:00","last_reported":"2025-06-19T23:28:51.349338+00:00","last_updated":"2025-06-19T23:28:51.349338+00:00","context":{"id":"01JY58C44N5FPEXMDEBF90KH70","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_1_living_room","state":"on","attributes":{"id":"1673812674424","last_triggered":"2025-06-26T21:46:04.684801+00:00","mode":"single","current":0,"friendly_name":"Button 1 - Living Room"},"last_changed":"2025-06-19T23:28:51.349609+00:00","last_reported":"2025-06-26T21:46:04.865224+00:00","last_updated":"2025-06-26T21:46:04.865224+00:00","context":{"id":"01JYQ38Z0CSVW909Y72SR0MDDG","parent_id":"01JYQ38Z0B5961CCPPDMWPQQRK","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_1_pushed_office","state":"on","attributes":{"id":"1673812783564","last_triggered":"2025-06-26T15:31:23.030411+00:00","mode":"single","current":0,"friendly_name":"Button 1 - Office"},"last_changed":"2025-06-19T23:28:51.349816+00:00","last_reported":"2025-06-26T15:31:23.312144+00:00","last_updated":"2025-06-26T15:31:23.312144+00:00","context":{"id":"01JYPDTW8NMKNZQE1KW7V5V0NW","parent_id":"01JYPDTW8N9YTYEKSQNHPRFGNF","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_4_pushed_office","state":"on","attributes":{"id":"1673812821748","last_triggered":"2025-06-26T16:29:46.968235+00:00","mode":"single","current":0,"friendly_name":"Button 4 - Office"},"last_changed":"2025-06-19T23:28:51.349989+00:00","last_reported":"2025-06-26T16:29:47.181826+00:00","last_updated":"2025-06-26T16:29:47.181826+00:00","context":{"id":"01JYPH5T2QW3GE9ZPA8EV6FTGA","parent_id":"01JYPH5T2Q6PF31Q2S0Z0RQ6Q1","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_4_pushed_living_room","state":"on","attributes":{"id":"1673812867146","last_triggered":"2025-06-27T02:08:11.053382+00:00","mode":"single","current":0,"friendly_name":"Button 4 - Living Room"},"last_changed":"2025-06-19T23:28:51.350150+00:00","last_reported":"2025-06-27T02:08:11.225135+00:00","last_updated":"2025-06-27T02:08:11.225135+00:00","context":{"id":"01JYQJ8WSDXK7DSQP5NV36ZGAS","parent_id":"01JYQJ8WSC4Q3A9MZ1DSK0N954","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.tag_sleep_mode_tag_is_scanned","state":"on","attributes":{"id":"1674274494899","last_triggered":"2023-02-15T01:59:27.885714+00:00","mode":"single","current":0,"friendly_name":"Tag Sleep Mode Tag is scanned"},"last_changed":"2025-06-19T23:28:51.350315+00:00","last_reported":"2025-06-19T23:28:51.350315+00:00","last_updated":"2025-06-19T23:28:51.350315+00:00","context":{"id":"01JY58C44PW022CEQ3DC3W746V","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.low_battery_level_detection_notification_for_all_battery_sensors","state":"on","attributes":{"id":"1675609601089","last_triggered":"2025-06-15T14:00:00.111060+00:00","mode":"single","current":0,"friendly_name":"Notification - Low Battery"},"last_changed":"2025-06-19T23:28:51.350478+00:00","last_reported":"2025-06-19T23:28:51.350478+00:00","last_updated":"2025-06-19T23:28:51.350478+00:00","context":{"id":"01JY58C44PWZT2FD3AS96S65V7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_3_increase_brightness","state":"on","attributes":{"id":"1676158632304","last_triggered":"2025-06-26T21:46:11.008856+00:00","mode":"single","current":0,"friendly_name":"Button 3 - Living Room"},"last_changed":"2025-06-19T23:28:51.350632+00:00","last_reported":"2025-06-26T21:46:11.218644+00:00","last_updated":"2025-06-26T21:46:11.218644+00:00","context":{"id":"01JYQ39560YWTVPDRTYBA1ZJJK","parent_id":"01JYQ39560PF26422M7FPJD2VM","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_2_decrease_brightness","state":"on","attributes":{"id":"1676158689176","last_triggered":"2025-06-25T23:46:55.921387+00:00","mode":"single","current":0,"friendly_name":"Button 2 - Living Room"},"last_changed":"2025-06-19T23:28:51.350819+00:00","last_reported":"2025-06-25T23:46:56.310744+00:00","last_updated":"2025-06-25T23:46:56.310744+00:00","context":{"id":"01JYMQSH9HQ4SHFVTM9T3FQ481","parent_id":"01JYMQSH9D63HW7VYF5GWXRSX8","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_1_held_master_bedroom","state":"on","attributes":{"id":"1676251744566","last_triggered":"2025-06-17T22:49:20.140659+00:00","mode":"single","current":0,"friendly_name":"Button 1 Held - Master Bedroom"},"last_changed":"2025-06-19T23:28:51.350974+00:00","last_reported":"2025-06-19T23:28:51.350974+00:00","last_updated":"2025-06-19T23:28:51.350974+00:00","context":{"id":"01JY58C44PJANESZVMT66XWWB7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_4_held_master_bedroom","state":"on","attributes":{"id":"1676251797198","last_triggered":"2025-02-12T21:01:18.579372+00:00","mode":"single","current":0,"friendly_name":"Button 4 Held - Master Bedroom"},"last_changed":"2025-06-19T23:28:51.351114+00:00","last_reported":"2025-06-19T23:28:51.351114+00:00","last_updated":"2025-06-19T23:28:51.351114+00:00","context":{"id":"01JY58C44Q7J0E1HK1CE82TR5J","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.automation_16","state":"on","attributes":{"id":"1676252741595","last_triggered":"2025-06-26T22:29:03.230006+00:00","mode":"single","current":0,"friendly_name":"Button 4 - Master Bedroom"},"last_changed":"2025-06-19T23:28:51.351265+00:00","last_reported":"2025-06-26T22:29:03.420204+00:00","last_updated":"2025-06-26T22:29:03.420204+00:00","context":{"id":"01JYQ5QN3XVZEYKBH213DB4281","parent_id":"01JYQ5QN3XGE3Z2TYXGDS9BWA2","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_1_master_bedroom","state":"on","attributes":{"id":"1676252813586","last_triggered":"2025-06-26T22:22:20.159869+00:00","mode":"single","current":0,"friendly_name":"Button 1 - Master Bedroom"},"last_changed":"2025-06-19T23:28:51.351465+00:00","last_reported":"2025-06-26T22:22:20.388299+00:00","last_updated":"2025-06-26T22:22:20.388299+00:00","context":{"id":"01JYQ5BBFZZ7MTFED3HPMG547H","parent_id":"01JYQ5BBFY0NA9P7VH0T9TA7DC","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_4_nursery","state":"on","attributes":{"id":"1676253561430","last_triggered":"2025-06-27T09:00:59.663664+00:00","mode":"single","current":0,"friendly_name":"Button 4 - Nursery"},"last_changed":"2025-06-19T23:28:51.351611+00:00","last_reported":"2025-06-27T09:00:59.904521+00:00","last_updated":"2025-06-27T09:00:59.904521+00:00","context":{"id":"01JYR9WRWF4F3DPV7DVTP9YB7X","parent_id":"01JYR9WRWFHHY9FHXD8N8Q3VSM","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_4_held_nursery","state":"on","attributes":{"id":"1676253626486","last_triggered":"2025-06-09T00:01:42.023079+00:00","mode":"single","current":0,"friendly_name":"Button 4 Held - Nursery"},"last_changed":"2025-06-19T23:28:51.351800+00:00","last_reported":"2025-06-19T23:28:51.351800+00:00","last_updated":"2025-06-19T23:28:51.351800+00:00","context":{"id":"01JY58C44Q9EPCJHZ1CX8Z53EY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_1_nursery","state":"on","attributes":{"id":"1676253745806","last_triggered":"2025-06-26T22:25:45.578784+00:00","mode":"single","current":0,"friendly_name":"Button 1 - Nursery"},"last_changed":"2025-06-19T23:28:51.351956+00:00","last_reported":"2025-06-26T22:25:45.777480+00:00","last_updated":"2025-06-26T22:25:45.777480+00:00","context":{"id":"01JYQ5HM3A2HDSF42N71EF50CG","parent_id":"01JYQ5HM3A2HQEH9PXSFJ4J1XT","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_2_nursery","state":"on","attributes":{"id":"1676253964000","last_triggered":"2025-06-26T22:56:35.070866+00:00","mode":"single","current":0,"friendly_name":"Button 2 - Nursery"},"last_changed":"2025-06-19T23:28:51.352102+00:00","last_reported":"2025-06-26T22:56:35.149468+00:00","last_updated":"2025-06-26T22:56:35.149468+00:00","context":{"id":"01JYQ7A27YX89E8N2Y1DZN98B3","parent_id":"01JYQ7A27YTME4M7CM6MZSVCWK","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_3_office","state":"on","attributes":{"id":"1676336983188","last_triggered":"2025-06-21T01:25:33.546496+00:00","mode":"single","current":0,"friendly_name":"Button 3 - Office"},"last_changed":"2025-06-19T23:28:51.352242+00:00","last_reported":"2025-06-21T01:25:33.622744+00:00","last_updated":"2025-06-21T01:25:33.622744+00:00","context":{"id":"01JY81EH7AR4F462K0PM2PR4QK","parent_id":"01JY81EH79SXN33ZR849P85PGK","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_1_held_office","state":"on","attributes":{"id":"1676337231823","last_triggered":"2024-08-16T19:48:28.680617+00:00","mode":"single","current":0,"friendly_name":"Button 1 Held - Office"},"last_changed":"2025-06-19T23:28:51.352390+00:00","last_reported":"2025-06-19T23:28:51.352390+00:00","last_updated":"2025-06-19T23:28:51.352390+00:00","context":{"id":"01JY58C44RGAGDP20CCT1V984F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.automation_26","state":"on","attributes":{"id":"1676337287420","last_triggered":"2025-05-25T07:24:05.068409+00:00","mode":"single","current":0,"friendly_name":"Button 1 Held - Nursery"},"last_changed":"2025-06-19T23:28:51.352545+00:00","last_reported":"2025-06-19T23:28:51.352545+00:00","last_updated":"2025-06-19T23:28:51.352545+00:00","context":{"id":"01JY58C44R3K4GJV64ATF3Y541","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_4_held_nursery_2","state":"on","attributes":{"id":"1676337360747","last_triggered":"2025-04-11T20:19:06.401217+00:00","mode":"single","current":0,"friendly_name":"Button 4 Held - Office"},"last_changed":"2025-06-19T23:28:51.352721+00:00","last_reported":"2025-06-19T23:28:51.352721+00:00","last_updated":"2025-06-19T23:28:51.352721+00:00","context":{"id":"01JY58C44RZ8S99NRK35KF8SMZ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.washer_or_dryer_completed","state":"on","attributes":{"id":"1679622108762","last_triggered":"2025-06-26T15:31:55.410054+00:00","mode":"single","current":0,"friendly_name":"Washer or Dryer Completed "},"last_changed":"2025-06-19T23:28:51.353250+00:00","last_reported":"2025-06-26T15:31:56.603554+00:00","last_updated":"2025-06-26T15:31:56.603554+00:00","context":{"id":"01JYPDVVWHM27NRNQVGY93KS5Y","parent_id":"01JYPDVVWFDP6CFQQ0C6N6ZQC2","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_3_nursery","state":"on","attributes":{"id":"1687276332936","last_triggered":"2025-06-27T09:00:58.865270+00:00","mode":"single","current":0,"friendly_name":"Button 3 - Nursery"},"last_changed":"2025-06-19T23:28:51.353434+00:00","last_reported":"2025-06-27T09:00:58.970368+00:00","last_updated":"2025-06-27T09:00:58.970368+00:00","context":{"id":"01JYR9WR3GG7MJZ3ENCDVKGXD3","parent_id":"01JYR9WR3G1JPK0ZP2H2CSMZNB","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_2_office","state":"on","attributes":{"id":"1687277139983","last_triggered":"2025-05-29T00:40:09.779837+00:00","mode":"single","current":0,"friendly_name":"Button 2 - Office"},"last_changed":"2025-06-19T23:28:51.353582+00:00","last_reported":"2025-06-19T23:28:51.353582+00:00","last_updated":"2025-06-19T23:28:51.353582+00:00","context":{"id":"01JY58C44ST4TAHYB7QMCP1G88","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.yellow_push_bedside_toggle","state":"on","attributes":{"id":"1694402158345","last_triggered":"2025-03-22T12:55:25.189075+00:00","mode":"single","current":0,"friendly_name":"Yellow Push - Bedside Toggle"},"last_changed":"2025-06-19T23:28:51.354299+00:00","last_reported":"2025-06-19T23:28:51.354299+00:00","last_updated":"2025-06-19T23:28:51.354299+00:00","context":{"id":"01JY58C44TGC3AMDETW1MY2MZG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.automation_46","state":"on","attributes":{"id":"1697415253655","last_triggered":"2025-06-04T15:35:34.423296+00:00","mode":"single","current":0,"friendly_name":"Motion Sensor Den Lamp"},"last_changed":"2025-06-19T23:28:51.354532+00:00","last_reported":"2025-06-19T23:28:51.354532+00:00","last_updated":"2025-06-19T23:28:51.354532+00:00","context":{"id":"01JY58C44T9SZ8197FGS1ZH16E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.basement_lights","state":"on","attributes":{"id":"1700688134693","last_triggered":"2025-06-26T00:03:01.016134+00:00","mode":"single","current":0,"friendly_name":"Red - Basement Lights"},"last_changed":"2025-06-19T23:28:51.354705+00:00","last_reported":"2025-06-26T00:03:01.094769+00:00","last_updated":"2025-06-26T00:03:01.094769+00:00","context":{"id":"01JYMRPZRQEZGDE20YN624VV24","parent_id":"01JYMRPZRQPZA9DWY8112GS3M4","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.garage_motion","state":"on","attributes":{"id":"1702867394208","last_triggered":"2025-06-27T11:42:54.598652+00:00","mode":"restart","current":0,"friendly_name":"Motion Automation - Garage Light"},"last_changed":"2025-06-19T23:28:51.354964+00:00","last_reported":"2025-06-27T11:47:54.714322+00:00","last_updated":"2025-06-27T11:47:54.714322+00:00","context":{"id":"01JYRKED6TAMKWH18BVMD0MGPE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.lock_doors_night_time_automation","state":"on","attributes":{"id":"1702994787994","last_triggered":"2025-06-27T12:59:00.412256+00:00","mode":"single","current":0,"friendly_name":"Notification or Lock Doors"},"last_changed":"2025-06-19T23:28:51.355228+00:00","last_reported":"2025-06-27T12:59:00.418997+00:00","last_updated":"2025-06-27T12:59:00.418997+00:00","context":{"id":"01JYRQGJXV70PMHMZ2W7GQ59HK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.bedside_lamp_bens_in_bed","state":"off","attributes":{"id":"1703045396205","last_triggered":"2025-05-04T10:48:35.277069+00:00","mode":"single","current":0,"friendly_name":"Bedside Lamp - Ben’s in Bed"},"last_changed":"2025-06-19T23:28:51.355435+00:00","last_reported":"2025-06-19T23:28:51.355435+00:00","last_updated":"2025-06-19T23:28:51.355435+00:00","context":{"id":"01JY58C44VKE5QHEP1ZR9NNQ0T","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_2_master_bedroom_2","state":"on","attributes":{"id":"1704041875404","last_triggered":"2025-06-25T22:30:54.604303+00:00","mode":"single","current":0,"friendly_name":"Button 2 - Master Bedroom"},"last_changed":"2025-06-19T23:28:51.355588+00:00","last_reported":"2025-06-25T22:30:54.733132+00:00","last_updated":"2025-06-25T22:30:54.733132+00:00","context":{"id":"01JYMKEAWBVGJAMS1RKDAQGX5R","parent_id":"01JYMKEAWB9KEB2J1FKPAVJS2K","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_3_master_bedroom","state":"on","attributes":{"id":"1706844061231","last_triggered":"2025-06-27T10:52:50.193612+00:00","mode":"single","current":0,"friendly_name":"Button 3 - Master Bedroom"},"last_changed":"2025-06-19T23:28:51.355767+00:00","last_reported":"2025-06-27T10:52:50.424013+00:00","last_updated":"2025-06-27T10:52:50.424013+00:00","context":{"id":"01JYRG9J4H23XSDA75HM3XPVVS","parent_id":"01JYRG9J4GYBSCS4TRC24T7E2V","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.tag_work_mode_is_scanned","state":"on","attributes":{"id":"1714507173385","last_triggered":"2024-12-20T13:08:18.978613+00:00","mode":"single","current":0,"friendly_name":"Tag Work Mode is scanned"},"last_changed":"2025-06-19T23:28:51.355921+00:00","last_reported":"2025-06-19T23:28:51.355921+00:00","last_updated":"2025-06-19T23:28:51.355921+00:00","context":{"id":"01JY58C44V29XXFQBSTJHYPAK5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.red_button_1_double_tap","state":"on","attributes":{"id":"1714951465917","last_triggered":"2025-06-05T18:54:30.420636+00:00","mode":"single","current":0,"friendly_name":"Red - Button 1 Double Tap"},"last_changed":"2025-06-19T23:28:51.356069+00:00","last_reported":"2025-06-19T23:28:51.356069+00:00","last_updated":"2025-06-19T23:28:51.356069+00:00","context":{"id":"01JY58C44WFJ2VCB85DSEX2XDQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_1_den","state":"on","attributes":{"id":"1715018593478","last_triggered":"2025-06-26T01:27:01.702735+00:00","mode":"single","current":0,"friendly_name":"Button 1 - Den"},"last_changed":"2025-06-19T23:28:51.356217+00:00","last_reported":"2025-06-26T01:27:01.840465+00:00","last_updated":"2025-06-26T01:27:01.840465+00:00","context":{"id":"01JYMXGTA63CE9B5RKXSRMHNCE","parent_id":"01JYMXGTA6MYC8WC9ZYX6FEPKV","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_1_held_den","state":"on","attributes":{"id":"1715018628963","last_triggered":"2025-05-21T22:18:32.653866+00:00","mode":"single","current":0,"friendly_name":"Button 1 Held - Den"},"last_changed":"2025-06-19T23:28:51.356373+00:00","last_reported":"2025-06-19T23:28:51.356373+00:00","last_updated":"2025-06-19T23:28:51.356373+00:00","context":{"id":"01JY58C44W7JGGC1YRV4DYS5TH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_2_den","state":"on","attributes":{"id":"1715018772925","last_triggered":"2025-06-26T01:27:01.255469+00:00","mode":"single","current":0,"friendly_name":"Button 2 - Den"},"last_changed":"2025-06-19T23:28:51.356514+00:00","last_reported":"2025-06-26T01:27:01.319287+00:00","last_updated":"2025-06-26T01:27:01.319287+00:00","context":{"id":"01JYMXGSW7T8HQXH1QG7HFA4D3","parent_id":"01JYMXGSW7CWV94C35PVH72V8G","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_3_den","state":"on","attributes":{"id":"1715019049014","last_triggered":"2025-06-26T01:27:00.117006+00:00","mode":"single","current":0,"friendly_name":"Button 3 - Den"},"last_changed":"2025-06-19T23:28:51.356652+00:00","last_reported":"2025-06-26T01:27:00.191416+00:00","last_updated":"2025-06-26T01:27:00.191416+00:00","context":{"id":"01JYMXGRRMHTA17PYEJ8KNMEQQ","parent_id":"01JYMXGRRKGJM3Z2XXVK43EEFB","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_4_den","state":"on","attributes":{"id":"1715019164387","last_triggered":"2025-06-27T12:56:29.889510+00:00","mode":"single","current":0,"friendly_name":"Button 4 - Den"},"last_changed":"2025-06-19T23:28:51.356823+00:00","last_reported":"2025-06-27T12:56:30.093200+00:00","last_updated":"2025-06-27T12:56:30.093200+00:00","context":{"id":"01JYRQBZY140EFGTB676XFQ7J6","parent_id":"01JYRQBZY0Q8HXS91Q6WDQNEQX","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.button_4_held_den","state":"on","attributes":{"id":"1715019433102","last_triggered":"2025-05-02T15:41:45.657012+00:00","mode":"single","current":0,"friendly_name":"Button 4 Held - Den"},"last_changed":"2025-06-19T23:28:51.356982+00:00","last_reported":"2025-06-19T23:28:51.356982+00:00","last_updated":"2025-06-19T23:28:51.356982+00:00","context":{"id":"01JY58C44W4V95DBSSPRPHBWZA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.phone_test","state":"on","attributes":{"id":"1715600813200","last_triggered":"2024-06-29T17:14:47.061962+00:00","mode":"single","current":0,"friendly_name":"Phone - Test"},"last_changed":"2025-06-19T23:28:51.357120+00:00","last_reported":"2025-06-19T23:28:51.357120+00:00","last_updated":"2025-06-19T23:28:51.357120+00:00","context":{"id":"01JY58C44XG2SKBBPM9J7WT054","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.ios_set_temperature","state":"on","attributes":{"id":"1725306001280","last_triggered":"2024-12-29T11:45:22.515958+00:00","mode":"single","current":0,"friendly_name":"iOS - MB Fan Speed"},"last_changed":"2025-06-19T23:28:51.357276+00:00","last_reported":"2025-06-19T23:28:51.357276+00:00","last_updated":"2025-06-19T23:28:51.357276+00:00","context":{"id":"01JY58C44X0F8X00DFN446ST7A","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.ios_doors","state":"on","attributes":{"id":"1725327498129","last_triggered":"2025-03-03T23:21:20.367974+00:00","mode":"single","current":0,"friendly_name":"iOS - Doors"},"last_changed":"2025-06-19T23:28:51.357453+00:00","last_reported":"2025-06-19T23:28:51.357453+00:00","last_updated":"2025-06-19T23:28:51.357453+00:00","context":{"id":"01JY58C44XVBVA9V43PXAQ4TNJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.ios_bedside_lamp","state":"on","attributes":{"id":"1725414778368","last_triggered":"2025-01-27T14:46:22.330467+00:00","mode":"single","current":0,"friendly_name":"iOS - Bedside Lamp"},"last_changed":"2025-06-19T23:28:51.357603+00:00","last_reported":"2025-06-19T23:28:51.357603+00:00","last_updated":"2025-06-19T23:28:51.357603+00:00","context":{"id":"01JY58C44X57E9FJX8HGZG40A6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.motion_sensor_basement_lighting","state":"on","attributes":{"id":"1735233420238","last_triggered":"2025-06-27T11:41:25.758404+00:00","mode":"restart","current":0,"friendly_name":"Motion Sensor Basement Lighting "},"last_changed":"2025-06-19T23:28:51.357780+00:00","last_reported":"2025-06-27T11:46:25.841113+00:00","last_updated":"2025-06-27T11:46:25.841113+00:00","context":{"id":"01JYRKBPDHT0RNGBX0Q46Q4983","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.hvac_master_upstairs_fan_full_pause_logic","state":"off","attributes":{"id":"1746369230767","last_triggered":"2025-05-10T04:35:33.942877+00:00","mode":"queued","current":0,"max":10,"friendly_name":"HVAC Master Control"},"last_changed":"2025-06-19T23:28:51.357933+00:00","last_reported":"2025-06-19T23:28:51.357933+00:00","last_updated":"2025-06-19T23:28:51.357933+00:00","context":{"id":"01JY58C44XNX6VHD84RYBSEVP2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.lamp_post_and_porch_light_control","state":"on","attributes":{"id":"1746371455555","last_triggered":"2025-06-27T09:49:30.766281+00:00","mode":"single","current":0,"friendly_name":"Lamp Post and Porch Light Control"},"last_changed":"2025-06-19T23:28:51.358077+00:00","last_reported":"2025-06-27T09:49:30.944174+00:00","last_updated":"2025-06-27T09:49:30.944174+00:00","context":{"id":"01JYRCNKRDG2XC0NCW98B05685","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.smart_fan_adjustment","state":"on","attributes":{"id":"1746975077666","last_triggered":"2025-06-27T12:55:07.309541+00:00","mode":"queued","current":0,"max":10,"friendly_name":"Smart Fan Adjustment"},"last_changed":"2025-06-19T23:28:51.358220+00:00","last_reported":"2025-06-27T12:55:07.317881+00:00","last_updated":"2025-06-27T12:55:07.317881+00:00","context":{"id":"01JYRQ9F9C763GM4H42AKF2JHQ","parent_id":"01JYRQ9F9BV4BYRRZZB551R5EY","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.hvac_pause_control","state":"off","attributes":{"id":"1746983951987","last_triggered":"2025-05-12T00:50:45.190788+00:00","mode":"queued","current":0,"max":10,"friendly_name":"HVAC Pause Control"},"last_changed":"2025-06-19T23:28:51.358386+00:00","last_reported":"2025-06-19T23:28:51.358386+00:00","last_updated":"2025-06-19T23:28:51.358386+00:00","context":{"id":"01JY58C44YQDY9KA5P8RZY5T4T","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.reset_hvac_pause_flag_on_manual_use","state":"off","attributes":{"id":"1746984193225","last_triggered":"2025-05-11T17:23:31.285231+00:00","mode":"single","current":0,"friendly_name":"Reset HVAC Pause Flag on Manual Use"},"last_changed":"2025-06-19T23:28:51.358528+00:00","last_reported":"2025-06-19T23:28:51.358528+00:00","last_updated":"2025-06-19T23:28:51.358528+00:00","context":{"id":"01JY58C44YBJZZZ3BKY9MEN6RY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.water_meter","state":"unavailable","attributes":{"state_class":"total_increasing","unit_of_measurement":"gal","device_class":"water","icon":"mdi:water-pump","friendly_name":"water_meter"},"last_changed":"2025-06-19T23:28:52.235287+00:00","last_reported":"2025-06-19T23:28:52.235287+00:00","last_updated":"2025-06-19T23:28:52.235287+00:00","context":{"id":"01JY58C50BV1RQF16Q0DMDXDWE","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "00000216009.9",
+        "native_unit_of_measurement": "gal"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.gas_meter","state":"unavailable","attributes":{"state_class":"total_increasing","unit_of_measurement":"ft³","device_class":"gas","icon":"mdi:meter-gas-outline","friendly_name":"gas_meter"},"last_changed":"2025-06-19T23:28:52.237564+00:00","last_reported":"2025-06-19T23:28:52.237564+00:00","last_updated":"2025-06-19T23:28:52.237564+00:00","context":{"id":"01JY58C50DBWGDSZ1DCZ88ZAAW","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "00000792.37",
+        "native_unit_of_measurement": "ft³"
+      },
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.garage_camera_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v3.0.0.2417_23070501","in_progress":false,"latest_version":"v3.0.0.4348_2411261177","release_summary":null,"release_url":"https://reolink.com/download-center/","skipped_version":"v3.0.0.4348_2411261177","title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/reolink/icon.png","friendly_name":"Garage Camera Firmware","supported_features":21},"last_changed":"2025-06-27T12:28:45.981090+00:00","last_reported":"2025-06-27T12:28:45.981090+00:00","last_updated":"2025-06-27T12:28:45.981090+00:00","context":{"id":"01JYRNS70WR55WB7VDF9G55EVY","parent_id":null,"user_id":"c722e9c4c017439782dcc839ac464d33"}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"scene.01","state":"2025-06-27T11:46:25.761578+00:00","attributes":{"entity_id":["light.basement_front","light.basement_rear","light.basement_laundry"],"friendly_name":"01"},"last_changed":"2025-06-27T11:46:25.761654+00:00","last_reported":"2025-06-27T11:46:25.761654+00:00","last_updated":"2025-06-27T11:46:25.761654+00:00","context":{"id":"01JYRK2HBYV5FW1B7HN74DSVSP","parent_id":"01JYRK2HBXVGMWTBA1X8GMVV6Z","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.06.2","in_progress":false,"latest_version":"2025.06.2","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2025.06.2","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/hassio/icon.png","friendly_name":"Home Assistant Supervisor Update","supported_features":1},"last_changed":"2025-06-27T12:35:11.075016+00:00","last_reported":"2025-06-27T12:40:25.725284+00:00","last_updated":"2025-06-27T12:35:11.075016+00:00","context":{"id":"01JYRP4Z33QNV2V706AF8AZHV4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_core_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.6.1","in_progress":false,"latest_version":"2025.6.3","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":null,"title":"Home Assistant Core","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Core Update","supported_features":11},"last_changed":"2025-06-27T12:35:11.075481+00:00","last_reported":"2025-06-27T12:40:25.725455+00:00","last_updated":"2025-06-27T12:35:11.075481+00:00","context":{"id":"01JYRP4Z33Y3F3R3M8DA7XR0F3","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_google_drive_backup_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"0.112.1","in_progress":false,"latest_version":"0.112.1","release_summary":null,"release_url":null,"skipped_version":null,"title":"Home Assistant Google Drive Backup","update_percentage":null,"entity_picture":"/api/hassio/addons/cebe7a76_hassio_google_drive_backup/icon","friendly_name":"Home Assistant Google Drive Backup Update","supported_features":25},"last_changed":"2025-06-27T12:35:11.075841+00:00","last_reported":"2025-06-27T12:40:25.725546+00:00","last_updated":"2025-06-27T12:35:11.075841+00:00","context":{"id":"01JYRP4Z334MWVNHB22E2V100Q","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.studio_code_server_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"5.19.3","in_progress":false,"latest_version":"5.19.3","release_summary":null,"release_url":null,"skipped_version":null,"title":"Studio Code Server","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_vscode/icon","friendly_name":"Studio Code Server Update","supported_features":25},"last_changed":"2025-06-27T12:35:11.076245+00:00","last_reported":"2025-06-27T12:40:25.725596+00:00","last_updated":"2025-06-27T12:35:11.076245+00:00","context":{"id":"01JYRP4Z34KP9QM7HETX82N0RS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.rtlamr2mqtt_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.6.5","in_progress":false,"latest_version":"2025.6.5","release_summary":null,"release_url":null,"skipped_version":null,"title":"rtlamr2mqtt","update_percentage":null,"entity_picture":"/api/hassio/addons/6713e36e_rtlamr2mqtt/icon","friendly_name":"rtlamr2mqtt Update","supported_features":25},"last_changed":"2025-06-27T12:35:11.076617+00:00","last_reported":"2025-06-27T12:40:25.725637+00:00","last_updated":"2025-06-27T12:35:11.076617+00:00","context":{"id":"01JYRP4Z34Z3GREFPDC3YMH7W0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mosquitto_broker_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"6.5.1","in_progress":false,"latest_version":"6.5.1","release_summary":null,"release_url":null,"skipped_version":null,"title":"Mosquitto broker","update_percentage":null,"entity_picture":"/api/hassio/addons/core_mosquitto/icon","friendly_name":"Mosquitto broker Update","supported_features":25},"last_changed":"2025-06-27T12:35:11.076912+00:00","last_reported":"2025-06-27T12:40:25.725749+00:00","last_updated":"2025-06-27T12:35:11.076912+00:00","context":{"id":"01JYRP4Z34QC8YRJAPESK2ST0A","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.aircast_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"4.2.4","in_progress":false,"latest_version":"4.2.4","release_summary":null,"release_url":null,"skipped_version":null,"title":"AirCast","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_aircast/icon","friendly_name":"AirCast Update","supported_features":25},"last_changed":"2025-06-27T12:35:11.077363+00:00","last_reported":"2025-06-27T12:40:25.725793+00:00","last_updated":"2025-06-27T12:35:11.077363+00:00","context":{"id":"01JYRP4Z35NFE9D98MDEM7Q93H","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.node_red_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"19.0.2","in_progress":false,"latest_version":"19.0.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Node-RED","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_nodered/icon","friendly_name":"Node-RED Update","supported_features":25},"last_changed":"2025-06-27T12:35:11.077745+00:00","last_reported":"2025-06-27T12:40:25.725829+00:00","last_updated":"2025-06-27T12:35:11.077745+00:00","context":{"id":"01JYRP4Z3500CMVQDP2HPEN5NG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.advanced_ssh_web_terminal_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"20.0.2","in_progress":false,"latest_version":"20.0.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Advanced SSH & Web Terminal","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ssh/icon","friendly_name":"Advanced SSH & Web Terminal Update","supported_features":25},"last_changed":"2025-06-27T12:35:11.078868+00:00","last_reported":"2025-06-27T12:40:25.725863+00:00","last_updated":"2025-06-27T12:35:11.078868+00:00","context":{"id":"01JYRP4Z36820NEY6NR4CHQ9QP","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_operating_system_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"15.2","in_progress":false,"latest_version":"15.2","release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/releases/tag/15.2","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Operating System Update","supported_features":11},"last_changed":"2025-06-27T12:35:11.079755+00:00","last_reported":"2025-06-27T12:40:25.726013+00:00","last_updated":"2025-06-27T12:35:11.079755+00:00","context":{"id":"01JYRP4Z37VFGSGKF0M1985K87","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-27T12:59:03.746488+00:00"
+    }
+  ]
+}
