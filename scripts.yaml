@@ -1,0 +1,122 @@
+garage_door_toggle:
+  sequence:
+  - type: toggle
+    device_id: 739d25842457b2026fc133a6b3b0f369
+    entity_id: 1c6248acbb1ca9676e813ef9e31e5541
+    domain: switch
+  alias: Garage Door - Toggle
+  description: ''
+  icon: mdi:garage-variant
+all_doors_lock:
+  sequence:
+  - device_id: 8540542bb32c02bebb8488686f2f5684
+    domain: lock
+    entity_id: 3b3ccd8fc94baa96ee12e50f3e52e207
+    type: lock
+  - device_id: a49b2de6a4ba5eb7403059c2649203be
+    domain: lock
+    entity_id: 02f1a19a66d932eaddf042348bcd812c
+    type: lock
+  - device_id: 289b4bfe89a38706671cc8312dbdc971
+    domain: lock
+    entity_id: d1df194df6136e0c2be75bc7171a73f8
+    type: lock
+  alias: All Doors - Lock
+  description: ''
+  icon: mdi:door-closed-lock
+  fields: {}
+toggle_bedside_lamps:
+  sequence:
+  - type: toggle
+    device_id: 21d3c918054ada785e0d895dc964fd65
+    entity_id: 20a4bdb889b25476241dbf8a17869a54
+    domain: light
+  - type: toggle
+    device_id: cbd619efdd067998904c66315c771031
+    entity_id: d494603e378b3dae8155f44163a47fb0
+    domain: light
+  alias: Toggle Bedside Lamps
+  description: ''
+cycle_bedroom_fan_speed:
+  alias: Cycle Bedroom Fan Speed
+  mode: single
+  sequence:
+  - variables:
+      index: '{{ states(''input_number.fan_speed_index'') | int(0) }}'
+      descending: '{{ is_state(''input_boolean.fan_descending'', ''on'') }}'
+      speed_steps:
+      - 0
+      - 16
+      - 33
+      - 50
+      - 66
+      - 83
+      - 100
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ index == 0 }}'
+      sequence:
+      - target:
+          entity_id: fan.bedroom_fan
+        action: fan.turn_on
+      - data:
+          percentage: 16
+        target:
+          entity_id: fan.bedroom_fan
+        action: fan.set_percentage
+      - data:
+          entity_id: input_number.fan_speed_index
+          value: 1
+        action: input_number.set_value
+      - target:
+          entity_id: input_boolean.fan_descending
+        action: input_boolean.turn_off
+    - conditions:
+      - condition: template
+        value_template: '{{ not descending and index > 0 and index < 6 }}'
+      sequence:
+      - data:
+          percentage: '{{ speed_steps[index + 1] }}'
+        target:
+          entity_id: fan.bedroom_fan
+        action: fan.set_percentage
+      - data:
+          entity_id: input_number.fan_speed_index
+          value: '{{ index + 1 }}'
+        action: input_number.set_value
+      - choose:
+        - conditions:
+          - condition: template
+            value_template: '{{ index + 1 == 6 }}'
+          sequence:
+          - target:
+              entity_id: input_boolean.fan_descending
+            action: input_boolean.turn_on
+    - conditions:
+      - condition: template
+        value_template: '{{ descending and index > 1 }}'
+      sequence:
+      - data:
+          percentage: '{{ speed_steps[index - 1] }}'
+        target:
+          entity_id: fan.bedroom_fan
+        action: fan.set_percentage
+      - data:
+          entity_id: input_number.fan_speed_index
+          value: '{{ index - 1 }}'
+        action: input_number.set_value
+    - conditions:
+      - condition: template
+        value_template: '{{ descending and index == 1 }}'
+      sequence:
+      - target:
+          entity_id: fan.bedroom_fan
+        action: fan.turn_off
+      - data:
+          entity_id: input_number.fan_speed_index
+          value: 0
+        action: input_number.set_value
+      - target:
+          entity_id: input_boolean.fan_descending
+        action: input_boolean.turn_off

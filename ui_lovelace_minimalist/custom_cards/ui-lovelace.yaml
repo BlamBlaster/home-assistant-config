@@ -1,0 +1,27 @@
+# Cards wherever you want to put them...
+- type: glance
+  title: "\U0001f6b0 Water Usage"
+  entities:
+    - sensor.water_usage_mains_hourly
+    - sensor.water_usage_mains_daily
+    - sensor.water_usage_mains_weekly_kl
+    - sensor.water_usage_mains_monthly_kl
+    - sensor.water_usage_mains_yearly_kl
+    - sensor.water_usage_mains_hourly_previous
+    - sensor.water_usage_mains_daily_previous
+    - sensor.water_usage_mains_weekly_previous_kl
+    - sensor.water_usage_mains_monthly_previous_kl
+    - sensor.water_usage_mains_yearly_previous_kl
+  # uses card-mod.js for styling
+  style: >-
+    .card-header { padding: .75rem .5rem; }
+    .entities { padding: 0 !important; }
+    state-badge { display: none; }
+    .entity { padding: 0 !important; }
+    .entity div:last-child { font-weight: 200; font-size: 2.5rem; letter-spacing: -.22rem; text
+    -overflow: initial; }
+- type: entities
+  entities:
+    - sensor.water_usage_last_update
+    - binary_sensor.water_meter_backflow
+    - binary_sensor.water_meter_tampering

@@ -1,0 +1,159 @@
+- id: '1730248496191'
+  name: Halloweeen
+  entities:
+    light.lamp_post:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 25.2
+      - 100
+      rgb_color:
+      - 255
+      - 107
+      - 0
+      xy_color:
+      - 0.636
+      - 0.354
+      entity_id:
+      - light.lamp_post_1
+      - light.lamp_post_2
+      icon: mdi:coach-lamp
+      friendly_name: Lamp Post
+      supported_features: 32
+      state: 'on'
+    light.entry_light:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      entity_id:
+      - light.entryway_1
+      - light.entryway_2
+      - light.entryway_3
+      icon: mdi:lightbulb-group
+      friendly_name: Entry Light
+      supported_features: 32
+      state: 'off'
+    light.den_lamp:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Den Lamp
+      supported_features: 32
+      state: 'off'
+    light.living_room_sconces:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 120
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 252
+      - 99
+      rgb_color:
+      - 53
+      - 2
+      - 255
+      xy_color:
+      - 0.151
+      - 0.047
+      entity_id:
+      - light.living_room_rgb_bulb_1
+      - light.living_room_rgb_bulb_2
+      icon: mdi:lightbulb-group
+      friendly_name: 'Living Room Sconces '
+      supported_features: 40
+      state: 'on'
+    light.living_room_lamp:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 110
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 10.8
+      - 67
+      rgb_color:
+      - 255
+      - 114
+      - 84
+      xy_color:
+      - 0.585
+      - 0.332
+      friendly_name: Living Room Lamp
+      supported_features: 32
+      state: 'on'
+    light.entryway_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Entryway 2
+      supported_features: 32
+      state: 'off'
+  icon: mdi:halloween
+  metadata:
+    light.lamp_post:
+      entity_only: true
+    light.entry_light:
+      entity_only: true
+    light.den_lamp:
+      entity_only: true
+    light.living_room_sconces:
+      entity_only: true
+    light.living_room_lamp:
+      entity_only: true
+    light.entryway_2:
+      entity_only: true

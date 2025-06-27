@@ -1,0 +1,37 @@
+# templates/fan_sensors.yaml
+
+- sensor:
+    - name: "Lamp Post Brightness"
+      unique_id: lamp_post_brightness
+      unit_of_measurement: "%"
+      state: >
+        {% set hour = now().hour %}
+        {% if 17 <= hour < 19 %}
+          255
+        {% elif 19 <= hour < 21 %}
+          200
+        {% elif 21 <= hour < 23 %}
+          150
+        {% else %}
+          100
+        {% endif %}
+
+    - name: "Lamp Post Color Temperature"
+      unique_id: lamp_post_color_temperature
+      unit_of_measurement: "K"
+      state: >
+        {% set hour = now().hour %}
+        {% if 17 <= hour < 19 %}
+          4000
+        {% elif 19 <= hour < 21 %}
+          3500
+        {% elif 21 <= hour < 23 %}
+          3000
+        {% else %}
+          2700
+        {% endif %}
+
+    - name: "Bedroom Fan Speed Percent"
+      unique_id: bedroom_fan_speed_percent
+      unit_of_measurement: "%"
+      state: "{{ state_attr('fan.bedroom_fan', 'percentage') | int(0) }}"
