@@ -1,0 +1,35 @@
+# Sensitive files
+secrets.yaml
+
+# Home Assistant runtime DB and backups
+home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+
+# Logs
+home-assistant.log
+home-assistant.log.1
+*.log
+
+# Volatile storage and cache
+.storage/
+.cloud/
+tts/
+__pycache__/
+deps/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite3
+
+# Auto-generated or integration state files
+*.pickle
+*.pyc
+*.bak
+*.tmp
+
+# IDE/editor/system files
+.vscode/
+.idea/
+.DS_Store
+*.swp
