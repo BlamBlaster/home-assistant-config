@@ -1,34 +1,51 @@
-# Sensitive files
+# ───────────────────────────────
+# 🔐 Sensitive Files
+# ───────────────────────────────
 secrets.yaml
 
-# Home Assistant runtime DB and backups
+# ───────────────────────────────
+# 🗃️ Home Assistant Runtime DB and Corrupt DBs
+# ───────────────────────────────
 home-assistant_v2.db
 home-assistant_v2.db-shm
 home-assistant_v2.db-wal
+*.db
+*.db-shm
+*.db-wal
+*.db.corrupt*
+*.sqlite3
 
-# Logs
+# ───────────────────────────────
+# 📝 Logs
+# ───────────────────────────────
 home-assistant.log
 home-assistant.log.1
 *.log
 
-# Volatile storage and cache
+# ───────────────────────────────
+# 🔁 Auto-generated, Cache, and Volatile Storage
+# ───────────────────────────────
 .storage/
 .cloud/
 tts/
-__pycache__/
 deps/
-*.db
-*.db-wal
-*.db-shm
-*.sqlite3
-
-# Auto-generated or integration state files
+__pycache__/
 *.pickle
 *.pyc
 *.bak
 *.tmp
 
-# IDE/editor/system files
+# ───────────────────────────────
+# 🗂️ Optional Media and Backups (Local Snapshot Files)
+# ───────────────────────────────
+media/
+backups/
+*.tar
+*.zip
+
+# ───────────────────────────────
+# 🧠 Editor / OS Artifacts
+# ───────────────────────────────
 .vscode/
 .idea/
 .DS_Store
