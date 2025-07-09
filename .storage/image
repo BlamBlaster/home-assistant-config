@@ -129,6 +129,13 @@
         "content_type": "image/jpeg",
         "name": "image.jpg",
         "uploaded_at": "2024-05-01T01:08:51.487059+00:00"
+      },
+      {
+        "id": "f3c85d10172e779016881bbb4b848a63",
+        "filesize": 2125261,
+        "content_type": "image/jpeg",
+        "name": "IMG_0531.JPG",
+        "uploaded_at": "2025-06-30T21:03:23.279321+00:00"
       }
     ]
   }

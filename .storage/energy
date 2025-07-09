@@ -114,18 +114,18 @@
         "cost_adjustment_day": 0.0
       },
       {
-        "type": "gas",
-        "stat_energy_from": "sensor.gas_meter",
-        "stat_cost": null,
-        "entity_energy_price": null,
-        "number_energy_price": null
-      },
-      {
         "type": "water",
         "stat_energy_from": "sensor.water_meter",
         "stat_cost": null,
         "entity_energy_price": null,
-        "number_energy_price": null
+        "number_energy_price": 0.0018772
+      },
+      {
+        "type": "gas",
+        "stat_energy_from": "sensor.gas_meter",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.00369
       }
     ],
     "device_consumption": [
@@ -143,6 +143,9 @@
       },
       {
         "stat_consumption": "sensor.electric_stove_2_1d"
+      },
+      {
+        "stat_consumption": "sensor.bedroom_4_powder_room_front_porch_front_of_basement_9_1d"
       }
     ]
   }

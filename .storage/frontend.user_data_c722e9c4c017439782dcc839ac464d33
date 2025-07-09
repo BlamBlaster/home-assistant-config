@@ -13,6 +13,26 @@
     },
     "core": {
       "showAdvanced": true
+    },
+    "sidebar": {
+      "panelOrder": [
+        "tablet-dashboard",
+        "Mobile-dashboard",
+        "dashboard-home",
+        "map",
+        "energy",
+        "calendar",
+        "hacs",
+        "a0d7b954_vscode",
+        "a0d7b954_ssh",
+        "developer-tools"
+      ],
+      "hiddenPanels": [
+        "cebe7a76_hassio_google_drive_backup",
+        "history",
+        "media-browser",
+        "logbook"
+      ]
     }
   }
 }

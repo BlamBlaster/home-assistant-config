@@ -324,6 +324,20 @@
         "domain": "hacs",
         "is_persistent": false,
         "issue_id": "restart_required_247362100_tags/v0.11.1"
+      },
+      {
+        "created": "2025-06-30T01:33:11.673080+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_290261325_tags/v1.25.0"
+      },
+      {
+        "created": "2025-07-08T22:50:28.956478+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "f8625259a6bf4e999f3b0cb5714f958f"
       }
     ]
   }

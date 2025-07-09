@@ -819,11 +819,11 @@
 - id: '1702994787994'
   alias: Notification or Lock Doors
   description: ''
-  trigger:
-  - platform: time_pattern
-    seconds: /15
-  condition: []
-  action:
+  triggers:
+  - seconds: /15
+    trigger: time_pattern
+  conditions: []
+  actions:
   - alias: Lock Basement after 30s at Night
     if:
     - alias: Lock Closed Door after Sunset
@@ -906,17 +906,16 @@
               the door.
             data:
               persistent: true
-          enabled: true
-          action: notify.mobile_app_benjamins_iphone_14
-        - metadata: {}
+          action: notify.mobile_app_iphone_14
+        - action: notify.mobile_app_benjamins_iphone_16
+          metadata: {}
           data:
-            title: ' ! ! Basement door is Jammed ! ! '
             message: The basement door was unable to be {% if is_state('lock.basement_door_lock',
               'jammed') %}locked{% else %}closed{% endif %}! Please close and lock
               the door.
+            title: ' ! ! Basement door is Jammed ! ! '
             data:
               persistent: true
-          action: notify.mobile_app_iphone_14
         - delay:
             hours: 0
             minutes: 2
@@ -2032,9 +2031,6 @@
 - id: '1746369230767'
   alias: HVAC Master Control
   triggers:
-  - entity_id: climate.upstairs_thermostat
-    attribute: hvac_action
-    trigger: state
   - entity_id: binary_sensor.window_contact_sensors
     to: 'on'
     for: 00:03:00
@@ -2052,28 +2048,30 @@
   actions:
   - choose:
     - conditions:
-      - condition: or
-        conditions:
-        - condition: template
-          value_template: '{{ windows_open }}'
-        - condition: template
-          value_template: '{{ doors_open }}'
+      - condition: state
+        entity_id: binary_sensor.window_contact_sensors
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.hvac_pause_active
+        state: 'off'
       sequence:
       - data:
           entity_id: input_text.previous_hvac_mode_upstairs
-          value: '{{ upstairs_hvac_mode or ''off'' }}'
+          value: '{{ states(''climate.upstairs_thermostat'') }}'
         action: input_text.set_value
       - data:
           entity_id: input_number.previous_hvac_temp_upstairs
-          value: '{{ upstairs_temp | float(72) }}'
+          value: '{{ state_attr(''climate.upstairs_thermostat'',''temperature'') |
+            float(default=72) }}'
         action: input_number.set_value
       - data:
           entity_id: input_text.previous_hvac_mode_downstairs
-          value: '{{ downstairs_hvac_mode or ''off'' }}'
+          value: '{{ states(''climate.downstairs_2'') }}'
         action: input_text.set_value
       - data:
           entity_id: input_number.previous_hvac_temp_downstairs
-          value: '{{ downstairs_temp | float(72) }}'
+          value: '{{ state_attr(''climate.downstairs_2'',''temperature'') | float(default=72)
+            }}'
         action: input_number.set_value
       - data:
           entity_id: input_text.previous_upstairs_mode_select
@@ -2090,15 +2088,25 @@
         data:
           hvac_mode: 'off'
         action: climate.set_hvac_mode
+      - target:
+          entity_id: input_boolean.hvac_pause_active
+        action: input_boolean.turn_on
     - conditions:
-      - condition: template
-        value_template: '{{ not windows_open and not doors_open }}'
+      - condition: state
+        entity_id: binary_sensor.window_contact_sensors
+        state: 'off'
+      - condition: state
+        entity_id: binary_sensor.doors
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.hvac_pause_active
+        state: 'on'
       sequence:
       - target:
           entity_id: climate.upstairs_thermostat
         data:
           temperature: '{{ states(''input_number.previous_hvac_temp_upstairs'') |
-            float(72) }}'
+            float(default=72) }}'
         action: climate.set_temperature
       - target:
           entity_id: climate.upstairs_thermostat
@@ -2110,7 +2118,7 @@
           entity_id: climate.downstairs_2
         data:
           temperature: '{{ states(''input_number.previous_hvac_temp_downstairs'')
-            | float(72) }}'
+            | float(default=72) }}'
         action: climate.set_temperature
       - target:
           entity_id: climate.downstairs_2
@@ -2122,7 +2130,7 @@
         - conditions:
           - condition: template
             value_template: '{{ states(''input_text.previous_upstairs_mode_select'')
-              in [''home'', ''sleep'', ''away''] }}'
+              in [''home'',''sleep'',''away''] }}'
           sequence:
           - target:
               entity_id: select.upstairs_thermostat_current_mode
@@ -2133,166 +2141,17 @@
         - conditions:
           - condition: template
             value_template: '{{ states(''input_text.previous_downstairs_mode_select'')
-              in [''home'', ''sleep'', ''away''] }}'
+              in [''home'',''sleep'',''away''] }}'
           sequence:
           - target:
               entity_id: select.downstairs_current_mode_2
             data:
               option: '{{ states(''input_text.previous_downstairs_mode_select'') }}'
             action: select.select_option
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: "{{ is_state('binary_sensor.office_front_contact', 'on') or\n
-          \  is_state('binary_sensor.office_side_contact', 'on') }}"
-      sequence:
-      - variables:
-          current_temp: '{{ states(''sensor.office_multi_sensor_temperature'') | float(72)
-            }}'
-          setpoint: '{{ states(''input_number.previous_hvac_temp_upstairs'') | float(72)
-            }}'
-          temp_diff: '{{ current_temp - setpoint }}'
-          target_pct: '{% if temp_diff < -2 %} 0 {% elif temp_diff < 0 %} 16 {% elif
-            temp_diff < 2 %} 33 {% elif temp_diff < 4 %} 50 {% elif temp_diff < 6
-            %} 75 {% else %} 100 {% endif %}'
-      - choose:
-        - conditions:
-          - condition: template
-            value_template: '{{ target_pct > 0 }}'
-          sequence:
-          - target:
-              entity_id: fan.office_fan
-            data:
-              percentage: '{{ target_pct }}'
-            action: fan.set_percentage
-        - conditions:
-          - condition: template
-            value_template: '{{ target_pct == 0 }}'
-          sequence:
-          - target:
-              entity_id: fan.office_fan
-            action: fan.turn_off
-            data: {}
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: "{{ is_state('binary_sensor.nursery_rear_contact', 'on') or\n
-          \  is_state('binary_sensor.nursery_side_contact', 'on') }}"
-      sequence:
-      - variables:
-          current_temp: '{{ states(''sensor.sensor_nursery_temperature'') | float(72)
-            }}'
-          setpoint: '{{ states(''input_number.previous_hvac_temp_upstairs'') | float(72)
-            }}'
-          temp_diff: '{{ current_temp - setpoint }}'
-          target_pct: '{% if temp_diff < -2 %} 0 {% elif temp_diff < 0 %} 16 {% elif
-            temp_diff < 2 %} 33 {% elif temp_diff < 4 %} 50 {% elif temp_diff < 6
-            %} 75 {% else %} 100 {% endif %}'
-      - choose:
-        - conditions:
-          - condition: template
-            value_template: '{{ target_pct > 0 }}'
-          sequence:
-          - target:
-              entity_id: fan.nursery_fan
-            data:
-              percentage: '{{ target_pct }}'
-            action: fan.set_percentage
-        - conditions:
-          - condition: template
-            value_template: '{{ target_pct == 0 }}'
-          sequence:
-          - target:
-              entity_id: fan.nursery_fan
-            action: fan.turn_off
-            data: {}
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: "{{ is_state('binary_sensor.master_bedroom_left_contact',
-          'on') or\n   is_state('binary_sensor.master_bedroom_side_contact', 'on')
-          or\n   is_state('binary_sensor.master_bedroom_right_contact', 'on') }}"
-      sequence:
-      - variables:
-          current_temp: '{{ states(''sensor.sensor_master_bedroom_temperature'') |
-            float(72) }}'
-          setpoint: '{{ states(''input_number.previous_hvac_temp_upstairs'') | float(72)
-            }}'
-          temp_diff: '{{ current_temp - setpoint }}'
-          target_pct: '{% if temp_diff < -2 %} 0 {% elif temp_diff < 0 %} 16 {% elif
-            temp_diff < 2 %} 33 {% elif temp_diff < 4 %} 50 {% elif temp_diff < 6
-            %} 75 {% else %} 100 {% endif %}'
-      - choose:
-        - conditions:
-          - condition: template
-            value_template: '{{ target_pct > 0 }}'
-          sequence:
-          - target:
-              entity_id: fan.bedroom_fan
-            data:
-              percentage: '{{ target_pct }}'
-            action: fan.set_percentage
-        - conditions:
-          - condition: template
-            value_template: '{{ target_pct == 0 }}'
-          sequence:
-          - target:
-              entity_id: fan.bedroom_fan
-            action: fan.turn_off
-            data: {}
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: "{{ is_state('binary_sensor.den_left_contact', 'on') or\n
-          \  is_state('binary_sensor.den_right_contact', 'on') }}"
-      sequence:
-      - variables:
-          current_temp: '{{ states(''sensor.familyroom_temperature'') | float(72)
-            }}'
-          setpoint: '{{ states(''input_number.previous_hvac_temp_upstairs'') | float(72)
-            }}'
-          temp_diff: '{{ current_temp - setpoint }}'
-          target_pct: '{% if temp_diff < -2 %} 0 {% elif temp_diff < 0 %} 16 {% elif
-            temp_diff < 2 %} 33 {% elif temp_diff < 4 %} 50 {% elif temp_diff < 6
-            %} 75 {% else %} 100 {% endif %}'
-      - choose:
-        - conditions:
-          - condition: template
-            value_template: '{{ target_pct > 0 }}'
-          sequence:
-          - target:
-              entity_id: fan.den_fan
-            data:
-              percentage: '{{ target_pct }}'
-            action: fan.set_percentage
-        - conditions:
-          - condition: template
-            value_template: '{{ target_pct == 0 }}'
-          sequence:
-          - target:
-              entity_id: fan.den_fan
-            action: fan.turn_off
-            data: {}
+      - target:
+          entity_id: input_boolean.hvac_pause_active
+        action: input_boolean.turn_off
   mode: queued
-  variables:
-    windows_open: '{{ is_state(''binary_sensor.window_contact_sensors'', ''on'') }}'
-    doors_open: '{{ is_state(''binary_sensor.doors'', ''on'') }}'
-    fan_index: '{{ states(''input_number.fan_speed_index'') | int(0) }}'
-    descending: '{{ is_state(''input_boolean.fan_descending'', ''on'') }}'
-    upstairs_hvac_action: '{{ state_attr(''climate.upstairs_thermostat'', ''hvac_action'')
-      }}'
-    upstairs_hvac_mode: '{{ states(''climate.upstairs_thermostat'') }}'
-    upstairs_temp: '{{ state_attr(''climate.upstairs_thermostat'', ''temperature'')
-      }}'
-    downstairs_hvac_mode: '{{ states(''climate.downstairs_2'') }}'
-    downstairs_temp: '{{ state_attr(''climate.downstairs_2'', ''temperature'') }}'
-    fan_pct_office: '{{ state_attr(''fan.office_fan'', ''percentage'') | int(0) }}'
-    fan_pct_nursery: '{{ state_attr(''fan.nursery_fan'', ''percentage'') | int(0)
-      }}'
-    fan_pct_bedroom: '{{ state_attr(''fan.bedroom_fan'', ''percentage'') | int(0)
-      }}'
-    fan_pct_den: '{{ state_attr(''fan.den_fan'', ''percentage'') | int(0) }}'
-    max_pct: 50
 - id: '1746371455555'
   alias: Lamp Post and Porch Light Control
   description: Controls lamp post and porch light based on sunset, bedtime, and sunrise.
@@ -2408,20 +2267,21 @@
   variables:
     setpoint: '{{ states(''input_number.previous_hvac_temp_upstairs'') | float(default=72)
       }}'
-    fan_targets: "{{\n  [\n    {'room': 'office', 'temp': states('sensor.office_multi_sensor_temperature')
-      | float(default=72),\n     'contact_open': (is_state('binary_sensor.office_front_contact',
-      'on') or\n                      is_state('binary_sensor.office_side_contact',
-      'on')),\n     'fan': 'fan.office_fan'},\n    {'room': 'nursery', 'temp': states('sensor.sensor_nursery_temperature')
-      | float(default=72),\n     'contact_open': (is_state('binary_sensor.nursery_rear_contact',
-      'on') or\n                      is_state('binary_sensor.nursery_side_contact',
-      'on')),\n     'fan': 'fan.nursery_fan'},\n    {'room': 'bedroom', 'temp': states('sensor.sensor_master_bedroom_temperature')
-      | float(default=72),\n     'contact_open': (is_state('binary_sensor.master_bedroom_left_contact',
-      'on') or\n                      is_state('binary_sensor.master_bedroom_side_contact',
-      'on') or\n                      is_state('binary_sensor.master_bedroom_right_contact',
-      'on')),\n     'fan': 'fan.bedroom_fan'},\n    {'room': 'den', 'temp': states('sensor.familyroom_temperature')
-      | float(default=72),\n     'contact_open': (is_state('binary_sensor.den_left_contact',
-      'on') or\n                      is_state('binary_sensor.den_right_contact',
-      'on')),\n     'fan': 'fan.den_fan'}\n  ]\n}}\n"
+    fan_targets: "{{\n  [\n    {'room': 'office', 'temp': states('sensor.office_multi_sensor_temperature')\n
+      \     | float(default=72),\n     'contact_open': (is_state('binary_sensor.office_front_contact',\n
+      \     'on') or\n                      is_state('binary_sensor.office_side_contact',\n
+      \     'on')),\n     'fan': 'fan.office_fan'},\n    {'room': 'nursery', 'temp':
+      states('sensor.sensor_nursery_temperature')\n      | float(default=72),\n     'contact_open':
+      (is_state('binary_sensor.nursery_rear_contact',\n      'on') or\n                      is_state('binary_sensor.nursery_side_contact',\n
+      \     'on')),\n     'fan': 'fan.nursery_fan'},\n    {'room': 'bedroom', 'temp':
+      states('sensor.sensor_master_bedroom_temperature')\n      | float(default=72),\n
+      \    'contact_open': (is_state('binary_sensor.master_bedroom_left_contact',\n
+      \     'on') or\n                      is_state('binary_sensor.master_bedroom_side_contact',\n
+      \     'on') or\n                      is_state('binary_sensor.master_bedroom_right_contact',\n
+      \     'on')),\n     'fan': 'fan.bedroom_fan'},\n    {'room': 'den', 'temp':
+      states('sensor.familyroom_temperature')\n      | float(default=72),\n     'contact_open':
+      (is_state('binary_sensor.den_left_contact',\n      'on') or\n                      is_state('binary_sensor.den_right_contact',\n
+      \     'on')),\n     'fan': 'fan.den_fan'}\n  ]\n}}\n"
   mode: queued
 - id: '1746983951987'
   alias: HVAC Pause Control
@@ -2518,4 +2378,55 @@
 
         '
     action: notify.persistent_notification
+  mode: single
+- id: '1751310649338'
+  alias: Reset HVAC Pause Flag on Manual Use
+  description: Clears HVAC pause flag if HVAC was manually turned back on
+  triggers:
+  - entity_id: climate.upstairs_thermostat
+    trigger: state
+  conditions:
+  - condition: state
+    entity_id: input_boolean.hvac_pause_active
+    state: 'on'
+  - condition: template
+    value_template: '{{ states(''climate.upstairs_thermostat'') != ''off'' }}'
+  actions:
+  - entity_id: input_boolean.hvac_pause_active
+    action: input_boolean.turn_off
+  - data:
+      title: HVAC Pause Override Cleared
+      message: 'Manual change detected — HVAC was turned back on while automation
+        pause was active. Pause flag has been cleared and automation will resume normal
+        monitoring.
+
+        '
+    action: notify.persistent_notification
+  mode: single
+- id: '1752003072665'
+  alias: Front Doorbell Pressed
+  description: Sends a snapshot and opens the security view when the doorbell rings
+  triggers:
+  - entity_id: binary_sensor.front_porch_doorbell_visitor
+    from: 'off'
+    to: 'on'
+    trigger: state
+  conditions: []
+  actions:
+  - data:
+      entity_id: camera.front_porch_doorbell_snapshots_fluent
+      filename: /config/www/snapshot_front_door.jpg
+    action: camera.snapshot
+  - data:
+      title: Front Porch Doorbell
+      message: "Someone is at the front door \U0001F6AA"
+      data:
+        image: /local/snapshot_front_door.jpg
+        url: /Mobile-dashboard/Security
+        push:
+          sound:
+            name: default
+            critical: 1
+            volume: 1
+    action: notify.mobile_app_benjamins_iphone_16
   mode: single

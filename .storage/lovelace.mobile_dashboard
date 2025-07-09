@@ -29,8 +29,50 @@
               "alignment": "center"
             },
             {
-              "type": "custom:clock-weather-card",
-              "entity": "weather.forecast_home"
+              "type": "custom:weather-chart-card",
+              "entity": "weather.forecast_home",
+              "show_main": true,
+              "show_temperature": true,
+              "show_current_condition": true,
+              "show_attributes": true,
+              "show_time": true,
+              "show_time_seconds": false,
+              "show_day": false,
+              "show_date": false,
+              "show_humidity": true,
+              "show_pressure": true,
+              "show_wind_direction": true,
+              "show_wind_speed": true,
+              "show_sun": false,
+              "show_feels_like": false,
+              "show_dew_point": false,
+              "show_wind_gust_speed": false,
+              "show_visibility": false,
+              "show_last_changed": false,
+              "use_12hour_format": true,
+              "icons_size": "25",
+              "animated_icons": false,
+              "icon_style": "style1",
+              "autoscroll": true,
+              "forecast": {
+                "precipitation_type": "rainfall",
+                "show_probability": false,
+                "labels_font_size": "11",
+                "precip_bar_size": "100",
+                "style": "style2",
+                "show_wind_forecast": false,
+                "condition_icons": true,
+                "round_temp": true,
+                "type": "daily",
+                "number_of_forecasts": "0",
+                "disable_animation": false
+              },
+              "units": {
+                "speed": ""
+              },
+              "time_size": "43",
+              "current_temp_size": "31",
+              "locale": "en"
             },
             {
               "type": "horizontal-stack",
@@ -63,17 +105,25 @@
               "alert_classes": [
                 "motion",
                 "moisture",
-                "opening"
+                "opening",
+                "occupancy"
               ],
               "sensor_classes": [
                 "temperature",
                 "humidity"
               ],
+              "features_position": "inline",
+              "display_type": "camera",
               "type": "area",
               "area": "living_room",
-              "show_camera": true,
               "navigation_path": "/Mobile-dashboard/living-room",
-              "aspect_ratio": "2:.95"
+              "aspect_ratio": "2:.95",
+              "color": "",
+              "features": [
+                {
+                  "type": "area-controls"
+                }
+              ]
             },
             {
               "camera_view": "auto",
@@ -85,11 +135,22 @@
               "sensor_classes": [
                 "temperature"
               ],
+              "features_position": "inline",
+              "display_type": "camera",
               "type": "area",
               "area": "master_bedroom",
               "navigation_path": "/Mobile-dashboard/master-bedroom",
-              "show_camera": true,
-              "aspect_ratio": "2:.95"
+              "aspect_ratio": "2:.95",
+              "color": "",
+              "features": [
+                {
+                  "type": "area-controls",
+                  "controls": [
+                    "light",
+                    "fan"
+                  ]
+                }
+              ]
             },
             {
               "camera_view": "auto",
@@ -101,11 +162,22 @@
               "sensor_classes": [
                 "temperature"
               ],
+              "features_position": "inline",
+              "display_type": "camera",
               "type": "area",
               "area": "nursery",
               "navigation_path": "/Mobile-dashboard/nursery",
-              "show_camera": true,
-              "aspect_ratio": "2:.95"
+              "aspect_ratio": "2:.95",
+              "color": "",
+              "features": [
+                {
+                  "type": "area-controls",
+                  "controls": [
+                    "light",
+                    "fan"
+                  ]
+                }
+              ]
             },
             {
               "camera_view": "live",
@@ -118,13 +190,25 @@
                 "temperature",
                 "humidity"
               ],
+              "features_position": "inline",
+              "display_type": "camera",
               "type": "area",
               "area": "office",
-              "show_camera": true,
               "navigation_path": "/Mobile-dashboard/office",
-              "aspect_ratio": "2:.95"
+              "aspect_ratio": "2:.95",
+              "color": "",
+              "features": [
+                {
+                  "type": "area-controls",
+                  "controls": [
+                    "light",
+                    "fan"
+                  ]
+                }
+              ]
             },
             {
+              "camera_view": "auto",
               "alert_classes": [
                 "motion",
                 "moisture"
@@ -132,11 +216,22 @@
               "sensor_classes": [
                 "temperature"
               ],
+              "features_position": "inline",
+              "display_type": "camera",
               "type": "area",
               "area": "den",
               "navigation_path": "/Mobile-dashboard/den-family-room",
-              "show_camera": true,
-              "aspect_ratio": "2:.95"
+              "aspect_ratio": "2:.95",
+              "color": "",
+              "features": [
+                {
+                  "type": "area-controls",
+                  "controls": [
+                    "light",
+                    "fan"
+                  ]
+                }
+              ]
             },
             {
               "camera_view": "auto",
@@ -148,11 +243,22 @@
                 "temperature",
                 "humidity"
               ],
+              "features_position": "inline",
+              "display_type": "camera",
               "type": "area",
               "area": "garage",
-              "show_camera": true,
               "navigation_path": "/Mobile-dashboard/garage",
-              "aspect_ratio": "2:.95"
+              "aspect_ratio": "2:.95",
+              "color": "",
+              "features": [
+                {
+                  "type": "area-controls",
+                  "controls": [
+                    "light",
+                    "cover-garage"
+                  ]
+                }
+              ]
             },
             {
               "camera_view": "auto",
@@ -163,28 +269,45 @@
                 "problem"
               ],
               "sensor_classes": [],
+              "features_position": "inline",
+              "display_type": "camera",
               "type": "area",
               "area": "basement",
               "navigation_path": "/Mobile-dashboard/basement",
-              "show_camera": true,
-              "aspect_ratio": "2:.95"
+              "aspect_ratio": "2:.95",
+              "color": "",
+              "features": [
+                {
+                  "type": "area-controls",
+                  "controls": [
+                    "light"
+                  ]
+                }
+              ]
             },
             {
+              "features": [
+                {
+                  "type": "area-controls",
+                  "controls": [
+                    "light"
+                  ]
+                }
+              ],
               "camera_view": "auto",
               "alert_classes": [
                 "motion",
                 "moisture"
               ],
               "sensor_classes": [
-                "temperature",
-                "humidity"
+                "energy"
               ],
+              "features_position": "inline",
+              "display_type": "camera",
               "type": "area",
               "area": "front_porch",
-              "show_camera": true,
-              "navigation_path": "/Mobile-dashboard/front-porch",
-              "theme": "Catppuccin Macchiato",
-              "aspect_ratio": "2:.95"
+              "color": "",
+              "navigation_path": "/Mobile-dashboard/front-porch"
             },
             {
               "alert_classes": [
@@ -197,11 +320,18 @@
                 "temperature",
                 "humidity"
               ],
+              "features_position": "inline",
+              "display_type": "picture",
               "type": "area",
               "area": "dining_room",
-              "show_camera": false,
               "navigation_path": "/Mobile-dashboard/dining-room",
-              "aspect_ratio": "2:.95"
+              "aspect_ratio": "2:.95",
+              "color": "",
+              "features": [
+                {
+                  "type": "area-controls"
+                }
+              ]
             }
           ]
         },
@@ -517,7 +647,8 @@
           "type": "custom:masonry-layout",
           "layout": {
             "max_cols": 2
-          }
+          },
+          "path": "Security"
         },
         {
           "title": "Vacuums",
@@ -603,7 +734,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "visible": []
         },
         {
           "title": "Today",
@@ -804,7 +936,8 @@
                       "name": "Fan Light",
                       "use_light_color": true,
                       "show_color_temp_control": false,
-                      "show_color_control": false
+                      "show_color_control": false,
+                      "icon_color": "primary"
                     },
                     {
                       "type": "custom:mushroom-fan-card",
@@ -1055,7 +1188,7 @@
                   "entity": "light.nursery_light",
                   "show_brightness_control": true,
                   "fill_container": true,
-                  "icon_color": "light-blue",
+                  "icon_color": "primary",
                   "hold_action": {
                     "action": "more-info"
                   }
@@ -1997,248 +2130,6 @@
               "entities": [
                 "update.den_ac_pro",
                 "button.den_ac_pro_restart"
-              ]
-            }
-          ]
-        },
-        {
-          "title": "Master Bedroom Display",
-          "path": "master-bedroom-display",
-          "icon": "mdi:castle",
-          "subview": true,
-          "type": "custom:horizontal-layout",
-          "theme": "minimalist-desktop",
-          "badges": [],
-          "cards": [
-            {
-              "type": "vertical-stack",
-              "cards": [
-                {
-                  "type": "custom:mushroom-title-card",
-                  "title": "Lighting & Fan",
-                  "alignment": "center"
-                },
-                {
-                  "type": "horizontal-stack",
-                  "cards": [
-                    {
-                      "type": "custom:mushroom-light-card",
-                      "entity": "light.bedroom_light",
-                      "show_brightness_control": true,
-                      "fill_container": true,
-                      "collapsible_controls": false,
-                      "name": "Fan Light",
-                      "use_light_color": true,
-                      "show_color_temp_control": false,
-                      "show_color_control": false,
-                      "tap_action": {
-                        "action": "toggle"
-                      },
-                      "hold_action": {
-                        "action": "more-info"
-                      }
-                    },
-                    {
-                      "type": "custom:mushroom-fan-card",
-                      "entity": "fan.bedroom_fan",
-                      "icon_animation": true,
-                      "icon": "mdi:fan",
-                      "fill_container": true,
-                      "show_percentage_control": true,
-                      "show_oscillate_control": false,
-                      "collapsible_controls": false,
-                      "name": "Ceiling Fan",
-                      "tap_action": {
-                        "action": "more-info"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "custom:mushroom-light-card",
-                  "entity": "light.bedside_lamps",
-                  "fill_container": true,
-                  "use_light_color": true,
-                  "show_brightness_control": true,
-                  "show_color_temp_control": true,
-                  "show_color_control": true,
-                  "collapsible_controls": false,
-                  "tap_action": {
-                    "action": "more-info"
-                  }
-                },
-                {
-                  "type": "horizontal-stack",
-                  "cards": [
-                    {
-                      "type": "custom:mushroom-light-card",
-                      "entity": "light.bedside_rgb_ben",
-                      "show_brightness_control": true,
-                      "use_light_color": true,
-                      "show_color_temp_control": false,
-                      "show_color_control": false,
-                      "collapsible_controls": true,
-                      "name": "Ben’s "
-                    },
-                    {
-                      "type": "custom:mushroom-light-card",
-                      "entity": "light.bedside_rgb_amanda",
-                      "use_light_color": true,
-                      "show_brightness_control": true,
-                      "show_color_temp_control": false,
-                      "show_color_control": false,
-                      "collapsible_controls": true,
-                      "name": "Amanda’s "
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "vertical-stack",
-              "cards": [
-                {
-                  "type": "custom:mushroom-title-card",
-                  "title": "Climate",
-                  "alignment": "center"
-                },
-                {
-                  "type": "custom:mushroom-climate-card",
-                  "entity": "climate.upstairs_thermostat",
-                  "name": "Upstairs",
-                  "show_temperature_control": true,
-                  "icon": "mdi:thermostat-box",
-                  "fill_container": true,
-                  "layout": "vertical",
-                  "hvac_modes": [
-                    "heat_cool",
-                    "cool",
-                    "heat",
-                    "fan_only",
-                    "auto",
-                    "dry",
-                    "off"
-                  ],
-                  "primary_info": "state",
-                  "secondary_info": "last-changed",
-                  "icon_type": "icon",
-                  "tap_action": {
-                    "action": "more-info"
-                  },
-                  "hold_action": {
-                    "action": "more-info"
-                  },
-                  "double_tap_action": {
-                    "action": "more-info"
-                  }
-                },
-                {
-                  "type": "horizontal-stack",
-                  "cards": [
-                    {
-                      "type": "custom:mini-graph-card",
-                      "entities": [
-                        "sensor.master_temperature"
-                      ],
-                      "name": "Temperature",
-                      "show": {
-                        "labels": false
-                      },
-                      "color_thresholds": [
-                        {
-                          "value": 65,
-                          "color": "#f39c12"
-                        },
-                        {
-                          "value": 70,
-                          "color": "#d35400"
-                        },
-                        {
-                          "value": 75,
-                          "color": "#c0392b"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "custom:mini-graph-card",
-                      "entities": [
-                        "sensor.upstairs_thermostat_current_humidity"
-                      ],
-                      "name": "Humidity",
-                      "color": "blue",
-                      "show": {
-                        "labels": false
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "sections",
-          "max_columns": 4,
-          "subview": true,
-          "path": "control",
-          "title": "Control",
-          "sections": [
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "heading",
-                  "heading": "New section"
-                },
-                {
-                  "type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "entities",
-                      "title": "Automation Toggles",
-                      "show_header_toggle": false,
-                      "entities": [
-                        {
-                          "entity": "input_boolean.hvac_pause_active",
-                          "name": "HVAC Automation Active",
-                          "icon": "mdi:thermostat-off"
-                        },
-                        {
-                          "entity": "input_boolean.fan_auto_enabled",
-                          "name": "Fan Auto Adjustment Enabled",
-                          "icon": "mdi:fan-auto"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "entities",
-                      "title": "Individual Fan Control",
-                      "show_header_toggle": false,
-                      "entities": [
-                        {
-                          "entity": "fan.office_fan",
-                          "name": "Office Fan"
-                        },
-                        {
-                          "entity": "fan.nursery_fan",
-                          "name": "Nursery Fan"
-                        },
-                        {
-                          "entity": "fan.bedroom_fan",
-                          "name": "Bedroom Fan"
-                        },
-                        {
-                          "entity": "fan.den_fan",
-                          "name": "Den Fan"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "horizontal-stack",
-                      "cards": []
-                    }
-                  ]
-                }
               ]
             }
           ]

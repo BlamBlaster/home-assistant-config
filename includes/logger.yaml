@@ -1,0 +1,12 @@
+# 888                    /       /                 
+# 888      e88~-_  e88~88e e88~88e  e88~~8e  888-~\
+# 888     d888   i 888 888 888 888 d888  88b 888   
+# 888     8888   | "88_88" "88_88" 8888__888 888   
+# 888     Y888   '  /       /      Y888    , 888   
+# 888____  "88_-~  Cb      Cb       "88___/  888   
+#                   Y8""8D  Y8""8D                 
+
+default: warning  # or info/debug if you want more verbosity
+logs:
+  homeassistant.core: info
+  custom_components.your_custom_integration: debug

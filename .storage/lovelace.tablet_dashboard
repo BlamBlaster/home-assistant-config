@@ -125,7 +125,7 @@
               "show_camera": true
             },
             {
-              "camera_view": "live",
+              "camera_view": "auto",
               "alert_classes": [
                 "motion",
                 "moisture"
@@ -171,7 +171,7 @@
               "navigation_path": "/Mobile-dashboard/garage"
             },
             {
-              "camera_view": "live",
+              "camera_view": "auto",
               "alert_classes": [
                 "motion",
                 "moisture",
@@ -264,6 +264,13 @@
           ],
           "layout": {
             "max_cols": 2
+          },
+          "background": {
+            "opacity": 33,
+            "alignment": "center",
+            "size": "cover",
+            "repeat": "repeat",
+            "attachment": "fixed"
           }
         },
         {

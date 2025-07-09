@@ -35,3 +35,25 @@
       unique_id: bedroom_fan_speed_percent
       unit_of_measurement: "%"
       state: "{{ state_attr('fan.bedroom_fan', 'percentage') | int(0) }}"
+
+    - name: "Nursery Temp Range"
+      state: >
+        {% set ns = namespace(min=none, max=none) %}
+        {% set temps = state_attr('sensor.sensor_nursery_temperature', 'history') %}
+        {% set today = now().date() %}
+        {% for s in state_attr('sensor.sensor_nursery_temperature', 'history') or [] %}
+          {% if s.last_changed.date() == today %}
+            {% if ns.min is none or s.state | float < ns.min %}
+              {% set ns.min = s.state | float %}
+            {% endif %}
+            {% if ns.max is none or s.state | float > ns.max %}
+              {% set ns.max = s.state | float %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if ns.min is not none and ns.max is not none %}
+          {{ ns.min | round(1) }}°–{{ ns.max | round(1) }}°
+        {% else %}
+          N/A
+        {% endif %}
+

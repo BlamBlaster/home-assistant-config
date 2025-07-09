@@ -151,12 +151,17 @@
       },
       {
         "id": "917c4b327ac14f619c2c216104a99ba3",
-        "url": "/hacsfiles/Bubble-Card/bubble-card.js?hacstag=680112919240",
+        "url": "/hacsfiles/Bubble-Card/bubble-card.js?hacstag=680112919300",
         "type": "module"
       },
       {
         "id": "08a1ac6c4611413ca53ff0c00dd36718",
         "url": "/hacsfiles/power-flow-card-plus/power-flow-card-plus.js?hacstag=618081815025",
+        "type": "module"
+      },
+      {
+        "id": "15b0af5203024661901589dd6c42cfb7",
+        "url": "/hacsfiles/weather-chart-card/weather-chart-card.js?hacstag=6655018292411",
         "type": "module"
       }
     ]

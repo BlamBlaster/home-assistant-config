@@ -143,43 +143,101 @@
         "failed_folders": []
       },
       {
-        "backup_id": "a1e19e42",
+        "backup_id": "850acede",
         "failed_addons": [],
         "failed_agent_ids": [],
         "failed_folders": []
       },
       {
-        "backup_id": "3fe98b48",
+        "backup_id": "95629cc5",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "74f4b170",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "f94ad446",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "ad215157",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "5b21c967",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "d2df7cd4",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "adb9947e",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "3a02a755",
         "failed_addons": [],
         "failed_agent_ids": [],
         "failed_folders": []
       }
     ],
     "config": {
-      "agents": {},
+      "agents": {
+        "hassio.local": {
+          "protected": true,
+          "retention": {
+            "copies": 1,
+            "days": null
+          }
+        }
+      },
       "automatic_backups_configured": true,
       "create_backup": {
         "agent_ids": [
-          "hassio.local",
-          "cloud.cloud"
+          "cloud.cloud",
+          "hassio.NAS_BAckup",
+          "hassio.local"
         ],
         "include_addons": [],
         "include_all_addons": true,
         "include_database": true,
-        "include_folders": null,
+        "include_folders": [
+          "media",
+          "share"
+        ],
         "name": null,
         "password": "LEIR-DCCX-OANV-BBI6-G1LM-CO7C-3F72"
       },
-      "last_attempted_automatic_backup": "2025-06-27T05:02:29.003001-04:00",
-      "last_completed_automatic_backup": "2025-06-27T05:08:39.167142-04:00",
+      "last_attempted_automatic_backup": "2025-07-09T04:51:39.002339-04:00",
+      "last_completed_automatic_backup": "2025-07-09T05:02:19.254804-04:00",
       "retention": {
         "copies": 3,
         "days": null
       },
       "schedule": {
-        "days": [],
-        "recurrence": "daily",
-        "state": "daily",
+        "days": [
+          "wed",
+          "fri",
+          "sun"
+        ],
+        "recurrence": "custom_days",
+        "state": "never",
         "time": null
       }
     }

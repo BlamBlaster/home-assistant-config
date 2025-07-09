@@ -181,7 +181,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.8,
+                    "value": 24.8,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -197,7 +197,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 21.7,
+                    "value": 23.1,
                     "description": "Target Temperature",
                     "unit": "celsius",
                     "minValue": 15.6,
@@ -232,7 +232,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.3,
+                    "value": 25.0,
                     "description": "Cooling Threshold Temperature",
                     "unit": "celsius",
                     "minValue": 19.4,
@@ -248,7 +248,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 20.0,
+                    "value": 21.1,
                     "description": "Heating Threshold Temperature",
                     "unit": "celsius",
                     "minValue": 15.6,
@@ -263,7 +263,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 57.0,
+                    "value": 59.0,
                     "description": "Current Relative Humidity",
                     "unit": "percentage",
                     "minValue": 0,
@@ -317,7 +317,7 @@
                       "pr"
                     ],
                     "format": "uint8",
-                    "value": 3,
+                    "value": 0,
                     "minValue": 0,
                     "maxValue": 3,
                     "minStep": 1
@@ -344,7 +344,7 @@
                       "pw"
                     ],
                     "format": "float",
-                    "value": 24.4,
+                    "value": 25.0,
                     "unit": "celsius",
                     "minValue": 19.4,
                     "maxValue": 29.4,
@@ -386,7 +386,7 @@
                       "pw"
                     ],
                     "format": "float",
-                    "value": 21.4,
+                    "value": 20.6,
                     "unit": "celsius",
                     "minValue": 15.6,
                     "maxValue": 23.9,
@@ -400,7 +400,7 @@
                       "pw"
                     ],
                     "format": "float",
-                    "value": 24.2,
+                    "value": 24.4,
                     "unit": "celsius",
                     "minValue": 19.4,
                     "maxValue": 29.4,
@@ -425,7 +425,7 @@
                       "pw"
                     ],
                     "format": "string",
-                    "value": "2035-01-01T00:00:00-04:00Q",
+                    "value": "",
                     "maxLen": 64
                   },
                   {
@@ -558,7 +558,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 1637,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -589,7 +589,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -603,7 +603,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 1637,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1075,7 +1075,7 @@
                       "pr"
                     ],
                     "format": "bool",
-                    "value": false
+                    "value": true
                   },
                   {
                     "type": "0000022C-0000-1000-8000-0026BB765291",
@@ -1290,7 +1290,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -1321,7 +1321,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 100.0,
+                    "value": 24.7,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -1347,7 +1347,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -1358,7 +1358,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -1378,7 +1378,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -1403,7 +1403,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -1414,7 +1414,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -1427,7 +1427,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 8176,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1469,7 +1469,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -1480,7 +1480,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -1493,7 +1493,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 8176,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1648,7 +1648,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 24.1,
+                    "value": 24.5,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -1754,7 +1754,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 8447,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1820,7 +1820,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 8447,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1975,7 +1975,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 24.3,
+                    "value": 24.8,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -2081,7 +2081,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 1603,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2101,7 +2101,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": true,
+                    "value": false,
                     "description": "Motion Detected"
                   },
                   {
@@ -2147,7 +2147,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 1603,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2302,7 +2302,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.7,
+                    "value": 25.2,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -2408,7 +2408,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 2347,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2474,7 +2474,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 2347,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2598,7 +2598,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -2629,7 +2629,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -2654,7 +2654,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -2665,7 +2665,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -2720,7 +2720,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -2731,7 +2731,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -2764,7 +2764,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -2899,7 +2899,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -2955,7 +2955,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -2966,7 +2966,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -2979,7 +2979,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 1645,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3021,7 +3021,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -3032,7 +3032,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3045,7 +3045,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 1645,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3065,7 +3065,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3200,7 +3200,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3256,7 +3256,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -3267,7 +3267,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3280,7 +3280,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 1644,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3322,7 +3322,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -3333,7 +3333,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3346,7 +3346,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 1343,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3366,7 +3366,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3501,7 +3501,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3532,7 +3532,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3557,7 +3557,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -3568,7 +3568,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3623,7 +3623,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -3634,7 +3634,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3667,7 +3667,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3802,7 +3802,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3833,7 +3833,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3858,7 +3858,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -3869,7 +3869,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3924,7 +3924,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -3935,7 +3935,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3968,7 +3968,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4183,7 +4183,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 11,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4249,7 +4249,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 11,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4404,7 +4404,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4435,7 +4435,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4460,7 +4460,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -4471,7 +4471,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4484,7 +4484,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 50771,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4526,7 +4526,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -4537,7 +4537,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4550,7 +4550,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 50771,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4570,7 +4570,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4705,7 +4705,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4736,7 +4736,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4761,7 +4761,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -4772,7 +4772,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4785,7 +4785,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 75213,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4827,7 +4827,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -4838,7 +4838,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -4851,7 +4851,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 75213,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4871,7 +4871,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5086,7 +5086,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 24,
+                    "value": 70916,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5152,7 +5152,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 24,
+                    "value": 70916,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5307,7 +5307,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5338,7 +5338,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5363,7 +5363,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -5374,7 +5374,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5387,7 +5387,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 2248,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5429,7 +5429,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -5440,7 +5440,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5453,7 +5453,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 2248,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5473,7 +5473,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5608,7 +5608,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5639,7 +5639,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5664,7 +5664,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -5675,7 +5675,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5688,7 +5688,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 58801,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5730,7 +5730,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -5741,7 +5741,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5754,7 +5754,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 58801,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5774,7 +5774,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -6600,7 +6600,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Target Heating Cooling State",
                     "minValue": 0,
                     "maxValue": 3,
@@ -6620,7 +6620,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 24.3,
+                    "value": 24.9,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -6636,7 +6636,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 20.6,
+                    "value": 22.2,
                     "description": "Target Temperature",
                     "unit": "celsius",
                     "minValue": 12.8,
@@ -6702,7 +6702,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 58.0,
+                    "value": 60.0,
                     "description": "Current Relative Humidity",
                     "unit": "percentage",
                     "minValue": 0,
@@ -6986,7 +6986,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Motion Detected"
                   },
                   {
@@ -6997,7 +6997,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 256,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -7028,7 +7028,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -7042,7 +7042,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 257,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -7729,7 +7729,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -7760,7 +7760,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 100.0,
+                    "value": 25.1,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -7786,7 +7786,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -7797,7 +7797,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -7842,7 +7842,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -7853,7 +7853,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -7866,7 +7866,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 262,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -7886,7 +7886,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Motion Detected"
                   },
                   {
@@ -7908,7 +7908,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -7919,7 +7919,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -7932,7 +7932,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 262,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8056,7 +8056,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8087,7 +8087,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 100.0,
+                    "value": 24.8,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -8113,7 +8113,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -8124,7 +8124,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8169,7 +8169,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -8180,7 +8180,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8193,7 +8193,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 257,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8213,7 +8213,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Motion Detected"
                   },
                   {
@@ -8235,7 +8235,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -8246,7 +8246,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8259,7 +8259,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 258,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8383,7 +8383,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8414,7 +8414,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 100.0,
+                    "value": 25.1,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -8440,7 +8440,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -8451,7 +8451,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8496,7 +8496,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -8507,7 +8507,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8520,7 +8520,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 258,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8540,7 +8540,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Motion Detected"
                   },
                   {
@@ -8562,7 +8562,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -8573,7 +8573,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8586,7 +8586,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 258,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8741,7 +8741,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8790,7 +8790,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 27,
+                    "value": 586,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8810,7 +8810,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Motion Detected"
                   },
                   {
@@ -8856,7 +8856,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 27,
+                    "value": 187,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9011,7 +9011,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9067,7 +9067,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -9078,7 +9078,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9091,7 +9091,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 585,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9111,7 +9111,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Motion Detected"
                   },
                   {
@@ -9133,7 +9133,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -9144,7 +9144,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9157,7 +9157,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 38,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9177,7 +9177,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9312,7 +9312,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9343,7 +9343,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9368,7 +9368,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -9379,7 +9379,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9392,7 +9392,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 58398,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9434,7 +9434,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -9445,7 +9445,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9458,7 +9458,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 58398,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9478,7 +9478,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9613,7 +9613,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9644,7 +9644,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9669,7 +9669,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -9680,7 +9680,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9693,7 +9693,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 13472,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9735,7 +9735,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -9746,7 +9746,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9759,7 +9759,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 13472,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9779,7 +9779,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9914,7 +9914,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9945,7 +9945,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9970,7 +9970,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -9981,7 +9981,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9994,7 +9994,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 70132,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10036,7 +10036,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -10047,7 +10047,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10060,7 +10060,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 70132,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10080,7 +10080,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10215,7 +10215,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10246,7 +10246,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10271,7 +10271,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -10282,7 +10282,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10295,7 +10295,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 11677,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10337,7 +10337,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -10348,7 +10348,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10361,7 +10361,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 11678,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10381,7 +10381,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10516,7 +10516,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10547,7 +10547,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10572,7 +10572,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -10583,7 +10583,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10596,7 +10596,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 8430,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10638,7 +10638,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -10649,7 +10649,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10662,7 +10662,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 8429,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10682,7 +10682,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10817,7 +10817,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10873,7 +10873,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -10884,7 +10884,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10897,7 +10897,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 574,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10939,7 +10939,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -10950,7 +10950,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10963,7 +10963,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 574,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10983,7 +10983,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11118,7 +11118,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11174,7 +11174,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -11185,7 +11185,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11198,7 +11198,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 577,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11218,7 +11218,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Motion Detected"
                   },
                   {
@@ -11240,7 +11240,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -11251,7 +11251,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11264,7 +11264,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 286,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11284,7 +11284,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11499,7 +11499,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 26,
+                    "value": 40118,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11565,7 +11565,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 26,
+                    "value": 40118,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11720,7 +11720,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11751,7 +11751,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11776,7 +11776,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -11787,7 +11787,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11800,7 +11800,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 82857,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11842,7 +11842,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Status Active"
                   },
                   {
@@ -11853,7 +11853,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11866,7 +11866,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 82856,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11886,7 +11886,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
