@@ -48,7 +48,7 @@ camera:
 # \__ \  __/ | | \__ \ (_) | |  \__ \
 # |___/\___|_| |_|___/\___/|_|  |___/
 
-- sensor:
+sensor:
     - name: "Lamp Post Brightness"
       unique_id: lamp_post_brightness
       unit_of_measurement: "%"

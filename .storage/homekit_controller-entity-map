@@ -181,7 +181,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.7,
+                    "value": 24.0,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -263,7 +263,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 55.0,
+                    "value": 56.0,
                     "description": "Current Relative Humidity",
                     "unit": "percentage",
                     "minValue": 0,
@@ -558,7 +558,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": 726,
+                    "value": 2537,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -589,7 +589,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -603,7 +603,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": 1101,
+                    "value": 2537,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1321,7 +1321,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.8,
+                    "value": 23.9,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -1427,7 +1427,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 21599,
+                    "value": 23409,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1493,7 +1493,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 21599,
+                    "value": 23410,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1648,7 +1648,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.6,
+                    "value": 23.8,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -1705,7 +1705,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -1754,7 +1754,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1572,
+                    "value": 3384,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1820,7 +1820,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1573,
+                    "value": 3384,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1975,7 +1975,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 24.3,
+                    "value": 24.6,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -2081,7 +2081,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 313,
+                    "value": 1524,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2101,7 +2101,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": false,
+                    "value": true,
                     "description": "Motion Detected"
                   },
                   {
@@ -2147,7 +2147,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 314,
+                    "value": 174,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2302,7 +2302,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.4,
+                    "value": 23.7,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -2359,7 +2359,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -2408,7 +2408,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1095,
+                    "value": 2876,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2474,7 +2474,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1065,
+                    "value": 2876,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2979,7 +2979,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1580,
+                    "value": 758,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3045,7 +3045,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 475,
+                    "value": 757,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3280,7 +3280,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1012,
+                    "value": 749,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3346,7 +3346,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 712,
+                    "value": 749,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3532,7 +3532,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3581,7 +3581,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1212,
+                    "value": 2445,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3647,7 +3647,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 633,
+                    "value": 2444,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5086,7 +5086,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 21382,
+                    "value": 23194,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5152,7 +5152,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 21383,
+                    "value": 23194,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5338,7 +5338,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5387,7 +5387,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1098,
+                    "value": 2828,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5453,7 +5453,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1017,
+                    "value": 2828,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -6620,7 +6620,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.3,
+                    "value": 23.6,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -6997,7 +6997,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": 6719,
+                    "value": 8530,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -7042,7 +7042,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": 7158,
+                    "value": 8969,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -7760,7 +7760,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 22.6,
+                    "value": 23.1,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -7817,7 +7817,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -7866,7 +7866,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1074,
+                    "value": 2585,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -7932,7 +7932,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 774,
+                    "value": 2585,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8087,7 +8087,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.7,
+                    "value": 23.8,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -8144,7 +8144,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8193,7 +8193,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 809,
+                    "value": 2610,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8259,7 +8259,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 799,
+                    "value": 2610,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8414,7 +8414,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.5,
+                    "value": 23.7,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -8471,7 +8471,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8520,7 +8520,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1077,
+                    "value": 2587,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8586,7 +8586,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 776,
+                    "value": 2587,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8741,7 +8741,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8790,7 +8790,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1076,
+                    "value": 2566,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8856,7 +8856,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 755,
+                    "value": 2566,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9091,7 +9091,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1082,
+                    "value": 955,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9157,7 +9157,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 606,
+                    "value": 955,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9392,7 +9392,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 11502,
+                    "value": 13313,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9458,7 +9458,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 11502,
+                    "value": 13313,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9693,7 +9693,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 6239,
+                    "value": 8050,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9759,7 +9759,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 6239,
+                    "value": 8050,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9994,7 +9994,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 15975,
+                    "value": 17786,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10060,7 +10060,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 15975,
+                    "value": 17786,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10295,7 +10295,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 12246,
+                    "value": 14057,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10361,7 +10361,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 12245,
+                    "value": 14056,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10596,7 +10596,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 5098,
+                    "value": 6908,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10662,7 +10662,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 5098,
+                    "value": 6909,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10897,7 +10897,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 5041,
+                    "value": 6852,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10963,7 +10963,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 5041,
+                    "value": 6852,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11149,7 +11149,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11198,7 +11198,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1074,
+                    "value": 2366,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11264,7 +11264,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 554,
+                    "value": 2365,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11499,7 +11499,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 76988,
+                    "value": 78799,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11565,7 +11565,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 76988,
+                    "value": 78799,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,

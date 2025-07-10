@@ -964,15 +964,6 @@
             door.
           data:
             persistent: true
-        action: notify.mobile_app_benjamins_iphone_14
-      - metadata: {}
-        data:
-          title: ' ! ! Front door is Jammed ! ! '
-          message: The front door was unable to be {% if is_state('lock.front_door_lock',
-            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-            door.
-          data:
-            persistent: true
         action: notify.mobile_app_iphone_14
       - metadata: {}
         data:
@@ -983,6 +974,15 @@
           data:
             persistent: true
         action: notify.mobile_app_benjamins_ipad
+      - action: notify.mobile_app_benjamins_iphone_16
+        metadata: {}
+        data:
+          message: The front door was unable to be {% if is_state('lock.front_door_lock',
+            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
+            door.
+          title: ' ! ! Front door is Jammed ! ! '
+          data:
+            persistent: true
       - metadata: {}
         data:
           title: ' ! ! Front door is Jammed ! ! '
@@ -1032,15 +1032,6 @@
               lock.
             data:
               persistent: true
-          action: notify.mobile_app_benjamins_iphone_14
-        - metadata: {}
-          data:
-            title: Front door is Open
-            message: The front door is {% if is_state('binary_sensor.front_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
-            data:
-              persistent: true
           action: notify.mobile_app_iphone_14
         - metadata: {}
           data:
@@ -1051,6 +1042,15 @@
             data:
               persistent: true
           action: notify.mobile_app_benjamins_ipad
+        - action: notify.mobile_app_benjamins_iphone_16
+          metadata: {}
+          data:
+            message: The front door is {% if is_state('binary_sensor.front_door_contact','open')
+              %}open{% else %}not closed{% endif %}! Please close so the door can
+              lock.
+            title: Front door is Open
+            data:
+              persistent: true
         - metadata: {}
           data:
             title: Front door is Open
@@ -1148,16 +1148,16 @@
             door.
           data:
             persistent: true
-        action: notify.mobile_app_benjamins_iphone_14
-      - metadata: {}
+        action: notify.mobile_app_iphone_14
+      - action: notify.mobile_app_benjamins_iphone_16
+        metadata: {}
         data:
-          title: ' ! ! Back door is Jammed ! ! '
           message: The back door was unable to be {% if is_state('lock.back_door',
             'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
             door.
+          title: ' ! ! Back door is Jammed ! ! '
           data:
             persistent: true
-        action: notify.mobile_app_iphone_14
       - metadata: {}
         data:
           title: ' ! ! Back door is Jammed ! ! '
