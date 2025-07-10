@@ -19,8 +19,7 @@ script: !include scripts.yaml
 # Others
 utility_meter: !include includes/utility_meter.yaml
 ios: !include includes/ios.yaml
-templates: !include templates/sensors.yaml
-camera: !include templates/camera.yaml
+
 
 # Text to speech
 tts:
@@ -32,4 +31,78 @@ recorder: !include includes/recorder.yaml
 
 shell_command:
   git_sync: /bin/bash /config/scripts/git_sync.sh
+
+#   ___ __ _ _ __ ___   ___ _ __ __ _ 
+#  / __/ _` | '_ ` _ \ / _ \ '__/ _` |
+# | (_| (_| | | | | | |  __/ | | (_| |
+#  \___\__,_|_| |_| |_|\___|_|  \__,_|
+
+camera:
+  platform: ffmpeg
+  name: reolink E1 pro
+  input: rtsp://admin:DDiue$g6T8h*$$5k84Nx@192.168.20.208:554
+
+
+#  ___  ___ _ __  ___  ___  _ __ ___ 
+# / __|/ _ \ '_ \/ __|/ _ \| '__/ __|
+# \__ \  __/ | | \__ \ (_) | |  \__ \
+# |___/\___|_| |_|___/\___/|_|  |___/
+
+- sensor:
+    - name: "Lamp Post Brightness"
+      unique_id: lamp_post_brightness
+      unit_of_measurement: "%"
+      state: >
+        {% set hour = now().hour %}
+        {% if 17 <= hour < 19 %}
+          255
+        {% elif 19 <= hour < 21 %}
+          200
+        {% elif 21 <= hour < 23 %}
+          150
+        {% else %}
+          100
+        {% endif %}
+
+    - name: "Lamp Post Color Temperature"
+      unique_id: lamp_post_color_temperature
+      unit_of_measurement: "K"
+      state: >
+        {% set hour = now().hour %}
+        {% if 17 <= hour < 19 %}
+          4000
+        {% elif 19 <= hour < 21 %}
+          3500
+        {% elif 21 <= hour < 23 %}
+          3000
+        {% else %}
+          2700
+        {% endif %}
+
+    - name: "Bedroom Fan Speed Percent"
+      unique_id: bedroom_fan_speed_percent
+      unit_of_measurement: "%"
+      state: "{{ state_attr('fan.bedroom_fan', 'percentage') | int(0) }}"
+
+    - name: "Nursery Temp Range"
+      state: >
+        {% set ns = namespace(min=none, max=none) %}
+        {% set temps = state_attr('sensor.sensor_nursery_temperature', 'history') %}
+        {% set today = now().date() %}
+        {% for s in state_attr('sensor.sensor_nursery_temperature', 'history') or [] %}
+          {% if s.last_changed.date() == today %}
+            {% if ns.min is none or s.state | float < ns.min %}
+              {% set ns.min = s.state | float %}
+            {% endif %}
+            {% if ns.max is none or s.state | float > ns.max %}
+              {% set ns.max = s.state | float %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if ns.min is not none and ns.max is not none %}
+          {{ ns.min | round(1) }}°–{{ ns.max | round(1) }}°
+        {% else %}
+          N/A
+        {% endif %}
+
 
