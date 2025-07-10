@@ -492,14 +492,6 @@
     id: Dryer
   conditions: []
   actions:
-  - data:
-      volume_level: 0.5
-    target:
-      entity_id:
-      - media_player.living_room_speaker
-      - media_player.kitchen_speaker
-      - media_player.master_bedroom_display
-    action: media_player.volume_set
   - if:
     - condition: trigger
       id:
@@ -964,7 +956,7 @@
             door.
           data:
             persistent: true
-        action: notify.mobile_app_benjamins_iphone_14
+        action: notify.mobile_app_benjamins_iphone_16
       - metadata: {}
         data:
           title: ' ! ! Front door is Jammed ! ! '
@@ -1032,7 +1024,7 @@
               lock.
             data:
               persistent: true
-          action: notify.mobile_app_benjamins_iphone_14
+          action: notify.mobile_app_benjamins_iphone_16
         - metadata: {}
           data:
             title: Front door is Open
@@ -1148,7 +1140,7 @@
             door.
           data:
             persistent: true
-        action: notify.mobile_app_benjamins_iphone_14
+        action: notify.mobile_app_benjamins_iphone_16
       - metadata: {}
         data:
           title: ' ! ! Back door is Jammed ! ! '
@@ -1210,7 +1202,7 @@
               lock.
             data:
               persistent: true
-          action: notify.mobile_app_benjamins_iphone_14
+          action: notify.mobile_app_benjamins_iphone_16
         - metadata: {}
           data:
             title: Back door is Open
@@ -2429,4 +2421,36 @@
             critical: 1
             volume: 1
     action: notify.mobile_app_benjamins_iphone_16
+  mode: single
+- id: '1752003073000'
+  alias: Speaker Volume Evening
+  description: Set all speaker volumes to 30% after 8pm
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  action:
+  - service: media_player.volume_set
+    target:
+      entity_id:
+      - media_player.living_room_speaker
+      - media_player.kitchen_speaker
+      - media_player.master_bedroom_display
+    data:
+      volume_level: 0.3
+  mode: single
+- id: '1752003073001'
+  alias: Speaker Volume Morning
+  description: Restore speaker volume to 70% at 8am
+  trigger:
+  - platform: time
+    at: '08:00:00'
+  action:
+  - service: media_player.volume_set
+    target:
+      entity_id:
+      - media_player.living_room_speaker
+      - media_player.kitchen_speaker
+      - media_player.master_bedroom_display
+    data:
+      volume_level: 0.7
   mode: single
