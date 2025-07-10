@@ -16,7 +16,6 @@
     },
     "sidebar": {
       "panelOrder": [
-        "tablet-dashboard",
         "Mobile-dashboard",
         "dashboard-home",
         "map",
@@ -30,8 +29,9 @@
       "hiddenPanels": [
         "cebe7a76_hassio_google_drive_backup",
         "history",
+        "logbook",
         "media-browser",
-        "logbook"
+        "tablet-dashboard"
       ]
     }
   }

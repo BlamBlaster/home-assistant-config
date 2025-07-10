@@ -30,4 +30,6 @@ tts:
 logger: !include includes/logger.yaml
 recorder: !include includes/recorder.yaml
 
+shell_command:
+  git_sync: /bin/bash /config/scripts/git_sync.sh
 
