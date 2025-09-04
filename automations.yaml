@@ -879,53 +879,7 @@
         data:
           message: Basement door locked
       enabled: true
-        # Jam notification block removed
-        # Jam notification block removed
-        #        - condition: and
-        #          conditions:
-        #          - condition: state
-        #            state: unlocked
-        #            entity_id: lock.basement_door_lock
-        #            for:
-        #              hours: 0
-        #              minutes: 5
-        #              seconds: 0
-        #          - condition: or
-        #            conditions:
-        #            - condition: state
-        #              state: 'on'
-        #              entity_id: binary_sensor.basement_door_contact
-        #            - condition: state
-        #              state: unavailable
-        #              entity_id: binary_sensor.basement_door_contact
-        #            - condition: state
-        #              entity_id: binary_sensor.basement_door_contact
-        #              state: unavailable
-        #        then:
-        #        - metadata: {}
-        #          data:
-        #            title: ' ! ! Basement door is Jammed ! ! '
-        #            message: The basement door was unable to be {% if is_state('lock.basement_door_lock',
-        #              'jammed') %}locked{% else %}closed{% endif %}! Please close and lock
-        #              the door.
-        #            data:
-        #              persistent: true
-        #          action: notify.mobile_app_iphone_14
-        #        - action: notify.mobile_app_benjamins_iphone_16
-        #          metadata: {}
-        #          data:
-        #            message: The basement door was unable to be {% if is_state('lock.basement_door_lock',
-        #              'jammed') %}locked{% else %}closed{% endif %}! Please close and lock
-        #              the door.
-        #            title: ' ! ! Basement door is Jammed ! ! '
-        #            data:
-        #              persistent: true
-        #        - delay:
-        #            hours: 0
-        #            minutes: 2
-        #            seconds: 0
-        #            milliseconds: 0
-        #        else: []
+      # Jam notification block removed
   - alias: Lock Front Door after X mins or Notify
     if:
     - condition: and
@@ -957,57 +911,7 @@
         data:
           message: Front door locked
       else:
-        # Jam notification block removed
-        #        - condition: state
-        #          state: jammed
-        #          entity_id: lock.front_door_lock
-        #        for:
-        #          hours: 0
-        #          minutes: 0
-        #          seconds: 30
-        #      then:
-        #      - metadata: {}
-        #        data:
-        #          title: ' ! ! Front door is Jammed ! ! '
-        #          message: The front door was unable to be {% if is_state('lock.front_door_lock',
-        #            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-        #            door.
-        #          data:
-        #            persistent: true
-        #        action: notify.mobile_app_benjamins_iphone_16
-        #      - metadata: {}
-        #        data:
-        #          title: ' ! ! Front door is Jammed ! ! '
-        #          message: The front door was unable to be {% if is_state('lock.front_door_lock',
-        #            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-        #            door.
-        #          data:
-        #            persistent: true
-        #        action: notify.mobile_app_iphone_14
-        #      - metadata: {}
-        #        data:
-        #          title: ' ! ! Front door is Jammed ! ! '
-        #          message: The front door was unable to be {% if is_state('lock.front_door_lock',
-        #            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-        #            door.
-        #          data:
-        #            persistent: true
-        #        action: notify.mobile_app_benjamins_ipad
-        #      - metadata: {}
-        #        data:
-        #          title: ' ! ! Front door is Jammed ! ! '
-        #          message: The front door was unable to be {% if is_state('lock.front_door_lock',
-        #            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-        #            door.
-        #          data:
-        #            persistent: true
-        #        action: notify.persistent_notification
-        #      - delay:
-        #          hours: 0
-        #          minutes: 1
-        #          seconds: 0
-        #          milliseconds: 0
-        #      else:
+      # Jam notification block removed
       - if:
         - condition: or
           conditions:
@@ -1030,7 +934,7 @@
             for:
               hours: 0
               minutes: 3
-              seconds: 0
+            seconds: 0
             entity_id: binary_sensor.front_door_contact
           enabled: true
         then:

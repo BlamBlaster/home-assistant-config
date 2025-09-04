@@ -43,6 +43,13 @@ input_text:
     name: Bedside Original Color
     max: 40
 
+notify:
+  - platform: group
+    name: family_phones
+    services:
+      - service: mobile_app_benjamins_iphone_16
+      - service: mobile_app_iphone_14
+
 alert:
   door_left_open:
     name: Door Left Open
