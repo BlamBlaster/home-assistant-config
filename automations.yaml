@@ -836,16 +836,22 @@
         minutes: 0
         seconds: 30
         milliseconds: 0
-    - data:
-        code: '27514760'
-      target:
-        entity_id: lock.basement_door_lock
-      action: lock.lock
-    else:
-    - alias: Lock Basement after 3m during Day
-      if:
-      - condition: and
-        conditions:
+      - data:
+          code: '27514760'
+        target:
+          entity_id: lock.basement_door_lock
+        action: lock.lock
+      - action: notify.mobile_app_benjamins_iphone_16
+        data:
+          message: Basement door locked
+      - action: notify.mobile_app_iphone_14
+        data:
+          message: Basement door locked
+      else:
+      - alias: Lock Basement after 3m during Day
+        if:
+        - condition: and
+          conditions:
         - condition: state
           state: unlocked
           entity_id: lock.basement_door_lock
@@ -866,6 +872,12 @@
         target:
           entity_id: lock.basement_door_lock
         action: lock.lock
+      - action: notify.mobile_app_benjamins_iphone_16
+        data:
+          message: Basement door locked
+      - action: notify.mobile_app_iphone_14
+        data:
+          message: Basement door locked
       enabled: true
       else:
       - if:
@@ -933,16 +945,22 @@
         minutes: 1
         seconds: 45
         milliseconds: 0
-    - data:
-        code: '27514760'
-      target:
-        entity_id: lock.front_door_lock
-      action: lock.lock
-    else:
-    - if:
-      - condition: state
-        state: jammed
-        entity_id: lock.front_door_lock
+      - data:
+          code: '27514760'
+        target:
+          entity_id: lock.front_door_lock
+        action: lock.lock
+      - action: notify.mobile_app_benjamins_iphone_16
+        data:
+          message: Front door locked
+      - action: notify.mobile_app_iphone_14
+        data:
+          message: Front door locked
+      else:
+      - if:
+        - condition: state
+          state: jammed
+          entity_id: lock.front_door_lock
         for:
           hours: 0
           minutes: 0
@@ -1071,21 +1089,27 @@
               before: sunset
               after: sunrise
           then:
-          - delay:
-              hours: 0
-              minutes: 5
-              seconds: 0
-              milliseconds: 0
-          - data:
-              code: '27514760'
-            target:
-              entity_id: lock.front_door_lock
-            action: lock.lock
-          enabled: true
-  - alias: Lock Back Door after X mins or Notify
-    if:
-    - condition: and
-      conditions:
+        - delay:
+            hours: 0
+            minutes: 5
+            seconds: 0
+            milliseconds: 0
+        - data:
+            code: '27514760'
+          target:
+            entity_id: lock.front_door_lock
+          action: lock.lock
+        - action: notify.mobile_app_benjamins_iphone_16
+          data:
+            message: Front door locked
+        - action: notify.mobile_app_iphone_14
+          data:
+            message: Front door locked
+        enabled: true
+    - alias: Lock Back Door after X mins or Notify
+      if:
+      - condition: and
+        conditions:
       - condition: state
         state: unlocked
         entity_id: lock.back_door
@@ -1106,6 +1130,12 @@
       target:
         entity_id: lock.back_door
       action: lock.lock
+    - action: notify.mobile_app_benjamins_iphone_16
+      data:
+        message: Back door locked
+    - action: notify.mobile_app_iphone_14
+      data:
+        message: Back door locked
     else:
     - if:
       - condition: or
@@ -1254,13 +1284,19 @@
               minutes: 5
               seconds: 0
               milliseconds: 0
-          - data:
-              code: '27514760'
-            target:
-              entity_id: lock.back_door
-            action: lock.lock
+            - data:
+                code: '27514760'
+              target:
+                entity_id: lock.back_door
+              action: lock.lock
+            - action: notify.mobile_app_benjamins_iphone_16
+              data:
+                message: Back door locked
+            - action: notify.mobile_app_iphone_14
+              data:
+                message: Back door locked
+            enabled: true
         enabled: true
-    enabled: true
   mode: single
 - id: '1703045396205'
   alias: Bedside Lamp - Ben’s in Bed
@@ -2453,4 +2489,94 @@
       - media_player.master_bedroom_display
     data:
       volume_level: 0.7
+  mode: single
+
+- id: '1753000000001'
+  alias: Good Night Security Sweep
+  description: Lock doors, arm cameras, lower volume, and set night temperature
+  triggers:
+  - platform: tag
+    tag_id: 91d68522-307e-4865-87d6-ff4ff389c681
+    id: sleep_tag
+  - platform: state
+    entity_id:
+    - binary_sensor.sleepnumber_sleep_number_amanda_is_in_bed
+    - binary_sensor.sleepnumber_sleep_number_benjamin_is_in_bed
+    to: 'on'
+    for: 00:05:00
+    id: bed
+  conditions:
+  - condition: or
+    conditions:
+    - condition: trigger
+      id: sleep_tag
+    - condition: and
+      conditions:
+      - condition: state
+        entity_id: binary_sensor.sleepnumber_sleep_number_amanda_is_in_bed
+        state: 'on'
+      - condition: state
+        entity_id: binary_sensor.sleepnumber_sleep_number_benjamin_is_in_bed
+        state: 'on'
+  actions:
+  - service: script.all_doors_lock
+  - service: camera.enable_motion_detection
+    target:
+      entity_id:
+      - camera.front_porch_doorbell
+      - camera.reolink_e1_pro
+  - service: media_player.volume_set
+    target:
+      entity_id:
+      - media_player.living_room_speaker
+      - media_player.kitchen_speaker
+      - media_player.master_bedroom_display
+    data:
+      volume_level: 0.2
+  - service: climate.set_temperature
+    target:
+      entity_id:
+      - climate.upstairs_thermostat
+      - climate.downstairs_2
+    data:
+      temperature: 68
+  mode: single
+
+- id: '1753000000002'
+  alias: Automatic Away Mode
+  description: Secure home when everyone leaves
+  triggers:
+  - platform: state
+    entity_id:
+    - person.benjamin
+    - person.amanda
+    to: not_home
+  conditions:
+  - condition: state
+    entity_id: person.benjamin
+    state: not_home
+  - condition: state
+    entity_id: person.amanda
+    state: not_home
+  actions:
+  - service: script.all_doors_lock
+  - service: cover.close_cover
+    target:
+      entity_id: cover.garage_door
+  - service: light.turn_off
+    target:
+      entity_id: all
+  - service: climate.set_hvac_mode
+    target:
+      entity_id:
+      - climate.upstairs_thermostat
+      - climate.downstairs_2
+    data:
+      hvac_mode: 'off'
+  - service: notify.mobile_app_benjamins_iphone_16
+    data:
+      message: Away mode activated. Home secured.
+  - service: notify.mobile_app_iphone_14
+    data:
+      message: Away mode activated. Home secured.
   mode: single

@@ -30,4 +30,17 @@ tts:
 logger: !include includes/logger.yaml
 recorder: !include includes/recorder.yaml
 
+input_number:
+  bedside_rainbow_index:
+    name: Bedside Rainbow Index
+    min: 0
+    max: 13
+    step: 1
+    initial: 0
+
+input_text:
+  bedside_original_color:
+    name: Bedside Original Color
+    max: 40
+
 
