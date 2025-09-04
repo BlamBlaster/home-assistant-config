@@ -147,3 +147,35 @@ cycle_bedroom_fan_speed:
       - target:
           entity_id: input_boolean.fan_descending
         action: input_boolean.turn_off
+cycle_bedside_lamp_colors:
+  alias: Cycle Bedside Lamp Colors
+  mode: single
+  sequence:
+  - variables:
+      colors:
+      - [255, 0, 0]
+      - [255, 165, 0]
+      - [255, 255, 0]
+      - [0, 255, 0]
+      - [0, 0, 255]
+      - [75, 0, 130]
+      - [238, 130, 238]
+      - [255, 255, 255]
+      - [0, 255, 255]
+      - [255, 0, 255]
+      - [255, 192, 203]
+      - [255, 105, 180]
+      - [255, 215, 0]
+  - repeat:
+      for_each: "{{ colors }}"
+      sequence:
+      - service: light.turn_on
+        target:
+          entity_id:
+          - light.bedside_rgb_amanda
+          - light.bedside_rgb_ben
+        data:
+          rgb_color: "{{ repeat.item }}"
+          transition: 1
+      - delay:
+          seconds: 1
