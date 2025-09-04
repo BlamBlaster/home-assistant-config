@@ -174,11 +174,5 @@ cycle_bedside_lamp_colors:
           entity_id:
           - light.bedside_rgb_amanda
           - light.bedside_rgb_ben
-        data:
-          rgb_color:
-            - "{{ repeat.item[0] | int }}"
-            - "{{ repeat.item[1] | int }}"
-            - "{{ repeat.item[2] | int }}"
-          transition: 1
       - delay:
           seconds: 1
