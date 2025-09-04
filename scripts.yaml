@@ -30,6 +30,12 @@ all_doors_lock:
     domain: lock
     entity_id: d1df194df6136e0c2be75bc7171a73f8
     type: lock
+  - service: notify.mobile_app_benjamins_iphone_16
+    data:
+      message: All doors locked
+  - service: notify.mobile_app_iphone_14
+    data:
+      message: All doors locked
   alias: All Doors - Lock
   description: ''
   icon: mdi:door-closed-lock
@@ -147,3 +153,67 @@ cycle_bedroom_fan_speed:
       - target:
           entity_id: input_boolean.fan_descending
         action: input_boolean.turn_off
+
+dim_bedside_lamps_step:
+  alias: Dim Bedside Lamps 5 Percent
+  mode: single
+  sequence:
+  - service: light.turn_on
+    data:
+      brightness_step_pct: -5
+    target:
+      entity_id:
+      - light.bedside_rgb_amanda
+      - light.bedside_rgb_ben
+
+cycle_bedside_rainbow:
+  alias: Cycle Bedside Rainbow
+  mode: single
+  sequence:
+  - variables:
+      index: "{{ states('input_number.bedside_rainbow_index') | int }}"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{{ index == 0 }}"
+      sequence:
+      - service: input_text.set_value
+        target:
+          entity_id: input_text.bedside_original_color
+        data:
+          value: "{{ state_attr('light.bedside_rgb_ben','hs_color') | join(',') }}"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{{ index < 12 }}"
+      sequence:
+      - service: light.turn_on
+        target:
+          entity_id: light.bedside_rgb_ben
+        data:
+          hs_color:
+          - "{{ (index * 30) % 360 }}"
+          - 100
+      - service: input_number.set_value
+        target:
+          entity_id: input_number.bedside_rainbow_index
+        data:
+          value: "{{ index + 1 }}"
+    - conditions:
+      - condition: template
+        value_template: "{{ index >= 12 }}"
+      sequence:
+      - variables:
+          parts: "{{ states('input_text.bedside_original_color').split(',') }}"
+      - service: light.turn_on
+        target:
+          entity_id: light.bedside_rgb_ben
+        data:
+          hs_color:
+          - "{{ parts[0]|float }}"
+          - "{{ parts[1]|float }}"
+      - service: input_number.set_value
+        target:
+          entity_id: input_number.bedside_rainbow_index
+        data:
+          value: 0
