@@ -43,4 +43,14 @@ input_text:
     name: Bedside Original Color
     max: 40
 
+alert:
+  garage_door_left_open:
+    name: Garage Door Left Open
+    entity_id: cover.garage_door
+    state: open
+    repeat:
+      - 60
+      - 15
+    notifiers:
+      - family_phones
 
