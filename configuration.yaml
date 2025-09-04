@@ -43,4 +43,14 @@ input_text:
     name: Bedside Original Color
     max: 40
 
+alert:
+  door_left_open:
+    name: Door Left Open
+    entity_id:
+      - binary_sensor.front_door_contact
+      - binary_sensor.basement_door_contact
+    repeat: [0, 1, 1, 1, 1, 15]
+    notifiers:
+      - family_phones
+
 
