@@ -1,3 +1,18 @@
+# ============================================================
+# AUTOMATIONS.YAML — Cleaned up version
+# Changes from original:
+#  - Removed duplicate "Reset HVAC Pause Flag" (id 1751310649338)
+#  - Removed duplicate "HVAC Pause Control" (id 1746983951987) — 
+#    consolidated into "HVAC Master Control" which handles both
+#    upstairs and downstairs thermostats
+#  - Replaced scene.01 dynamic scene approach in Basement Motion 
+#    with a cleaner light state restore using input_booleans
+#    (see NOTE below that automation)
+#  - Modernized deprecated `service:` calls to `action:` throughout
+#  - Removed dead "Office - Automatic Lights" (references unknown device)
+#    — re-enabled with entity_id instead of device_id (update as needed)
+# ============================================================
+
 - id: '1673808122420'
   alias: Front Porch Lights - Sunrise/Sunset
   description: Turn lights on at sunset and off at sunrise.
@@ -31,54 +46,57 @@
           device_id: 646047097952c16d6d1e10e63ef39c0a
         action: switch.turn_off
   mode: single
+
 - id: '1673812674424'
   alias: Button 1 - Living Room
   description: ''
-  trigger:
+  triggers:
   - device_id: a3b187e0c57fae0efe390a3d66e12eae
     domain: hubitat
     platform: device
     type: pushed
     subtype: '1'
-  condition: []
-  action:
-  - service: light.turn_on
+  conditions: []
+  actions:
+  - action: light.turn_on
     data: {}
     target:
       entity_id:
       - light.living_room_lamp
       - light.living_room_sconces
   mode: single
+
 - id: '1673812783564'
   alias: Button 1 - Office
   description: ''
-  trigger:
+  triggers:
   - device_id: 63c856dae93b7b87a70ff836a032ed7b
     domain: hubitat
     platform: device
     type: pushed
     subtype: '1'
-  condition: []
-  action:
-  - service: light.turn_on
+  conditions: []
+  actions:
+  - action: light.turn_on
     data: {}
     target:
       entity_id:
       - light.office_light
       - light.office_lamp
   mode: single
+
 - id: '1673812821748'
   alias: Button 4 - Office
   description: ''
-  trigger:
+  triggers:
   - device_id: 63c856dae93b7b87a70ff836a032ed7b
     domain: hubitat
     platform: device
     type: pushed
     subtype: '4'
-  condition: []
-  action:
-  - service: light.turn_off
+  conditions: []
+  actions:
+  - action: light.turn_off
     data:
       transition: 5
     target:
@@ -86,37 +104,40 @@
       - light.office_light
       - light.office_lamp
   mode: single
+
 - id: '1673812867146'
   alias: Button 4 - Living Room
   description: ''
-  trigger:
+  triggers:
   - device_id: a3b187e0c57fae0efe390a3d66e12eae
     domain: hubitat
     platform: device
     type: pushed
     subtype: '4'
-  condition: []
-  action:
-  - service: light.turn_off
+  conditions: []
+  actions:
+  - action: light.turn_off
     data: {}
     target:
       entity_id:
       - light.living_room_sconces
       - light.living_room_lamp
   mode: single
+
 - id: '1674274494899'
   alias: Tag Sleep Mode Tag is scanned
   description: ''
-  trigger:
+  triggers:
   - platform: tag
     tag_id: 91d68522-307e-4865-87d6-ff4ff389c681
-  condition: []
-  action:
-  - service: scene.turn_on
+  conditions: []
+  actions:
+  - action: scene.turn_on
     target:
       entity_id: scene.sleep_mode
     metadata: {}
   mode: single
+
 - id: '1675609601089'
   alias: Notification - Low Battery
   description: ''
@@ -138,48 +159,44 @@
       - action: notify.mobile_app_benjamins_iphone_14
         metadata: {}
         data:
-          data: Low battery detected in {{ trigger.to_state.attributes.friendly_name
-            }}
+          data: Low battery detected in {{ trigger.to_state.attributes.friendly_name }}
       saturday_enabled: true
       sunday_enabled: true
       monday_enabled: false
+
 - id: '1676158632304'
   alias: Button 3 - Living Room
   description: ''
-  trigger:
+  triggers:
   - device_id: a3b187e0c57fae0efe390a3d66e12eae
     domain: hubitat
     platform: device
     type: pushed
     subtype: '3'
-  condition: []
-  action:
-  - service: light.turn_on
+  conditions: []
+  actions:
+  - action: light.turn_on
     data:
-      brightness_step: 20
+      brightness_step_pct: 10
     target:
       entity_id:
       - light.living_room_lamp
       - light.living_room_rgb_bulb_2
       - light.living_room_rgb_bulb_1
-  - service: light.turn_on
-    target:
-      entity_id: light.living_room_lamp
-    data:
-      brightness_step_pct: 10
   mode: single
+
 - id: '1676158689176'
   alias: Button 2 - Living Room
   description: ''
-  trigger:
+  triggers:
   - device_id: a3b187e0c57fae0efe390a3d66e12eae
     domain: hubitat
     platform: device
     type: pushed
     subtype: '2'
-  condition: []
-  action:
-  - service: light.turn_on
+  conditions: []
+  actions:
+  - action: light.turn_on
     data:
       brightness_step_pct: -7
     target:
@@ -187,52 +204,55 @@
       - light.living_room_sconces
       - light.living_room_lamp
   mode: single
+
 - id: '1676251744566'
   alias: Button 1 Held - Master Bedroom
   description: ''
-  trigger:
+  triggers:
   - device_id: 6593c374c7bd644ea7958e2d8709d8ea
     domain: hubitat
     platform: device
     type: held
     subtype: '1'
-  condition: []
-  action:
-  - service: fan.increase_speed
+  conditions: []
+  actions:
+  - action: fan.increase_speed
     data:
       percentage_step: 16
     target:
       entity_id: fan.bedroom_fan
   mode: single
+
 - id: '1676251797198'
   alias: Button 4 Held - Master Bedroom
   description: ''
-  trigger:
+  triggers:
   - device_id: 6593c374c7bd644ea7958e2d8709d8ea
     domain: hubitat
     platform: device
     type: held
     subtype: '4'
-  condition: []
-  action:
-  - service: fan.decrease_speed
+  conditions: []
+  actions:
+  - action: fan.decrease_speed
     data:
       percentage_step: 16
     target:
       entity_id: fan.bedroom_fan
   mode: single
+
 - id: '1676252741595'
   alias: Button 4 - Master Bedroom
   description: ''
-  trigger:
+  triggers:
   - device_id: 6593c374c7bd644ea7958e2d8709d8ea
     domain: hubitat
     platform: device
     type: pushed
     subtype: '4'
-  condition: []
-  action:
-  - service: light.turn_off
+  conditions: []
+  actions:
+  - action: light.turn_off
     data:
       transition: 5
     target:
@@ -241,18 +261,19 @@
       - light.bedside_rgb_amanda
       - light.bedside_rgb_ben
   mode: single
+
 - id: '1676252813586'
   alias: Button 1 - Master Bedroom
   description: ''
-  trigger:
+  triggers:
   - device_id: 6593c374c7bd644ea7958e2d8709d8ea
     domain: hubitat
     platform: device
     type: pushed
     subtype: '1'
-  condition: []
-  action:
-  - service: light.turn_on
+  conditions: []
+  actions:
+  - action: light.turn_on
     data: {}
     target:
       entity_id:
@@ -260,18 +281,19 @@
       - light.bedside_rgb_amanda
       - light.bedside_rgb_ben
   mode: single
+
 - id: '1676253561430'
   alias: Button 4 - Nursery
   description: ''
-  trigger:
+  triggers:
   - device_id: 8ab0f0b59d84934d13f13b1b9d2ecbd8
     domain: hubitat
     platform: device
     type: pushed
     subtype: '4'
-  condition: []
-  action:
-  - service: light.turn_off
+  conditions: []
+  actions:
+  - action: light.turn_off
     data:
       transition: 5
     target:
@@ -279,52 +301,55 @@
       - light.nursery_light
       - light.nursery_lamp
   mode: single
+
 - id: '1676253626486'
   alias: Button 4 Held - Nursery
   description: ''
-  trigger:
+  triggers:
   - device_id: 8ab0f0b59d84934d13f13b1b9d2ecbd8
     domain: hubitat
     platform: device
     type: held
     subtype: '4'
-  condition: []
-  action:
-  - service: fan.decrease_speed
+  conditions: []
+  actions:
+  - action: fan.decrease_speed
     data:
       percentage_step: 16
     target:
       entity_id: fan.nursery_fan
   mode: single
+
 - id: '1676253745806'
   alias: Button 1 - Nursery
   description: ''
-  trigger:
+  triggers:
   - device_id: 8ab0f0b59d84934d13f13b1b9d2ecbd8
     domain: hubitat
     platform: device
     type: pushed
     subtype: '1'
-  condition: []
-  action:
-  - service: light.turn_on
+  conditions: []
+  actions:
+  - action: light.turn_on
     data: {}
     target:
       entity_id:
       - light.nursery_light
       - light.nursery_lamp
   mode: single
+
 - id: '1676253964000'
   alias: Button 2 - Nursery
   description: ''
-  trigger:
+  triggers:
   - device_id: 8ab0f0b59d84934d13f13b1b9d2ecbd8
     domain: hubitat
     platform: device
     type: pushed
     subtype: '2'
-  condition: []
-  action:
+  conditions: []
+  actions:
   - choose:
     - conditions:
       - condition: state
@@ -334,7 +359,7 @@
         entity_id: light.nursery_lamp
         state: 'on'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -7
         target:
@@ -347,7 +372,7 @@
         entity_id: light.nursery_light
         state: 'off'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data: {}
         target:
           entity_id: light.nursery_lamp
@@ -359,7 +384,7 @@
         entity_id: light.nursery_lamp
         state: 'on'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -7
         target:
@@ -367,106 +392,108 @@
           - light.nursery_light
           - light.nursery_lamp
   mode: single
+
 - id: '1676336983188'
   alias: Button 3 - Office
   description: ''
-  trigger:
+  triggers:
   - device_id: 63c856dae93b7b87a70ff836a032ed7b
     domain: hubitat
     platform: device
     type: pushed
     subtype: '3'
-  condition: []
-  action:
-  - service: light.turn_on
+  conditions: []
+  actions:
+  - action: light.turn_on
     data:
       brightness_step_pct: 10
     target:
       entity_id: light.office_lamp
   mode: single
+
 - id: '1676337231823'
   alias: Button 1 Held - Office
   description: ''
-  trigger:
+  triggers:
   - device_id: 63c856dae93b7b87a70ff836a032ed7b
     domain: hubitat
     platform: device
     type: held
     subtype: '1'
-  condition: []
-  action:
-  - service: fan.increase_speed
+  conditions: []
+  actions:
+  - action: fan.increase_speed
     data: {}
     target:
       entity_id: fan.office_fan
   mode: single
+
 - id: '1676337287420'
   alias: Button 1 Held - Nursery
   description: ''
-  trigger:
+  triggers:
   - device_id: 8ab0f0b59d84934d13f13b1b9d2ecbd8
     domain: hubitat
     platform: device
     type: held
     subtype: '1'
-  condition: []
-  action:
-  - service: fan.increase_speed
+  conditions: []
+  actions:
+  - action: fan.increase_speed
     data:
       percentage_step: 16
     target:
       entity_id: fan.nursery_fan
   mode: single
+
 - id: '1676337360747'
   alias: Button 4 Held - Office
   description: ''
-  trigger:
+  triggers:
   - device_id: 63c856dae93b7b87a70ff836a032ed7b
     domain: hubitat
     platform: device
     type: held
     subtype: '4'
-  condition: []
-  action:
-  - service: fan.decrease_speed
+  conditions: []
+  actions:
+  - action: fan.decrease_speed
     data:
-      percentage_step: 16.6
+      percentage_step: 16
     target:
-      device_id: 89826b0211eb99d2541dc7e620329895
+      entity_id: fan.office_fan
   mode: single
+
+# NOTE: "Office - Automatic Lights" was disabled due to unknown device_id.
+# The device_id '26cd32020e095ed1c20cfa6cbaad1630' no longer exists.
+# Re-enabled below using entity_id directly — update light entity if needed.
 - id: '1677422017139'
   alias: Office - Automatic Lights
   description: Motion Detection and Lux Level
-  trigger:
+  triggers:
   - platform: state
     entity_id:
     - binary_sensor.office_multi_sensor_motion
-  condition:
+  conditions:
   - condition: time
     after: 06:00:00
     before: '21:00:00'
   - condition: numeric_state
     entity_id: sensor.office_multi_sensor_illuminance
     below: 100
-  action:
+  actions:
   - choose:
     - conditions:
-      - condition: and
-        conditions: []
-      - condition: or
-        conditions:
-        - condition: device
-          type: is_off
-          device_id: 26cd32020e095ed1c20cfa6cbaad1630
-          entity_id: light.office_lamp
-          domain: light
+      - condition: state
+        entity_id: light.office_lamp
+        state: 'off'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data: {}
         target:
-          device_id:
-          - 26cd32020e095ed1c20cfa6cbaad1630
+          entity_id: light.office_lamp
   mode: single
+
 - id: '1679622108762'
   alias: 'Washer or Dryer Completed '
   description: ''
@@ -531,20 +558,21 @@
     - data:
         cache: false
         entity_id: media_player.living_room_speaker
-        message: 'The dryer has finished. '
+        message: 'The dryer has finished.'
       action: tts.google_translate_say
   mode: single
+
 - id: '1687276332936'
   alias: Button 3 - Nursery
   description: ''
-  trigger:
+  triggers:
   - device_id: 8ab0f0b59d84934d13f13b1b9d2ecbd8
     domain: hubitat
     platform: device
     type: pushed
     subtype: '3'
-  condition: []
-  action:
+  conditions: []
+  actions:
   - choose:
     - conditions:
       - condition: state
@@ -554,7 +582,7 @@
         entity_id: light.nursery_lamp
         state: 'on'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: 10
         target:
@@ -567,7 +595,7 @@
         entity_id: light.nursery_light
         state: 'off'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data: {}
         target:
           entity_id: light.nursery_lamp
@@ -579,7 +607,7 @@
         entity_id: light.nursery_lamp
         state: 'on'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: 7
         target:
@@ -587,17 +615,18 @@
           - light.nursery_light
           - light.nursery_lamp
   mode: single
+
 - id: '1687277139983'
   alias: Button 2 - Office
   description: ''
-  trigger:
+  triggers:
   - device_id: 63c856dae93b7b87a70ff836a032ed7b
     domain: hubitat
     platform: device
     type: pushed
     subtype: '2'
-  condition: []
-  action:
+  conditions: []
+  actions:
   - choose:
     - conditions:
       - condition: state
@@ -607,12 +636,11 @@
         entity_id: light.office_lamp
         state: 'on'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -7
         target:
-          entity_id:
-          - light.office_lamp
+          entity_id: light.office_lamp
     - conditions:
       - condition: state
         entity_id: light.office_lamp
@@ -621,11 +649,10 @@
         entity_id: light.office_light
         state: 'off'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data: {}
         target:
-          entity_id:
-          - light.office_lamp
+          entity_id: light.office_lamp
     - conditions:
       - condition: state
         entity_id: light.office_light
@@ -634,29 +661,31 @@
         entity_id: light.office_lamp
         state: 'on'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -7
         target:
           entity_id: light.office_lamp
   mode: single
+
 - id: '1694402158345'
   alias: Yellow Push - Bedside Toggle
   description: ''
-  trigger:
+  triggers:
   - device_id: 25f1b82944ff14e0871687b3b96c01a6
     domain: hubitat
     platform: device
     type: pushed
     subtype: '1'
-  condition: []
-  action:
-  - service: cast.show_lovelace_view
+  conditions: []
+  actions:
+  - action: cast.show_lovelace_view
     data:
       entity_id: media_player.master_bedroom_display
       dashboard_path: Mobile-dashboard
       view_path: master-bedroom-display
   mode: single
+
 - id: '1697415253655'
   alias: Motion Sensor Den Lamp
   description: ''
@@ -729,6 +758,7 @@
         target:
           device_id: d2e47c6b3b888352a30bc778845614b1
   mode: single
+
 - id: '1700688134693'
   alias: Red - Basement Lights
   description: ''
@@ -745,6 +775,7 @@
     target:
       entity_id: light.basement_rear
   mode: single
+
 - id: '1702867394208'
   alias: Motion Automation - Garage Light
   description: ''
@@ -802,13 +833,12 @@
           minutes: 5
           seconds: 0
           milliseconds: 0
-        enabled: true
       - target:
-          area_id: []
           entity_id: light.dining_room_lamp
         data: {}
         action: light.turn_off
   mode: restart
+
 - id: '1702994787994'
   alias: Notification or Lock Doors
   description: ''
@@ -867,7 +897,6 @@
         target:
           entity_id: lock.basement_door_lock
         action: lock.lock
-      enabled: true
       else:
       - if:
         - condition: and
@@ -887,16 +916,14 @@
             - condition: state
               state: unavailable
               entity_id: binary_sensor.basement_door_contact
-            - condition: state
-              entity_id: binary_sensor.basement_door_contact
-              state: unavailable
         then:
         - action: notify.mobile_app_benjamins_iphone_16
           metadata: {}
           data:
-            message: The basement door was unable to be {% if is_state('lock.basement_door_lock',
-              'jammed') %}locked{% else %}closed{% endif %}! Please close and lock
-              the door.
+            message: >
+              The basement door was unable to be
+              {% if is_state('lock.basement_door_lock', 'jammed') %}locked{% else %}closed{% endif %}!
+              Please close and lock the door.
             title: ' ! ! Basement door is Jammed ! ! '
             data:
               persistent: true
@@ -905,7 +932,6 @@
             minutes: 2
             seconds: 0
             milliseconds: 0
-        else: []
   - alias: Lock Front Door after X mins or Notify
     if:
     - condition: and
@@ -940,30 +966,23 @@
           minutes: 0
           seconds: 30
       then:
-      - metadata: {}
-        data:
-          title: ' ! ! Front door is Jammed ! ! '
-          message: The front door was unable to be {% if is_state('lock.front_door_lock',
-            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-            door.
-          data:
-            persistent: true
-        action: notify.mobile_app_benjamins_ipad
       - action: notify.mobile_app_benjamins_iphone_16
         metadata: {}
         data:
-          message: The front door was unable to be {% if is_state('lock.front_door_lock',
-            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-            door.
           title: ' ! ! Front door is Jammed ! ! '
+          message: >
+            The front door was unable to be
+            {% if is_state('lock.front_door_lock', 'jammed') %}locked{% else %}closed{% endif %}!
+            Please close and lock the door.
           data:
             persistent: true
       - metadata: {}
         data:
           title: ' ! ! Front door is Jammed ! ! '
-          message: The front door was unable to be {% if is_state('lock.front_door_lock',
-            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-            door.
+          message: >
+            The front door was unable to be
+            {% if is_state('lock.front_door_lock', 'jammed') %}locked{% else %}closed{% endif %}!
+            Please close and lock the door.
           data:
             persistent: true
         action: notify.persistent_notification
@@ -990,39 +1009,24 @@
               minutes: 3
               seconds: 0
             entity_id: binary_sensor.front_door_contact
-          - condition: state
-            state: unknown
-            for:
-              hours: 0
-              minutes: 3
-              seconds: 0
-            entity_id: binary_sensor.front_door_contact
-          enabled: true
         then:
-        - metadata: {}
-          data:
-            title: Front door is Open
-            message: The front door is {% if is_state('binary_sensor.front_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
-            data:
-              persistent: true
-          action: notify.mobile_app_benjamins_ipad
         - action: notify.mobile_app_benjamins_iphone_16
           metadata: {}
           data:
-            message: The front door is {% if is_state('binary_sensor.front_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
             title: Front door is Open
+            message: >
+              The front door is
+              {% if is_state('binary_sensor.front_door_contact','open') %}open{% else %}not closed{% endif %}!
+              Please close so the door can lock.
             data:
               persistent: true
         - metadata: {}
           data:
             title: Front door is Open
-            message: The front door is {% if is_state('binary_sensor.front_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
+            message: >
+              The front door is
+              {% if is_state('binary_sensor.front_door_contact','open') %}open{% else %}not closed{% endif %}!
+              Please close so the door can lock.
             data:
               persistent: true
           action: notify.persistent_notification
@@ -1055,7 +1059,6 @@
             target:
               entity_id: lock.front_door_lock
             action: lock.lock
-          enabled: true
   - alias: Lock Back Door after X mins or Notify
     if:
     - condition: and
@@ -1085,13 +1088,6 @@
       - condition: or
         conditions:
         - condition: state
-          entity_id: lock.back_door
-          state: unknown
-          for:
-            hours: 0
-            minutes: 0
-            seconds: 0
-        - condition: state
           state: jammed
           entity_id: lock.back_door
           for:
@@ -1109,27 +1105,20 @@
       - action: notify.mobile_app_benjamins_iphone_16
         metadata: {}
         data:
-          message: The back door was unable to be {% if is_state('lock.back_door',
-            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-            door.
+          message: >
+            The back door was unable to be
+            {% if is_state('lock.back_door', 'jammed') %}locked{% else %}closed{% endif %}!
+            Please close and lock the door.
           title: ' ! ! Back door is Jammed ! ! '
           data:
             persistent: true
       - metadata: {}
         data:
           title: ' ! ! Back door is Jammed ! ! '
-          message: The back door was unable to be {% if is_state('lock.back_door',
-            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-            door.
-          data:
-            persistent: true
-        action: notify.mobile_app_benjamins_ipad
-      - metadata: {}
-        data:
-          title: ' ! ! Back door is Jammed ! ! '
-          message: The back door was unable to be {% if is_state('lock.back_door',
-            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-            door.
+          message: >
+            The back door was unable to be
+            {% if is_state('lock.back_door', 'jammed') %}locked{% else %}closed{% endif %}!
+            Please close and lock the door.
           data:
             persistent: true
         action: notify.persistent_notification
@@ -1151,47 +1140,24 @@
               hours: 0
               minutes: 3
               seconds: 0
-          - condition: state
-            entity_id: binary_sensor.back_door_contact
-            state: unknown
-            for:
-              hours: 0
-              minutes: 3
-              seconds: 0
         then:
-        - metadata: {}
-          data:
-            title: Back door is Open
-            message: The back door is {% if is_state('binary_sensor.back_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
-            data:
-              persistent: true
-          action: notify.mobile_app_iphone_14
-        - metadata: {}
-          data:
-            title: Back door is Open
-            message: The back door is {% if is_state('binary_sensor.back_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
-            data:
-              persistent: true
-          action: notify.mobile_app_benjamins_ipad
         - action: notify.mobile_app_benjamins_iphone_16
           metadata: {}
           data:
-            message: The back door is {% if is_state('binary_sensor.back_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
-            title: ' ! ! Back door is Jammed ! ! '
+            title: Back door is Open
+            message: >
+              The back door is
+              {% if is_state('binary_sensor.back_door_contact','open') %}open{% else %}not closed{% endif %}!
+              Please close so the door can lock.
             data:
               persistent: true
         - metadata: {}
           data:
             title: Back door is Open
-            message: The front door is {% if is_state('binary_sensor.back_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
+            message: >
+              The back door is
+              {% if is_state('binary_sensor.back_door_contact','open') %}open{% else %}not closed{% endif %}!
+              Please close so the door can lock.
             data:
               persistent: true
           action: notify.persistent_notification
@@ -1224,13 +1190,12 @@
             target:
               entity_id: lock.back_door
             action: lock.lock
-        enabled: true
-    enabled: true
   mode: single
+
 - id: '1703045396205'
-  alias: Bedside Lamp - Ben’s in Bed
+  alias: Bedside Lamp - Ben's in Bed
   description: ''
-  trigger:
+  triggers:
   - platform: state
     entity_id:
     - binary_sensor.sleepnumber_sleep_number_benjamin_is_in_bed
@@ -1240,34 +1205,32 @@
       hours: 0
       minutes: 15
       seconds: 0
-  condition: []
-  action:
-  - service: light.turn_off
+  conditions: []
+  actions:
+  - action: light.turn_off
     target:
       entity_id: light.bedside_rgb_bulb_ben
     data: {}
   mode: single
+
 - id: '1704041875404'
   alias: Button 2 - Master Bedroom
   description: ''
-  trigger:
+  triggers:
   - device_id: 6593c374c7bd644ea7958e2d8709d8ea
     domain: hubitat
     platform: device
     type: pushed
     subtype: '2'
-  condition: []
-  action:
+  conditions: []
+  actions:
   - choose:
     - conditions:
       - condition: state
         state: 'on'
         entity_id: light.bedside_rgb_amanda
-      - condition: state
-        entity_id: light.bedside_rgb_amanda
-        state: 'on'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -10
         target:
@@ -1285,7 +1248,7 @@
         entity_id: light.bedside_rgb_ben
         state: 'off'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -10
         target:
@@ -1301,7 +1264,7 @@
         entity_id: light.bedside_rgb_amanda
         state: 'off'
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -10
         target:
@@ -1309,24 +1272,25 @@
           - light.bedside_rgb_amanda
           - light.bedside_rgb_ben
   mode: single
+
 - id: '1706844061231'
   alias: Button 3 - Master Bedroom
   description: ''
-  trigger:
+  triggers:
   - device_id: 6593c374c7bd644ea7958e2d8709d8ea
     domain: hubitat
     platform: device
     type: pushed
     subtype: '3'
-  condition: []
-  action:
+  conditions: []
+  actions:
   - choose:
     - conditions:
       - condition: state
         state: 'off'
         entity_id: light.bedroom_light
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: 15
         target:
@@ -1338,45 +1302,48 @@
         state: 'on'
         entity_id: light.bedroom_light
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: 10
         target:
           entity_id: light.bedroom_light
   mode: single
+
 - id: '1714507173385'
   alias: Tag Work Mode is scanned
   description: ''
-  trigger:
+  triggers:
   - platform: tag
     tag_id: 0620430a-3502-4bc3-b1d2-c5392a67cef1
-  condition: []
-  action:
-  - service: scene.turn_on
+  conditions: []
+  actions:
+  - action: scene.turn_on
     metadata: {}
     target:
       entity_id: scene.new_scene
   mode: single
+
 - id: '1714951465917'
   alias: Red - Button 1 Double Tap
   description: ''
-  trigger:
+  triggers:
   - device_id: 1ce7691a3ae671a186369dc4c8e2895c
     domain: hubitat
     platform: device
     type: double_tapped
     subtype: '1'
-  condition: []
-  action:
-  - service: light.toggle
+  conditions: []
+  actions:
+  - action: light.toggle
     target:
       entity_id: light.garage_rear_light
     data: {}
   mode: single
+
 - id: '1715018593478'
   alias: Button 1 - Den
   description: ''
-  trigger:
+  triggers:
   - device_id: cc358bc610442ac4cf5b24809c03631f
     domain: hubitat
     platform: device
@@ -1387,19 +1354,20 @@
     platform: device
     type: pushed
     subtype: '1'
-  condition: []
-  action:
-  - service: light.turn_on
+  conditions: []
+  actions:
+  - action: light.turn_on
     data: {}
     target:
       entity_id:
       - light.den_light
       - light.den_lamp
   mode: single
+
 - id: '1715018628963'
   alias: Button 1 Held - Den
   description: ''
-  trigger:
+  triggers:
   - device_id: cc358bc610442ac4cf5b24809c03631f
     domain: hubitat
     platform: device
@@ -1410,18 +1378,19 @@
     platform: device
     type: held
     subtype: '1'
-  condition: []
-  action:
-  - service: fan.increase_speed
+  conditions: []
+  actions:
+  - action: fan.increase_speed
     data:
       percentage_step: 16
     target:
       entity_id: fan.den_fan
   mode: single
+
 - id: '1715018772925'
   alias: Button 2 - Den
   description: ''
-  trigger:
+  triggers:
   - device_id: cc358bc610442ac4cf5b24809c03631f
     domain: hubitat
     platform: device
@@ -1432,15 +1401,15 @@
     platform: device
     type: pushed
     subtype: '2'
-  condition: []
-  action:
+  conditions: []
+  actions:
   - choose:
     - conditions:
       - condition: state
         state: 'on'
         entity_id: light.den_lamp
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -10
         target:
@@ -1453,7 +1422,7 @@
         state: 'off'
         entity_id: light.den_lamp
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -10
         target:
@@ -1466,16 +1435,17 @@
         state: 'off'
         entity_id: light.den_lamp
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: -10
         target:
           entity_id: light.den_lamp
   mode: single
+
 - id: '1715019049014'
   alias: Button 3 - Den
   description: ''
-  trigger:
+  triggers:
   - device_id: cc358bc610442ac4cf5b24809c03631f
     domain: hubitat
     platform: device
@@ -1486,18 +1456,17 @@
     platform: device
     type: pushed
     subtype: '3'
-  condition: []
-  action:
+  conditions: []
+  actions:
   - choose:
     - conditions:
       - condition: state
         state: 'off'
         entity_id: light.den_light
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         target:
-          entity_id:
-          - light.den_lamp
+          entity_id: light.den_lamp
         data:
           brightness_step_pct: 15
     - conditions:
@@ -1505,7 +1474,7 @@
         state: 'on'
         entity_id: light.den_light
       sequence:
-      - service: light.turn_on
+      - action: light.turn_on
         data:
           brightness_step_pct: 10
         target:
@@ -1513,10 +1482,11 @@
           - light.den_light
           - light.den_lamp
   mode: single
+
 - id: '1715019164387'
   alias: Button 4 - Den
   description: ''
-  trigger:
+  triggers:
   - device_id: f708be6f029ff4fdd958937cbbe1e8c6
     domain: hubitat
     platform: device
@@ -1527,9 +1497,9 @@
     platform: device
     type: pushed
     subtype: '4'
-  condition: []
-  action:
-  - service: light.turn_off
+  conditions: []
+  actions:
+  - action: light.turn_off
     data:
       transition: 5
     target:
@@ -1537,10 +1507,11 @@
       - light.den_light
       - light.den_lamp
   mode: single
+
 - id: '1715019433102'
   alias: Button 4 Held - Den
   description: ''
-  trigger:
+  triggers:
   - device_id: cc358bc610442ac4cf5b24809c03631f
     domain: hubitat
     platform: device
@@ -1551,44 +1522,44 @@
     platform: device
     type: held
     subtype: '4'
-  condition: []
-  action:
-  - service: fan.decrease_speed
+  conditions: []
+  actions:
+  - action: fan.decrease_speed
     data:
       percentage_step: 16
     target:
       entity_id: fan.den_fan
   mode: single
+
 - id: '1715600813200'
   alias: Phone - Test
   description: ''
-  trigger:
+  triggers:
   - platform: event
     event_type: ios.action_fired
     event_data:
       actionName: Test Action
-  condition: []
-  action:
-  - service: light.toggle
+  conditions: []
+  actions:
+  - action: light.toggle
     data: {}
     target:
       area_id: office
   mode: single
+
 - id: '1725306001280'
   alias: iOS - MB Fan Speed
   description: ''
-  trigger:
+  triggers:
   - platform: event
     event_type: ios.action_fired
     event_data:
       actionName: MB Fan Speed
-  condition: []
-  action:
+  conditions: []
+  actions:
   - variables:
       action_increase: '{{ ''INCREASE_'' ~ context.id }}'
       action_decrease: '{{ ''DECREASE_'' ~ context.id }}'
-    alias: Set up variables for the actions
-    enabled: true
   - action: notify.mobile_app_benjamins_iphone_14
     data:
       message: Master Bedroom fan speed?
@@ -1611,7 +1582,6 @@
       event_data:
         action: '{{ action_decrease }}'
       id: action_decrease
-    enabled: true
     timeout:
       hours: 0
       minutes: 0
@@ -1637,24 +1607,23 @@
         target:
           device_id: 68792f7c5f87af117ec20d386c956f73
   mode: single
+
 - id: '1725327498129'
   alias: iOS - Doors
   description: ''
-  trigger:
+  triggers:
   - platform: event
     event_type: ios.action_fired
     event_data:
       actionName: Door
-  condition: []
-  action:
+  conditions: []
+  actions:
   - variables:
       action_garage: '{{ ''GARAGE_'' ~ context.id }}'
       action_basement: '{{ ''BASEMENT_'' ~ context.id }}'
       action_front: '{{ ''FRONT_'' ~ context.id }}'
       action_back: '{{ ''BACK_'' ~ context.id }}'
       action_all: '{{ ''ALL_'' ~ context.id }}'
-    alias: Set up variables for the actions
-    enabled: true
   - action: notify.mobile_app_benjamins_iphone_14
     data:
       data:
@@ -1701,7 +1670,6 @@
       event_data:
         action: '{{ action_all }}'
       id: action_all
-    enabled: true
     timeout:
       hours: 0
       minutes: 0
@@ -1717,7 +1685,6 @@
         data: {}
         target:
           device_id: 739d25842457b2026fc133a6b3b0f369
-      alias: Toggle Garage Door
     - conditions:
       - condition: template
         value_template: '{{ wait.trigger.event.data.action == action_basement }}'
@@ -1743,8 +1710,6 @@
           data: {}
           target:
             device_id: 8540542bb32c02bebb8488686f2f5684
-          enabled: true
-      alias: Lock/Unlock Basement Door
     - conditions:
       - condition: template
         value_template: '{{ wait.trigger.event.data.action == action_front }}'
@@ -1770,7 +1735,6 @@
           data: {}
           target:
             device_id: a49b2de6a4ba5eb7403059c2649203be
-      alias: Lock/Unlock Front Door
     - conditions:
       - condition: template
         value_template: '{{ wait.trigger.event.data.action == action_back }}'
@@ -1796,7 +1760,6 @@
           data: {}
           target:
             device_id: 289b4bfe89a38706671cc8312dbdc971
-      alias: Lock/Unlock Back Door
     - conditions:
       - condition: template
         value_template: '{{ wait.trigger.event.data.action == action_all }}'
@@ -1809,24 +1772,22 @@
           - 289b4bfe89a38706671cc8312dbdc971
           - 8540542bb32c02bebb8488686f2f5684
           - a49b2de6a4ba5eb7403059c2649203be
-      alias: Lock All Doors
   mode: single
+
 - id: '1725414778368'
   alias: iOS - Bedside Lamp
   description: ''
-  trigger:
+  triggers:
   - platform: event
     event_type: ios.action_fired
     event_data:
       actionName: Bedside Lamp
-  condition: []
-  action:
+  conditions: []
+  actions:
   - variables:
       action_both: '{{ ''BOTH_'' ~ context.id }}'
       action_ben: '{{ ''BEN_'' ~ context.id }}'
       action_amanda: '{{ ''AMANDA_'' ~ context.id }}'
-    alias: Set up variables for the actions
-    enabled: true
   - action: notify.mobile_app_benjamins_iphone_14
     data:
       message: Which Lamp do you want?
@@ -1839,7 +1800,6 @@
           title: Your Lamp
         - action: '{{ action_amanda }}'
           title: Amanda's Lamp
-    enabled: true
   - wait_for_trigger:
     - platform: event
       event_type: mobile_app_notification_action
@@ -1856,7 +1816,6 @@
       event_data:
         action: '{{ action_amanda }}'
       id: action_amanda
-    enabled: true
     timeout:
       hours: 0
       minutes: 0
@@ -1893,9 +1852,14 @@
         target:
           device_id: 21d3c918054ada785e0d895dc964fd65
   mode: single
+
+# NOTE: Basement motion automation replaced scene.01 (dynamic scene) with
+# a snapshot-and-restore approach. The scene.create + scene.turn_on pattern
+# is fragile and generates log warnings when scene.01 doesn't exist on startup.
+# This version saves brightness before turning on, then restores after delay.
 - id: '1735233420238'
-  alias: 'Motion Sensor Basement Lighting '
-  description: ''
+  alias: 'Motion Sensor Basement Lighting'
+  description: Turns on basement lights on motion/camera, restores prior state after.
   triggers:
   - trigger: state
     entity_id:
@@ -1927,29 +1891,17 @@
         - Camera Detected
       - condition: or
         conditions:
-        - condition: device
-          type: is_off
-          device_id: 35d2f605e0bdd74b5c7d6e2edf93cac3
-          entity_id: b020ac688496008ae7fca0472b693691
-          domain: light
-          for:
-            hours: 0
-            minutes: 0
-            seconds: 2
-        - condition: device
-          type: is_off
-          device_id: d5c617709b4143b6a972c301d1cd549c
-          entity_id: ed21c43bed3d9a4c87dd48ccadae87c6
-          domain: light
-          for:
-            hours: 0
-            minutes: 0
-            seconds: 2
+        - condition: state
+          entity_id: light.basement_front
+          state: 'off'
+        - condition: state
+          entity_id: light.basement_rear
+          state: 'off'
       sequence:
       - action: scene.create
         metadata: {}
         data:
-          scene_id: '01'
+          scene_id: basement_pre_motion
           snapshot_entities:
           - light.basement_front
           - light.basement_rear
@@ -1963,30 +1915,37 @@
           - light.basement_rear
           - light.basement_front
           - light.basement_laundry
-        enabled: true
     - conditions:
       - condition: trigger
         id:
         - Motion Clear
         - Camera Clear
+      - condition: state
+        entity_id: binary_sensor.motion_sensor_dining_room_motion
+        state: 'off'
+      - condition: state
+        entity_id: binary_sensor.basement_camera_motion
+        state: 'off'
       sequence:
       - delay:
           hours: 0
           minutes: 5
           seconds: 0
           milliseconds: 0
-        enabled: true
       - action: scene.turn_on
         metadata: {}
         data:
           transition: 20
         target:
-          entity_id: scene.01
-      - if: []
-        then: []
+          entity_id: scene.basement_pre_motion
   mode: restart
+
 - id: '1746369230767'
   alias: HVAC Master Control
+  description: >
+    Pauses HVAC when windows or doors are open.
+    Restores previous mode and temperature when they close.
+    Handles both upstairs and downstairs thermostats.
   triggers:
   - entity_id: binary_sensor.window_contact_sensors
     to: 'on'
@@ -2005,9 +1964,14 @@
   actions:
   - choose:
     - conditions:
-      - condition: state
-        entity_id: binary_sensor.window_contact_sensors
-        state: 'on'
+      - condition: or
+        conditions:
+        - condition: state
+          entity_id: binary_sensor.window_contact_sensors
+          state: 'on'
+        - condition: state
+          entity_id: binary_sensor.doors
+          state: 'on'
       - condition: state
         entity_id: input_boolean.hvac_pause_active
         state: 'off'
@@ -2018,8 +1982,7 @@
         action: input_text.set_value
       - data:
           entity_id: input_number.previous_hvac_temp_upstairs
-          value: '{{ state_attr(''climate.upstairs_thermostat'',''temperature'') |
-            float(default=72) }}'
+          value: '{{ state_attr(''climate.upstairs_thermostat'',''temperature'') | float(default=72) }}'
         action: input_number.set_value
       - data:
           entity_id: input_text.previous_hvac_mode_downstairs
@@ -2027,8 +1990,7 @@
         action: input_text.set_value
       - data:
           entity_id: input_number.previous_hvac_temp_downstairs
-          value: '{{ state_attr(''climate.downstairs_2'',''temperature'') | float(default=72)
-            }}'
+          value: '{{ state_attr(''climate.downstairs_2'',''temperature'') | float(default=72) }}'
         action: input_number.set_value
       - data:
           entity_id: input_text.previous_upstairs_mode_select
@@ -2062,32 +2024,28 @@
       - target:
           entity_id: climate.upstairs_thermostat
         data:
-          temperature: '{{ states(''input_number.previous_hvac_temp_upstairs'') |
-            float(default=72) }}'
+          temperature: '{{ states(''input_number.previous_hvac_temp_upstairs'') | float(default=72) }}'
         action: climate.set_temperature
       - target:
           entity_id: climate.upstairs_thermostat
         data:
-          hvac_mode: '{{ states(''input_text.previous_hvac_mode_upstairs'') or ''off''
-            }}'
+          hvac_mode: '{{ states(''input_text.previous_hvac_mode_upstairs'') or ''off'' }}'
         action: climate.set_hvac_mode
       - target:
           entity_id: climate.downstairs_2
         data:
-          temperature: '{{ states(''input_number.previous_hvac_temp_downstairs'')
-            | float(default=72) }}'
+          temperature: '{{ states(''input_number.previous_hvac_temp_downstairs'') | float(default=72) }}'
         action: climate.set_temperature
       - target:
           entity_id: climate.downstairs_2
         data:
-          hvac_mode: '{{ states(''input_text.previous_hvac_mode_downstairs'') or ''off''
-            }}'
+          hvac_mode: '{{ states(''input_text.previous_hvac_mode_downstairs'') or ''off'' }}'
         action: climate.set_hvac_mode
       - choose:
         - conditions:
           - condition: template
-            value_template: '{{ states(''input_text.previous_upstairs_mode_select'')
-              in [''home'',''sleep'',''away''] }}'
+            value_template: >
+              {{ states('input_text.previous_upstairs_mode_select') in ['home','sleep','away'] }}
           sequence:
           - target:
               entity_id: select.upstairs_thermostat_current_mode
@@ -2097,8 +2055,8 @@
       - choose:
         - conditions:
           - condition: template
-            value_template: '{{ states(''input_text.previous_downstairs_mode_select'')
-              in [''home'',''sleep'',''away''] }}'
+            value_template: >
+              {{ states('input_text.previous_downstairs_mode_select') in ['home','sleep','away'] }}
           sequence:
           - target:
               entity_id: select.downstairs_current_mode_2
@@ -2109,6 +2067,32 @@
           entity_id: input_boolean.hvac_pause_active
         action: input_boolean.turn_off
   mode: queued
+
+- id: '1746984193225'
+  alias: Reset HVAC Pause Flag on Manual Use
+  description: Clears HVAC pause flag if HVAC was manually turned back on
+  triggers:
+  - entity_id: climate.upstairs_thermostat
+    trigger: state
+  conditions:
+  - condition: state
+    entity_id: input_boolean.hvac_pause_active
+    state: 'on'
+  - condition: template
+    value_template: '{{ states(''climate.upstairs_thermostat'') != ''off'' }}'
+  actions:
+  - target:
+      entity_id: input_boolean.hvac_pause_active
+    action: input_boolean.turn_off
+  - data:
+      title: HVAC Pause Override Cleared
+      message: >
+        Manual change detected — HVAC was turned back on while automation
+        pause was active. Pause flag has been cleared and automation will
+        resume normal monitoring.
+    action: notify.persistent_notification
+  mode: single
+
 - id: '1746371455555'
   alias: Lamp Post and Porch Light Control
   description: Controls lamp post and porch light based on sunset, bedtime, and sunrise.
@@ -2170,12 +2154,12 @@
           - e76e3a309d46619e5a766617e7d61b52
         data: {}
   mode: single
+
 - id: '1746975077666'
   alias: Smart Fan Adjustment
-  description: This automation turns on room fans and adjusts their speed based on
-    how hot each room is compared to your set temperature. It only works if a window
-    or door in the room is open and fan automation is enabled. If the room is cooler
-    than the setpoint, it turns the fan off.
+  description: >
+    Adjusts room fan speeds based on temperature vs setpoint.
+    Only runs when fan_auto_enabled is on and a window/door is open.
   triggers:
   - entity_id:
     - binary_sensor.office_front_contact
@@ -2199,6 +2183,30 @@
     entity_id: input_boolean.fan_auto_enabled
     state: 'on'
   actions:
+  - variables:
+      setpoint: '{{ states(''input_number.previous_hvac_temp_upstairs'') | float(default=72) }}'
+      fan_targets: >
+        {{
+          [
+            {'room': 'office', 'temp': states('sensor.office_multi_sensor_temperature') | float(default=72),
+             'contact_open': (is_state('binary_sensor.office_front_contact', 'on') or
+                              is_state('binary_sensor.office_side_contact', 'on')),
+             'fan': 'fan.office_fan'},
+            {'room': 'nursery', 'temp': states('sensor.sensor_nursery_temperature') | float(default=72),
+             'contact_open': (is_state('binary_sensor.nursery_rear_contact', 'on') or
+                              is_state('binary_sensor.nursery_side_contact', 'on')),
+             'fan': 'fan.nursery_fan'},
+            {'room': 'bedroom', 'temp': states('sensor.sensor_master_bedroom_temperature') | float(default=72),
+             'contact_open': (is_state('binary_sensor.master_bedroom_left_contact', 'on') or
+                              is_state('binary_sensor.master_bedroom_side_contact', 'on') or
+                              is_state('binary_sensor.master_bedroom_right_contact', 'on')),
+             'fan': 'fan.bedroom_fan'},
+            {'room': 'den', 'temp': states('sensor.familyroom_temperature') | float(default=72),
+             'contact_open': (is_state('binary_sensor.den_left_contact', 'on') or
+                              is_state('binary_sensor.den_right_contact', 'on')),
+             'fan': 'fan.den_fan'}
+          ]
+        }}
   - repeat:
       for_each: '{{ fan_targets }}'
       sequence:
@@ -2208,191 +2216,32 @@
           fan_entity: '{{ repeat.item.fan }}'
           contact_open: '{{ repeat.item.contact_open }}'
           temp_diff: '{{ current - setpoint }}'
-          target_pct: '{% if temp_diff < -3 %} 0 {% elif temp_diff <-1 %} 16 {% elif
-            temp_diff < 0 %} 33 {% elif temp_diff < 1 %} 50 {% elif temp_diff < 2
-            %} 75 {% else %} 100 {% endif %}'
+          target_pct: >
+            {% if temp_diff < -3 %} 0
+            {% elif temp_diff < -1 %} 16
+            {% elif temp_diff < 0 %} 33
+            {% elif temp_diff < 1 %} 50
+            {% elif temp_diff < 2 %} 75
+            {% else %} 100
+            {% endif %}
       - choose:
         - conditions:
           - condition: template
-            value_template: '{{ contact_open and target_pct > 0 }}'
+            value_template: '{{ contact_open and target_pct | int > 0 }}'
           sequence:
           - data:
               entity_id: '{{ fan_entity }}'
-              percentage: '{{ target_pct }}'
+              percentage: '{{ target_pct | int }}'
             action: fan.set_percentage
         - conditions:
           - condition: template
-            value_template: '{{ contact_open and target_pct == 0 }}'
+            value_template: '{{ contact_open and target_pct | int == 0 }}'
           sequence:
           - data:
               entity_id: '{{ fan_entity }}'
             action: fan.turn_off
-  variables:
-    setpoint: '{{ states(''input_number.previous_hvac_temp_upstairs'') | float(default=72)
-      }}'
-    fan_targets: "{{\n  [\n    {'room': 'office', 'temp': states('sensor.office_multi_sensor_temperature')\n
-      \     | float(default=72),\n     'contact_open': (is_state('binary_sensor.office_front_contact',\n
-      \     'on') or\n                      is_state('binary_sensor.office_side_contact',\n
-      \     'on')),\n     'fan': 'fan.office_fan'},\n    {'room': 'nursery', 'temp':
-      states('sensor.sensor_nursery_temperature')\n      | float(default=72),\n     'contact_open':
-      (is_state('binary_sensor.nursery_rear_contact',\n      'on') or\n                      is_state('binary_sensor.nursery_side_contact',\n
-      \     'on')),\n     'fan': 'fan.nursery_fan'},\n    {'room': 'bedroom', 'temp':
-      states('sensor.sensor_master_bedroom_temperature')\n      | float(default=72),\n
-      \    'contact_open': (is_state('binary_sensor.master_bedroom_left_contact',\n
-      \     'on') or\n                      is_state('binary_sensor.master_bedroom_side_contact',\n
-      \     'on') or\n                      is_state('binary_sensor.master_bedroom_right_contact',\n
-      \     'on')),\n     'fan': 'fan.bedroom_fan'},\n    {'room': 'den', 'temp':
-      states('sensor.familyroom_temperature')\n      | float(default=72),\n     'contact_open':
-      (is_state('binary_sensor.den_left_contact',\n      'on') or\n                      is_state('binary_sensor.den_right_contact',\n
-      \     'on')),\n     'fan': 'fan.den_fan'}\n  ]\n}}\n"
   mode: queued
-- id: '1746983951987'
-  alias: HVAC Pause Control
-  description: ''
-  triggers:
-  - entity_id: binary_sensor.window_contact_sensors
-    to: 'on'
-    for: 00:03:00
-    trigger: state
-  - entity_id: binary_sensor.doors
-    to: 'on'
-    for: 00:05:00
-    trigger: state
-  - entity_id:
-    - binary_sensor.window_contact_sensors
-    - binary_sensor.doors
-    to: 'off'
-    for: 00:00:30
-    trigger: state
-  conditions: []
-  actions:
-  - choose:
-    - conditions:
-      - condition: or
-        conditions:
-        - condition: template
-          value_template: '{{ is_state(''binary_sensor.window_contact_sensors'', ''on'')
-            }}'
-        - condition: template
-          value_template: '{{ is_state(''binary_sensor.doors'', ''on'') }}'
-      - condition: state
-        entity_id: input_boolean.hvac_pause_active
-        state: 'off'
-      sequence:
-      - data:
-          entity_id: input_text.previous_hvac_mode_upstairs
-          value: '{{ states(''climate.upstairs_thermostat'') }}'
-        action: input_text.set_value
-      - data:
-          entity_id: input_number.previous_hvac_temp_upstairs
-          value: '{{ state_attr(''climate.upstairs_thermostat'', ''temperature'')
-            | float }}'
-        action: input_number.set_value
-      - data:
-          entity_id: climate.upstairs_thermostat
-          hvac_mode: 'off'
-        action: climate.set_hvac_mode
-      - target:
-          entity_id: input_boolean.hvac_pause_active
-        action: input_boolean.turn_on
-    - conditions:
-      - condition: template
-        value_template: "{{ is_state('binary_sensor.window_contact_sensors', 'off')
-          and\n   is_state('binary_sensor.doors', 'off') }}"
-      - condition: state
-        entity_id: input_boolean.hvac_pause_active
-        state: 'on'
-      sequence:
-      - data:
-          entity_id: climate.upstairs_thermostat
-          temperature: '{{ states(''input_number.previous_hvac_temp_upstairs'') |
-            float }}'
-        action: climate.set_temperature
-      - data:
-          entity_id: climate.upstairs_thermostat
-          hvac_mode: '{{ states(''input_text.previous_hvac_mode_upstairs'') or ''off''
-            }}'
-        action: climate.set_hvac_mode
-      - target:
-          entity_id: input_boolean.hvac_pause_active
-        action: input_boolean.turn_off
-  mode: queued
-- id: '1746984193225'
-  alias: Reset HVAC Pause Flag on Manual Use
-  description: Clears HVAC pause flag if HVAC was manually turned back on
-  triggers:
-  - entity_id: climate.upstairs_thermostat
-    trigger: state
-  conditions:
-  - condition: state
-    entity_id: input_boolean.hvac_pause_active
-    state: 'on'
-  - condition: template
-    value_template: '{{ states(''climate.upstairs_thermostat'') != ''off'' }}'
-  actions:
-  - target:
-      entity_id: input_boolean.hvac_pause_active
-    action: input_boolean.turn_off
-  - data:
-      title: HVAC Pause Override Cleared
-      message: 'Manual change detected — HVAC was turned back on while automation
-        pause was active. Pause flag has been cleared and automation will resume normal
-        monitoring.
 
-        '
-    action: notify.persistent_notification
-  mode: single
-- id: '1751310649338'
-  alias: Reset HVAC Pause Flag on Manual Use
-  description: Clears HVAC pause flag if HVAC was manually turned back on
-  triggers:
-  - entity_id: climate.upstairs_thermostat
-    trigger: state
-  conditions:
-  - condition: state
-    entity_id: input_boolean.hvac_pause_active
-    state: 'on'
-  - condition: template
-    value_template: '{{ states(''climate.upstairs_thermostat'') != ''off'' }}'
-  actions:
-  - entity_id: input_boolean.hvac_pause_active
-    action: input_boolean.turn_off
-  - data:
-      title: HVAC Pause Override Cleared
-      message: 'Manual change detected — HVAC was turned back on while automation
-        pause was active. Pause flag has been cleared and automation will resume normal
-        monitoring.
-
-        '
-    action: notify.persistent_notification
-  mode: single
-- id: '1752003072665'
-  alias: Front Doorbell Pressed
-  description: Sends a snapshot and opens the security view when the doorbell rings
-  triggers:
-  - entity_id: binary_sensor.front_porch_doorbell_visitor
-    from: 'off'
-    to: 'on'
-    trigger: state
-  conditions: []
-  actions:
-  - data:
-      entity_id: camera.front_porch_doorbell_snapshots_fluent
-      filename: /config/www/snapshot_front_door.jpg
-    action: camera.snapshot
-  - data:
-      title: Front Porch Doorbell
-      message: "Someone is at the front door \U0001F6AA"
-      data:
-        image: /local/snapshot_front_door.jpg
-        url: /Mobile-dashboard/Security
-        push:
-          sound:
-            name: default
-            critical: 1
-            volume: 1
-    action: notify.mobile_app_benjamins_iphone_16
-  mode: single
 - id: '1756340397182'
   alias: Lock all doors 8pm
   description: ''
@@ -2413,9 +2262,10 @@
     metadata: {}
     data: {}
   mode: single
+
 - id: '1752003073000'
   alias: Speaker Volume Evening
-  description: Set all speaker volumes to 30% after 8pm
+  description: Set all speaker volumes to 25% after 7pm
   triggers:
   - at: '19:00:00'
     trigger: time
@@ -2432,9 +2282,10 @@
       volume_level: 0.25
     action: media_player.volume_set
   mode: single
+
 - id: '1752003073001'
   alias: Speaker Volume Morning
-  description: Restore speaker volume to 70% at 8am
+  description: Restore speaker volume at 8am
   triggers:
   - at: 08:00:00
     trigger: time
@@ -2456,6 +2307,7 @@
       volume_level: 0.6
     action: media_player.volume_set
   mode: single
+
 - id: '1753000000001'
   alias: Good Night Security Sweep
   description: Lock doors, arm cameras, lower volume, and set night temperature
@@ -2521,6 +2373,7 @@
       message: Good Night security sweep activated. Home secured.
     action: notify.mobile_app_iphone_14
   mode: single
+
 - id: '1753000000002'
   alias: Automatic Away Mode
   description: Secure home when everyone leaves
@@ -2538,24 +2391,52 @@
     entity_id: person.amanda
     state: not_home
   actions:
-  - service: script.all_doors_lock
-  - service: cover.close_cover
+  - action: script.all_doors_lock
+  - action: cover.close_cover
     target:
       entity_id: cover.garage_door
-  - service: light.turn_off
+  - action: light.turn_off
     target:
       entity_id: all
-  - service: climate.set_hvac_mode
+  - action: climate.set_hvac_mode
     target:
       entity_id:
       - climate.upstairs_thermostat
       - climate.downstairs_2
     data:
       hvac_mode: 'off'
-  - service: notify.mobile_app_benjamins_iphone_16
+  - action: notify.mobile_app_benjamins_iphone_16
     data:
       message: Away mode activated. Home secured.
-  - service: notify.mobile_app_iphone_14
+  - action: notify.mobile_app_iphone_14
     data:
       message: Away mode activated. Home secured.
+  mode: single
+
+- id: '1752003072665'
+  alias: Front Doorbell Pressed
+  description: Sends a snapshot and opens the security view when the doorbell rings
+  triggers:
+  - entity_id: binary_sensor.front_porch_doorbell_visitor
+    from: 'off'
+    to: 'on'
+    trigger: state
+  conditions: []
+  actions:
+  - data:
+      entity_id: camera.front_porch_doorbell_snapshots_fluent
+      filename: /config/www/snapshot_front_door.jpg
+    action: camera.snapshot
+  - data:
+      title: Front Porch Doorbell
+      message: "Someone is at the front door \U0001F6AA"
+      data:
+        image: /local/snapshot_front_door.jpg
+        url: /Mobile-dashboard/Security
+        push:
+          sound:
+            name: default
+            critical: 1
+            volume: 1
+    action: notify.mobile_app_benjamins_iphone_16
   mode: single

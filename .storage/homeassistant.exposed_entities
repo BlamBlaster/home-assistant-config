@@ -15038,6 +15038,26 @@
             "should_expose": false
           }
         }
+      },
+      "alert.front_door_left_open": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          },
+          "cloud.google_assistant": {
+            "should_expose": false
+          }
+        }
+      },
+      "alert.basement_door_left_open": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          },
+          "cloud.google_assistant": {
+            "should_expose": false
+          }
+        }
       }
     }
   }
