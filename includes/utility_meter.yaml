@@ -7,29 +7,62 @@
 #.                      |___/_____|                           
 #.                      
 
-utility_meter:
-  hourly_gas:
-    source: sensor.gas_meter
-    cycle: hourly
-  weekly_gas:
-    source: sensor.gas_meter
-    cycle: weekly
-  daily_gas:
-    source: sensor.gas_meter
-    cycle: daily
-  monthly_gas:
-    source: sensor.gas_meter
-    cycle: monthly
+# includes/utility_meter.yaml
 
-  hourly_water:
-    source: sensor.water_meter
-    cycle: hourly
-  weekly_water:
-    source: sensor.water_meter
-    cycle: weekly
-  daily_water:
-    source: sensor.water_meter
-    cycle: daily
-  monthly_water:
-    source: sensor.water_meter
-    cycle: monthly
+# --- GAS ---
+gas_hourly:
+  source: sensor.gas_meter
+  cycle: hourly
+  name: Gas – This Hour
+  unique_id: utility_gas_hourly
+  periodically_resetting: false
+
+gas_daily:
+  source: sensor.gas_meter
+  cycle: daily
+  name: Gas – Today
+  unique_id: utility_gas_daily
+  periodically_resetting: false
+
+gas_weekly:
+  source: sensor.gas_meter
+  cycle: weekly
+  name: Gas – This Week
+  unique_id: utility_gas_weekly
+  periodically_resetting: false
+
+gas_monthly:
+  source: sensor.gas_meter
+  cycle: monthly
+  name: Gas – This Month
+  unique_id: utility_gas_monthly
+  periodically_resetting: false
+
+# --- WATER ---
+water_hourly:
+  source: sensor.water_meter
+  cycle: hourly
+  name: Water – This Hour
+  unique_id: utility_water_hourly
+  periodically_resetting: false
+
+water_daily:
+  source: sensor.water_meter
+  cycle: daily
+  name: Water – Today
+  unique_id: utility_water_daily
+  periodically_resetting: false
+
+water_weekly:
+  source: sensor.water_meter
+  cycle: weekly
+  name: Water – This Week
+  unique_id: utility_water_weekly
+  periodically_resetting: false
+
+water_monthly:
+  source: sensor.water_meter
+  cycle: monthly
+  name: Water – This Month
+  unique_id: utility_water_monthly
+  periodically_resetting: false

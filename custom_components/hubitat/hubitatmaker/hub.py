@@ -175,27 +175,33 @@ class Hub:
     async def load_devices(self, force_refresh: bool = False) -> None:
         """Load the current state of all devices."""
         if force_refresh or len(self._devices) == 0:
-            devices: list[dict[str, Any]] = await self._api_request("devices")
+            devices = cast(list[dict[str, Any]], await self._api_request("devices"))
             _LOGGER.debug("Loaded device list")
 
             # load devices sequentially to avoid overloading the hub
             for dev in devices:
                 await self._load_device(cast(str, dev["id"]), force_refresh)
 
-    async def start(self) -> None:
+    async def start(self, force_refresh: bool = False) -> None:
         """Download initial state data, and start an event server if requested.
 
         Hub and device data will not be available until this method has
         completed. Methods that rely on that data will raise an error if called
         before this method has completed.
+
+        force_refresh:
+          If True, force a refresh of all device data even if devices have
+          already been loaded. This is useful when reconnecting after a
+          failed initialization.
         """
 
         self._mode_supported = None
         self._hsm_supported = None
 
+        # First verify we can connect to the hub by loading devices
+        # Don't start the event server until we know the hub is reachable
         try:
-            await self._start_server()
-            await self.load_devices()
+            await self.load_devices(force_refresh=force_refresh)
             _LOGGER.debug("Connected to Hubitat hub at %s", self.host)
         except aiohttp.ClientError as e:
             raise ConnectionError(str(e))
@@ -214,11 +220,14 @@ class Hub:
             self._hsm_supported = False
             _LOGGER.warning(f"Unable to access HSM status: {e}")
 
+        # Only start the event server after successfully connecting to the hub
+        await self._start_server()
+
     def stop(self) -> None:
         """Remove all listeners and stop the event server (if running)."""
         if self._server:
             self._server.stop()
-            _LOGGER.info("Stopped event server")
+            _LOGGER.debug("Stopped event server")
         self._listeners = {}
 
     async def refresh_device(self, device_id: str) -> None:
@@ -251,7 +260,7 @@ class Hub:
 
         hsm_mode must be one of the HSM_* constants.
         """
-        new_mode: dict[str, str] = await self._api_request(f"hsm/{hsm_mode}")
+        new_mode = cast(dict[str, str], await self._api_request(f"hsm/{hsm_mode}"))
         self._hsm_status = new_mode["hsm"]
 
     async def set_mode(self, name: str) -> None:
@@ -265,7 +274,7 @@ class Hub:
             _LOGGER.error("Invalid mode: %s", name)
             raise InvalidMode(name)
 
-        new_modes: list[dict[str, Any]] = await self._api_request(f"modes/{id}")
+        new_modes = cast(list[dict[str, Any]], await self._api_request(f"modes/{id}"))
         self._modes = [Mode(m) for m in new_modes]
 
     def set_host(self, host: str) -> None:
@@ -372,18 +381,34 @@ class Hub:
     ) -> None:
         """Update a device attribute value."""
         _LOGGER.debug(
-            "Updating %s of %s to %s (%s)", attr_name, device_id, value, value_unit
+            "Setting %s to %s (%s) for device %s from api %s at hub %s",
+            attr_name,
+            value,
+            value_unit,
+            device_id,
+            self.app_id,
+            self.host,
         )
         try:
             dev = self._devices[device_id]
         except KeyError:
-            _LOGGER.warning("Tried to update unknown device %s", device_id)
+            _LOGGER.warning(
+                "Tried to update unknown device %s from api %s at hub %s",
+                device_id,
+                self.app_id,
+                self.host,
+            )
             return
 
         try:
             dev.update_attr(attr_name, value, value_unit)
         except KeyError:
-            _LOGGER.warning("Tried to update unknown attribute %s", attr_name)
+            _LOGGER.warning(
+                "Tried to update unknown attribute %s from api %s at hub %s",
+                attr_name,
+                self.app_id,
+                self.host,
+            )
 
     async def _load_device(self, device_id: str, force_refresh: bool = False) -> None:
         """Return full info for a specific device."""
@@ -402,13 +427,13 @@ class Hub:
 
     async def _load_hsm_status(self) -> None:
         """Load the current hub HSM status."""
-        hsm: dict[str, str] = await self._api_request("hsm")
+        hsm = cast(dict[str, str], await self._api_request("hsm"))
         _LOGGER.debug("Loaded hsm status")
         self._hsm_status = hsm["hsm"]
 
     async def _load_modes(self) -> None:
         """Load the current hub mode."""
-        modes: list[dict[str, Any]] = await self._api_request("modes")
+        modes = cast(list[dict[str, Any]], await self._api_request("modes"))
         _LOGGER.debug("Loaded modes")
         self._modes = [Mode(m) for m in modes]
 
@@ -424,7 +449,10 @@ class Hub:
             conn = aiohttp.TCPConnector(ssl=False)
             try:
                 async with aiohttp.request(
-                    method, f"{self.api_url}/{path}", params=params, connector=conn
+                    method,
+                    f"{self.api_url}/{path}",
+                    params=params,
+                    connector=conn,
                 ) as resp:
                     if resp.status >= 400:
                         # retry on server errors or request timeout w/ increasing delay
@@ -465,8 +493,14 @@ class Hub:
                 asyncio.TimeoutError,
                 ContentTypeError,
             ) as e:
-                # catch connection exceptions to retry w/ increasing delay
-                if attempt < MAX_REQUEST_ATTEMPT_COUNT:
+                # Don't retry on connection errors - if we can't reach the hub,
+                # retrying immediately won't help. Higher-level retry logic will
+                # handle reconnection attempts. Do retry on timeouts and content
+                # errors as those might be transient.
+                if (
+                    not isinstance(e, ClientConnectionError)
+                    and attempt < MAX_REQUEST_ATTEMPT_COUNT
+                ):
                     _LOGGER.debug(
                         "%s request to %s failed with %s. Retrying...",
                         method,
@@ -487,7 +521,7 @@ class Hub:
         # machine and the Hubitat hub are on the same network.
         with _open_socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
             s.connect((self.host, 80))
-            address: str = s.getsockname()[0]
+            address = cast(str, s.getsockname()[0])
 
         self._server = create_server(
             self._process_event, address, self.port or 0, self.ssl_context

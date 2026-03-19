@@ -15,6 +15,10 @@
       {
         "username": "mqtt_haos",
         "password": "JDJiJDEyJEV1eWJMLkc0WTZZOW4yQ3RYOU8ucU9kcjR4amJWa20wY3liSnBhcjdzWWl4NlAxLkFrSDZH"
+      },
+      {
+        "username": "guest",
+        "password": "JDJiJDEyJE0zRmJQMW1zcFBVcXRZODJwOXdDcWVaLkZ4ZjZpUFg4NXpXN01WRDNRMFl5dGJTWFl0Ly4u"
       }
     ]
   }

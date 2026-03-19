@@ -1,131 +1,226 @@
 {
   "version": 1,
-  "minor_version": 1,
+  "minor_version": 3,
   "key": "energy",
   "data": {
     "energy_sources": [
       {
         "type": "grid",
-        "flow_from": [
-          {
-            "stat_energy_from": "sensor.air_conditioner_8_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.air_handler_4_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.back_of_basement_den_bedroom_3_1_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.bedroom_4_powder_room_front_porch_front_of_basement_9_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.dishwasher_14_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.disposal_and_kitchen_outlet_16_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.dryer_15_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.electric_stove_2_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.front_porch_switch_energy",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.furnace_3_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.kitchen_12_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.master_bedroom_13_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.microwave_back_proch_6_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.nursery_master_bath_garage_master_closet_more_11_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.partial_living_room_partial_kitchen_hallway_bathroom_hallway_7_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.refrigerator_dining_room_10_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          },
-          {
-            "stat_energy_from": "sensor.washing_machine_5_1d",
-            "stat_cost": null,
-            "entity_energy_price": null,
-            "number_energy_price": 0.23
-          }
-        ],
-        "flow_to": [],
-        "cost_adjustment_day": 0.0
-      },
-      {
-        "type": "water",
-        "stat_energy_from": "sensor.water_meter",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.air_conditioner_8_1d",
         "stat_cost": null,
         "entity_energy_price": null,
-        "number_energy_price": 0.0018772
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.air_handler_4_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.back_of_basement_den_bedroom_3_1_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.bedroom_4_powder_room_front_porch_front_of_basement_9_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.dishwasher_14_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.disposal_and_kitchen_outlet_16_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.dryer_15_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.electric_stove_2_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.front_porch_switch_energy",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.furnace_3_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.kitchen_12_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.master_bedroom_13_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.microwave_back_proch_6_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.nursery_master_bath_garage_master_closet_more_11_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.partial_living_room_partial_kitchen_hallway_bathroom_hallway_7_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.refrigerator_dining_room_10_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      },
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.washing_machine_5_1d",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": 0.23,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
       },
       {
         "type": "gas",
-        "stat_energy_from": "sensor.gas_meter",
+        "stat_energy_from": "sensor.gas_meter_gas_meter",
         "stat_cost": null,
         "entity_energy_price": null,
-        "number_energy_price": 0.00369
+        "number_energy_price": null
+      },
+      {
+        "type": "water",
+        "stat_energy_from": "sensor.water_meter_water_meter",
+        "stat_cost": null,
+        "entity_energy_price": null,
+        "number_energy_price": null
       }
     ],
     "device_consumption": [
@@ -146,7 +241,38 @@
       },
       {
         "stat_consumption": "sensor.bedroom_4_powder_room_front_porch_front_of_basement_9_1d"
+      },
+      {
+        "stat_consumption": "sensor.furnace_3_1d"
+      },
+      {
+        "stat_consumption": "sensor.washing_machine_5_1d"
+      },
+      {
+        "stat_consumption": "sensor.refrigerator_dining_room_10_1d"
+      },
+      {
+        "stat_consumption": "sensor.master_bedroom_13_1d"
+      },
+      {
+        "stat_consumption": "sensor.dishwasher_14_1d"
+      },
+      {
+        "stat_consumption": "sensor.disposal_and_kitchen_outlet_16_1d"
+      },
+      {
+        "stat_consumption": "sensor.kitchen_12_1d"
+      },
+      {
+        "stat_consumption": "sensor.microwave_back_proch_6_1d"
+      },
+      {
+        "stat_consumption": "sensor.nursery_master_bath_garage_master_closet_more_11_1d"
+      },
+      {
+        "stat_consumption": "sensor.partial_living_room_partial_kitchen_hallway_bathroom_hallway_7_1d"
       }
-    ]
+    ],
+    "device_consumption_water": []
   }
 }

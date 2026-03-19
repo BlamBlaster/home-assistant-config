@@ -12,26 +12,32 @@
       "first_weekday": "language"
     },
     "core": {
-      "showAdvanced": true
+      "showAdvanced": true,
+      "default_panel": "Mobile-dashboard"
     },
     "sidebar": {
       "panelOrder": [
         "Mobile-dashboard",
-        "dashboard-home",
-        "map",
         "energy",
         "calendar",
+        "map",
         "hacs",
         "a0d7b954_vscode",
         "a0d7b954_ssh",
+        "media-browser",
+        "history",
         "developer-tools"
       ],
       "hiddenPanels": [
+        "lovelace",
+        "tablet-dashboard",
+        "dashboard-home",
+        "light",
+        "security",
+        "climate",
+        "home",
         "cebe7a76_hassio_google_drive_backup",
-        "history",
-        "logbook",
-        "media-browser",
-        "tablet-dashboard"
+        "logbook"
       ]
     }
   }

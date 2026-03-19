@@ -10,6 +10,26 @@
       "date_format": "language",
       "time_zone": "local",
       "first_weekday": "language"
+    },
+    "sidebar": {
+      "panelOrder": [
+        "Mobile-dashboard",
+        "calendar",
+        "energy",
+        "logbook",
+        "history"
+      ],
+      "hiddenPanels": [
+        "map",
+        "dashboard-home",
+        "developer-tools",
+        "cebe7a76_hassio_google_drive_backup",
+        "a0d7b954_vscode",
+        "a0d7b954_ssh",
+        "media-browser",
+        "hacs",
+        "tablet-dashboard"
+      ]
     }
   }
 }

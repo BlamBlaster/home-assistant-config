@@ -6,7 +6,6 @@
     "config": {
       "views": [
         {
-          "theme": "minimalist-mobile",
           "title": "Quick Access",
           "icon": "mdi:home-assistant",
           "columns": 2,
@@ -101,6 +100,11 @@
               ]
             },
             {
+              "features": [
+                {
+                  "type": "area-controls"
+                }
+              ],
               "camera_view": "auto",
               "alert_classes": [
                 "motion",
@@ -112,20 +116,28 @@
                 "temperature",
                 "humidity"
               ],
-              "features_position": "inline",
               "display_type": "camera",
+              "features_position": "bottom",
               "type": "area",
               "area": "living_room",
-              "navigation_path": "/Mobile-dashboard/living-room",
-              "aspect_ratio": "2:.95",
+              "aspect_ratio": "2:.75",
               "color": "",
-              "features": [
-                {
-                  "type": "area-controls"
-                }
-              ]
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/living-room"
+              }
             },
             {
+              "features": [
+                {
+                  "type": "area-controls",
+                  "controls": [
+                    "light",
+                    "fan"
+                  ]
+                }
+              ],
               "camera_view": "auto",
               "alert_classes": [
                 "motion",
@@ -135,13 +147,19 @@
               "sensor_classes": [
                 "temperature"
               ],
-              "features_position": "inline",
               "display_type": "camera",
+              "features_position": "bottom",
               "type": "area",
               "area": "master_bedroom",
-              "navigation_path": "/Mobile-dashboard/master-bedroom",
-              "aspect_ratio": "2:.95",
+              "aspect_ratio": "2:.75",
               "color": "",
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/master-bedroom"
+              }
+            },
+            {
               "features": [
                 {
                   "type": "area-controls",
@@ -150,9 +168,7 @@
                     "fan"
                   ]
                 }
-              ]
-            },
-            {
+              ],
               "camera_view": "auto",
               "alert_classes": [
                 "motion",
@@ -162,13 +178,19 @@
               "sensor_classes": [
                 "temperature"
               ],
-              "features_position": "inline",
               "display_type": "camera",
+              "features_position": "bottom",
               "type": "area",
               "area": "nursery",
-              "navigation_path": "/Mobile-dashboard/nursery",
-              "aspect_ratio": "2:.95",
+              "aspect_ratio": "2:.75",
               "color": "",
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/nursery"
+              }
+            },
+            {
               "features": [
                 {
                   "type": "area-controls",
@@ -177,9 +199,7 @@
                     "fan"
                   ]
                 }
-              ]
-            },
-            {
+              ],
               "camera_view": "live",
               "alert_classes": [
                 "motion",
@@ -190,13 +210,19 @@
                 "temperature",
                 "humidity"
               ],
-              "features_position": "inline",
               "display_type": "camera",
+              "features_position": "bottom",
               "type": "area",
               "area": "office",
-              "navigation_path": "/Mobile-dashboard/office",
-              "aspect_ratio": "2:.95",
+              "aspect_ratio": "2:.75",
               "color": "",
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/office"
+              }
+            },
+            {
               "features": [
                 {
                   "type": "area-controls",
@@ -205,9 +231,7 @@
                     "fan"
                   ]
                 }
-              ]
-            },
-            {
+              ],
               "camera_view": "auto",
               "alert_classes": [
                 "motion",
@@ -216,24 +240,28 @@
               "sensor_classes": [
                 "temperature"
               ],
-              "features_position": "inline",
               "display_type": "camera",
+              "features_position": "bottom",
               "type": "area",
               "area": "den",
-              "navigation_path": "/Mobile-dashboard/den-family-room",
-              "aspect_ratio": "2:.95",
+              "aspect_ratio": "2:.75",
               "color": "",
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/den-family-room"
+              }
+            },
+            {
               "features": [
                 {
                   "type": "area-controls",
                   "controls": [
                     "light",
-                    "fan"
+                    "cover-garage"
                   ]
                 }
-              ]
-            },
-            {
+              ],
               "camera_view": "auto",
               "alert_classes": [
                 "motion",
@@ -243,24 +271,27 @@
                 "temperature",
                 "humidity"
               ],
-              "features_position": "inline",
               "display_type": "camera",
+              "features_position": "bottom",
               "type": "area",
               "area": "garage",
-              "navigation_path": "/Mobile-dashboard/garage",
-              "aspect_ratio": "2:.95",
+              "aspect_ratio": "2:.75",
               "color": "",
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/garage"
+              }
+            },
+            {
               "features": [
                 {
                   "type": "area-controls",
                   "controls": [
-                    "light",
-                    "cover-garage"
+                    "light"
                   ]
                 }
-              ]
-            },
-            {
+              ],
               "camera_view": "auto",
               "alert_classes": [
                 "motion",
@@ -269,21 +300,17 @@
                 "problem"
               ],
               "sensor_classes": [],
-              "features_position": "inline",
               "display_type": "camera",
+              "features_position": "bottom",
               "type": "area",
               "area": "basement",
-              "navigation_path": "/Mobile-dashboard/basement",
-              "aspect_ratio": "2:.95",
+              "aspect_ratio": "2:.75",
               "color": "",
-              "features": [
-                {
-                  "type": "area-controls",
-                  "controls": [
-                    "light"
-                  ]
-                }
-              ]
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/tablet-dashboard/basement"
+              }
             },
             {
               "features": [
@@ -302,14 +329,45 @@
               "sensor_classes": [
                 "energy"
               ],
-              "features_position": "inline",
               "display_type": "camera",
+              "features_position": "bottom",
               "type": "area",
               "area": "front_porch",
+              "aspect_ratio": "2:.75",
               "color": "",
-              "navigation_path": "/Mobile-dashboard/front-porch"
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/front-porch"
+              }
             },
             {
+              "alert_classes": [
+                "motion",
+                "moisture"
+              ],
+              "sensor_classes": [
+                "temperature",
+                "humidity"
+              ],
+              "display_type": "picture",
+              "features_position": "bottom",
+              "type": "area",
+              "area": "kitchen",
+              "aspect_ratio": "2:.75",
+              "color": "",
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/kitchen"
+              }
+            },
+            {
+              "features": [
+                {
+                  "type": "area-controls"
+                }
+              ],
               "alert_classes": [
                 "motion",
                 "moisture",
@@ -320,37 +378,140 @@
                 "temperature",
                 "humidity"
               ],
-              "features_position": "inline",
               "display_type": "picture",
+              "features_position": "bottom",
               "type": "area",
               "area": "dining_room",
-              "navigation_path": "/Mobile-dashboard/dining-room",
-              "aspect_ratio": "2:.95",
+              "aspect_ratio": "2:.75",
               "color": "",
-              "features": [
-                {
-                  "type": "area-controls"
-                }
-              ]
+              "tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/dining-room"
+              },
+              "vertical": false,
+              "image_tap_action": {
+                "action": "navigate",
+                "navigation_path": "/Mobile-dashboard/dining-room"
+              }
             }
-          ]
+          ],
+          "theme": "minimalist-mobile"
         },
         {
           "icon": "mdi:security",
           "cards": [
             {
-              "type": "custom:mushroom-cover-card",
-              "show_position_control": false,
-              "layout": "horizontal",
-              "show_tilt_position_control": false,
-              "show_buttons_control": true,
-              "entity": "cover.garage_door"
+              "type": "entity-filter",
+              "card": {
+                "type": "entities",
+                "title": "Water Sensors",
+                "show_header_toggle": true,
+                "state_color": true
+              },
+              "entities": [
+                {
+                  "entity": "binary_sensor.water_sensor_dishwasher_water",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.water_sensor_kitchen_sink_water",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.water_sensor_hot_water_tank_water",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "binary_sensor.water_sensor_hvac_drop_pan_water",
+                  "secondary_info": "last-changed"
+                }
+              ],
+              "state_filter": [
+                {
+                  "operator": "=="
+                },
+                "on"
+              ],
+              "show_empty": false
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entity-filter",
+                  "card": {
+                    "type": "entities",
+                    "title": "Open Door",
+                    "state_color": true
+                  },
+                  "entities": [
+                    {
+                      "entity": "binary_sensor.garage_door_contact",
+                      "name": "Garage Door",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:garage-open-variant"
+                    },
+                    {
+                      "entity": "binary_sensor.front_door_contact_2",
+                      "name": "Front Door",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:door-open"
+                    },
+                    {
+                      "entity": "binary_sensor.back_door_contact_2",
+                      "name": "Back Door",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:door-open"
+                    },
+                    {
+                      "entity": "binary_sensor.basement_door_contact_2",
+                      "name": "Basement Door",
+                      "secondary_info": "last-changed",
+                      "icon": "mdi:door-open"
+                    }
+                  ],
+                  "state_filter": [
+                    {
+                      "operator": "=="
+                    },
+                    "on"
+                  ],
+                  "show_empty": false
+                },
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Doors",
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:mushroom-cover-card",
+                  "show_position_control": false,
+                  "layout": "horizontal",
+                  "show_tilt_position_control": false,
+                  "show_buttons_control": true,
+                  "entity": "cover.garage_door"
+                },
+                {
+                  "type": "glance",
+                  "entities": [
+                    {
+                      "entity": "lock.front_door_lock"
+                    },
+                    {
+                      "entity": "lock.back_door"
+                    },
+                    {
+                      "entity": "lock.basement_door_lock"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "type": "entity-filter",
               "card": {
                 "type": "entities",
-                "title": "Battery Levels",
+                "title": "Battery Notifications",
                 "show_header_toggle": true,
                 "state_color": true
               },
@@ -370,81 +531,14 @@
                 {
                   "entity": "sensor.water_sensor_hot_water_tank_battery",
                   "secondary_info": "last-changed"
-                },
-                {
-                  "entity": "sensor.front_door_lock_battery",
-                  "secondary_info": "last-changed"
-                },
-                {
-                  "entity": "sensor.back_door_lock_battery",
-                  "secondary_info": "last-changed"
-                },
-                {
-                  "entity": "sensor.basement_door_lock_battery",
-                  "secondary_info": "last-changed"
                 }
               ],
               "conditions": [
                 {
                   "condition": "numeric_state",
                   "above": -1,
-                  "below": 50
+                  "below": 11
                 }
-              ],
-              "show_empty": false
-            },
-            {
-              "type": "glance",
-              "entities": [
-                {
-                  "entity": "lock.front_door_lock"
-                },
-                {
-                  "entity": "lock.back_door"
-                },
-                {
-                  "entity": "lock.basement_door_lock"
-                }
-              ]
-            },
-            {
-              "type": "entity-filter",
-              "card": {
-                "type": "entities",
-                "title": "Open Door",
-                "state_color": true
-              },
-              "entities": [
-                {
-                  "entity": "binary_sensor.garage_door_contact",
-                  "name": "Garage Door",
-                  "secondary_info": "last-changed",
-                  "icon": "mdi:garage-open-variant"
-                },
-                {
-                  "entity": "binary_sensor.front_door_contact",
-                  "name": "Front Door",
-                  "secondary_info": "last-changed",
-                  "icon": "mdi:door-open"
-                },
-                {
-                  "entity": "binary_sensor.back_door_contact",
-                  "name": "Back Door",
-                  "secondary_info": "last-changed",
-                  "icon": "mdi:door-open"
-                },
-                {
-                  "entity": "binary_sensor.basement_door_contact",
-                  "name": "Basement Door",
-                  "secondary_info": "last-changed",
-                  "icon": "mdi:door-open"
-                }
-              ],
-              "state_filter": [
-                {
-                  "operator": "=="
-                },
-                "on"
               ],
               "show_empty": false
             },
@@ -569,86 +663,204 @@
               "show_empty": false
             },
             {
-              "type": "entity-filter",
-              "card": {
-                "type": "entities",
-                "title": "Water Sensors",
-                "show_header_toggle": true,
-                "state_color": true
+              "type": "custom:power-flow-card-plus",
+              "entities": {
+                "battery": {
+                  "entity": "",
+                  "state_of_charge": "sensor.old_iphone_6_battery_level"
+                },
+                "grid": {
+                  "secondary_info": {
+                    "entity": "sensor.child_drive_123_1d",
+                    "unit_white_space": false,
+                    "display_zero": true,
+                    "color_value": true
+                  },
+                  "color_value": false,
+                  "use_metadata": false,
+                  "invert_state": false,
+                  "display_state": "one_way_no_zero",
+                  "entity": "sensor.child_drive_123_1mon",
+                  "icon": "mdi:transmission-tower"
+                },
+                "fossil_fuel_percentage": {
+                  "secondary_info": {}
+                },
+                "individual": [
+                  {
+                    "entity": "sensor.dryer_15_1mon",
+                    "secondary_info": {},
+                    "name": "Dryer",
+                    "icon": "mdi:tumble-dryer",
+                    "color_value": true,
+                    "color_icon": true
+                  },
+                  {
+                    "entity": "sensor.electric_stove_2_1mon",
+                    "secondary_info": {},
+                    "name": "Stove",
+                    "icon": "mdi:stove",
+                    "color_value": true,
+                    "color_icon": true,
+                    "display_zero": false,
+                    "inverted_animation": false,
+                    "show_direction": false,
+                    "unit_white_space": false,
+                    "use_metadata": false
+                  },
+                  {
+                    "entity": "sensor.washing_machine_5_1mon",
+                    "secondary_info": {},
+                    "name": "Washer",
+                    "icon": "mdi:washing-machine",
+                    "color_value": true,
+                    "color_icon": true
+                  },
+                  {
+                    "entity": "sensor.back_of_basement_den_bedroom_3_1_1mon",
+                    "secondary_info": {},
+                    "name": "Sever +",
+                    "icon": "mdi:server",
+                    "color_value": true,
+                    "color_icon": true
+                  }
+                ],
+                "home": {
+                  "secondary_info": {},
+                  "subtract_individual": false,
+                  "override_state": true,
+                  "circle_animation": true,
+                  "use_metadata": true,
+                  "color_icon": true,
+                  "color_value": true
+                },
+                "solar": {
+                  "secondary_info": {}
+                }
               },
+              "clickable_entities": true,
+              "display_zero_lines": {
+                "mode": "show",
+                "transparency": 50,
+                "grey_color": [
+                  189,
+                  189,
+                  189
+                ]
+              },
+              "use_new_flow_rate_model": true,
+              "w_decimals": 0,
+              "min_flow_rate": 0.75,
+              "max_flow_rate": 6,
+              "max_expected_power": 2000,
+              "min_expected_power": 0.01,
+              "watt_threshold": 1000,
+              "transparency_zero_lines": 0,
+              "disable_dots": false,
+              "kw_decimals": 0,
+              "title": "Monthly Electric"
+            },
+            {
+              "show_name": true,
+              "show_icon": true,
+              "show_state": true,
+              "type": "glance",
               "entities": [
                 {
-                  "entity": "binary_sensor.water_sensor_dishwasher_water",
-                  "secondary_info": "last-changed"
+                  "entity": "sensor.96_gallon_toter"
                 },
                 {
-                  "entity": "binary_sensor.water_sensor_kitchen_sink_water",
-                  "secondary_info": "last-changed"
-                },
-                {
-                  "entity": "binary_sensor.water_sensor_hot_water_tank_water",
-                  "secondary_info": "last-changed"
-                },
-                {
-                  "entity": "binary_sensor.water_sensor_hvac_drop_pan_water",
-                  "secondary_info": "last-changed"
+                  "entity": "sensor.curb_service_recycle_materials"
                 }
               ],
-              "state_filter": [
+              "state_color": true
+            },
+            {
+              "type": "custom:mini-graph-card",
+              "entities": [
                 {
-                  "operator": "=="
-                },
-                "on"
+                  "entity": "sensor.daily_water"
+                }
               ],
-              "show_empty": false
+              "name": "Water Usage by Day",
+              "hours_to_show": 360,
+              "aggregate_func": "max",
+              "group_by": "date",
+              "show": {
+                "graph": "line",
+                "name": true,
+                "legend": true,
+                "icon": false,
+                "labels": true,
+                "show_points": "true.",
+                "points_per_hour": 1,
+                "smoothing": false
+              },
+              "color_thresholds": [
+                {
+                  "value": 10,
+                  "color": "#99b8c7"
+                },
+                {
+                  "value": 25,
+                  "color": "#8fd9fb"
+                },
+                {
+                  "value": 50,
+                  "color": "#4ab5b5"
+                },
+                {
+                  "value": 100,
+                  "color": "#6d8bc0"
+                },
+                {
+                  "value": 200,
+                  "color": "#525aff"
+                }
+              ]
             },
             {
-              "show_state": false,
-              "show_name": false,
-              "camera_view": "auto",
-              "type": "picture-entity",
-              "aspect_ratio": "2:1.5",
-              "entity": "camera.camera_back_door_fluent"
-            },
-            {
-              "show_state": false,
-              "show_name": false,
-              "camera_view": "auto",
-              "type": "picture-entity",
-              "entity": "camera.garage_camera_fluent",
-              "aspect_ratio": "2:1.5"
-            },
-            {
-              "show_state": false,
-              "show_name": false,
-              "camera_view": "live",
-              "type": "picture-entity",
-              "entity": "camera.basement_camera_fluent",
-              "aspect_ratio": "2:1.5"
-            },
-            {
-              "show_state": false,
-              "show_name": false,
-              "camera_view": "live",
-              "type": "picture-entity",
-              "entity": "camera.front_porch_doorbell_fluent",
-              "aspect_ratio": "2:1.5"
-            },
-            {
-              "show_state": false,
-              "show_name": false,
-              "camera_view": "live",
-              "type": "picture-entity",
-              "aspect_ratio": "2:1.5",
-              "entity": "camera.camera_office_camera_rtp_stream_0"
+              "type": "custom:mini-graph-card",
+              "entities": [
+                {
+                  "entity": "sensor.daily_gas"
+                }
+              ],
+              "name": "Gas Usage by Day",
+              "hours_to_show": 360,
+              "aggregate_func": "max",
+              "group_by": "date",
+              "show": {
+                "graph": "line",
+                "name": true,
+                "legend": true,
+                "icon": false,
+                "labels": true,
+                "show_points": "true.",
+                "points_per_hour": 1,
+                "smoothing": false
+              },
+              "color_thresholds": [
+                {
+                  "value": 1,
+                  "color": "#ffd54a"
+                },
+                {
+                  "value": 3,
+                  "color": "#ffa500"
+                },
+                {
+                  "value": 5,
+                  "color": "#ff6d00"
+                }
+              ]
             }
           ],
           "theme": "minimalist-mobile",
           "type": "custom:masonry-layout",
           "layout": {
             "max_cols": 2
-          },
-          "path": "Security"
+          }
         },
         {
           "title": "Vacuums",
@@ -736,6 +948,64 @@
             }
           ],
           "visible": []
+        },
+        {
+          "type": "custom:masonry-layout",
+          "path": "cameras",
+          "title": "Cameras",
+          "icon": "mdi:cctv",
+          "cards": [
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "live",
+              "type": "picture-entity",
+              "aspect_ratio": "2:1.4",
+              "entity": "camera.camera_back_door_fluent"
+            },
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "live",
+              "type": "picture-entity",
+              "entity": "camera.basement_camera_fluent",
+              "aspect_ratio": "2:1.4"
+            },
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "live",
+              "type": "picture-entity",
+              "entity": "camera.front_porch_doorbell_fluent",
+              "aspect_ratio": "2:1.4"
+            },
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "auto",
+              "type": "picture-entity",
+              "entity": "camera.garage_camera_fluent",
+              "aspect_ratio": "2:1.4"
+            },
+            {
+              "show_state": false,
+              "show_name": false,
+              "camera_view": "live",
+              "type": "picture-entity",
+              "entity": "camera.camera_office_camera_rtp_stream_0",
+              "aspect_ratio": "2:1.4"
+            }
+          ],
+          "layout": {
+            "max_cols": 2
+          },
+          "background": {
+            "opacity": 33,
+            "alignment": "center",
+            "size": "cover",
+            "repeat": "repeat",
+            "attachment": "fixed"
+          }
         },
         {
           "title": "Today",
@@ -854,60 +1124,11 @@
               "disable_dots": false,
               "kw_decimals": 0,
               "title": "Monthly Electric"
-            },
-            {
-              "type": "horizontal-stack",
-              "cards": [
-                {
-                  "type": "custom:mini-graph-card",
-                  "entities": [
-                    "sensor.daily_water"
-                  ],
-                  "name": "Water Usage",
-                  "theme": "Catppuccin Frappe",
-                  "show": {
-                    "labels": false
-                  },
-                  "color_thresholds": [
-                    {
-                      "value": 10,
-                      "color": "white"
-                    },
-                    {
-                      "value": 50,
-                      "color": "cyan"
-                    }
-                  ]
-                },
-                {
-                  "type": "custom:mini-graph-card",
-                  "entities": [
-                    "sensor.daily_gas"
-                  ],
-                  "name": "Gas Usage",
-                  "theme": "Catppuccin Frappe",
-                  "show": {
-                    "labels": false
-                  },
-                  "color_thresholds": [
-                    {
-                      "value": 5,
-                      "color": "yellow"
-                    },
-                    {
-                      "value": 10,
-                      "color": "orange"
-                    },
-                    {
-                      "value": 15,
-                      "color": "red"
-                    }
-                  ]
-                }
-              ]
             }
           ],
-          "theme": "minimalist-mobile"
+          "theme": "minimalist-mobile",
+          "type": "masonry",
+          "visible": []
         },
         {
           "path": "master-bedroom",
@@ -960,10 +1181,7 @@
                   "show_brightness_control": true,
                   "show_color_temp_control": true,
                   "show_color_control": true,
-                  "collapsible_controls": false,
-                  "tap_action": {
-                    "action": "more-info"
-                  }
+                  "collapsible_controls": false
                 },
                 {
                   "type": "horizontal-stack",
@@ -1453,7 +1671,7 @@
             },
             {
               "type": "custom:mushroom-light-card",
-              "entity": "light.lamp_post",
+              "entity": "light.lamp_posts",
               "use_light_color": true,
               "show_brightness_control": true,
               "show_color_temp_control": true,
@@ -1668,7 +1886,22 @@
           "theme": "Mushroom Square Shadow",
           "visible": [],
           "subview": true,
-          "badges": [],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.garage_humidity"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.garage_temperature"
+            }
+          ],
           "cards": [
             {
               "type": "horizontal-stack",
@@ -2035,8 +2268,8 @@
                       "type": "custom:mushroom-light-card",
                       "show_brightness_control": true,
                       "use_light_color": true,
-                      "show_color_temp_control": false,
-                      "show_color_control": false,
+                      "show_color_temp_control": true,
+                      "show_color_control": true,
                       "collapsible_controls": false,
                       "name": "Den Lamp",
                       "entity": "light.den_lamp"
@@ -2164,6 +2397,171 @@
               }
             }
           ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Kitchen",
+          "path": "kitchen",
+          "icon": "mdi:stove",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "entity": "sensor.microwave"
+                },
+                {
+                  "type": "tile",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "entity": "fan.microwave_fan"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.microwave_light"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "media-control",
+                  "entity": "media_player.office_display"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "subtitle",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  },
+                  "heading": "Appliances"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.dishwasher_run_state",
+                  "features_position": "bottom",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.oven",
+                  "features_position": "bottom",
+                  "vertical": true
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.oven_oven_upper_current_temperature",
+                      "secondary_info": "none",
+                      "name": "Current Temp"
+                    },
+                    {
+                      "entity": "sensor.oven_oven_upper_target_temperature",
+                      "secondary_info": "none",
+                      "name": "Target Temp"
+                    },
+                    {
+                      "entity": "binary_sensor.oven_cooktop_state"
+                    }
+                  ],
+                  "visibility": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.oven",
+                      "state": "On"
+                    }
+                  ]
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.dishwasher_run_state",
+                      "secondary_info": "last-updated"
+                    },
+                    {
+                      "entity": "binary_sensor.dishwasher_wash_completed"
+                    },
+                    {
+                      "entity": "sensor.dishwasher_current_course"
+                    },
+                    {
+                      "entity": "sensor.dishwasher_process_state"
+                    }
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "subtitle",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": "auto"
+                  }
+                }
+              ],
+              "column_span": 1
+            }
+          ],
+          "subview": true,
+          "cards": [],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.dishwasher_14_1d"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.disposal_and_kitchen_outlet_16_1d"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "binary_sensor.kitchen_contact"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "binary_sensor.kitchen_motion"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "binary_sensor.water_sensor_dishwasher_water"
+            }
+          ],
+          "header": {
+            "layout": "center",
+            "badges_position": "bottom",
+            "badges_wrap": "wrap"
+          }
         }
       ],
       "title": "4760 Child Drive"

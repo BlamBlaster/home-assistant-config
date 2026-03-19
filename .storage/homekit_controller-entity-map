@@ -5,7 +5,7 @@
   "data": {
     "pairings": {
       "4F:8E:89:D4:F3:27": {
-        "config_num": 74,
+        "config_num": 85,
         "accessories": [
           {
             "aid": 1,
@@ -141,7 +141,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Current Heating Cooling State",
                     "minValue": 0,
                     "maxValue": 2,
@@ -161,7 +161,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 3,
+                    "value": 1,
                     "description": "Target Heating Cooling State",
                     "minValue": 0,
                     "maxValue": 3,
@@ -181,7 +181,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 24.0,
+                    "value": 20.4,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -197,7 +197,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 21.4,
+                    "value": 20.6,
                     "description": "Target Temperature",
                     "unit": "celsius",
                     "minValue": 15.6,
@@ -232,7 +232,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.3,
+                    "value": 23.9,
                     "description": "Cooling Threshold Temperature",
                     "unit": "celsius",
                     "minValue": 19.4,
@@ -248,7 +248,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 19.4,
+                    "value": 20.6,
                     "description": "Heating Threshold Temperature",
                     "unit": "celsius",
                     "minValue": 15.6,
@@ -263,7 +263,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 56.0,
+                    "value": 39.0,
                     "description": "Current Relative Humidity",
                     "unit": "percentage",
                     "minValue": 0,
@@ -317,7 +317,7 @@
                       "pr"
                     ],
                     "format": "uint8",
-                    "value": 3,
+                    "value": 0,
                     "minValue": 0,
                     "maxValue": 3,
                     "minStep": 1
@@ -330,7 +330,7 @@
                       "pw"
                     ],
                     "format": "float",
-                    "value": 21.1,
+                    "value": 20.6,
                     "unit": "celsius",
                     "minValue": 15.6,
                     "maxValue": 23.9,
@@ -344,7 +344,7 @@
                       "pw"
                     ],
                     "format": "float",
-                    "value": 25.0,
+                    "value": 23.3,
                     "unit": "celsius",
                     "minValue": 19.4,
                     "maxValue": 29.4,
@@ -386,7 +386,7 @@
                       "pw"
                     ],
                     "format": "float",
-                    "value": 20.6,
+                    "value": 20.0,
                     "unit": "celsius",
                     "minValue": 15.6,
                     "maxValue": 23.9,
@@ -425,7 +425,7 @@
                       "pw"
                     ],
                     "format": "string",
-                    "value": "2025-07-10T02:00:00-04:00Q",
+                    "value": "",
                     "maxLen": 64
                   },
                   {
@@ -503,7 +503,7 @@
                       "pr"
                     ],
                     "format": "string",
-                    "value": "The Hive is humming along. You have no pending alerts or reminders.",
+                    "value": "Time to change your air handler filter.  It was last changed on Oct 8, 2025. For help, visit ecobee",
                     "maxLen": 64
                   },
                   {
@@ -558,7 +558,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": 2537,
+                    "value": 1270,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -589,7 +589,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -603,7 +603,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": 2537,
+                    "value": 1270,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1075,7 +1075,7 @@
                       "pr"
                     ],
                     "format": "bool",
-                    "value": false
+                    "value": true
                   },
                   {
                     "type": "0000022C-0000-1000-8000-0026BB765291",
@@ -1321,7 +1321,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.9,
+                    "value": 20.4,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -1378,7 +1378,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -1427,7 +1427,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 23409,
+                    "value": 376,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1493,7 +1493,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 23410,
+                    "value": 337,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1648,7 +1648,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.8,
+                    "value": 20.3,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -1754,7 +1754,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 3384,
+                    "value": 34181,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1820,7 +1820,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 3384,
+                    "value": 34181,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -1975,7 +1975,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 24.6,
+                    "value": 20.2,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -2081,7 +2081,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 1524,
+                    "value": 1259,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2101,7 +2101,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": true,
+                    "value": false,
                     "description": "Motion Detected"
                   },
                   {
@@ -2147,7 +2147,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 174,
+                    "value": 1259,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2302,7 +2302,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.7,
+                    "value": 20.2,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -2408,7 +2408,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2876,
+                    "value": 37671,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2474,7 +2474,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2876,
+                    "value": 37671,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2678,7 +2678,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 37974,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2744,7 +2744,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 37974,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -2930,7 +2930,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -2979,7 +2979,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 758,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3045,7 +3045,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 757,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3231,7 +3231,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 1,
+                    "value": 0,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -3280,7 +3280,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 749,
+                    "value": 50200,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3346,7 +3346,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 749,
+                    "value": 50200,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3581,7 +3581,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2445,
+                    "value": 3335,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -3647,7 +3647,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2444,
+                    "value": 3335,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4183,7 +4183,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 43282,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4249,7 +4249,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 43283,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4484,7 +4484,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 7242,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -4550,7 +4550,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": -1,
+                    "value": 7243,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5037,7 +5037,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -5086,7 +5086,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 23194,
+                    "value": 1269,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5152,7 +5152,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 23194,
+                    "value": 1269,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5387,7 +5387,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2828,
+                    "value": 9001,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -5453,7 +5453,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2828,
+                    "value": 9001,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -6444,7 +6444,7 @@
         "state_num": null
       },
       "8B:84:A7:84:EC:99": {
-        "config_num": 38,
+        "config_num": 50,
         "accessories": [
           {
             "aid": 1,
@@ -6600,7 +6600,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Target Heating Cooling State",
                     "minValue": 0,
                     "maxValue": 3,
@@ -6620,7 +6620,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.6,
+                    "value": 19.7,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -6636,7 +6636,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 22.2,
+                    "value": 20.0,
                     "description": "Target Temperature",
                     "unit": "celsius",
                     "minValue": 12.8,
@@ -6687,7 +6687,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 20.6,
+                    "value": 20.0,
                     "description": "Heating Threshold Temperature",
                     "unit": "celsius",
                     "minValue": 12.8,
@@ -6702,7 +6702,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 55.0,
+                    "value": 37.0,
                     "description": "Current Relative Humidity",
                     "unit": "percentage",
                     "minValue": 0,
@@ -6769,7 +6769,7 @@
                       "pw"
                     ],
                     "format": "float",
-                    "value": 20.6,
+                    "value": 20.0,
                     "unit": "celsius",
                     "minValue": 12.8,
                     "maxValue": 23.9,
@@ -6997,7 +6997,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": 8530,
+                    "value": 688,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -7042,7 +7042,7 @@
                       "ev"
                     ],
                     "format": "int",
-                    "value": 8969,
+                    "value": 688,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -7514,7 +7514,7 @@
                       "pr"
                     ],
                     "format": "bool",
-                    "value": true
+                    "value": false
                   },
                   {
                     "type": "0000022C-0000-1000-8000-0026BB765291",
@@ -7760,7 +7760,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.1,
+                    "value": 19.8,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -7817,7 +7817,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -7866,7 +7866,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2585,
+                    "value": 904,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -7932,7 +7932,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2585,
+                    "value": 905,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8087,7 +8087,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.8,
+                    "value": 18.9,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -8193,7 +8193,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2610,
+                    "value": 9031,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8259,7 +8259,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2610,
+                    "value": 9031,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8414,7 +8414,7 @@
                       "ev"
                     ],
                     "format": "float",
-                    "value": 23.7,
+                    "value": 19.6,
                     "description": "Current Temperature",
                     "unit": "celsius",
                     "minValue": 0,
@@ -8471,7 +8471,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8520,7 +8520,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2587,
+                    "value": 1260,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8586,7 +8586,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2587,
+                    "value": 910,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8710,7 +8710,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8741,7 +8741,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8766,7 +8766,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": true,
+                    "value": false,
                     "description": "Status Active"
                   },
                   {
@@ -8777,7 +8777,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8790,7 +8790,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2566,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8832,7 +8832,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": true,
+                    "value": false,
                     "description": "Status Active"
                   },
                   {
@@ -8843,7 +8843,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -8856,7 +8856,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2566,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -8876,7 +8876,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9091,7 +9091,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 955,
+                    "value": 1267,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9157,7 +9157,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 955,
+                    "value": 686,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9343,7 +9343,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9392,7 +9392,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 13313,
+                    "value": 676,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9458,7 +9458,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 13313,
+                    "value": 676,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9644,7 +9644,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -9693,7 +9693,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 8050,
+                    "value": 891,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9759,7 +9759,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 8050,
+                    "value": 414,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -9994,7 +9994,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 17786,
+                    "value": 55238,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10060,7 +10060,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 17786,
+                    "value": 55237,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10295,7 +10295,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 14057,
+                    "value": 49745,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10361,7 +10361,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 14056,
+                    "value": 49746,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10516,7 +10516,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10547,7 +10547,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10572,7 +10572,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": true,
+                    "value": false,
                     "description": "Status Active"
                   },
                   {
@@ -10583,7 +10583,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10596,7 +10596,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 6908,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10638,7 +10638,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": true,
+                    "value": false,
                     "description": "Status Active"
                   },
                   {
@@ -10649,7 +10649,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10662,7 +10662,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 6909,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10682,7 +10682,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,
@@ -10897,7 +10897,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 6852,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -10963,7 +10963,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 6852,
+                    "value": -1,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11149,7 +11149,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11198,7 +11198,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2366,
+                    "value": 1190,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11264,7 +11264,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 2365,
+                    "value": 717,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11499,7 +11499,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 78799,
+                    "value": 43879,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11565,7 +11565,7 @@
                       "pr"
                     ],
                     "format": "int",
-                    "value": 78799,
+                    "value": 43880,
                     "unit": "seconds",
                     "minValue": -1,
                     "maxValue": 86400,
@@ -11720,7 +11720,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11751,7 +11751,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Occupancy Detected",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11776,7 +11776,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": true,
+                    "value": false,
                     "description": "Status Active"
                   },
                   {
@@ -11787,7 +11787,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11842,7 +11842,7 @@
                       "ev"
                     ],
                     "format": "bool",
-                    "value": true,
+                    "value": false,
                     "description": "Status Active"
                   },
                   {
@@ -11853,7 +11853,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Status Low Battery",
                     "minValue": 0,
                     "maxValue": 1,
@@ -11886,7 +11886,7 @@
                       "ev"
                     ],
                     "format": "uint8",
-                    "value": 0,
+                    "value": 1,
                     "description": "Contact Sensor State",
                     "minValue": 0,
                     "maxValue": 1,

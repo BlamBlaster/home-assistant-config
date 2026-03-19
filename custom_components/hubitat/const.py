@@ -1,4 +1,5 @@
 """Constants for the Hubitat integration."""
+
 from enum import StrEnum
 from typing import Literal, get_args
 
@@ -58,6 +59,7 @@ H_CONF_SERVER_URL = "server_url"
 H_CONF_SERVER_SSL_CERT = "server_ssl_cert"
 H_CONF_SERVER_SSL_KEY = "server_ssl_key"
 H_CONF_SYNC_AREAS = "sync_areas"
+H_CONF_HUB_ID = "hub_id"
 H_CONF_BUTTON = "button"
 H_CONF_DOUBLE_TAPPED = "double_tapped"
 H_CONF_HELD = "held"
@@ -120,8 +122,17 @@ TEMP_C = "C"
 class TriggerInfo:
     """Trigger metadata."""
 
+    attr: str
+    event: str
+    conf: str
+    subconfs: tuple[str, ...] | None
+
     def __init__(
-        self, attr: str, event: str, conf: str, subconfs: tuple[str, ...] | None = None
+        self,
+        attr: str,
+        event: str,
+        conf: str,
+        subconfs: tuple[str, ...] | None = None,
     ):
         """Initialize a TriggerInfo."""
         self.attr = attr

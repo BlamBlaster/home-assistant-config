@@ -38,7 +38,7 @@ _CONTACT_INFOS: list[ContactInfo] = [
 ]
 
 
-class HubitatBinarySensor(HubitatEntity, BinarySensorEntity):  # pyright: ignore[reportIncompatibleVariableOverride]
+class HubitatBinarySensor(BinarySensorEntity, HubitatEntity):
     """A generic Hubitat sensor."""
 
     _active_state: str
@@ -52,9 +52,9 @@ class HubitatBinarySensor(HubitatEntity, BinarySensorEntity):  # pyright: ignore
         device_class: BinarySensorDeviceClass | None = None,
         **kwargs: Unpack[HubitatEntityArgs],
     ):
-        HubitatEntity.__init__(self, device_class=device_class, **kwargs)
+        HubitatEntity.__init__(self, **kwargs)
         BinarySensorEntity.__init__(self)
-
+        self._attr_device_class = device_class
         self._attribute = attribute
         self._active_state = active_state
         self._attr_unique_id: str | None = (
@@ -278,7 +278,12 @@ async def async_setup_entry(
             return attr[0] in device.attributes
 
         _ = create_and_add_entities(
-            hass, config_entry, async_add_entities, "binary_sensor", attr[1], is_sensor
+            hass,
+            config_entry,
+            async_add_entities,
+            "binary_sensor",
+            attr[1],
+            is_sensor,
         )
 
 

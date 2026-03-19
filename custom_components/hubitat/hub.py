@@ -4,7 +4,7 @@ from collections.abc import Mapping
 from logging import getLogger
 from ssl import SSLContext
 from types import MappingProxyType
-from typing import TYPE_CHECKING, Any, Callable, TypeVar, cast
+from typing import TYPE_CHECKING, Any, Callable, TypeVar, cast, override
 
 from custom_components.hubitat.hubitatmaker.const import DeviceAttribute
 from homeassistant.config_entries import ConfigEntry
@@ -17,7 +17,7 @@ from homeassistant.const import (
     UnitOfTemperature,
 )
 from homeassistant.core import CALLBACK_TYPE, HomeAssistant
-from homeassistant.helpers import area_registry, device_registry
+from homeassistant.helpers import area_registry, device_registry, entity_registry
 from homeassistant.helpers.device_registry import DeviceEntry
 
 try:
@@ -36,6 +36,7 @@ from .const import (
     ATTR_HUB,
     DOMAIN,
     H_CONF_APP_ID,
+    H_CONF_HUB_ID,
     H_CONF_HUBITAT_EVENT,
     H_CONF_SERVER_PORT,
     H_CONF_SERVER_SSL_CERT,
@@ -52,7 +53,13 @@ from .hubitatmaker import (
     Hub as HubitatHub,
 )
 from .types import Removable, UpdateableEntity
-from .util import get_device_identifiers, get_hub_device_id, get_hub_short_id
+from .util import (
+    HasId,
+    get_device_identifiers,
+    get_hub_device_id,
+    get_hub_short_id,
+    get_token_hash,
+)
 
 _LOGGER = getLogger(__name__)
 
@@ -71,7 +78,7 @@ E = TypeVar("E", bound=UpdateableEntity)
 M = TypeVar("M", bound=Removable)
 
 
-class Hub:
+class Hub(HasId):
     """Representation of a Hubitat hub."""
 
     hass: HomeAssistant
@@ -85,6 +92,9 @@ class Hub:
     _hub_device_listeners: list[Listener]
     _device_listeners: dict[str, list[Listener]]
     _hub: HubitatHub
+    _is_connected: bool
+    _retry_task_unsub: CALLBACK_TYPE | None
+    _platforms_setup: bool
 
     def __init__(
         self,
@@ -125,11 +135,19 @@ class Hub:
         self._device_listeners = {}
         self._hub = hub
         self.device = device
+        self._is_connected = False
+        self._retry_task_unsub = None
+        self._platforms_setup = False
 
     @property
     def app_id(self) -> str:
         """The Maker API app ID for this hub."""
         return cast(str, self.config_entry.data.get(H_CONF_APP_ID))
+
+    @property
+    def is_connected(self) -> bool:
+        """Return whether the hub is currently connected."""
+        return self._is_connected
 
     @property
     def devices(self) -> Mapping[str, Device]:
@@ -152,8 +170,13 @@ class Hub:
         )
 
     @property
+    @override
     def id(self) -> str:
         """A unique ID for this hub instance."""
+        # Use stored hub_id if available, fall back to token-derived
+        stored_id: str | None = self.config_entry.data.get(H_CONF_HUB_ID)
+        if stored_id:
+            return str(stored_id)
         return get_hub_short_id(self._hub)
 
     @property
@@ -263,11 +286,34 @@ class Hub:
         self._device_listeners = {}
         self._hub_device_listeners = []
 
+    def set_retry_task_unsub(self, unsub: CALLBACK_TYPE) -> None:
+        """Set the retry task cancellation callback."""
+        self._retry_task_unsub = unsub
+
+    def cancel_retry_task(self) -> None:
+        """Cancel the retry task if it's running."""
+        if self._retry_task_unsub is not None:
+            self._retry_task_unsub()
+            self._retry_task_unsub = None
+
     async def unload(self) -> None:
         """Unload the hub."""
         for emitter in self.event_emitters:
             await emitter.async_will_remove_from_hass()
         self.unsub_config_listener()
+
+        # Cancel retry task if it's still running
+        self.cancel_retry_task()
+
+    def get_state_attributes(self) -> dict[str, Any]:
+        """Get the state attributes for the hub entity."""
+        attrs = {
+            CONF_ID: f"{self._hub.host}::{self._hub.app_id}",
+            CONF_HOST: self.host,
+            ATTR_HIDDEN: True,
+            CONF_TEMPERATURE_UNIT: self.temperature_unit,
+        }
+        return attrs
 
     @staticmethod
     async def create(hass: HomeAssistant, entry: ConfigEntry, index: int) -> "Hub":
@@ -280,8 +326,14 @@ class Hub:
         if CONF_ACCESS_TOKEN not in entry.data:
             raise ValueError("Missing access token in config entry")
 
-        url = entry.options.get(H_CONF_SERVER_URL, entry.data.get(H_CONF_SERVER_URL))
-        port = entry.options.get(H_CONF_SERVER_PORT, entry.data.get(H_CONF_SERVER_PORT))
+        url = cast(
+            str | None,
+            entry.options.get(H_CONF_SERVER_URL, entry.data.get(H_CONF_SERVER_URL)),
+        )
+        port = cast(
+            int | None,
+            entry.options.get(H_CONF_SERVER_PORT, entry.data.get(H_CONF_SERVER_PORT)),
+        )
 
         # Previous versions of the integration may have saved a value of "" for
         # server_url with the assumption that a use_server_url flag would control
@@ -290,12 +342,18 @@ class Hub:
         if url == "":
             url = None
 
-        ssl_cert = entry.options.get(
-            H_CONF_SERVER_SSL_CERT,
-            entry.data.get(H_CONF_SERVER_SSL_CERT),
+        ssl_cert = cast(
+            str | None,
+            entry.options.get(
+                H_CONF_SERVER_SSL_CERT,
+                entry.data.get(H_CONF_SERVER_SSL_CERT),
+            ),
         )
-        ssl_key = entry.options.get(
-            H_CONF_SERVER_SSL_KEY, entry.data.get(H_CONF_SERVER_SSL_KEY)
+        ssl_key = cast(
+            str | None,
+            entry.options.get(
+                H_CONF_SERVER_SSL_KEY, entry.data.get(H_CONF_SERVER_SSL_KEY)
+            ),
         )
         ssl_context = await hass.async_add_executor_job(
             _create_ssl_context, ssl_cert, ssl_key
@@ -350,7 +408,9 @@ class Hub:
         )
 
         hub = Hub(hass, entry, index, hubitat_hub, device)
-        hass.data[DOMAIN][entry.entry_id] = hub
+        hub._is_connected = True
+        domain_data = get_domain_data(hass)
+        domain_data[entry.entry_id] = hub
 
         # Add a listener for every device exported by the hub. The listener
         # will re-export the Hubitat event as a hubitat_event in HA if it
@@ -364,13 +424,17 @@ class Hub:
         if hub.id:
             _update_device_ids(hub.id, hass)
 
+        # Migrate entity unique IDs from old token-hash format to new hub-id format
+        _migrate_entity_unique_ids(hass, hub.id, token)
+
         # Initialize entities
         await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
         _LOGGER.debug("Registered platforms")
 
-        should_update_rooms = entry.options.get(
-            H_CONF_SYNC_AREAS, entry.data.get(H_CONF_SYNC_AREAS)
+        should_update_rooms = cast(
+            bool | None,
+            entry.options.get(H_CONF_SYNC_AREAS, entry.data.get(H_CONF_SYNC_AREAS)),
         )
         if should_update_rooms:
             _update_device_rooms(hub, hass)
@@ -379,12 +443,7 @@ class Hub:
         hass.states.async_set(
             hub.entity_id,
             "connected",
-            {
-                CONF_ID: f"{hubitat_hub.host}::{hubitat_hub.app_id}",
-                CONF_HOST: hubitat_hub.host,
-                ATTR_HIDDEN: True,
-                CONF_TEMPERATURE_UNIT: hub.temperature_unit,
-            },
+            hub.get_state_attributes(),
         )
 
         if hub.mode_supported:
@@ -413,6 +472,218 @@ class Hub:
 
         return hub
 
+    @staticmethod
+    async def create_offline(
+        hass: HomeAssistant, entry: ConfigEntry, index: int
+    ) -> "Hub":
+        """Create a hub instance without connecting to it.
+
+        This is used when the hub is unavailable at startup but we still want
+        to register the integration and retry later.
+        """
+
+        if CONF_HOST not in entry.data:
+            raise ValueError("Missing host in config entry")
+        if H_CONF_APP_ID not in entry.data:
+            raise ValueError("Missing app ID in config entry")
+        if CONF_ACCESS_TOKEN not in entry.data:
+            raise ValueError("Missing access token in config entry")
+
+        url = cast(
+            str | None,
+            entry.options.get(H_CONF_SERVER_URL, entry.data.get(H_CONF_SERVER_URL)),
+        )
+        port = cast(
+            int | None,
+            entry.options.get(H_CONF_SERVER_PORT, entry.data.get(H_CONF_SERVER_PORT)),
+        )
+
+        if url == "":
+            url = None
+
+        ssl_cert = cast(
+            str | None,
+            entry.options.get(
+                H_CONF_SERVER_SSL_CERT,
+                entry.data.get(H_CONF_SERVER_SSL_CERT),
+            ),
+        )
+        ssl_key = cast(
+            str | None,
+            entry.options.get(
+                H_CONF_SERVER_SSL_KEY, entry.data.get(H_CONF_SERVER_SSL_KEY)
+            ),
+        )
+        ssl_context = await hass.async_add_executor_job(
+            _create_ssl_context, ssl_cert, ssl_key
+        )
+
+        host = cast(
+            str,
+            entry.options.get(CONF_HOST, entry.data.get(CONF_HOST)),
+        )
+        app_id = cast(str, entry.data.get(H_CONF_APP_ID))
+        token = cast(str, entry.data.get(CONF_ACCESS_TOKEN))
+
+        _LOGGER.debug("Creating offline Hubitat hub instance")
+
+        # Create the HubitatHub but don't start it yet
+        hubitat_hub = HubitatHub(
+            host,
+            app_id,
+            token,
+            port=port,
+            event_url=url,
+            ssl_context=ssl_context,
+        )
+
+        # Create a placeholder device for the hub
+        device = Device(
+            {
+                "id": "unknown",
+                "name": HUB_DEVICE_NAME,
+                "label": HUB_DEVICE_NAME,
+                "model": "Cx",
+                "manufacturer": HUB_NAME,
+                "attributes": [],
+                "capabilities": [],
+                "commands": [],
+            }
+        )
+
+        hub = Hub(hass, entry, index, hubitat_hub, device)
+        hub._is_connected = False
+        domain_data = get_domain_data(hass)
+        domain_data[entry.entry_id] = hub
+
+        # Create an entity for the Hubitat hub in unavailable state
+        hass.states.async_set(
+            hub.entity_id,
+            "unavailable",
+            hub.get_state_attributes(),
+        )
+
+        return hub
+
+    async def async_connect(self) -> None:
+        """Connect to the Hubitat hub.
+
+        This is called after create_offline() to complete initialization.
+        """
+        if self._is_connected:
+            _LOGGER.debug("Hub is already connected")
+            return
+
+        _LOGGER.debug("Connecting to Hubitat hub...")
+
+        # Force refresh if devices were partially loaded from a previous failed
+        # connection attempt
+        force_refresh = len(self._hub.devices) > 0
+
+        try:
+            # Start the hub (this will raise ConnectionError if it fails)
+            await self._hub.start(force_refresh=force_refresh)
+
+            # Update the device with hub info
+            self.device = Device(
+                {
+                    "id": get_hub_short_id(self._hub),
+                    "name": HUB_DEVICE_NAME,
+                    "label": HUB_DEVICE_NAME,
+                    "model": "Cx",
+                    "manufacturer": HUB_NAME,
+                    "attributes": [
+                        {
+                            "name": "mode",
+                            "currentValue": self._hub.mode,
+                            "dataType": "ENUM",
+                        },
+                        {
+                            "name": "hsm_status",
+                            "currentValue": self._hub.hsm_status,
+                            "dataType": "ENUM",
+                        },
+                    ],
+                    "capabilities": [],
+                    "commands": [],
+                }
+            )
+
+            # Add listeners for all devices
+            for device_id in self._hub.devices:
+                self._hub.add_device_listener(device_id, self.handle_event)
+
+            # Update device identifiers
+            if self.id:
+                _update_device_ids(self.id, self.hass)
+
+            # Migrate entity unique IDs from old token-hash format to new hub-id format
+            _migrate_entity_unique_ids(self.hass, self.id, self.token)
+
+            # Initialize entities (only once - this is not idempotent)
+            if not self._platforms_setup:
+                await self.hass.config_entries.async_forward_entry_setups(
+                    self.config_entry, PLATFORMS
+                )
+                self._platforms_setup = True
+
+            _LOGGER.debug("Registered platforms")
+
+            should_update_rooms = cast(
+                bool | None,
+                self.config_entry.options.get(
+                    H_CONF_SYNC_AREAS, self.config_entry.data.get(H_CONF_SYNC_AREAS)
+                ),
+            )
+            if should_update_rooms:
+                _update_device_rooms(self, self.hass)
+
+            if self.mode_supported:
+
+                def handle_mode_event(event: Event):
+                    self.device.update_attr(
+                        DeviceAttribute.MODE, cast(str, event.value), None
+                    )
+                    for listener in self._hub_device_listeners:
+                        listener(event)
+
+                self._hub.add_mode_listener(handle_mode_event)
+                if self.mode:
+                    self.device.update_attr(DeviceAttribute.MODE, self.mode, None)
+
+            if self.hsm_supported:
+
+                def handle_hsm_status_event(event: Event):
+                    self.device.update_attr(
+                        DeviceAttribute.HSM_STATUS, cast(str, event.value), None
+                    )
+                    for listener in self._hub_device_listeners:
+                        listener(event)
+
+                self._hub.add_hsm_listener(handle_hsm_status_event)
+                if self.hsm_status:
+                    self.device.update_attr(
+                        DeviceAttribute.HSM_STATUS, self.hsm_status, None
+                    )
+
+            self._is_connected = True
+            _LOGGER.debug("Hub connection complete")
+
+        except Exception:
+            # If connection fails, clean up to allow clean retry
+            # Stop the event server to avoid "address in use" errors
+            self._hub.stop()
+
+            # Clear device listeners that were added
+            for device_id in self._hub.devices:
+                self._hub.remove_device_listeners(device_id)
+
+            # Clear mode and HSM listeners
+            self._hub.remove_mode_listeners()
+            self._hub.remove_hsm_status_listeners()
+
+            raise
+
     def async_update_device_registry(self) -> None:
         """Add a device for this hub to the device registry."""
         dreg = device_registry.async_get(self.hass)
@@ -432,8 +703,9 @@ class Hub:
         _LOGGER.debug("Handling options update...")
         hub = get_hub(hass, config_entry.entry_id)
 
-        host: str | None = config_entry.options.get(
-            CONF_HOST, config_entry.data.get(CONF_HOST)
+        host = cast(
+            str | None,
+            config_entry.options.get(CONF_HOST, config_entry.data.get(CONF_HOST)),
         )
         if host is not None and host != hub.host:
             await hub.set_host(host)
@@ -450,8 +722,11 @@ class Hub:
             await hub.set_port(port)
             _LOGGER.debug("Set event server port to %s", port)
 
-        url = config_entry.options.get(
-            H_CONF_SERVER_URL, config_entry.data.get(H_CONF_SERVER_URL)
+        url = cast(
+            str | None,
+            config_entry.options.get(
+                H_CONF_SERVER_URL, config_entry.data.get(H_CONF_SERVER_URL)
+            ),
         )
         if url == "":
             url = None
@@ -459,25 +734,34 @@ class Hub:
             await hub.set_event_url(url)
             _LOGGER.debug("Set event server URL to %s", url)
 
-        ssl_cert = config_entry.options.get(
-            H_CONF_SERVER_SSL_CERT,
-            config_entry.data.get(H_CONF_SERVER_SSL_CERT),
+        ssl_cert = cast(
+            str | None,
+            config_entry.options.get(
+                H_CONF_SERVER_SSL_CERT,
+                config_entry.data.get(H_CONF_SERVER_SSL_CERT),
+            ),
         )
-        ssl_key = config_entry.options.get(
-            H_CONF_SERVER_SSL_KEY,
-            config_entry.data.get(H_CONF_SERVER_SSL_KEY),
+        ssl_key = cast(
+            str | None,
+            config_entry.options.get(
+                H_CONF_SERVER_SSL_KEY,
+                config_entry.data.get(H_CONF_SERVER_SSL_KEY),
+            ),
         )
         ssl_context = await hass.async_add_executor_job(
             _create_ssl_context, ssl_cert, ssl_key
         )
         await hub.set_ssl_context(ssl_context)
         _LOGGER.debug(
-            "Set event server SSL cert to %s and SSL key to %s", ssl_cert, ssl_key
+            "Set event server SSL cert to %s and SSL key to %s",
+            ssl_cert,
+            ssl_key,
         )
 
         temp_unit = (
             config_entry.options.get(
-                CONF_TEMPERATURE_UNIT, config_entry.data.get(CONF_TEMPERATURE_UNIT)
+                CONF_TEMPERATURE_UNIT,
+                config_entry.data.get(CONF_TEMPERATURE_UNIT),
             )
             or TEMP_F
         )
@@ -553,7 +837,8 @@ async def _update_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> None:
 
 def get_hub(hass: HomeAssistant, config_entry_id: str) -> Hub:
     """Get the Hub device associated with a given config entry."""
-    return cast(Hub, hass.data[DOMAIN][config_entry_id])
+    domain_data = get_domain_data(hass)
+    return domain_data[config_entry_id]
 
 
 def _create_ssl_context(ssl_cert: str | None, ssl_key: str | None) -> SSLContext | None:
@@ -568,6 +853,46 @@ def _create_ssl_context(ssl_cert: str | None, ssl_key: str | None) -> SSLContext
         return ssl_context
     else:
         return None
+
+
+def _migrate_entity_unique_ids(
+    hass: HomeAssistant, hub_id: str, old_token: str
+) -> None:
+    """Migrate entity unique IDs from old token-hash format to new hub-id format.
+
+    Old format: {sha256_hash_of_token}::{device_id}
+    New format: {hub_id}::{device_id}
+    """
+    ereg = entity_registry.async_get(hass)
+    old_hash = get_token_hash(old_token)
+    old_prefix = f"{old_hash}::"
+
+    entities_to_update: list[tuple[str, str]] = []
+
+    for entity_id in ereg.entities:
+        entity = ereg.entities[entity_id]
+        if not entity.unique_id:
+            _LOGGER.warning("Skipping entity %s with no unique_id", entity.entity_id)
+            continue
+
+        if not isinstance(entity.unique_id, str):
+            _LOGGER.warning(
+                "Skipping entity %s with non-str unique_id %s (%s)",
+                entity.entity_id,
+                entity.unique_id,
+                type(entity.unique_id),
+            )
+            continue
+
+        if entity.unique_id.startswith(old_prefix):
+            # Extract device_id from old format
+            device_id = entity.unique_id[len(old_prefix) :]
+            new_unique_id = f"{hub_id}::{device_id}"
+            entities_to_update.append((entity_id, new_unique_id))
+
+    for entity_id, new_unique_id in entities_to_update:
+        ereg.async_update_entity(entity_id, new_unique_id=new_unique_id)
+        _LOGGER.info("Migrated entity %s unique_id to %s", entity_id, new_unique_id)
 
 
 def _update_device_ids(hub_id: str, hass: HomeAssistant) -> None:
@@ -629,7 +954,10 @@ def _update_device_ids(hub_id: str, hass: HomeAssistant) -> None:
         id_set = dev_ids[0]
         if len(id_set) == 3:
             new_ids = {
-                (cast(tuple[str, str, str], id_set)[0], f"{id_set[1]}:{id_set[2]}")
+                (
+                    cast(tuple[str, str, str], id_set)[0],
+                    f"{id_set[1]}:{id_set[2]}",
+                )
             }
             _ = dreg.async_update_device(new_dev.id, new_identifiers=new_ids)
             _LOGGER.info(
@@ -702,6 +1030,15 @@ def _update_device_rooms(hub: Hub, hass: HomeAssistant) -> None:
             _LOGGER.debug("Cleared location of %s", device.name)
 
 
+def get_domain_data(hass: HomeAssistant) -> dict[str, Hub]:
+    """Return the Hubitat domain data dictionary, creating it if necessary."""
+    data = cast(dict[str, Hub] | None, hass.data.get(DOMAIN))
+    if data is None:
+        data = {}
+        hass.data[DOMAIN] = data
+    return data
+
+
 if TYPE_CHECKING:
     test_hass = HomeAssistant("")
     test_discovery_keys: MappingProxyType[str, tuple[DiscoveryKey, ...]] = (
@@ -717,10 +1054,15 @@ if TYPE_CHECKING:
         discovery_keys=test_discovery_keys,  # pyright: ignore[reportArgumentType]
         options=None,
         unique_id=None,
+        subentries_data=None,
     )
     hubitat_hub = HubitatHub("", "", "")
     device = Device({})
     HUB_TYPECHECK = Hub(
-        hass=test_hass, entry=test_entry, index=0, hub=hubitat_hub, device=device
+        hass=test_hass,
+        entry=test_entry,
+        index=0,
+        hub=hubitat_hub,
+        device=device,
     )
     DEVICE_TYPECHECK = Device({})

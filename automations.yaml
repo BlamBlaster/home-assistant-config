@@ -1,42 +1,35 @@
 - id: '1673808122420'
   alias: Front Porch Lights - Sunrise/Sunset
-  description: ''
-  trigger:
-  - platform: time_pattern
-    minutes: /30
-  condition: []
-  action:
+  description: Turn lights on at sunset and off at sunrise.
+  triggers:
+  - event: sunrise
+    offset: 00:15:00
+    trigger: sun
+  - event: sunset
+    offset: -00:30:00
+    trigger: sun
+  actions:
   - choose:
     - conditions:
       - condition: sun
-        after: sunset
         before: sunrise
-        after_offset: '-30'
       sequence:
-      - service: light.turn_on
-        target:
+      - target:
           entity_id: light.lamp_post
-        data: {}
-      - service: switch.turn_on
-        target:
-          device_id:
-          - 646047097952c16d6d1e10e63ef39c0a
-        data: {}
+        action: light.turn_on
+      - target:
+          device_id: 646047097952c16d6d1e10e63ef39c0a
+        action: switch.turn_on
     - conditions:
       - condition: sun
         after: sunrise
-        before: sunset
-        after_offset: '15'
       sequence:
-      - service: switch.turn_off
-        data: {}
-        target:
-          device_id: 646047097952c16d6d1e10e63ef39c0a
-      - service: light.turn_off
-        data: {}
-        target:
+      - target:
           entity_id: light.lamp_post
-        enabled: true
+        action: light.turn_off
+      - target:
+          device_id: 646047097952c16d6d1e10e63ef39c0a
+        action: switch.turn_off
   mode: single
 - id: '1673812674424'
   alias: Button 1 - Living Room
@@ -898,15 +891,6 @@
               entity_id: binary_sensor.basement_door_contact
               state: unavailable
         then:
-        - metadata: {}
-          data:
-            title: ' ! ! Basement door is Jammed ! ! '
-            message: The basement door was unable to be {% if is_state('lock.basement_door_lock',
-              'jammed') %}locked{% else %}closed{% endif %}! Please close and lock
-              the door.
-            data:
-              persistent: true
-          action: notify.mobile_app_iphone_14
         - action: notify.mobile_app_benjamins_iphone_16
           metadata: {}
           data:
@@ -956,15 +940,6 @@
           minutes: 0
           seconds: 30
       then:
-      - metadata: {}
-        data:
-          title: ' ! ! Front door is Jammed ! ! '
-          message: The front door was unable to be {% if is_state('lock.front_door_lock',
-            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-            door.
-          data:
-            persistent: true
-        action: notify.mobile_app_iphone_14
       - metadata: {}
         data:
           title: ' ! ! Front door is Jammed ! ! '
@@ -1024,15 +999,6 @@
             entity_id: binary_sensor.front_door_contact
           enabled: true
         then:
-        - metadata: {}
-          data:
-            title: Front door is Open
-            message: The front door is {% if is_state('binary_sensor.front_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
-            data:
-              persistent: true
-          action: notify.mobile_app_iphone_14
         - metadata: {}
           data:
             title: Front door is Open
@@ -1140,15 +1106,6 @@
             minutes: 3
             seconds: 0
       then:
-      - metadata: {}
-        data:
-          title: ' ! ! Back door is Jammed ! ! '
-          message: The back door was unable to be {% if is_state('lock.back_door',
-            'jammed') %}locked{% else %}closed{% endif %}! Please close and lock the
-            door.
-          data:
-            persistent: true
-        action: notify.mobile_app_iphone_14
       - action: notify.mobile_app_benjamins_iphone_16
         metadata: {}
         data:
@@ -1210,15 +1167,6 @@
               lock.
             data:
               persistent: true
-          action: notify.mobile_app_benjamins_iphone_14
-        - metadata: {}
-          data:
-            title: Back door is Open
-            message: The back door is {% if is_state('binary_sensor.back_door_contact','open')
-              %}open{% else %}not closed{% endif %}! Please close so the door can
-              lock.
-            data:
-              persistent: true
           action: notify.mobile_app_iphone_14
         - metadata: {}
           data:
@@ -1229,6 +1177,15 @@
             data:
               persistent: true
           action: notify.mobile_app_benjamins_ipad
+        - action: notify.mobile_app_benjamins_iphone_16
+          metadata: {}
+          data:
+            message: The back door is {% if is_state('binary_sensor.back_door_contact','open')
+              %}open{% else %}not closed{% endif %}! Please close so the door can
+              lock.
+            title: ' ! ! Back door is Jammed ! ! '
+            data:
+              persistent: true
         - metadata: {}
           data:
             title: Back door is Open
@@ -2163,6 +2120,7 @@
   - event: sunrise
     id: sunrise
     trigger: sun
+    offset: -03:00:00
   - entity_id:
     - binary_sensor.sleepnumber_sleep_number_amanda_is_in_bed
     - binary_sensor.sleepnumber_sleep_number_benjamin_is_in_bed
@@ -2177,15 +2135,16 @@
       - condition: trigger
         id: sunset
       sequence:
-      - target:
-          entity_id: light.lamp_post
-        data:
-          brightness: '{{ states(''sensor.lamp_post_brightness'') | int }}'
-          color_temp: '{{ states(''sensor.lamp_post_color_temperature'') | int }}'
-        action: light.turn_on
+      - action: light.turn_on
+        target:
+          device_id:
+          - ea1b2672474c74e25f9f7d7b85ee5a70
+          - e76e3a309d46619e5a766617e7d61b52
+        data: {}
       - target:
           entity_id: switch.front_porch_switch
         action: switch.turn_on
+        data: {}
     - conditions:
       - condition: trigger
         id: bedtime_check
@@ -2199,13 +2158,17 @@
       - target:
           entity_id: switch.front_porch_switch
         action: switch.turn_off
+        data: {}
     - conditions:
       - condition: trigger
         id: sunrise
       sequence:
-      - target:
-          entity_id: light.lamp_post
-        action: light.turn_off
+      - action: light.turn_off
+        target:
+          device_id:
+          - ea1b2672474c74e25f9f7d7b85ee5a70
+          - e76e3a309d46619e5a766617e7d61b52
+        data: {}
   mode: single
 - id: '1746975077666'
   alias: Smart Fan Adjustment
@@ -2245,8 +2208,8 @@
           fan_entity: '{{ repeat.item.fan }}'
           contact_open: '{{ repeat.item.contact_open }}'
           temp_diff: '{{ current - setpoint }}'
-          target_pct: '{% if temp_diff < -2 %} 0 {% elif temp_diff < 0 %} 16 {% elif
-            temp_diff < 2 %} 33 {% elif temp_diff < 4 %} 50 {% elif temp_diff < 6
+          target_pct: '{% if temp_diff < -3 %} 0 {% elif temp_diff <-1 %} 16 {% elif
+            temp_diff < 0 %} 33 {% elif temp_diff < 1 %} 50 {% elif temp_diff < 2
             %} 75 {% else %} 100 {% endif %}'
       - choose:
         - conditions:
@@ -2429,4 +2392,170 @@
             critical: 1
             volume: 1
     action: notify.mobile_app_benjamins_iphone_16
+  mode: single
+- id: '1756340397182'
+  alias: Lock all doors 8pm
+  description: ''
+  triggers:
+  - trigger: time
+    at: '20:00:00'
+    weekday:
+    - sat
+    - fri
+    - thu
+    - wed
+    - tue
+    - mon
+    - sun
+  conditions: []
+  actions:
+  - action: script.all_doors_lock
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1752003073000'
+  alias: Speaker Volume Evening
+  description: Set all speaker volumes to 30% after 8pm
+  triggers:
+  - at: '19:00:00'
+    trigger: time
+  actions:
+  - target:
+      entity_id:
+      - media_player.living_room_speaker
+      - media_player.kitchen_speaker
+      - media_player.master_bedroom_display
+      - media_player.office_display
+      - media_player.nursery_display
+      - media_player.bathroom_speaker
+    data:
+      volume_level: 0.25
+    action: media_player.volume_set
+  mode: single
+- id: '1752003073001'
+  alias: Speaker Volume Morning
+  description: Restore speaker volume to 70% at 8am
+  triggers:
+  - at: 08:00:00
+    trigger: time
+  actions:
+  - target:
+      entity_id:
+      - media_player.living_room_speaker
+      - media_player.office_display
+      - media_player.bathroom_speaker
+    data:
+      volume_level: 0.8
+    action: media_player.volume_set
+  - target:
+      entity_id:
+      - media_player.kitchen_speaker
+      - media_player.nursery_display
+      - media_player.master_bedroom_display
+    data:
+      volume_level: 0.6
+    action: media_player.volume_set
+  mode: single
+- id: '1753000000001'
+  alias: Good Night Security Sweep
+  description: Lock doors, arm cameras, lower volume, and set night temperature
+  triggers:
+  - tag_id: 91d68522-307e-4865-87d6-ff4ff389c681
+    id: sleep_tag
+    trigger: tag
+  - entity_id:
+    - binary_sensor.sleepnumber_sleep_number_amanda_is_in_bed
+    - binary_sensor.sleepnumber_sleep_number_benjamin_is_in_bed
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 25
+      seconds: 0
+    id: bed
+    trigger: state
+  conditions:
+  - condition: or
+    conditions:
+    - condition: trigger
+      id: sleep_tag
+    - condition: and
+      conditions:
+      - condition: state
+        entity_id: binary_sensor.sleepnumber_sleep_number_amanda_is_in_bed
+        state: 'on'
+      - condition: state
+        entity_id: binary_sensor.sleepnumber_sleep_number_benjamin_is_in_bed
+        state: 'on'
+  actions:
+  - action: script.all_doors_lock
+    data: {}
+  - target:
+      entity_id:
+      - camera.front_porch_doorbell
+      - camera.reolink_e1_pro
+    action: camera.enable_motion_detection
+  - target:
+      entity_id:
+      - media_player.living_room_speaker
+      - media_player.kitchen_speaker
+      - media_player.master_bedroom_display
+      - media_player.nursery_display
+      - media_player.office_display
+      - media_player.bathroom_speaker
+    data:
+      volume_level: 0.2
+    action: media_player.volume_set
+  - target:
+      entity_id:
+      - climate.upstairs_thermostat
+      - climate.downstairs_2
+    data:
+      target_temp_high: 74
+      target_temp_low: 68
+      hvac_mode: heat_cool
+    action: climate.set_temperature
+  - data:
+      message: Good Night security sweep activated. Home secured.
+    action: notify.mobile_app_benjamins_iphone_16
+  - data:
+      message: Good Night security sweep activated. Home secured.
+    action: notify.mobile_app_iphone_14
+  mode: single
+- id: '1753000000002'
+  alias: Automatic Away Mode
+  description: Secure home when everyone leaves
+  triggers:
+  - platform: state
+    entity_id:
+    - person.benjamin
+    - person.amanda
+    to: not_home
+  conditions:
+  - condition: state
+    entity_id: person.benjamin
+    state: not_home
+  - condition: state
+    entity_id: person.amanda
+    state: not_home
+  actions:
+  - service: script.all_doors_lock
+  - service: cover.close_cover
+    target:
+      entity_id: cover.garage_door
+  - service: light.turn_off
+    target:
+      entity_id: all
+  - service: climate.set_hvac_mode
+    target:
+      entity_id:
+      - climate.upstairs_thermostat
+      - climate.downstairs_2
+    data:
+      hvac_mode: 'off'
+  - service: notify.mobile_app_benjamins_iphone_16
+    data:
+      message: Away mode activated. Home secured.
+  - service: notify.mobile_app_iphone_14
+    data:
+      message: Away mode activated. Home secured.
   mode: single

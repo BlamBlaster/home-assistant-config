@@ -26,16 +26,16 @@ ATTR_EVENTS = {
 }
 
 
-class HubitatButtonEventEntity(HubitatEntity, EventEntity):  # pyright: ignore[reportIncompatibleVariableOverride]
+class HubitatButtonEventEntity(EventEntity, HubitatEntity):
     """Representation of an Hubitat button event"""
 
     _button_id: str
 
     def __init__(self, button_id: str, **kwargs: Unpack[HubitatEntityArgs]):
         """Initialize a hubitat button event entity"""
-        HubitatEntity.__init__(self, device_class=EventDeviceClass.BUTTON, **kwargs)
+        HubitatEntity.__init__(self, **kwargs)
         EventEntity.__init__(self)
-
+        self._attr_device_class = EventDeviceClass.BUTTON
         self._button_id = button_id
         self._attr_unique_id: str | None = (
             f"{super().unique_id}::button_event::{self._button_id}"
@@ -52,13 +52,19 @@ class HubitatButtonEventEntity(HubitatEntity, EventEntity):  # pyright: ignore[r
         if not self.enabled:
             return
 
-        if event.attribute not in ATTR_EVENTS:
+        try:
+            attribute = DeviceAttribute(event.attribute)
+        except ValueError:
+            _LOGGER.debug("Ignoring unknown button attribute: %s", event.attribute)
+            return
+
+        if attribute not in ATTR_EVENTS:
             return
 
         if event.value != self._button_id:
             return
 
-        event_type = ATTR_EVENTS[event.attribute]
+        event_type = ATTR_EVENTS[attribute]
         self._trigger_event(event_type)
         self.async_write_ha_state()
 

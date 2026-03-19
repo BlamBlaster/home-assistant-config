@@ -20,22 +20,22 @@
     "alexa_entity_configs": {},
     "cloud_user": "8ca5914793894de8af20e5cee1952a75",
     "cloudhooks": {
-      "fec9f21b48f5810005f97c150a3cb4b803d41d51c1c9008e7036ee5297152639": {
-        "webhook_id": "fec9f21b48f5810005f97c150a3cb4b803d41d51c1c9008e7036ee5297152639",
-        "cloudhook_id": "6295f0c763744994b559cb12c8299a7f",
-        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABma3AJEH9pYPziO9ONw0FK_bvrhIUI2Wws8uPP6ynMBUCK7gPQftJdXnUZjIROeWSwgMkIN--crXeLC3aARxmOHR9wGSTKSJ5WgmrkB2e2GROZ_gUOx4ujj9x3bFjEi5kJZpTdlJragysLR2-nL5vcGQzEsECotL0_9nzyWMzQ50cMi3o=",
-        "managed": true
-      },
       "3b0f6885f91b67797f26e7d830fddd1493b6d3945629ee79ce3e811920ab14d4": {
         "webhook_id": "3b0f6885f91b67797f26e7d830fddd1493b6d3945629ee79ce3e811920ab14d4",
         "cloudhook_id": "88695dd2e1af4665ac95450996e015fe",
         "cloudhook_url": "https://hooks.nabu.casa/gAAAAABoHUsb1v74676dSlxyf9pp8-lGearRkCX3XNTmBIfiEjnp0ypSXCQKyDuccruEue6zVxgl3aOQNe1Be5pBkEU5YYdFAtLnzT5wH32nWxmP8WwB6ziv_ifD3Fs8kZvYv1RE6yjkMdV0kDrJ-jjh2NjLns0OrsOOd8BIuyjWNA-ooqS65wY=",
         "managed": true
       },
-      "099c15d91ed0be5a50976cae6dd44976311428a92aa0d82105f7c3dc72ef7828": {
-        "webhook_id": "099c15d91ed0be5a50976cae6dd44976311428a92aa0d82105f7c3dc72ef7828",
-        "cloudhook_id": "43c35154f80d4726b4b8669ce9be9946",
-        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABoQG5E_fM7VshEevNJVRVtYxAUsJOOYDrUI11WpcAE2DFGpWhVYsPJaGvBlJojcqOyy85gOEse8C4A9waEPD6trGHxGh9r0yyOocQv20_cfmpgX3wPOl_bQXSzpFDIinFeCo84ehW976mGimkyJBj6E1Dy2PamBpY5pCfpfl5PbIkR-Ak=",
+      "8b023b189d88732e385d885df4ca5ec138829940c81af374dc0b913bd7362d3c": {
+        "webhook_id": "8b023b189d88732e385d885df4ca5ec138829940c81af374dc0b913bd7362d3c",
+        "cloudhook_id": "891c85d260244691a6ad0c730c1c4d7d",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABojq0c767fTc781GhZKWSxYOsUTPrJqi8njmhjp1bMV1HShGXUXgYg0zRaOm_YmfGhW293sD7xCa9Rkp8t1leLetwU14LITGFDjMaKbk3La0PiE-FQHNYeXiZWmX6pvyZ-VovkCBxvUmap8ouO5ByhJUI3n1Xcu397IaCnQ2jHEKyVMzo=",
+        "managed": true
+      },
+      "40c6f14aae01cdc95c048a86af4a32d8721712683ac705f292cb8bd406c73bc8": {
+        "webhook_id": "40c6f14aae01cdc95c048a86af4a32d8721712683ac705f292cb8bd406c73bc8",
+        "cloudhook_id": "8dbdffd534b242b1b8b028294f2cd8d0",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABozJhabzlFXSRmmy0SY2V5h8ItBkS0q4zhsgdCxbgugyc_nWC0UCdChEstAyEi8LB9-Vg9m6LN6VY8X1NEfM20ks9rIX-NlBQiu9dASceAlL7_CMx51qOqkNVF0nCvWgdPDlrZ9AgRrXzFDml20kuX4udupxbZQwkNanaejN1gnJZo_WI=",
         "managed": true
       }
     },

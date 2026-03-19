@@ -5,17 +5,16 @@
   "data": {
     "items": [
       {
-        "last_scanned": "2023-02-15T01:59:27.880878+00:00",
+        "last_scanned": "2025-11-07T12:39:47.996852+00:00",
         "id": "91d68522-307e-4865-87d6-ff4ff389c681",
-        "name": "Sleep Mode Tag",
-        "migrated": true
+        "migrated": true,
+        "device_id": "8a563dfd2291db9bbe52304b318fe326"
       },
       {
-        "last_scanned": "2024-10-29T01:10:05.024259+00:00",
+        "last_scanned": "2025-08-29T03:45:44.956315+00:00",
         "id": "0c784a36-f4a2-4357-bc5f-77778b0e0e65",
-        "name": "Charger Tag",
         "migrated": true,
-        "device_id": "33c504d0d083a24cb68b80d121999006"
+        "device_id": "8a563dfd2291db9bbe52304b318fe326"
       },
       {
         "id": "hassio-repository",
@@ -24,7 +23,6 @@
       },
       {
         "id": "0620430a-3502-4bc3-b1d2-c5392a67cef1",
-        "name": "Work Mode",
         "last_scanned": "2024-12-20T13:08:18.980579+00:00",
         "migrated": true,
         "device_id": "33c504d0d083a24cb68b80d121999006"

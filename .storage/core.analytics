@@ -8,8 +8,11 @@
       "base": true,
       "usage": true,
       "statistics": true,
-      "diagnostics": true
+      "diagnostics": true,
+      "snapshots": true
     },
-    "uuid": "3c3b9ebb5a9a4c158519a183577e4e99"
+    "uuid": "3c3b9ebb5a9a4c158519a183577e4e99",
+    "submission_identifier": "8J9GqB6--K_ldmnZcbSlWB5gg5zpkVL-98yaJSSH27k|eyJyb2xlIjoic25hcHNob3Qtc3VibWlzc2lvbiIsImF0IjoxNzczOTg0MzYwLCJpZCI6ImU4YmMxNTgwLTZkYzItNDc1Zi1iNzdhLTllMTVlMTk4ZmIxMyIsInN1YiI6IjlmYzlmMDVlLTE0NjktNDM3NC1iNTkxLTExYTZlMTZlYjhiMiJ9",
+    "snapshot_submission_time": 23159.002371222956
   }
 }

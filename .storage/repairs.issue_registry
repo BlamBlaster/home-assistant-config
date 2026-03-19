@@ -292,26 +292,6 @@
         "issue_id": "restart_required_172733314_tags/2.0.5"
       },
       {
-        "created": "2025-02-10T04:43:45.301788+00:00",
-        "dismissed_version": null,
-        "domain": "automation",
-        "is_persistent": true,
-        "issue_id": "automation.lock_doors_night_time_automation_service_not_found_notify.mobile_app_benjamins_iphone_14",
-        "breaks_in_ha_version": null,
-        "data": null,
-        "is_fixable": true,
-        "issue_domain": null,
-        "learn_more_url": null,
-        "severity": "error",
-        "translation_key": "service_not_found",
-        "translation_placeholders": {
-          "service": "notify.mobile_app_benjamins_iphone_14",
-          "entity_id": "automation.lock_doors_night_time_automation",
-          "name": "Notification or Lock Doors",
-          "edit": "/config/automation/edit/1702994787994"
-        }
-      },
-      {
         "created": "2025-02-12T16:04:54.165080+00:00",
         "dismissed_version": null,
         "domain": "hacs",
@@ -338,6 +318,223 @@
         "domain": "hassio",
         "is_persistent": false,
         "issue_id": "f8625259a6bf4e999f3b0cb5714f958f"
+      },
+      {
+        "created": "2025-08-22T14:37:09.060536+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_871829086_tags/1.4.0"
+      },
+      {
+        "created": "2025-09-14T15:00:42.819291+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_871829086_tags/1.4.1"
+      },
+      {
+        "created": "2025-09-15T17:13:49.477493+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_247362100_tags/v0.11.2"
+      },
+      {
+        "created": "2025-09-23T02:54:35.782501+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_290261325_tags/v1.26.0"
+      },
+      {
+        "created": "2025-12-11T03:26:56.348525+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_290261325_tags/v1.29.0"
+      },
+      {
+        "created": "2025-12-11T17:51:44.058662+00:00",
+        "dismissed_version": null,
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "config_entry_reauth_smartthinq_sensors_8fb52a368deed777610f8097b7a2eed2"
+      },
+      {
+        "created": "2025-12-27T00:08:43.575721+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_247362100_tags/v0.11.3"
+      },
+      {
+        "created": "2025-12-27T00:08:45.854567+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_871829086_tags/1.4.2"
+      },
+      {
+        "created": "2026-01-12T21:15:16.880212+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_290261325_tags/v1.30.1"
+      },
+      {
+        "created": "2026-01-26T16:08:15.057401+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_235943258_tags/v0.10.1"
+      },
+      {
+        "created": "2026-02-23T18:03:00.073191+00:00",
+        "dismissed_version": null,
+        "domain": "automation",
+        "is_persistent": true,
+        "issue_id": "automation.lock_doors_night_time_automation_service_not_found_notify.mobile_app_iphone_14",
+        "breaks_in_ha_version": null,
+        "data": null,
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "error",
+        "translation_key": "service_not_found",
+        "translation_placeholders": {
+          "service": "notify.mobile_app_iphone_14",
+          "entity_id": "automation.lock_doors_night_time_automation",
+          "name": "Notification or Lock Doors",
+          "edit": "/config/automation/edit/1702994787994"
+        }
+      },
+      {
+        "created": "2026-02-24T01:00:00.329480+00:00",
+        "dismissed_version": null,
+        "domain": "automation",
+        "is_persistent": true,
+        "issue_id": "automation.lock_all_doors_8pm_service_not_found_script.all_doors_lock",
+        "breaks_in_ha_version": null,
+        "data": null,
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "error",
+        "translation_key": "service_not_found",
+        "translation_placeholders": {
+          "service": "script.all_doors_lock",
+          "entity_id": "automation.lock_all_doors_8pm",
+          "name": "Lock all doors 8pm",
+          "edit": "/config/automation/edit/1756340397182"
+        }
+      },
+      {
+        "created": "2026-02-24T01:36:01.847043+00:00",
+        "dismissed_version": null,
+        "domain": "automation",
+        "is_persistent": true,
+        "issue_id": "automation.automatic_away_mode_service_not_found_script.all_doors_lock",
+        "breaks_in_ha_version": null,
+        "data": null,
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "error",
+        "translation_key": "service_not_found",
+        "translation_placeholders": {
+          "service": "script.all_doors_lock",
+          "entity_id": "automation.automatic_away_mode",
+          "name": "Automatic Away Mode",
+          "edit": "/config/automation/edit/1753000000002"
+        }
+      },
+      {
+        "created": "2026-02-24T02:24:46.812120+00:00",
+        "dismissed_version": null,
+        "domain": "automation",
+        "is_persistent": true,
+        "issue_id": "automation.good_night_security_sweep_service_not_found_script.all_doors_lock",
+        "breaks_in_ha_version": null,
+        "data": null,
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "error",
+        "translation_key": "service_not_found",
+        "translation_placeholders": {
+          "service": "script.all_doors_lock",
+          "entity_id": "automation.good_night_security_sweep",
+          "name": "Good Night Security Sweep",
+          "edit": "/config/automation/edit/1753000000001"
+        }
+      },
+      {
+        "created": "2026-02-26T15:23:36.094162+00:00",
+        "dismissed_version": null,
+        "domain": "automation",
+        "is_persistent": true,
+        "issue_id": "automation.front_doorbell_pressed_notify_benjamin_service_not_found_notify.mobile_app_benjamins_iphone_16",
+        "breaks_in_ha_version": null,
+        "data": null,
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "error",
+        "translation_key": "service_not_found",
+        "translation_placeholders": {
+          "service": "notify.mobile_app_benjamins_iphone_16",
+          "entity_id": "automation.front_doorbell_pressed_notify_benjamin",
+          "name": "Front Doorbell Pressed",
+          "edit": "/config/automation/edit/1752003072665"
+        }
+      },
+      {
+        "created": "2026-03-01T22:17:45.265039+00:00",
+        "dismissed_version": null,
+        "domain": "automation",
+        "is_persistent": true,
+        "issue_id": "automation.lock_doors_night_time_automation_service_not_found_notify.mobile_app_benjamins_iphone_16",
+        "breaks_in_ha_version": null,
+        "data": null,
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "error",
+        "translation_key": "service_not_found",
+        "translation_placeholders": {
+          "service": "notify.mobile_app_benjamins_iphone_16",
+          "entity_id": "automation.lock_doors_night_time_automation",
+          "name": "Notification or Lock Doors",
+          "edit": "/config/automation/edit/1702994787994"
+        }
+      },
+      {
+        "created": "2026-03-14T20:53:32.727941+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "0f333bc0326f4eb294b328ca30c30558"
+      },
+      {
+        "created": "2026-03-19T12:08:27.463252+00:00",
+        "dismissed_version": null,
+        "domain": "homeassistant",
+        "is_persistent": true,
+        "issue_id": "orphaned_ignored_entry.01JQ434ZSN9A724J079RMAK0VY",
+        "breaks_in_ha_version": null,
+        "data": {
+          "domain": "google_home",
+          "entry_id": "01JQ434ZSN9A724J079RMAK0VY"
+        },
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "warning",
+        "translation_key": "orphaned_ignored_config_entry",
+        "translation_placeholders": {
+          "domain": "google_home"
+        }
       }
     ]
   }

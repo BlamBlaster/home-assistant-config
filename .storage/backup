@@ -191,7 +191,61 @@
         "failed_folders": []
       },
       {
-        "backup_id": "3a02a755",
+        "backup_id": "8b1a55f9",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "e09ff82a",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "e983fc01",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "db0a40ed",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "df2f567b",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "43aab7d5",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "2fe4fdcc",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "33a02d8f",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "137e600d",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "7f98d248",
         "failed_addons": [],
         "failed_agent_ids": [],
         "failed_folders": []
@@ -224,8 +278,8 @@
         "name": null,
         "password": "LEIR-DCCX-OANV-BBI6-G1LM-CO7C-3F72"
       },
-      "last_attempted_automatic_backup": "2025-07-09T04:51:39.002339-04:00",
-      "last_completed_automatic_backup": "2025-07-09T05:02:19.254804-04:00",
+      "last_attempted_automatic_backup": "2026-03-19T07:54:31.652442-04:00",
+      "last_completed_automatic_backup": "2026-03-19T08:03:40.777965-04:00",
       "retention": {
         "copies": 3,
         "days": null
@@ -237,7 +291,6 @@
           "sun"
         ],
         "recurrence": "custom_days",
-        "state": "never",
         "time": null
       }
     }

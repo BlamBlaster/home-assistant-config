@@ -36,10 +36,10 @@ except Exception:
     from enum import StrEnum
 
     from homeassistant.const import (
-        STATE_ALARM_ARMED_AWAY,  # pyright: ignore[reportAttributeAccessIssue,reportUnknownVariableType]
-        STATE_ALARM_ARMED_HOME,  # pyright: ignore[reportAttributeAccessIssue,reportUnknownVariableType]
-        STATE_ALARM_ARMED_NIGHT,  # pyright: ignore[reportAttributeAccessIssue,reportUnknownVariableType]
-        STATE_ALARM_DISARMED,  # pyright: ignore[reportAttributeAccessIssue,reportUnknownVariableType]
+        STATE_ALARM_ARMED_AWAY,  # ty: ignore[unresolved-import]
+        STATE_ALARM_ARMED_HOME,  # ty: ignore[unresolved-import]
+        STATE_ALARM_ARMED_NIGHT,  # ty: ignore[unresolved-import]
+        STATE_ALARM_DISARMED,  # ty: ignore[unresolved-import]
     )
 
     class AlarmControlPanelState(StrEnum):
@@ -63,8 +63,10 @@ _device_attrs = (
 )
 
 
-class HubitatSecurityKeypad(HubitatEntity, AlarmControlPanelEntity):
+class HubitatSecurityKeypad(AlarmControlPanelEntity, HubitatEntity):
     """Representation of a Hubitat security keypad."""
+
+    _attr_supported_features: AlarmControlPanelEntityFeature
 
     def __init__(self, **kwargs: Unpack[HubitatEntityArgs]):
         """Initialize a Hubitat security keypad."""
@@ -81,7 +83,7 @@ class HubitatSecurityKeypad(HubitatEntity, AlarmControlPanelEntity):
             HassStateAttribute.MAX_CODES: self.max_codes,
         }
 
-        self._attr_supported_features: AlarmControlPanelEntityFeature = (  # pyright: ignore[reportIncompatibleVariableOverride]
+        self._attr_supported_features = (
             AlarmControlPanelEntityFeature.ARM_AWAY
             | AlarmControlPanelEntityFeature.ARM_HOME
         )

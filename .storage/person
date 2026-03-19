@@ -22,6 +22,13 @@
         "user_id": "78befb7d8ea5495ca41054080780b710",
         "picture": "/api/image/serve/99a6046611ef5bbdd6b2e4ae6a0f530b/512x512",
         "id": "amanda"
+      },
+      {
+        "id": "guest",
+        "name": "Guest",
+        "device_trackers": [],
+        "user_id": "c6351bf0f8b94169874c21be3840aed0",
+        "picture": null
       }
     ]
   }
