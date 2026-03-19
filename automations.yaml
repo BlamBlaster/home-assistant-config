@@ -917,7 +917,7 @@
               state: unavailable
               entity_id: binary_sensor.basement_door_contact
         then:
-        - action: notify.mobile_app_benjamins_iphone_16
+        - action: notify.mobile_app_benjamins_iphone_16_pro
           metadata: {}
           data:
             message: >
@@ -966,7 +966,7 @@
           minutes: 0
           seconds: 30
       then:
-      - action: notify.mobile_app_benjamins_iphone_16
+      - action: notify.mobile_app_benjamins_iphone_16_pro
         metadata: {}
         data:
           title: ' ! ! Front door is Jammed ! ! '
@@ -1010,7 +1010,7 @@
               seconds: 0
             entity_id: binary_sensor.front_door_contact
         then:
-        - action: notify.mobile_app_benjamins_iphone_16
+        - action: notify.mobile_app_benjamins_iphone_16_pro
           metadata: {}
           data:
             title: Front door is Open
@@ -1102,7 +1102,7 @@
             minutes: 3
             seconds: 0
       then:
-      - action: notify.mobile_app_benjamins_iphone_16
+      - action: notify.mobile_app_benjamins_iphone_16_pro
         metadata: {}
         data:
           message: >
@@ -1141,7 +1141,7 @@
               minutes: 3
               seconds: 0
         then:
-        - action: notify.mobile_app_benjamins_iphone_16
+        - action: notify.mobile_app_benjamins_iphone_16_pro
           metadata: {}
           data:
             title: Back door is Open
@@ -2368,10 +2368,10 @@
     action: climate.set_temperature
   - data:
       message: Good Night security sweep activated. Home secured.
-    action: notify.mobile_app_benjamins_iphone_16
+    action: notify.mobile_app_benjamins_iphone_16_pro
   - data:
       message: Good Night security sweep activated. Home secured.
-    action: notify.mobile_app_iphone_14
+    action: notify.mobile_app_amandas_iphone_14
   mode: single
 
 - id: '1753000000002'
@@ -2405,10 +2405,10 @@
       - climate.downstairs_2
     data:
       hvac_mode: 'off'
-  - action: notify.mobile_app_benjamins_iphone_16
+  - action: notify.mobile_app_benjamins_iphone_16_pro
     data:
       message: Away mode activated. Home secured.
-  - action: notify.mobile_app_iphone_14
+  - action: notify.mobile_app_amandas_iphone_14
     data:
       message: Away mode activated. Home secured.
   mode: single
@@ -2438,5 +2438,5 @@
             name: default
             critical: 1
             volume: 1
-    action: notify.mobile_app_benjamins_iphone_16
+    action: notify.mobile_app_benjamins_iphone_16_pro
   mode: single

@@ -125,8 +125,8 @@ notify:
   - platform: group
     name: family_phones
     services:
-      - service: mobile_app_benjamins_iphone_16
-      - service: mobile_app_iphone_14
+      - service: mobile_app_benjamins_iphone_16_pro
+      - service: mobile_app_amandas_iphone_14
 
 # FIXED: entity_id must be a string (not a list) for alert integration.
 # FIXED: repeat value of 0 is invalid (minimum is 0.016 minutes ~= 1 second).

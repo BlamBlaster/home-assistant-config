@@ -154,3 +154,18 @@ cycle_bedside_rainbow:
           entity_id: input_number.bedside_rainbow_index
         data:
           value: 0
+
+all_doors_lock:
+  alias: Lock All Doors
+  description: Locks the front door, back door, and basement door.
+  sequence:
+  - action: lock.lock
+    data:
+      code: '27514760'
+    target:
+      entity_id:
+      - lock.front_door_lock
+      - lock.back_door
+      - lock.basement_door_lock
+  mode: single
+  icon: mdi:lock
